@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  },
+  "name": "softcorpindustries",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Softcorp-Industries/softcorpindustries.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Softcorp-Industries/softcorpindustries/issues"
+  },
+  "homepage": "https://github.com/Softcorp-Industries/softcorpindustries",
+  "description": ""
+}
