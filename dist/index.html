@@ -1,14 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Softcorp Industries</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <title>Softcorp Industries</title>
+  <link rel="stylesheet" href="main.css">
+  <script defer type="module" src="main.js"></script>
 </head>
-<body>
-    
-    <h1>Hello World!</h1>
-    
+
+<body data-darkMode="light">
+  <header>
+    <section id="darkMode" class="darkMode">
+      <button id="darkModeBtn" class="dmToggle"></button>
+    </section>
+    <section class="navBtn">
+      <div class="navBtn__menu">
+        <div class="navBtn__menu__btn"></div>
+      </div>
+    </section>
+    <nav id="siteNav" class="siteNav" aria-label="siteNav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <nav class="pageNav" aria-label="pageNav">
+      <ul id="pageNav-list" class="pageNav-list">
+        <p class="cHeader">Chapters</p>
+        <li class="pageNav-listItem"><a href="#theVision">The Vision</a></li>
+        <li class="pageNav-listItem"><a href="#thePath">The Path</a></li>
+        <li class="pageNav-listItem"><a href="#theFuture">The Future</a></li>
+      </ul>
+    </nav>
+    <section class="landing">
+      <article class="landing__top">
+        <p id="greeting" class="greeting">Welcome</p>
+        <h2>Christopher T. Guy</h2>
+      </article>
+      <article class="landing__title">
+        <h1>Softcorp Industries</h1>
+      </article>
+    </section>
+  </header>
+  <section class="welcome">
+    <header class="featureHeader">
+      <h2>"Portfolio"</h2>
+      <p>Christopher T. Guy</p>
+    </header>
+    <article class="welcome__header">
+      <p>Welcome to my <span>"Portfolio"</span> web site, the first of three web sites that I'm building on my path
+        to
+        becoming a Front-End Web Developer.</p>
+    </article>
+    <section class="links">
+      <section class="hwLink link-container">
+        <article class="linkHeader">
+          <p>
+            <a href="https://guycorpindustries.github.io/HomeWork/" target="_blank"><span>"Home Work"</span></a> is
+            the second web site I'm building, it's purpose is to display small web development projects and skills. I
+            thought the best way to practice what I was learning was to build an environment for the projects and
+            display them.
+          </p>
+        </article>
+        <div class="link">
+          <a href="https://guycorpindustries.github.io/HomeWork/" target="_blank">
+            <p>"Home Work"</p>
+            <img src="./img/backgrounds/Home_Work_2021-11-05_at_14-16-372.png" alt="">
+            <p>Click to visit</p>
+          </a>
+        </div>
+      </section>
+      <section class="prgLink link-container">
+        <article class="linkHeader">
+          <p>
+            <a href="https://guycorpindustries.github.io/The_Program/"><span>"The Program"</span></a> is the third
+            web site that I'm building, it's purpose is to practice more advanced javaScript skills. The primary goal
+            is to populate tables using forms and then extract that information.
+          </p>
+        </article>
+        <div class="link">
+          <a href="https://guycorpindustries.github.io/The_Program/" target="_blank">
+            <p>"The Program"</p>
+            <img src="./img/backgrounds/The Program_2021-11-05_at_14-19-212.png" alt="">
+            <p>Click to visit</p>
+          </a>
+        </div>
+      </section>
+    </section>
+  </section>
+  <section class="tripleMonitors">
+    <h2>Get with <span>"The Program"</span></h2>
+    <section class="imgs">
+      <picture class="img1 img">
+        <img src="img/education/annie-spratt-500px.jpg" alt="">
+      </picture>
+      <picture class="img2 img">
+        <img src="img/education/dollar-gill-500px.jpg" alt="">
+      </picture>
+      <picture class="img3 img">
+        <img src="img/education/monika-kozub-500px.jpg" alt="">
+      </picture>
+    </section>
+    <h2>Learn to <span>"Code"</span></h2>
+  </section>
+  <hr>
+  <main>
+
+  </main>
+  <footer>Copyright &copy 2021 Christopher Guy <span>O/A</span> Softcorp Industries</footer>
 </body>
+
 </html>
