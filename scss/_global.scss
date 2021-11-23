@@ -50,17 +50,19 @@
   padding: 0;
 }
 body {
-    background-color: var(--primaryClr);
+    //background-color: var(--primaryClr);
     font-size: 16px;
+    background-color: var(--darkModeBg);
 }
 body[data-darkMode="darkMode"] {
-  --darkModeBg: rgb(99, 99, 99); // from
+  --darkModeBg: rgb(39, 39, 39); // from #e3e3e3
   --darkModeBgblk: rgb(0, 0, 0); // from
-  --darkModeBgOp: rgba(255, 255, 255, 0.6); // from
-  --darkModeTxtClr: white; // from
+  --darkModeTxtClr: white; // from rgb(54, 54, 54)
   --darkModeClrlgt: rgb(54, 54, 54); // from
   --themeTxtClr: white; // from
-  --themeBlk: rgb(0, 0, 0); // from whitesmoke
+  --themeBlk: rgb(99, 99, 99); // from whitesmoke
+  --themeBg: black;
+  --themeSec: yellow;
 }
 
 body.transition,
@@ -70,16 +72,40 @@ body.transition *:after {
   transition: all 750ms;
 }
 h1,
-h2 {
+h2,
+h3 {
   font-family: 'Audiowide'
 }
+p {
+  padding: 1em;
+  line-height: 1.4;
+  font-size: .8em;
+  letter-spacing: 1px;
+  span {
+    font-size: 1.3em;
+    color: var(--jsThemeClr);
+    font-family: "Audiowide";
+    text-shadow: 0px 0px 3px var(--black);
+    font-weight: 900;
+  }
+}
+hr{
+  margin: auto;
+  margin-bottom: 2em;
+  width: 85%;
+  height: 4px;
+  background-color: var(--jsThemeClr);
+  box-shadow: 0px 0px 2px var(--black);
+}
 footer {
-  margin: 2em auto;
+  margin: auto;
+  padding: 2em;
   text-align: center;
   font-family: 'audiowide', cursive;
   font-size: .45em;
   letter-spacing: 0.2em;
-  color: var(--black);
+  color: var(--darkModeTxtClr);
+  background-color: var(--themeBlk);
 }
 
 footer span {
@@ -108,6 +134,12 @@ footer span {
   body{
     font-size: 28px;
   }
+  p{
+    font-size: 18px;
+      span{
+        font-size: 28px;
+      }
+    }
 }
 
 @media screen and (min-width: 1024px) {

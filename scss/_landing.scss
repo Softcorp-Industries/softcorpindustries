@@ -1,11 +1,320 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
+.webDevelopment-list {
+  margin: auto;
+  max-width: 700px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 15px;
+  text-align: center;
+  margin-bottom: 100px;
+  .listItem {
+    //@include shadowSm;
+    margin: auto;
+    height: 175px;
+    width: 145px;
+    color: var(--darkModeTxtClr);
+    background-color: var(--themeBlk);
+    border: 1px solid var(--darkModeTxtClr);
+    box-shadow: 0px 0px 4px var(--black);
+    letter-spacing: 2px;
+    line-height: 1;
+    border-radius: 1rem;
+    .listItemInfo {
+      width: 90%;
+      margin: auto;
+      //border-bottom: 4px solid red;
+      h4 {
+        text-align: center;
+        font-size: 16px;
+      }
+      p {
+        font-size: 14px;
+        padding: none;
+        padding-bottom: 3px;
+      }
+    }
+    img {
+      margin: 12px auto;
+      height: 80px;
+      width: 80px;
+    }
+  }
+  &__html {
+    .listItemInfo {
+      border-bottom: 4px solid green;
+    }
+  }
+  &__css {
+    .listItemInfo {
+      border-bottom: 4px solid green;
+    }
+  }
+  &__sass {
+    .listItemInfo {
+      border-bottom: 4px solid green;
+    }
+  }
+  &__tailwind {
+    img{
+      scale: 1.2;
+    }
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__bootStrap {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__javaScript {
+    .listItemInfo {
+      border-bottom: 4px solid green;
+    }
+  }
+  &__typeScript {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__git {
+    .listItemInfo {
+      border-bottom: 4px solid yellow;
+    }
+  }
+  &__npm {
+    img{
+      scale: 1.2;
+    }
+    .listItemInfo {
+      border-bottom: 4px solid yellow;
+    }
+  }
+  &__jquery {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__mongo {
+    img{
+      scale: 1.1;
+    }
+    .listItemInfo {
+      border-bottom: 4px solid yellow;
+    }
+  }
+  &__express {
+    .listItemInfo {
+      border-bottom: 4px solid yellow;
+    }
+  }
+  &__react {
+    .listItemInfo {
+      border-bottom: 4px solid yellow;
+    }
+  }
+  &__node {
+    .listItemInfo {
+      border-bottom: 4px solid yellow;
+    }
+  }
+  &__angular {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__vue {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__redux {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__next {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__python {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__php {
+    img{
+      scale: 1.4;
+    }
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__sql {
+    img{
+      scale: 1.4;
+    }
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__apache {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+}
+.frontEndList .listItem {
+  display: none;
+}
+.fullStackList .listItem {
+  display: none;
+}
+.serverSideList .listItem {
+  display: none;
+}
+.openWebDev {
+  .listItem {
+    opacity: 0;
+    transform-origin: center;
+  }
+  @for $i from 1 through 20 {
+    .listItem:nth-child(#{$i}) {
+      animation: webDevAnim 300ms ease-in-out forwards;
+      animation-delay: (150ms * $i) - 300ms;
+    }
+  }
+}
+.openWebDev.frontEndList .listItem {
+  display: block;
+}
+.openWebDev.fullStackList .listItem {
+  display: block;
+}
+.openWebDev.serverSideList .listItem {
+  display: block;
+}
+@keyframes webDevAnim {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
 
+.chapter {
+  &__header {
+    margin-bottom: 2.5em;
+    &__title {
+      text-align: center;
+      //text-shadow: 0px 0px 5px var(--black);
+      //background-color: var(--bgFilterDrk);
+      letter-spacing: 2px;
+      //margin-bottom: 25px;
+      h3 {
+        color: var(--darkModeTxtClr);
+        font-size: 1.25em;
+        margin-bottom: 1.5em;
+      }
+    }
+    &__body {
+      width: 95%;
+      max-width: 900px;
+      //height: 200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      justify-content: space-evenly;
+      //padding-top: 15px;
+      //background-color: var(--bgFilter);
+      .reportCard {
+        width: 275px;
+        margin: auto;
+        border: 2px solid var(--themeBg);
+        padding: 0.25rem;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: Var(--themeBg);
+        background-color: var(--themeSec);
+        border-radius: 0.5rem;
+        h3 {
+          color: orangered;
+        }
+        span {
+          color: orangered;
+          font-weight: 900;
+          //text-shadow: 0px 0px 4px var(--black);
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .showBtn {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+.showBtn {
+  margin: 15px auto;
+  background: none;
+  //background-color: var(--bgPrimary);
+  //border: 2px solid var(--black);
+  border-radius: 1rem;
+  button {
+    @include darkMode;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-family: "Audiowide";
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--bgSecondary);
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.25rem;
+    //background-color: var(--bgFilterDrk);
+    border-radius: 1rem;
+  }
+}
+.btn:hover {
+  background-color: var(--bgSecondary);
+  color: var(--white);
+}
+.idSpacer{
+  content: "";
+  height: .25em;
+  //margin-top: 4em;
+}
 @media screen and (min-width: 310px) {
 }
 
 @media screen and (min-width: 400px) {
+  .webDevelopment-list {
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    gap: 50px;
+    .listItem {
+      width: 175px;
+      height: 200px;
+      img {
+        height: 100px;
+        width: 100px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 481px) {
@@ -15,7 +324,9 @@
 }
 
 @media screen and (min-width: 1024px) {
-  
+  .webDevelopment-list {
+    max-width: 900px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
