@@ -1,8 +1,8 @@
 @mixin shadowSm {
-  box-shadow: -4px -4px 7px #fff, 4px 4px 7px rgba(#000, 0.4);
+  box-shadow: -4px -4px 7px rgb(255, 255, 255), 4px 4px 7px rgba(0, 0, 0, 0.4);
 }
 @mixin shadowLg {
-  box-shadow: -8px -8px 9px #fff, 8px 8px 9px rgba(#000, 0.4);
+  box-shadow: -8px -8px 9px rgb(255, 255, 255), 8px 8px 9px rgba(0, 0, 0, 0.4);
 }
 @mixin shadowLg-inset {
   box-shadow: inset -8px -8px 9px #fff, inset 8px 8px 9px rgba(#000, 0.4);

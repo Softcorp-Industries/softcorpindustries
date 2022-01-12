@@ -74,7 +74,7 @@ body.transition *:after {
 h1,
 h2,
 h3 {
-  font-family: 'Audiowide'
+  font-family: 'Audiowide';
 }
 p {
   padding: 1em;
@@ -111,7 +111,13 @@ footer {
 footer span {
   color: red;
 }
-
+.test {
+  color: red;
+  background-image: linear-gradient(#800080, #ffc0cb);
+  background-color: rgb(255, 255, 0);
+  overflow-wrap: break-word;
+  
+}
 
 // Break Points
 
