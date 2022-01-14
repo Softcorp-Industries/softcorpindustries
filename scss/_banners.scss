@@ -20,11 +20,11 @@
       transform: rotate(-3.8deg);
       font-family: "Audiowide", cursive;
       font-size: 0.8em;
-      color: var(--black);
+      color: #C0FFF4;
       margin-bottom: 0;
       padding-bottom: 0.5em;
       letter-spacing: 0.15rem;
-      text-shadow: 0px 0px 7px var(--white);
+      text-shadow: 0px 0px 7px var(--black);
     }
   }
   &__title {
@@ -32,11 +32,12 @@
     height: calc(5vw + 5em);
     width: 100%;
     z-index: 0;
-    background-image: url("img/backgrounds/header_background_2.png");
+    background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
+    //background-image: url("img/backgrounds/header_background_2.png");
     background-size: cover;
     background-position: top;
     background-color: var(--themeBlk);
-    border-bottom: 3px solid var(--jsThemeClr);
+    border-bottom: 3px solid var(--secondaryClr);
     box-shadow: 0px 3px 3px rgb(70, 70, 70);
     h1 {
       position: absolute;
@@ -44,7 +45,7 @@
       text-align: center;
       bottom: 0.75em;
       font-weight: 900;
-      color: var(--jsThemeClr);
+      color: var(--white);
       font-size: 1.2em;
       letter-spacing: 0.25em;
       text-shadow: 0px 0px 7px var(--black);
@@ -53,11 +54,11 @@
 }
 .greeting {
   width: 100%;
-  padding: 4em 0;
+  padding: 2.5em 0;
   text-align: center;
   font-size: 1.25em;
   font-family: "Audiowide";
-  color: var(--jsThemeClr);
+  color: #C0FFF4;
   text-shadow: 0px 0px 3px var(--black);
   letter-spacing: 2px;
 }

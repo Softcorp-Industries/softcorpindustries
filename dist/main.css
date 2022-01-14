@@ -1,6 +1,7 @@
 :root {
   --primaryBg: #e3e3e3;
   --secondaryClr: purple;
+  --secondaryTxt: #C0FFF4;
   --jsThemeClr: yellow;
   --htmlThemeClr: orangered;
   --cssThemeClr: blue;
@@ -75,20 +76,21 @@ p {
   letter-spacing: 1px;
 }
 p span {
-  font-size: 1.3em;
-  color: var(--jsThemeClr);
+  font-size: 1.5em;
+  color: #C0FFF4;
   font-family: "Audiowide";
   text-shadow: 0px 0px 3px var(--black);
   font-weight: 900;
+  letter-spacing: 2px;
 }
 
 hr {
   margin: auto;
   margin-bottom: 2em;
   width: 85%;
-  height: 4px;
-  background-color: var(--jsThemeClr);
-  box-shadow: 0px 0px 2px var(--black);
+  height: 8px;
+  background-color: var(--secondaryClr);
+  border-radius: 5px;
 }
 
 footer {
@@ -261,7 +263,7 @@ footer span {
   width: 1.2em;
   height: 0.14em;
   border-radius: 25%;
-  background-color: var(--jsThemeClr);
+  background-color: #C0FFF4;
   box-shadow: 0px 0px 2px var(--black);
 }
 .navBtn__menu__btn::after, .navBtn__menu__btn::before {
@@ -271,6 +273,7 @@ footer span {
   height: 0.14em;
   border-radius: 25%;
   background-color: var(--secondaryClr);
+  box-shadow: 0px 0px 2px var(--black);
   transition: all 0.5s ease-in-out;
 }
 .navBtn__menu__btn::before {
@@ -542,22 +545,22 @@ footer span {
   transform: rotate(-3.8deg);
   font-family: "Audiowide", cursive;
   font-size: 0.8em;
-  color: var(--black);
+  color: #C0FFF4;
   margin-bottom: 0;
   padding-bottom: 0.5em;
   letter-spacing: 0.15rem;
-  text-shadow: 0px 0px 7px var(--white);
+  text-shadow: 0px 0px 7px var(--black);
 }
 .landing__title {
   position: relative;
   height: calc(5vw + 5em);
   width: 100%;
   z-index: 0;
-  background-image: url("img/backgrounds/header_background_2.png");
+  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
   background-size: cover;
   background-position: top;
   background-color: var(--themeBlk);
-  border-bottom: 3px solid var(--jsThemeClr);
+  border-bottom: 3px solid var(--secondaryClr);
   box-shadow: 0px 3px 3px #464646;
 }
 .landing__title h1 {
@@ -566,7 +569,7 @@ footer span {
   text-align: center;
   bottom: 0.75em;
   font-weight: 900;
-  color: var(--jsThemeClr);
+  color: var(--white);
   font-size: 1.2em;
   letter-spacing: 0.25em;
   text-shadow: 0px 0px 7px var(--black);
@@ -574,11 +577,11 @@ footer span {
 
 .greeting {
   width: 100%;
-  padding: 4em 0;
+  padding: 2.5em 0;
   text-align: center;
   font-size: 1.25em;
   font-family: "Audiowide";
-  color: var(--jsThemeClr);
+  color: #C0FFF4;
   text-shadow: 0px 0px 3px var(--black);
   letter-spacing: 2px;
 }
@@ -613,27 +616,28 @@ footer span {
   margin-top: 2em;
   padding: 1em;
   width: 80%;
-  max-width: 450px;
+  max-width: 650px;
   border-radius: 1rem;
-  background-image: url("img/backgrounds/header_background_2.png");
+  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
   background-size: cover;
   background-color: var(--themeBlk);
   margin-bottom: 50px;
 }
 .featureHeader p {
   font-family: "Bedrock";
-  color: var(--darkModeTxtClr);
+  color: var(--white);
   font-size: 1em;
   font-weight: 600;
   letter-spacing: 3px;
   padding: 0.25em;
+  text-shadow: 0px 0px 3px var(--black);
 }
 .featureHeader h2 {
   font-family: "audiowide", cursive;
   text-shadow: 0px 0px 5px var(--black);
   font-size: 1.8em;
   font-weight: 900;
-  color: var(--jsThemeClr);
+  color: var(--secondaryTxt);
   letter-spacing: 4px;
 }
 
@@ -668,17 +672,17 @@ footer span {
 }
 
 .link {
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6), -4px -4px 7px white, 4px 4px 7px rgba(0, 0, 0, 0.4);
   display: flex;
   cursor: pointer;
   flex-direction: column;
   align-items: center;
   width: 200px;
   min-width: 200px;
-  height: 200px;
+  height: 175px;
   text-align: center;
   letter-spacing: 1px;
-  background-color: var(--themeBlk);
-  border: 1px solid var(--darkModeTxtClr);
+  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
   border-radius: 1rem;
   margin: auto;
   margin-bottom: 25px;
@@ -688,8 +692,8 @@ footer span {
   height: 100%;
 }
 .link a p {
-  line-height: 1.5;
-  color: var(--jsThemeClr);
+  line-height: 1.4;
+  color: var(--white);
   text-shadow: 0px 0px 3px var(--black);
   font-size: 18px;
 }
@@ -700,28 +704,41 @@ footer span {
 }
 .link a img {
   width: 90%;
+  border-radius: 0.5rem;
+}
+
+.link:hover {
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6), -8px -8px 9px white, 8px 8px 9px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+.triple-container {
+  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
+  border-top: 3px solid var(--secondaryTxt);
+  border-bottom: 3px solid var(--secondaryClr);
+  box-shadow: 0px 3px 3px #464646, 0px -3px 3px #464646;
 }
 
 .tripleMonitors {
   padding: var(--mdSpacer) 0em;
-  background-color: var(--bgDarkMode);
   max-width: 1000px;
   margin: auto;
   margin-bottom: 50px;
 }
 .tripleMonitors h2 {
-  color: var(--darkModeTxtClr);
+  color: var(--white);
   padding: 1em;
   text-align: center;
   font-family: "bedrock";
   font-size: 0.9em;
   letter-spacing: 1px;
+  text-shadow: 0px 0px 3px var(--black);
 }
 .tripleMonitors span {
   font-size: 1.2em;
   font-family: "audiowide";
   letter-spacing: 3px;
-  color: var(--jsThemeClr);
+  color: var(--secondaryTxt);
   text-shadow: 0px 0px 3px var(--black);
 }
 .tripleMonitors .imgs {
@@ -773,21 +790,22 @@ footer span {
 
 .quote {
   width: 95%;
-  max-width: 350px;
+  max-width: 500px;
   margin: auto;
   padding: 1rem 1.5rem;
   text-align: center;
-  background-color: var(--themeBg);
-  border: 2px solid var(--themeSec);
+  background-image: url("./img/backgrounds/clouds_72634.jpg");
+  border: 2px solid var(--secondaryClr);
   border-radius: 1rem;
-  color: var(--darkModeTxtClr);
+  color: var(--black);
   margin-bottom: 100px;
 }
 .quote p:last-child {
-  color: var(--themeSec);
-  font-size: 1rem;
+  color: var(--secondaryClr);
+  font-size: 2.5rem;
   line-height: 1.5rem;
   font-weight: 900;
+  font-family: "The Nautigal";
 }
 .quote p {
   font-size: 1.2rem;

@@ -4,6 +4,7 @@
   // no change
   --primaryBg: #e3e3e3;
   --secondaryClr: purple;
+  --secondaryTxt: #C0FFF4;
 
   --jsThemeClr: yellow;
   --htmlThemeClr: orangered;
@@ -81,21 +82,24 @@ p {
   line-height: 1.4;
   font-size: .8em;
   letter-spacing: 1px;
+  
   span {
-    font-size: 1.3em;
-    color: var(--jsThemeClr);
+    font-size: 1.5em;
+    color: #C0FFF4;
     font-family: "Audiowide";
     text-shadow: 0px 0px 3px var(--black);
     font-weight: 900;
+    letter-spacing: 2px;
   }
 }
 hr{
   margin: auto;
   margin-bottom: 2em;
   width: 85%;
-  height: 4px;
-  background-color: var(--jsThemeClr);
-  box-shadow: 0px 0px 2px var(--black);
+  height: 8px;
+  background-color: var(--secondaryClr);
+  border-radius: 5px;
+  //box-shadow: 0px 0px 2px var(--black);
 }
 footer {
   margin: auto;

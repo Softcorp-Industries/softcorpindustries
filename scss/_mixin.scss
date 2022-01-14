@@ -24,3 +24,11 @@
 @mixin tabletBox {
   box-shadow: -4px -4px 7px rgba(#000, 0.4), 4px 4px 7px rgba(#000, 0.4);
 }
+@mixin new {
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6),
+    inset 3px 3px 5px rgba(202, 202, 202, 0.6), -4px -4px 7px rgb(255, 255, 255), 4px 4px 7px rgba(0, 0, 0, 0.4);
+}
+@mixin newHover {
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6),
+    inset 3px 3px 5px rgba(202, 202, 202, 0.6), -8px -8px 9px rgb(255, 255, 255), 8px 8px 9px rgba(0, 0, 0, 0.4);
+}
