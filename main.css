@@ -2,6 +2,7 @@
   --primaryBg: #e3e3e3;
   --secondaryClr: purple;
   --secondaryTxt: #C0FFF4;
+  --bgGradient: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
   --jsThemeClr: yellow;
   --htmlThemeClr: orangered;
   --cssThemeClr: blue;
@@ -74,6 +75,7 @@ p {
   line-height: 1.4;
   font-size: 0.8em;
   letter-spacing: 1px;
+  font-family: "Roboto";
 }
 p span {
   font-size: 1.5em;
@@ -618,7 +620,7 @@ footer span {
   width: 80%;
   max-width: 650px;
   border-radius: 1rem;
-  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
+  background-image: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
   background-size: cover;
   background-color: var(--themeBlk);
   margin-bottom: 50px;
@@ -729,7 +731,6 @@ footer span {
   color: var(--white);
   padding: 1em;
   text-align: center;
-  font-family: "bedrock";
   font-size: 0.9em;
   letter-spacing: 1px;
   text-shadow: 0px 0px 3px var(--black);
@@ -760,7 +761,7 @@ footer span {
   width: 100%;
   height: 100%;
   opacity: 0.8;
-  border: 2px solid var(--jsThemeClr);
+  border: 3px solid var(--secondaryClr);
 }
 .tripleMonitors .imgs .img1 {
   z-index: 1;
@@ -770,11 +771,11 @@ footer span {
   transform-origin: right;
   transform: rotateY(10deg);
   border-radius: 0.5rem 5px 5px 0.5rem;
-  box-shadow: 0px -5px 5px var(--black), 0px 5px 5px var(--black), -5px 0px 5px var(--black);
+  box-shadow: 0px -5px 5px var(--secondaryTxt), 0px 5px 5px var(--secondaryTxt), -5px 0px 5px var(--secondaryTxt);
 }
 .tripleMonitors .imgs .img2 img {
   perspective-origin: center;
-  box-shadow: 0px -5px 5px var(--black), 0px 5px 5px var(--black);
+  box-shadow: 0px -5px 5px var(--secondaryTxt), 0px 5px 5px var(--secondaryTxt);
   border-radius: 5px;
 }
 .tripleMonitors .imgs .img3 {
@@ -785,17 +786,17 @@ footer span {
   transform-origin: left;
   transform: rotateY(-10deg);
   border-radius: 5px 0.5rem 0.5rem 5px;
-  box-shadow: 0px -5px 5px var(--black), 0px 5px 5px var(--black), 5px 0px 5px var(--black);
+  box-shadow: 0px -5px 5px var(--secondaryTxt), 0px 5px 5px var(--secondaryTxt), 5px 0px 5px var(--secondaryTxt);
 }
 
 .quote {
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   width: 95%;
   max-width: 500px;
   margin: auto;
   padding: 1rem 1.5rem;
   text-align: center;
   background-image: url("./img/backgrounds/clouds_72634.jpg");
-  border: 2px solid var(--secondaryClr);
   border-radius: 1rem;
   color: var(--black);
   margin-bottom: 100px;
@@ -816,23 +817,20 @@ footer span {
 .cardBox {
   position: relative;
   width: 95%;
-  max-width: 550px;
+  max-width: 850px;
   margin: 100px auto;
   transform-style: preserve-3d;
 }
-.cardBox h1 {
-  font-size: 2em;
-  text-align: right;
+.cardBox h4 {
+  font-size: 1.25em;
+  text-align: left;
   margin-right: 50px;
   letter-spacing: 0.1rem;
-  color: var(--jsThemeClr);
-  text-shadow: 0px 0px 4px var(--black);
+  font-family: "Audiowide";
+  color: var(--darkModeTxtClr);
 }
-.cardBox h2 {
-  font-size: 1.5em;
-  letter-spacing: 0.1rem;
-  color: var(--jsThemeClr);
-  text-shadow: 0px 0px 4px var(--black);
+.cardBox h4:nth-last-child(1) {
+  text-align: right;
 }
 .cardBox .card {
   box-shadow: inset -4px -4px 7px #fff, inset 4px 4px 7px rgba(0, 0, 0, 0.4);
@@ -867,37 +865,35 @@ footer span {
           backface-visibility: hidden;
   width: 250px;
   height: 150px;
+  color: var(--secondaryTxt);
+  text-shadow: 0px 0px 7px var(--black);
 }
 .cardBox .card__front-title {
+  padding: 0;
   position: absolute;
   transform: translateZ(2.5em);
-  top: 20px;
-  left: 25px;
-  color: var(--white);
+  top: 0.5em;
+  left: 1em;
   letter-spacing: 2px;
-  text-shadow: 0px 0px 5px var(--black);
   font-size: 22px;
 }
 .cardBox .card__subtitle {
+  padding: 0;
   transform: translateZ(2.5em);
   position: absolute;
-  bottom: 10px;
-  right: 20px;
+  bottom: 0.5em;
+  right: 0.75em;
   width: 100%;
   text-align: right;
   font-size: 32px;
-  color: var(--white);
-  text-shadow: 0px 0px 5px var(--black);
 }
 .cardBox .card__back-title {
   position: absolute;
   width: 100%;
-  padding-top: 3em;
+  top: 1em;
   transform: translateZ(2.5em);
   font-size: 18px;
   line-height: 2;
-  color: var(--white);
-  text-shadow: 0px 0px 7px var(--black);
 }
 
 .displayMobile {
@@ -906,6 +902,7 @@ footer span {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   margin-bottom: 100px;
+  display: none;
 }
 
 .tabletBox {
@@ -1181,10 +1178,6 @@ footer span {
   display: none;
 }
 
-.phoneBox {
-  width: 100%;
-}
-
 .phones {
   margin: 50px auto;
   max-width: 900px;
@@ -1250,10 +1243,6 @@ footer span {
 }
 
 @media (min-width: 400px) {
-  .chapter__header__title h1 {
-    font-size: 18px;
-  }
-
   .cardBox h1 {
     font-size: 2.5em;
   }
@@ -1307,29 +1296,16 @@ footer span {
     padding: 0.5em;
   }
 
-  .chapter__header__title h1 {
-    font-size: 36px;
-  }
-
-  .cardBox h1 {
-    font-size: 3.5em;
-    text-align: right;
-    letter-spacing: 0.25rem;
-  }
-  .cardBox h2 {
-    font-size: 2em;
-    letter-spacing: 0.25rem;
-  }
   .cardBox .card__front-title {
     font-size: 28px;
-    top: 30px;
-    left: 40px;
+    top: 1em;
+    left: 1em;
   }
   .cardBox .card__subtitle {
     font-size: 40px;
   }
   .cardBox .card__back-title {
-    padding-top: 2em;
+    top: 2em;
     font-size: 28px;
   }
   .cardBox .card {
@@ -1660,7 +1636,7 @@ footer span {
   }
 }
 .chapter__header {
-  margin-bottom: 2.5em;
+  margin-bottom: 1em;
 }
 .chapter__header__title {
   text-align: center;
@@ -1669,7 +1645,6 @@ footer span {
 .chapter__header__title h3 {
   color: var(--darkModeTxtClr);
   font-size: 1.25em;
-  margin-bottom: 1.5em;
 }
 .chapter__header__body {
   width: 95%;
@@ -1752,6 +1727,15 @@ footer span {
   .webDevelopment-list .listItem img {
     height: 100px;
     width: 100px;
+  }
+
+  .chapter__header__title h1 {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .chapter__header__title h1 {
+    font-size: 36px;
   }
 }
 @media screen and (min-width: 1024px) {
