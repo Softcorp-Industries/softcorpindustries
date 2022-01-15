@@ -211,17 +211,15 @@
 
 .chapter {
   &__header {
-    margin-bottom: 2.5em;
+    margin-bottom: 1em;
     &__title {
       text-align: center;
       //text-shadow: 0px 0px 5px var(--black);
       //background-color: var(--bgFilterDrk);
       letter-spacing: 2px;
-      //margin-bottom: 25px;
       h3 {
         color: var(--darkModeTxtClr);
         font-size: 1.25em;
-        margin-bottom: 1.5em;
       }
     }
     &__body {
@@ -315,12 +313,30 @@
       }
     }
   }
+  .chapter{
+    &__header{
+      &__title{
+        h1{
+          font-size: 18px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 481px) {
 }
 
 @media screen and (min-width: 700px) {
+  .chapter{
+    &__header{
+      &__title{
+        h1{
+          font-size: 36px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {

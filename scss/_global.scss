@@ -6,6 +6,8 @@
   --secondaryClr: purple;
   --secondaryTxt: #C0FFF4;
 
+  --bgGradient: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
+
   --jsThemeClr: yellow;
   --htmlThemeClr: orangered;
   --cssThemeClr: blue;
@@ -82,7 +84,7 @@ p {
   line-height: 1.4;
   font-size: .8em;
   letter-spacing: 1px;
-  
+  font-family: "Roboto";
   span {
     font-size: 1.5em;
     color: #C0FFF4;
