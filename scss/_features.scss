@@ -35,6 +35,20 @@
   }
 }
 .welcome {
+  p {
+    padding: 1em;
+    line-height: 1.4;
+    font-size: .8em;
+    letter-spacing: 1px;
+    span {
+      font-size: 1.5em;
+      color: #C0FFF4;
+      font-family: "Audiowide";
+      text-shadow: 0px 0px 3px var(--black);
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+  }
   &__header {
     color: var(--darkModeTxtClr);
     margin: auto;
@@ -226,7 +240,7 @@
     margin-right: 50px;
     letter-spacing: 0.1rem;
     font-family: "Audiowide";
-    color: var(--darkModeTxtClr);
+    color: var(--secondaryClr);
     //text-shadow: 0px 0px 2px var(--white);
   }
   h4:nth-last-child(1) {
@@ -698,17 +712,7 @@
     h2:nth-last-child(1) {
       text-align: right;
     }
-  }
-  .chapter{
-    &__header{
-      &__title{
-        h1{
-          font-size: 26px;
-        }
-      }
-    }
-  }
-  
+  }  
 }
 @media (min-width: 700px) {
   .featureHeader{

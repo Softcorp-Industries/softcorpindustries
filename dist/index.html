@@ -1,339 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=The+Nautigal:wght@400;700&family=Roboto:ital,wght@0,500;0,700;0,900;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Softcorp Industries</title>
+    <link rel="stylesheet" href="main.css" />
+    <script defer type="module" src="main.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=The+Nautigal:wght@400;700&family=Roboto:ital,wght@0,500;0,700;0,900;1,300&display=swap"
-    rel="stylesheet">
-  <title>Softcorp Industries</title>
-  <link rel="stylesheet" href="main.css">
-  <script defer type="module" src="main.js"></script>
-</head>
-
-<body data-darkMode="light">
-  <header>
-    <section id="darkMode" class="darkMode">
-      <button id="darkModeBtn" class="dmToggle"></button>
-    </section>
-    <section class="navBtn">
-      <div class="navBtn__menu">
-        <div class="navBtn__menu__btn"></div>
+  <body data-darkMode="light">
+    <header>
+      <section id="darkMode" class="darkMode">
+        <button id="darkModeBtn" class="dmToggle"></button>
+      </section>
+      <div class="navBtn">
+        <div class="navBtn__menu">
+          <div class="navBtn__menu__btn"></div>
+        </div>
       </div>
-    </section>
-    <nav id="siteNav" class="siteNav" aria-label="siteNav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-    <nav class="pageNav" aria-label="pageNav">
-      <ul id="pageNav-list" class="pageNav-list">
-        <p class="cHeader">Chapters</p>
-        <li class="pageNav-listItem"><a href="#theVision">The Vision</a></li>
-        <li class="pageNav-listItem"><a href="#thePath">The Path</a></li>
-        <li class="pageNav-listItem"><a href="#theFuture">The Future</a></li>
-      </ul>
-    </nav>
-    <section class="landing">
-      <article class="landing__top">
-        <p id="greeting" class="greeting">Welcome</p>
-      </article>
-      <article class="landing__title">
-        <h1>Softcorp Industries</h1>
-      </article>
-    </section>
-  </header>
-  <section class="welcome">
-    <header class="featureHeader">
-      <h2>"Portfolio"</h2>
-      <p>Christopher T. Guy</p>
-    </header>
-    <article class="welcome__header">
-      <p>Welcome to my <span>"Portfolio"</span> web site, the first of three web sites that I'm building on my path
-        to
-        becoming a Front-End Web Developer.</p>
-    </article>
-    <section class="links">
-      <section class="hwLink link-container">
-        <article class="linkHeader">
-          <p>
-            <a href="https://softcorp-industries.github.io/HomeWork/" target="_blank"><span>"Home Work"</span></a> is
-            the second web site I'm building, it's purpose is to display small web development projects and skills. I
-            thought the best way to practice what I was learning was to build an environment for the projects and
-            display them.
-          </p>
+      <nav id="siteNav" class="siteNav" aria-label="siteNav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <nav class="pageNav" aria-label="pageNav">
+        <ul id="pageNav-list" class="pageNav-list">
+          <p class="cHeader">Chapters</p>
+          <li class="pageNav-listItem"><a href="#theVision">The Vision</a></li>
+          <li class="pageNav-listItem"><a href="#thePath">The Path</a></li>
+          <li class="pageNav-listItem"><a href="#theFuture">The Future</a></li>
+        </ul>
+      </nav>
+      <section class="landing">
+        <article class="landing__top">
+          <p id="greeting" class="greeting">Welcome</p>
         </article>
-        <div class="link">
-          <a href="https://softcorp-industries.github.io/HomeWork/" target="_blank">
-            <p>Click to visit</p>
-            <img src="./img/backgrounds/Home_Work_2021-11-05_at_14-16-372.png" alt="">
-          </a>
-        </div>
-      </section>
-      <section class="prgLink link-container">
-        <article class="linkHeader">
-          <p>
-            <a href="https://softcorp-industries.github.io/The_Program/"><span>"The Program"</span></a> is the third
-            web site that I'm building, it's purpose is to practice more advanced javaScript skills. The primary goal
-            is to populate tables using forms and then extract that information.
-          </p>
+        <article class="landing__title">
+          <h1>Softcorp Industries</h1>
         </article>
-        <div class="link">
-          <a href="https://softcorp-industries.github.io/TheProgram/" target="_blank">
-            <p>Click to visit</p>
-            <img src="./img/backgrounds/The Program_2021-11-05_at_14-19-212.png" alt="">
-          </a>
-        </div>
       </section>
-    </section>
-  </section>
-  <section class="triple-container">
-    <div class="tripleMonitors">
-      <h2>Get with <span>"The Program"</span></h2>
-      <section class="imgs">
-      <picture class="img1 img">
-        <img src="img/education/annie-spratt-500px.jpg" alt="">
-      </picture>
-      <picture class="img2 img">
-        <img src="img/education/dollar-gill-500px.jpg" alt="">
-      </picture>
-      <picture class="img3 img">
-        <img src="img/education/monika-kozub-500px.jpg" alt="">
-      </picture>
-      </section>
-      <h2>Learn to <span>"Code"</span></h2>
-    </div>
-  </section>
-  
-  <main>
-  
-    <div class="idSpacer" id="theVision"></div>
-    <header class="featureHeader">
-      <h2>The Vision</h2>
     </header>
-    <article class="quote">
-      <p>“There is nothing like a dream to create the future”
-      </p>
-      <p>Victor Hugo</p>
-    </article>
-    <section class="chapter">
-      <section class="cardBox">
-        <h4>Connecting You</h4>
-        <section class="card">
-          <div class="card__content">
-            <article class="card__front">
-              <p class="card__front-title">To The</p>
-              <p class="card__subtitle">World</p>
-            </article>
-            <article class="card__back">
-              <p class="card__back-title">Softcorp Industries</p>
-            </article>
+
+    <section class="welcome">
+      <header class="featureHeader">
+        <h2>"Portfolio"</h2>
+        <p>Christopher T. Guy</p>
+      </header>
+      <article class="welcome__header">
+        <p>
+          Welcome to my <span>"Portfolio"</span> web site, the first of three
+          web sites that I'm building on my path to becoming a Front-End Web
+          Developer.
+        </p>
+      </article>
+      <section class="links">
+        <section class="hwLink link-container">
+          <article class="linkHeader">
+            <p>
+              <a
+                href="https://softcorp-industries.github.io/HomeWork/"
+                target="_blank">
+                <span>"Home Work"</span>
+              </a>
+              is the second web site I'm building, it's purpose is to display
+              small web development projects and skills. I thought the best way
+              to practice what I was learning was to build an environment for
+              the projects and display them.
+            </p>
+          </article>
+          <div class="link">
+            <a
+              href="https://softcorp-industries.github.io/HomeWork/"
+              target="_blank"
+            >
+              <p>Click to visit</p>
+              <img
+                src="./img/backgrounds/Home_Work_2021-11-05_at_14-16-372.png"
+                alt="Link to Home Work"
+              />
+            </a>
           </div>
         </section>
-        <h4>Safely</h4>
+        <section class="prgLink link-container">
+          <article class="linkHeader">
+            <p>
+              <a 
+                href="https://softcorp-industries.github.io/The_Program/"
+                target="_blank">
+                <span>"The Program"</span>
+              </a>
+              is the third web site that I'm building, it's purpose is to
+              practice more advanced javaScript skills. The primary goal is to
+              populate tables using forms and then extract that information.
+            </p>
+          </article>
+          <div class="link">
+            <a
+              href="https://softcorp-industries.github.io/TheProgram/"
+              target="_blank"
+            >
+              <p>Click to visit</p>
+              <img
+                src="./img/backgrounds/The Program_2021-11-05_at_14-19-212.png"
+                alt="Link to The Program"
+              />
+            </a>
+          </div>
+        </section>
       </section>
-      <br>
-      <header class="chapter__header">
-        <article class="chapter__header__title">
-          <h3>Desktop Web Sites</h3>
-        </article>
-      </header>
-      <section class="desktop">
-        <div class="desktop__monitor">
-          <img src="./img/backgrounds/Portfolio2021-10-31_at_10-26-50_Softcorp_Industries1.png" alt="">
-          <p>Softcorp TV</p>
-        </div>
-      </section>
-      <header class="chapter__header">
-        <article class="chapter__header__title">
-          <h3>Mobile Devices</h3>
-        </article>
-      </header>
-      <section class="displayMobile">
-        <section class="tabletBox">
-          <section class="tablet">
-            <section class="tablet__speakers">
-              <article class="speakerL speaker">***********</article>
-              <p>Softcorp Tablet</p>
-              <article class="speakerR speaker">***********</article>
-            </section>
-            <div class="tablet__screen">
-              <section class="slider">
-                <div class="slideContainer">
-                  <h3>Biography</h3>
-                  <p>Christopher T. Guy</p>
-                </div>
-                <div class="solar slideContainer">
-                  <h4>My first career</h4>
-                  <article>
-                    <p>I started in the electrical trade 2 days before my 20th birthday. </p>
-                    <p> I thought I was making a decision that I would never have to make again.</p>
-                  </article>
-                  <article class="solar__img">
-                    <p>"Make hay while the sun shines"</p>
-                  </article>
-                  <article>
-                    <p>That was 30 years ago!!!</p>
-                  </article>
-                </div>
-                <div class="change slideContainer">
-                  <h4>Re-inventing myself</h4>
-                  <article>
-                    <p>The world Changed.</p>
-                    <p>I needed to change with it.</p>
-                  </article>
-                  <p>HOW?</p>
-                  <section class="change__img">
-                    <picture class=" change__img__1">
-                      <p>Electronics</p>
-                      <img src="img/tech_img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="">
-                    </picture>
-                    <picture class="change__img__2">
-                      <p>OR</p>
-                      <img src="img/tech_img/exclusive-OR-function-built.webp" alt="">
-                    </picture>
-                    <picture class="change__img__3">
-                      <p>Programming</p>
-                      <img src="img/tech_img/sai-kiran-anagani-5Ntkpxqt54Y-unsplash.jpg" alt="">
-                    </picture>
-                  </section>
-                </div>
-                <div class="rome slideContainer">
-                  <h4>New Direction</h4>
-                  <p>So I Listened...</p>
-                  <article>
-                    <p>
-                      "All roads lead to Rome"
-                    </p>
-                    <p class="p1">
-                      "The Program"
-                    </p>
-                    <p class="p2">
-                      "Home Work"
-                    </p>
-                  </article>
-                  <p>I Started Learning <span>"Code"</span>.</p>
-                  <p>I Made my Own <span>"Program"</span></p>
-                </div>
-                <div class="why slideContainer">
-                  <h4>Hello World!</h4>
-                  <article>
-                    <p>
-                      The Industry I worked in for 20 years crashed a few years ago. The loss of jobs and unemployment was devistating to many families in my area. I lost my
-                      job
-                      too...
-                    </p>
-                    <P>
-                      Going back to school at 50 was not an option, I didn't even know what to study.
-                    </P>
-                    <P>
-                      I was completely lost, I had an idea that "Technology and the Internet" was the direction of the Future. What
-                      technology, and where on the Internet were two completely different
-                      questions.
-                    </P>
-                    <P>
-                      By chance I came across a video on YouTube with this person giving a tutorial on HTML.
-                    </P>
-                    <p>
-                      I started learning the basics of HTML and CSS with-in a few days of each other. I spent probably a month going a
-                      little
-                      more in-depth on both making little static pages, javaScript was the next logical step. I've been writing code for over a year now, I absolutely love it.
-                    </p>
+    </section>
+    <section class="triple-container">
+      <div class="tripleMonitors">
+        <h2>Get with <span>"The Program"</span></h2>
+        <section class="imgs">
+          <picture class="img1 img">
+            <img src="img/education/annie-spratt-500px.jpg" alt="" />
+          </picture>
+          <picture class="img2 img">
+            <img src="img/education/dollar-gill-500px.jpg" alt="" />
+          </picture>
+          <picture class="img3 img">
+            <img src="img/education/monika-kozub-500px.jpg" alt="" />
+          </picture>
+        </section>
+        <h2>Learn to <span>"Code"</span></h2>
+      </div>
+    </section>
 
-                    <div class="article__summary">
-                      <P>
-                        I still build things.
-                      </P>
-                      <P>
-                        My tools just changed.
-                      </P>
-                      <h2>Thank You</h2>
-                    </div>
-                  </article>
-                </div>
-              </section>
+    <main>
+      <div class="idSpacer" id="theVision"></div>
+      <header class="featureHeader">
+        <h2>The Vision</h2>
+      </header>
+      <article class="quote">
+        <p>“There is nothing like a dream to create the future”</p>
+        <p>Victor Hugo</p>
+      </article>
+      <section class="chapter">
+        <section class="cardBox">
+          <h4>Connecting You</h4>
+          <section class="card">
+            <div class="card__content">
+              <article class="card__front">
+                <p class="card__front-title">To The</p>
+                <p class="card__subtitle">World</p>
+              </article>
+              <article class="card__back">
+                <p class="card__back-title">Softcorp Industries</p>
+              </article>
             </div>
-            <br>
-            <section class="tablet__controls">
-              <div class="fullScreen"></div>
-              <a href="" target="_blank" title="">Biography</a>
-              <div class="fullScreen"></div>
-            </section>
           </section>
+          <h4>Safely</h4>
         </section>
-        <section class="phones">
-          <div class="phone">
-            <div class="phone__samsung">
-              <div class="speakerBar">
-                <div class="camera">
-                  camera
-                </div>
-                <div class="speaker">
-                  speaker
-                </div>
-              </div>
-              <img src="./img/tech/diego-ph-fIq0tET6llw-unsplash.jpg" alt="Content">
-              <div class="controls">
-                  <div class="back">
-                    triangle
-                  </div>
-                  <div class="home">
-                    circle
-                  </div>
-                  <div class="current">
-                    square
-                  </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-    </section>
-    <hr>
-    <div class="idSpacer" id="thePath"></div>
-    <header class="featureHeader">
-      <h2>The Path</h2>
-    </header>
-    <article class="quote">
-      <p>“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.”
-      </p>
-      <p>Malcolm X</p>
-    </article>
-    <section class="fccCourse">
-      <div class="courseProject">
-        <p>Tribute Page</p>
-        <a href="https://codepen.io/Softcorp-Industries/full/PoJGwGG"><img src="./img/education/Tribute Page.png" alt="Tribute"></a>
-      </div>
-      <div class="courseProject">
-        <p>E-Commerce</p>
-        <a href="https://codepen.io/Softcorp-Industries/full/bGoBqwe" target="_blank"><img src="./img/education/Product Landing Page.png" alt="E-Commerce"></a>
-      </div>
-      <div class="courseProject">
-        <p>Survey Form</p>
-        <a href="https://codepen.io/Softcorp-Industries/full/xxXRGVb" target="_blank"><img src="./img/education/Survey Form.png" alt="Survey"></a>
-      </div>
-      <div class="courseProject">
-        <p>Technical Documentation</p>
-        <a href="https://codepen.io/Softcorp-Industries/full/bGoBqee" target="_blank"><img src="./img/education/Technical Documentation Page.png" alt="Technical Documentation"></a>
-      </div>
-      <div class="courseProject">
-        <p>Portfolio Page</p>
-        <a href="https://codepen.io/Softcorp-Industries/full/bGoBqee" target="_blank"><img src="./img/education/Personal Portfolio Webpage.png" alt="Technical Documentation"></a>
-      </div>
-  </section>
-    <section class="webDevelopment chapter">
         <header class="chapter__header">
           <article class="chapter__header__title">
-            <h3>Front-End Web Development</h3>
+            <h4>Desktop Web Sites</h4>
+          </article>
+        </header>
+        <section class="desktop">
+          <div class="desktop__monitor">
+            <img
+              src="./img/backgrounds/Portfolio2021-10-31_at_10-26-50_Softcorp_Industries1.png"
+              alt=""
+            />
+            <p>Softcorp TV</p>
+          </div>
+        </section>
+        <header class="chapter__header">
+          <article class="chapter__header__title">
+            <h3>Mobile Devices</h3>
+          </article>
+        </header>
+        <section class="displayMobile">
+          <section class="tabletBox">
+            <section class="tablet">
+              <section class="tablet__speakers">
+                <article class="speakerL speaker">***********</article>
+                <p>Softcorp Tablet</p>
+                <article class="speakerR speaker">***********</article>
+              </section>
+              <div class="tablet__screen">
+                <section class="slider">
+                  <div class="slideContainer">
+                    <h3>Biography</h3>
+                    <p>Christopher T. Guy</p>
+                  </div>
+                  <div class="solar slideContainer">
+                    <h4>My first career</h4>
+                    <article>
+                      <p>
+                        I started in the electrical trade 2 days before my 20th
+                        birthday.
+                      </p>
+                      <p>
+                        I thought I was making a decision that I would never
+                        have to make again.
+                      </p>
+                    </article>
+                    <article class="solar__img">
+                      <p>"Make hay while the sun shines"</p>
+                    </article>
+                    <article>
+                      <p>That was 30 years ago!!!</p>
+                    </article>
+                  </div>
+                  <div class="change slideContainer">
+                    <h4>Re-inventing myself</h4>
+                    <article>
+                      <p>The world Changed.</p>
+                      <p>I needed to change with it.</p>
+                    </article>
+                    <p>HOW?</p>
+                    <section class="change__img">
+                      <picture class="change__img__1">
+                        <p>Electronics</p>
+                        <img
+                          src="img/tech_img/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg"
+                          alt=""
+                        />
+                      </picture>
+                      <picture class="change__img__2">
+                        <p>OR</p>
+                        <img
+                          src="img/tech_img/exclusive-OR-function-built.webp"
+                          alt=""
+                        />
+                      </picture>
+                      <picture class="change__img__3">
+                        <p>Programming</p>
+                        <img
+                          src="img/tech_img/sai-kiran-anagani-5Ntkpxqt54Y-unsplash.jpg"
+                          alt=""
+                        />
+                      </picture>
+                    </section>
+                  </div>
+                  <div class="rome slideContainer">
+                    <h4>New Direction</h4>
+                    <p>So I Listened...</p>
+                    <article>
+                      <p>"All roads lead to Rome"</p>
+                      <p class="p1">"The Program"</p>
+                      <p class="p2">"Home Work"</p>
+                    </article>
+                    <p>I Started Learning <span>"Code"</span>.</p>
+                    <p>I Made my Own <span>"Program"</span></p>
+                  </div>
+                  <div class="why slideContainer">
+                    <h4>Hello World!</h4>
+                    <article>
+                      <p>
+                        The Industry I worked in for 20 years crashed a few
+                        years ago. The loss of jobs and unemployment was
+                        devistating to many families in my area. I lost my job
+                        too...
+                      </p>
+                      <p>
+                        Going back to school at 50 was not an option, I didn't
+                        even know what to study.
+                      </p>
+                      <p>
+                        I was completely lost, I had an idea that "Technology
+                        and the Internet" was the direction of the Future. What
+                        technology, and where on the Internet were two
+                        completely different questions.
+                      </p>
+                      <p>
+                        By chance I came across a video on YouTube with this
+                        person giving a tutorial on HTML.
+                      </p>
+                      <p>
+                        I started learning the basics of HTML and CSS with-in a
+                        few days of each other. I spent probably a month going a
+                        little more in-depth on both making little static pages,
+                        javaScript was the next logical step. I've been writing
+                        code for over a year now, I absolutely love it.
+                      </p>
+
+                      <div class="article__summary">
+                        <p>I still build things.</p>
+                        <p>My tools just changed.</p>
+                        <h2>Thank You</h2>
+                      </div>
+                    </article>
+                  </div>
+                </section>
+              </div>
+              <br />
+              <section class="tablet__controls">
+                <div class="fullScreen"></div>
+                <a href="" target="_blank" title="">Biography</a>
+                <div class="fullScreen"></div>
+              </section>
+            </section>
+          </section>
+          <section class="phones">
+            <div class="phone">
+              <div class="phone__samsung">
+                <div class="speakerBar">
+                  <div class="camera">camera</div>
+                  <div class="speaker">speaker</div>
+                </div>
+                <img
+                  src="./img/tech/diego-ph-fIq0tET6llw-unsplash.jpg"
+                  alt="Content"
+                />
+                <div class="controls">
+                  <div class="back">triangle</div>
+                  <div class="home">circle</div>
+                  <div class="current">square</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+      <hr />
+      <div class="idSpacer" id="thePath"></div>
+      <header class="featureHeader">
+        <h2>The Path</h2>
+      </header>
+      <article class="quote">
+        <p>
+          “Education is the passport to the future, for tomorrow belongs to
+          those who prepare for it today.”
+        </p>
+        <p>Malcolm X</p>
+      </article>
+      <h3 class="sectionHeader">Courses and Training</h3>
+      <h4>Free Code Camp</h4>
+      <section class="fccCourse chapter">
+        <header class="chapter__header">
+          <article class="chapter__header__title">
+            <h4>Responsive Web Design</h4>
           </article>
           <section class="chapter__header__body">
             <article class="reportCard">
-              <h3>Report Card:</h3>
+              <p>Report Card:</p>
+              <p>HTML, CSS and Vanilla JavaScript.</p>
+            </article>
+            <div class="showBtn">
+              <button class="btn" id="">Show Courses</button>
+            </div>
+          </section>
+        </header>
+        <section class="fccProjects">
+          <div class="courseProject">
+            <p>Tribute Page</p>
+            <a href="https://codepen.io/Softcorp-Industries/full/PoJGwGG"
+              ><img src="./img/education/Tribute Page.png" alt="Tribute"
+            /></a>
+          </div>
+          <div class="courseProject">
+            <p>E-Commerce</p>
+            <a
+              href="https://codepen.io/Softcorp-Industries/full/bGoBqwe"
+              target="_blank"
+              ><img
+                src="./img/education/Product Landing Page.png"
+                alt="E-Commerce"
+            /></a>
+          </div>
+          <div class="courseProject">
+            <p>Survey Form</p>
+            <a
+              href="https://codepen.io/Softcorp-Industries/full/xxXRGVb"
+              target="_blank"
+              ><img src="./img/education/Survey Form.png" alt="Survey"
+            /></a>
+          </div>
+          <div class="courseProject">
+            <p>Technical Documentation</p>
+            <a
+              href="https://codepen.io/Softcorp-Industries/full/bGoBqee"
+              target="_blank"
+              ><img
+                src="./img/education/Technical Documentation Page.png"
+                alt="Technical Documentation"
+            /></a>
+          </div>
+          <div class="courseProject">
+            <p>Portfolio Page</p>
+            <a
+              href="https://codepen.io/Softcorp-Industries/full/bGoBqee"
+              target="_blank"
+              ><img
+                src="./img/education/Personal Portfolio Webpage.png"
+                alt="Technical Documentation"
+            /></a>
+          </div>
+        </section>
+      </section>
+      <header class="chapter__header">
+        <article class="chapter__header__title">
+          <h4>JavaScript Algorithms & Data Structures</h4>
+        </article>
+        <section class="chapter__header__body">
+          <article class="reportCard">
+            <p>Report Card:</p>
+            <p>HTML, CSS and Vanilla JavaScript.</p>
+          </article>
+          <div class="showBtn">
+            <button class="btn" id="">Show Courses</button>
+          </div>
+        </section>
+      </header>
+      <h4>W3C Schools</h4>
+      <h3 class="sectionHeader">Skills</h3>
+      <section class="webDevelopment chapter">
+        <header class="chapter__header">
+          <article class="chapter__header__title">
+            <h4>Front-End Web Development</h4>
+          </article>
+          <section class="chapter__header__body">
+            <article class="reportCard">
+              <p>Report Card:</p>
               <p>HTML, CSS and Vanilla JavaScript.</p>
             </article>
             <div class="showBtn">
@@ -344,14 +433,22 @@
         <section class="frontEndDev">
           <ul class="webDevelopment-list frontEndList" id="frontEndList">
             <li class="webDevelopment-list__html listItem">
-              <img src="img/icon/HTML5_logo.svg.png" alt="HTML Logo" width="100px" />
+              <img
+                src="img/icon/HTML5_logo.svg.png"
+                alt="HTML Logo"
+                width="100px"
+              />
               <article class="listItemInfo">
                 <h4>Skill Level:</h4>
                 <p>Intermediate</p>
               </article>
             </li>
             <li class="webDevelopment-list__css listItem">
-              <img src="img/icon/css3-logo3.svg.png" alt="CSS Logo" width="71px" />
+              <img
+                src="img/icon/css3-logo3.svg.png"
+                alt="CSS Logo"
+                width="71px"
+              />
               <article class="listItemInfo">
                 <h4>Skill Level:</h4>
                 <p>Intermediate</p>
@@ -365,28 +462,44 @@
               </article>
             </li>
             <li class="webDevelopment-list__tailwind listItem">
-              <img src="img/icon/tailwind-logo.png" alt="Tailwind Logo" width="90px" />
+              <img
+                src="img/icon/tailwind-logo.png"
+                alt="Tailwind Logo"
+                width="90px"
+              />
               <article class="listItemInfo">
                 <h4>Skill Level:</h4>
                 <p>Novice</p>
               </article>
             </li>
             <li class="webDevelopment-list__bootStrap listItem">
-              <img src="img/icon/bootstrap-logo.png" alt="Bootstrap Logo" width="90px" />
+              <img
+                src="img/icon/bootstrap-logo.png"
+                alt="Bootstrap Logo"
+                width="90px"
+              />
               <article class="listItemInfo">
                 <h4>Skill Level:</h4>
                 <p>Novice</p>
               </article>
             </li>
             <li class="webDevelopment-list__javaScript listItem">
-              <img src="img/icon/javaScript-logo-2-1024px-.svg.png" alt="javaScript Logo" width="90px" />
+              <img
+                src="img/icon/javaScript-logo-2-1024px-.svg.png"
+                alt="javaScript Logo"
+                width="90px"
+              />
               <article class="listItemInfo">
                 <h4>Skill Level:</h4>
                 <p>Intermediate</p>
               </article>
             </li>
             <li class="webDevelopment-list__typeScript listItem">
-              <img src="img/icon/typescript-logo2.png" alt="typeScript Logo" width="90px" />
+              <img
+                src="img/icon/typescript-logo2.png"
+                alt="typeScript Logo"
+                width="90px"
+              />
               <article class="listItemInfo">
                 <h4>Skill Level:</h4>
                 <p>Novice</p>
@@ -407,7 +520,11 @@
               </article>
             </li>
             <li class="webDevelopment-list__jquery listItem">
-              <img src="img/icon/jquery-logo.png" alt="jquery Logo" width="90px" />
+              <img
+                src="img/icon/jquery-logo.png"
+                alt="jquery Logo"
+                width="90px"
+              />
               <article class="listItemInfo">
                 <h4>Skill Level:</h4>
                 <p>Novice</p>
@@ -417,43 +534,59 @@
         </section>
         <header class="chapter__header">
           <article class="chapter__header__title">
-            <h3>Full-Stack Web Development</h3>
+            <h4>Full-Stack Web Development</h4>
           </article>
-          <section class="chapter__header__body">
+          <div class="chapter__header__body">
             <article class="reportCard">
-              <h3>Report Card:</h3>
+              <p>Report Card:</p>
               <p>MERN, MEAN & MEVN Stack</p>
             </article>
             <div class="showBtn">
               <button class="btn" id="fullStackBtn">Show Courses</button>
             </div>
-          </section>
+          </div>
         </header>
         <section class="fullStackDev">
           <ul class="webDevelopment-list fullStackList" id="fullStackList">
             <li class="webDevelopment-list__mongo listItem">
-              <img src="img/icon/mongodb-logo1.png" alt="Mongodb Logo" width="90px" />
+              <img
+                src="img/icon/mongodb-logo1.png"
+                alt="Mongodb Logo"
+                width="90px"
+              />
               <article class="listItemInfo">
                 <h4>Level</h4>
                 <p>Junior</p>
               </article>
             </li>
             <li class="webDevelopment-list__express listItem">
-              <img src="img/icon/express-logo.png" alt="Express Logo" width="90px" />
+              <img
+                src="img/icon/express-logo.png"
+                alt="Express Logo"
+                width="90px"
+              />
               <article class="listItemInfo">
                 <h4>Level</h4>
                 <p>Junior</p>
               </article>
             </li>
             <li class="webDevelopment-list__react listItem">
-              <img src="img/icon/react-logo512.png" alt="React Logo" width="90px" />
+              <img
+                src="img/icon/react-logo512.png"
+                alt="React Logo"
+                width="90px"
+              />
               <article class="listItemInfo">
                 <h4>Level</h4>
                 <p>Junior</p>
               </article>
             </li>
             <li class="webDevelopment-list__node listItem">
-              <img src="img/icon/nodejs-logo.png" alt="Node.js Logo" width="90px" />
+              <img
+                src="img/icon/nodejs-logo.png"
+                alt="Node.js Logo"
+                width="90px"
+              />
               <article class="listItemInfo">
                 <h4>Level</h4>
                 <p>Junior</p>
@@ -467,14 +600,22 @@
               </article>
             </li>
             <li class="webDevelopment-list__angular listItem">
-              <img src="img/icon/angular-logo7.png" alt="Angular Logo" width="90px" />
+              <img
+                src="img/icon/angular-logo7.png"
+                alt="Angular Logo"
+                width="90px"
+              />
               <article class="listItemInfo">
                 <h4>Level</h4>
                 <p>Novice</p>
               </article>
             </li>
             <li class="webDevelopment-list__redux listItem">
-              <img src="img/icon/redux-logo.png" alt="Redux Logo" width="90px" />
+              <img
+                src="img/icon/redux-logo.png"
+                alt="Redux Logo"
+                width="90px"
+              />
               <article class="listItemInfo">
                 <h4>Level</h4>
                 <p>Novice</p>
@@ -491,11 +632,11 @@
         </section>
         <header class="chapter__header">
           <article class="chapter__header__title">
-            <h3>Server-Side Development</h3>
+            <h4>Server-Side Development</h4>
           </article>
           <section class="chapter__header__body">
             <article class="reportCard">
-              <h3>Report Card:</h3>
+              <p>Report Card:</p>
               <p>Focus on Server Side Rendering</p>
             </article>
             <div class="showBtn">
@@ -506,7 +647,11 @@
         <section class="serverSideDev">
           <ul class="webDevelopment-list serverSideList" id="serverSideList">
             <li class="webDevelopment-list__python listItem">
-              <img src="img/icon/Pyhton-logo.png" alt="Python Logo" width="100px" />
+              <img
+                src="img/icon/Pyhton-logo.png"
+                alt="Python Logo"
+                width="100px"
+              />
               <article class="listItemInfo">
                 <h4>Level</h4>
                 <p>Novice</p>
@@ -520,14 +665,22 @@
               </article>
             </li>
             <li class="webDevelopment-list__sql listItem">
-              <img src="img/icon/mySQL-logo3.png" alt="SQL Logo" width="110px" />
+              <img
+                src="img/icon/mySQL-logo3.png"
+                alt="SQL Logo"
+                width="110px"
+              />
               <article class="listItemInfo">
                 <h4>Level</h4>
                 <p>Novice</p>
               </article>
             </li>
             <li class="webDevelopment-list__apache listItem">
-              <img src="img/icon/apache-logo.png" alt="apache Logo" width="90px" />
+              <img
+                src="img/icon/apache-logo.png"
+                alt="apache Logo"
+                width="90px"
+              />
               <article class="listItemInfo">
                 <h4>Level</h4>
                 <p>Novice</p>
@@ -535,55 +688,73 @@
             </li>
           </ul>
         </section>
-    </section>
-    
-    <hr>
-    <div class="idSpacer" id="theFuture"></div>
-    <header class="featureHeader">
-      <h2>The Future</h2>
-    </header>
-    <article class="quote">
-      <p>“My interest is in the future because I am going to spend the rest of my life there.”</p>
-      <p>Anonymous</p>
-    </article>
-    <section class="chapter">
+      </section>
+
+      <hr />
+      <div class="idSpacer" id="theFuture"></div>
+      <header class="featureHeader">
+        <h2>The Future</h2>
+      </header>
+      <article class="quote">
+        <p>
+          “My interest is in the future because I am going to spend the rest of
+          my life there.”
+        </p>
+        <p>Anonymous</p>
+      </article>
+      <section class="chapter">
         <section class="future">
           <p>The Future</p>
           <section class="hands">
             <picture class="hand">
-              <img class="hand__right" src="img/tech_img/possessed-photography-jIBMSMs4_kA-unsplash.jpg" alt="">
+              <img
+                class="hand__right"
+                src="img/tech_img/possessed-photography-jIBMSMs4_kA-unsplash.jpg"
+                alt=""
+              />
             </picture>
             <picture class="hand">
-              <img class="hand__left" src="img/tech_img/possessed-photography-jIBMSMs4_kA-unsplash.jpg" alt="">
+              <img
+                class="hand__left"
+                src="img/tech_img/possessed-photography-jIBMSMs4_kA-unsplash.jpg"
+                alt=""
+              />
             </picture>
           </section>
           <p><span>Is in Your</span> Hands</p>
         </section>
-    </section>
-    <section class="chapter">
+      </section>
+      <section class="chapter">
         <section class="tech">
           <section class="ai">
             <h3>A.I.</h3>
             <picture>
-              <img src="img/tech_img/possessed-photography-YKW0JjP7rlU-unsplash.jpg" alt="">
+              <img
+                src="img/tech_img/possessed-photography-YKW0JjP7rlU-unsplash.jpg"
+                alt=""
+              />
             </picture>
           </section>
           <section class="robotics">
             <h3>Robotics</h3>
             <picture>
-              <img src="img/tech_img/valentin-petkov-uKS_wcTAMZU-unsplash.jpg" alt="">
+              <img
+                src="img/tech_img/valentin-petkov-uKS_wcTAMZU-unsplash.jpg"
+                alt=""
+              />
             </picture>
           </section>
         </section>
-    </section>
-    <hr>
-  </main>
-  <aside>
-    <div class="contactModal">
-      <button class="contactBtn" type="button">Contact</button>
-    </div>
-  </aside>
-  <footer>Copyright &copy 2021 Christopher Guy <span>O/A</span> Softcorp Industries</footer>
-</body>
-
+      </section>
+      <hr />
+    </main>
+    <aside>
+      <div class="contactModal">
+        <button class="contactBtn" type="button">Contact</button>
+      </div>
+    </aside>
+    <footer>
+      Copyright &copy 2021 Christopher Guy <span>O/A</span> Softcorp Industries
+    </footer>
+  </body>
 </html>
