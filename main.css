@@ -42,7 +42,6 @@
 }
 
 body {
-  font-size: 16px;
   background-color: var(--darkModeBg);
 }
 
@@ -70,22 +69,6 @@ h3 {
   font-family: "Audiowide";
 }
 
-p {
-  padding: 1em;
-  line-height: 1.4;
-  font-size: 0.8em;
-  letter-spacing: 1px;
-  font-family: "Roboto";
-}
-p span {
-  font-size: 1.5em;
-  color: #C0FFF4;
-  font-family: "Audiowide";
-  text-shadow: 0px 0px 3px var(--black);
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
 hr {
   margin: auto;
   margin-bottom: 2em;
@@ -110,13 +93,6 @@ footer span {
   color: red;
 }
 
-.test {
-  color: red;
-  background-image: linear-gradient(#800080, #ffc0cb);
-  background-color: yellow;
-  overflow-wrap: break-word;
-}
-
 @media screen and (min-width: 400px) {
   body {
     font-size: 20px;
@@ -129,13 +105,6 @@ footer span {
 }
 @media screen and (min-width: 700px) {
   body {
-    font-size: 28px;
-  }
-
-  p {
-    font-size: 18px;
-  }
-  p span {
     font-size: 28px;
   }
 }
@@ -643,6 +612,20 @@ footer span {
   letter-spacing: 4px;
 }
 
+.welcome p {
+  padding: 1em;
+  line-height: 1.4;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+}
+.welcome p span {
+  font-size: 1.5em;
+  color: #C0FFF4;
+  font-family: "Audiowide";
+  text-shadow: 0px 0px 3px var(--black);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
 .welcome__header {
   color: var(--darkModeTxtClr);
   margin: auto;
@@ -827,7 +810,7 @@ footer span {
   margin-right: 50px;
   letter-spacing: 0.1rem;
   font-family: "Audiowide";
-  color: var(--darkModeTxtClr);
+  color: var(--secondaryClr);
 }
 .cardBox h4:nth-last-child(1) {
   text-align: right;
@@ -1280,10 +1263,6 @@ footer span {
   .tripleMonitors h2:nth-last-child(1) {
     text-align: right;
   }
-
-  .chapter__header__title h1 {
-    font-size: 26px;
-  }
 }
 @media (min-width: 700px) {
   .featureHeader {
@@ -1343,6 +1322,31 @@ footer span {
     max-width: 900px;
   }
 }
+.fccProjects {
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+}
+
+.courseProject {
+  margin: auto;
+  width: 300px;
+  padding: 0.25em;
+  color: var(--secondaryTxt);
+  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
+  border: 2px solid black;
+}
+.courseProject p {
+  text-align: center;
+  font-family: "Audiowide";
+  font-size: 1rem;
+}
+.courseProject a img {
+  width: 100%;
+}
+
 .webDevelopment-list {
   margin: auto;
   max-width: 700px;
@@ -1635,16 +1639,25 @@ footer span {
     scale: 1;
   }
 }
-.chapter__header {
+.sectionHeader {
+  text-align: center;
+  color: var(--secondaryClr);
+  font-size: 2em;
   margin-bottom: 1em;
 }
-.chapter__header__title {
+
+.chapter {
+  margin-bottom: 2em;
+}
+.chapter__header {
+  margin-bottom: 1em;
   text-align: center;
   letter-spacing: 2px;
 }
-.chapter__header__title h3 {
+.chapter__header__title h4 {
   color: var(--darkModeTxtClr);
   font-size: 1.25em;
+  margin-bottom: 1em;
 }
 .chapter__header__body {
   width: 95%;
@@ -1655,27 +1668,26 @@ footer span {
   justify-content: space-evenly;
 }
 .chapter__header__body .reportCard {
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   width: 275px;
   margin: auto;
-  border: 2px solid var(--themeBg);
-  padding: 0.25rem;
+  padding: 0.5rem;
   text-align: center;
-  font-size: 14px;
-  font-weight: 600;
   letter-spacing: 2px;
-  color: Var(--themeBg);
-  background-color: var(--themeSec);
+  background-image: url("./img/backgrounds/clouds_72634.jpg");
   border-radius: 0.5rem;
 }
-.chapter__header__body .reportCard h3 {
-  color: orangered;
-}
-.chapter__header__body .reportCard span {
-  color: orangered;
+.chapter__header__body .reportCard p {
+  line-height: 1.4;
+  font-family: "The Nautigal";
+  font-size: 1.5em;
+  color: var(--secondaryClr);
   font-weight: 900;
 }
-.chapter__header__body .reportCard p {
+.chapter__header__body .reportCard p:nth-child(2) {
+  color: Var(--black);
   font-size: 14px;
+  font-family: "Roboto";
 }
 .chapter__header__body .showBtn {
   display: flex;
@@ -1727,15 +1739,6 @@ footer span {
   .webDevelopment-list .listItem img {
     height: 100px;
     width: 100px;
-  }
-
-  .chapter__header__title h1 {
-    font-size: 18px;
-  }
-}
-@media screen and (min-width: 700px) {
-  .chapter__header__title h1 {
-    font-size: 36px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1980,24 +1983,4 @@ footer span {
   .profile .pastBio, .profile .presentBio {
     max-width: 1000px;
   }
-}
-.fccCourse {
-  margin: auto;
-  width: 90%;
-  max-width: 1000px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-}
-.fccCourse .courseProject {
-  width: 300px;
-  color: var(--darkModeTxtClr);
-}
-.fccCourse .courseProject p {
-  text-align: center;
-  font-family: "Audiowide";
-  font-size: 1rem;
-}
-.fccCourse .courseProject a img {
-  width: 100%;
 }/*# sourceMappingURL=main.css.map */
