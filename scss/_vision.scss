@@ -1,0 +1,510 @@
+@use "_global" as *;
+@use "_mixin" as *;
+
+.cardBox {
+  position: relative;
+  width: 95%;
+  max-width: 850px;
+  margin: 100px auto;
+  transform-style: preserve-3d;
+  h4 {
+    font-size: 1.25em;
+    text-align: left;
+    margin-right: 50px;
+    letter-spacing: 0.1rem;
+    font-family: "Audiowide";
+    color: var(--secondaryClr);
+    //text-shadow: 0px 0px 2px var(--white);
+  }
+  h4:nth-last-child(1) {
+    text-align: right;
+  }
+  .card {
+    @include shadowSm-inset;
+    cursor: pointer;
+    width: 250px;
+    height: 150px;
+    border-radius: 1rem;
+    margin: 50px auto;
+  }
+  .card__content {
+    transform-style: preserve-3d;
+    text-align: center;
+    position: relative;
+    transition: transform 2s;
+  }
+  .card:hover .card__content {
+    transform: rotateY(0.5turn);
+  }
+  .card__back {
+    transform: rotateY(0.5turn);
+  }
+  .card__back,
+  .card__front {
+    transform-style: preserve-3d;
+    position: absolute;
+    margin: auto;
+    background-image: url("img/tech/crop.php.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+    backface-visibility: hidden;
+    width: 250px;
+    height: 150px;
+    color: var(--secondaryTxt);
+    text-shadow: 0px 0px 7px var(--black);
+  }
+  .card__front-title {
+    padding: 0;
+    position: absolute;
+    transform: translateZ(2.5em);
+    top: 0.5em;
+    left: 1em;
+    letter-spacing: 2px;
+    font-size: 22px;
+  }
+  .card__subtitle {
+    padding: 0;
+    transform: translateZ(2.5em);
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.75em;
+    width: 100%;
+    text-align: right;
+    font-size: 32px;
+  }
+  .card__back-title {
+    position: absolute;
+    width: 100%;
+    top: 1em;
+    transform: translateZ(2.5em);
+    font-size: 18px;
+    line-height: 2;
+  }
+}
+.visionSlider {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    overflow: hidden;
+}
+.visionSliderSection {
+    min-width: 100%;
+    margin: 0 auto;
+    padding: 0 .5em;
+}
+
+.displayTablets {
+  max-width: 950px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  margin-bottom: 100px;
+  //display: none;
+}
+
+.tabletBox {
+  //display: none;
+  width: 430px;
+  margin: auto;
+  border-radius: 1.5rem;
+  .tablet {
+    @include tablet;
+    padding: 0.4rem;
+    background-color: rgb(10, 10, 10);
+    border-radius: 1.5rem;
+    text-align: center;
+    &__screen {
+      margin: auto;
+      margin-top: 10px;
+      max-width: 400px;
+      width: 95%;
+      height: 550px;
+      border-radius: 0.75rem;
+      background-color: grey;
+      //overflow: scroll;
+      outline: 2px solid silver;
+      outline-offset: 3px;
+      -moz-outline-radius: 1rem;
+    }
+    &__speakers {
+      display: flex;
+      align-self: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      //margin-bottom: 0.5rem;
+      letter-spacing: 0.1rem;
+      p {
+        font-size: 12px;
+        color: white;
+      }
+      .speaker {
+        font-size: 14px;
+        width: 100px;
+        color: black;
+        padding-top: 0.5rem;
+        background-color: silver;
+        border-radius: 4px 4px 13px 13px;
+        line-height: 0.3;
+      }
+    }
+    &__controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 12px;
+        letter-spacing: 0.1rem;
+        width: 125px;
+        height: 35px;
+        margin: 0px 50px;
+        border-radius: 0.75rem 0.75rem 1.5rem 1.5rem;
+        outline: none;
+        @include tabletBtn-inset;
+      }
+      .fullScreen {
+        cursor: pointer;
+        @include tabletBtn-inset;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        //margin: 5px;
+      }
+      .fullTablet {
+        cursor: pointer;
+        @include tabletBtn-inset;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        //margin: 5px;
+      }
+    }
+  }
+}
+.slider {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  overflow: scroll;
+  background-color: var(--themeBlk);
+  border-radius: 0.75rem;
+  z-index: 30;
+  .slideContainer {
+    margin: 50px auto;
+    width: 95%;
+    max-width: 450px;
+    //border: 2px solid black;
+    color: var(--darkModeTxtClr);
+    border-radius: 0.75rem;
+    h1 {
+      letter-spacing: 2px;
+      padding: 0.5em 1em;
+      font-size: 48px;
+    }
+    h2 {
+      margin: 10px;
+      margin-bottom: 50px;
+      font-size: 22px;
+      letter-spacing: 1px;
+      color: var(--jsThemeClr);
+      text-shadow: 0px 0px 3px var(--black);
+    }
+    h3 {
+      margin: 10px;
+      font-size: 18px;
+      letter-spacing: 1px;
+      color: var(--jsThemeClr);
+      text-shadow: 0px 0px 3px var(--black);
+    }
+    p {
+      font-size: 12px;
+      letter-spacing: 1px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+    picture {
+      margin-bottom: 10px;
+    }
+    article {
+      margin: auto;
+      width: 80%;
+    }
+  }
+  .solar {
+    position: relative;
+    &__img {
+      position: relative;
+      opacity: 0.8;
+      display: block;
+      margin: auto;
+      width: 150px;
+      height: 100px;
+      background-image: url("img/tech_img/manny-becerra-NgdhrwAx0J8-unsplash.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      box-shadow: 0px 0px 5px var(--darkModeTxtClr);
+      border-radius: 1rem;
+      h3 {
+        position: absolute;
+        width: 100%;
+        padding: 0.5rem 0;
+        text-align: center;
+        letter-spacing: 0.15rem;
+        font-size: 10px;
+        color: var(--darkModeBg);
+        //text-shadow: 0px 0px 5px var(--darkModeTxtClr);
+      }
+    }
+  }
+  .change {
+    &__img {
+      position: relative;
+      height: 275px;
+      margin: 25px auto;
+      &__2 {
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        overflow: hidden;
+        z-index: 1;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 0.5rem;
+        }
+      }
+      &__1 {
+        position: absolute;
+        width: 150px;
+        left: 0px;
+        border-radius: 1rem;
+        overflow: hidden;
+        img {
+          width: 100%;
+          border-radius: 0.5rem;
+        }
+      }
+      &__3 {
+        position: absolute;
+        width: 150px;
+        top: 120px;
+        right: 0px;
+        border-radius: 1rem;
+        overflow: hidden;
+        img {
+          width: 100%;
+          border-radius: 0.5rem;
+        }
+      }
+      h4 {
+        font-size: 16px;
+        margin: 5px auto;
+      }
+    }
+  }
+  .rome {
+    position: relative;
+    article {
+      position: relative;
+      background-image: url("img/tech_img/tech_img3.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.8;
+      margin: auto;
+      width: 350px;
+      height: 200px;
+      border-radius: 1rem;
+      box-shadow: 0px 0px 5px var(--darkModeTxtClr);
+      color: var(--white);
+      z-index: 1;
+    }
+    p {
+      margin: 15px;
+      letter-spacing: 0.1rem;
+      line-height: 1.5;
+      font-weight: 700;
+      span {
+        color: var(--jsThemeClr);
+        text-shadow: 0px 0px 3px var(--black);
+      }
+    }
+    p:last-child {
+      text-align: right;
+    }
+    .p1 {
+      position: absolute;
+      top: 10px;
+      left: 70px;
+    }
+    .p2 {
+      position: absolute;
+      top: 85px;
+      left: 5%;
+    }
+    h4 {
+      position: absolute;
+      width: 100%;
+      top: 85%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 20px;
+    }
+  }
+  .why {
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p {
+        line-height: 1.6;
+        margin: 10px auto;
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+    h2 {
+      text-align: center;
+    }
+  }
+}
+.slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.displayPhones {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    margin-bottom: 100px;
+    //display: none;
+  }
+.phones {
+  //display: none;
+  margin: 50px auto;
+  max-width: 900px;
+  .phone {
+    &__samsung {
+      @include tablet;
+      margin: auto;
+      border-radius: 1rem;
+      padding: 1em 0;
+      width: 275px;
+      height: 475px;
+      font-size: 12px;
+      text-align: center;
+      background-color: black;
+      img {
+        padding: 0.25em;
+        width: 95%;
+        height: 90%;
+        border-radius: 0.75rem;
+        background-color: rgb(70, 70, 70);
+        //border: 1px solid silver;
+      }
+      .speakerBar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+      }
+      .controls {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: var(--white);
+      }
+    }
+  }
+}
+.desktop {
+  //display: none;
+  margin-bottom: 100px;
+  &__monitor {
+      margin: auto;
+    //width: 90%;
+    max-width: 950px;
+    max-height: 675px;
+    @include tablet;
+    border-radius: 0.5rem;
+    background-color: black;
+    text-align: center;
+    img {
+      padding: 0.75rem;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.75rem;
+    }
+    p {
+      padding: 0;
+      padding-bottom: 0.5rem;
+      font-size: 12px;
+      margin-top: -10px;
+      color: var(--white);
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media (min-width: 320px) {
+}
+
+@media (min-width: 400px) {
+  .cardBox {
+    h1 {
+      font-size: 2.5em;
+    }
+    h2 {
+      font-size: 2em;
+    }
+  }
+}
+
+@media (min-width: 550px) {
+}
+
+@media (min-width: 700px) {
+  .cardBox {
+    .card__front-title {
+      font-size: 28px;
+      top: 1em;
+      left: 1em;
+    }
+    .card__subtitle {
+      font-size: 40px;
+    }
+    .card__back-title {
+      top: 2em;
+      font-size: 28px;
+    }
+    .card {
+      width: 350px;
+      height: 225px;
+    }
+    .card__back,
+    .card__front {
+      width: 350px;
+      height: 225px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1200px) {
+}

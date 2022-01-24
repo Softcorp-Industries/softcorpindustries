@@ -7,24 +7,25 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1em;
-}
-.courseProject {
-  margin: auto;
-  width: 300px;
-  padding: .25em;
-  color: var(--secondaryTxt);
-  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));;
-  border: 2px solid black;
-      p {
-          text-align: center;
-          font-family: 'Audiowide';
-          font-size: 1rem;;
-      }
-      a {
-          img {
-              width: 100%;
-          }
-      }
+  .listItem {
+    display: none;
+    margin: auto;
+    width: 300px;
+    padding: .25em;
+    color: var(--secondaryTxt);
+    background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));;
+    border: 2px solid black;
+        p {
+            text-align: center;
+            font-family: 'Audiowide';
+            font-size: 1rem;;
+        }
+        a {
+            img {
+                width: 100%;
+            }
+        }
+  }
 }
 .webDevelopment-list {
   margin: auto;
@@ -36,14 +37,15 @@
   text-align: center;
   margin-bottom: 100px;
   .listItem {
-    //@include shadowSm;
+    @include new;
     margin: auto;
     height: 175px;
     width: 145px;
     color: var(--darkModeTxtClr);
-    background-color: var(--themeBlk);
-    border: 1px solid var(--darkModeTxtClr);
-    box-shadow: 0px 0px 4px var(--black);
+    //background-color: var(--themeBlk);
+    background-image: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
+    //border: 1px solid var(--darkModeTxtClr);
+    //box-shadow: 0px 0px 4px var(--black);
     letter-spacing: 2px;
     line-height: 1;
     border-radius: 1rem;
@@ -214,6 +216,9 @@
     }
   }
 }
+.openWebDev.fccProjects .listItem {
+  display: block;
+}
 .openWebDev.frontEndList .listItem {
   display: block;
 }
@@ -234,102 +239,6 @@
   }
 }
 
-
-.sectionHeader {
-  text-align: center;
-  color: var(--secondaryClr);
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-.chapter {
-  margin-bottom: 2em;
-  &__header {
-    margin-bottom: 1em;
-    text-align: center;
-    letter-spacing: 2px;
-    &__title {
-      h4 {
-        color: var(--darkModeTxtClr);
-        font-size: 1.25em;
-        margin-bottom: 1em;
-        }
-    }
-    //text-shadow: 0px 0px 5px var(--black);
-    //background-color: var(--bgFilterDrk);
-    &__body {
-      width: 95%;
-      max-width: 900px;
-      //height: 200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      justify-content: space-evenly;
-      //padding-top: 15px;
-      //background-color: var(--bgFilter);
-      .reportCard {
-        @include darkMode;
-        width: 275px;
-        margin: auto;
-        padding: 0.5rem;
-        text-align: center;
-        letter-spacing: 2px;
-        background-image: url("./img/backgrounds/clouds_72634.jpg");
-        border-radius: 0.5rem;
-        p {
-          line-height: 1.4;
-          font-family: "The Nautigal";
-          font-size: 1.5em;
-          color: var(--secondaryClr);
-          font-weight: 900; 
-        }
-        p:nth-child(2) {
-          color: Var(--black);
-          font-size: 14px;
-          font-family: "Roboto";
-          
-        }
-      }
-      .showBtn {
-        display: flex;
-        align-items: center;
-      }
-    }
-  }
-}
-.showBtn {
-  margin: 15px auto;
-  background: none;
-  //background-color: var(--bgPrimary);
-  //border: 2px solid var(--black);
-  border-radius: 1rem;
-  button {
-    @include darkMode;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    display: block;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    font-family: "Audiowide";
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--bgSecondary);
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: 0.25rem;
-    //background-color: var(--bgFilterDrk);
-    border-radius: 1rem;
-  }
-}
-.btn:hover {
-  background-color: var(--bgSecondary);
-  color: var(--white);
-}
-.idSpacer {
-  content: "";
-  height: 0.25em;
-  //margin-top: 4em;
-}
 
 @media screen and (min-width: 310px) {
 }
