@@ -160,12 +160,14 @@
           </section>
           <h4>Safely</h4>
         </section>
-        <header class="chapter__header">
+        <div class="visionSlider">
+          <div class="visionSliderSection">
+            <header class="chapter__header">
           <article class="chapter__header__title">
             <h4>Desktop Web Sites</h4>
           </article>
-        </header>
-        <section class="desktop">
+            </header>
+            <section class="desktop">
           <div class="desktop__monitor">
             <img
               src="./img/backgrounds/Portfolio2021-10-31_at_10-26-50_Softcorp_Industries1.png"
@@ -173,13 +175,15 @@
             />
             <p>Softcorp TV</p>
           </div>
-        </section>
-        <header class="chapter__header">
+            </section>
+          </div>
+          <div class="visionSliderSection">
+            <header class="chapter__header">
           <article class="chapter__header__title">
-            <h3>Mobile Devices</h3>
+            <h4>Tablets</h4>
           </article>
-        </header>
-        <section class="displayMobile">
+            </header>
+            <section class="displayTablets">
           <section class="tabletBox">
             <section class="tablet">
               <section class="tablet__speakers">
@@ -302,6 +306,15 @@
               </section>
             </section>
           </section>
+            </section>
+          </div>
+          <div class="visionSliderSection">
+            <header class="chapter__header">
+          <article class="chapter__header__title">
+            <h4>Phones</h4>
+          </article>
+            </header>
+            <section class="displayPhones">
           <section class="phones">
             <div class="phone">
               <div class="phone__samsung">
@@ -321,7 +334,9 @@
               </div>
             </div>
           </section>
-        </section>
+            </section>
+          </div>
+        </div>
       </section>
       <hr />
       <div class="idSpacer" id="thePath"></div>
@@ -335,8 +350,9 @@
         </p>
         <p>Malcolm X</p>
       </article>
-      <h3 class="sectionHeader">Courses and Training</h3>
-      <h4>Free Code Camp</h4>
+
+      <h3 class="sectionHeader">Courses</h3>
+      <p class="subHeader">Free Code Camp</p>
       <section class="fccCourse chapter">
         <header class="chapter__header">
           <article class="chapter__header__title">
@@ -345,21 +361,22 @@
           <section class="chapter__header__body">
             <article class="reportCard">
               <p>Report Card:</p>
-              <p>HTML, CSS and Vanilla JavaScript.</p>
+              <p>HTML, CSS.</p>
             </article>
-            <div class="showBtn">
-              <button class="btn" id="">Show Courses</button>
-            </div>
           </section>
         </header>
-        <section class="fccProjects">
-          <div class="courseProject">
+        <div class="showBtn">
+          <button class="btn" id="fccProjectsBtn">Show Projects</button>
+        </div>
+        <section>
+          <ul class="fccProjects" id="fccProjects">
+          <li class="courseProject listItem">
             <p>Tribute Page</p>
             <a href="https://codepen.io/Softcorp-Industries/full/PoJGwGG"
               ><img src="./img/education/Tribute Page.png" alt="Tribute"
             /></a>
-          </div>
-          <div class="courseProject">
+          </li>
+          <li class="courseProject listItem">
             <p>E-Commerce</p>
             <a
               href="https://codepen.io/Softcorp-Industries/full/bGoBqwe"
@@ -368,16 +385,16 @@
                 src="./img/education/Product Landing Page.png"
                 alt="E-Commerce"
             /></a>
-          </div>
-          <div class="courseProject">
+          </li>
+          <li class="courseProject listItem">
             <p>Survey Form</p>
             <a
               href="https://codepen.io/Softcorp-Industries/full/xxXRGVb"
               target="_blank"
               ><img src="./img/education/Survey Form.png" alt="Survey"
             /></a>
-          </div>
-          <div class="courseProject">
+          </li>
+          <li class="courseProject listItem">
             <p>Technical Documentation</p>
             <a
               href="https://codepen.io/Softcorp-Industries/full/bGoBqee"
@@ -386,8 +403,8 @@
                 src="./img/education/Technical Documentation Page.png"
                 alt="Technical Documentation"
             /></a>
-          </div>
-          <div class="courseProject">
+          </li>
+          <li class="courseProject listItem">
             <p>Portfolio Page</p>
             <a
               href="https://codepen.io/Softcorp-Industries/full/bGoBqee"
@@ -396,9 +413,11 @@
                 src="./img/education/Personal Portfolio Webpage.png"
                 alt="Technical Documentation"
             /></a>
-          </div>
+          </li>
+        </ul>
         </section>
       </section>
+      <section class="fccCourse chapter">
       <header class="chapter__header">
         <article class="chapter__header__title">
           <h4>JavaScript Algorithms & Data Structures</h4>
@@ -406,15 +425,16 @@
         <section class="chapter__header__body">
           <article class="reportCard">
             <p>Report Card:</p>
-            <p>HTML, CSS and Vanilla JavaScript.</p>
+            <p>Vanilla JavaScript.</p>
           </article>
-          <div class="showBtn">
-            <button class="btn" id="">Show Courses</button>
-          </div>
         </section>
       </header>
-      <h4>W3C Schools</h4>
-      <h3 class="sectionHeader">Skills</h3>
+      <div class="showBtn">
+        <button class="btn" id="">Show Projects</button>
+      </div>
+    </section>
+      <p class="subHeader">W3C Schools</p>
+      <h3 class="sectionHeader">Training</h3>
       <section class="webDevelopment chapter">
         <header class="chapter__header">
           <article class="chapter__header__title">
@@ -425,11 +445,11 @@
               <p>Report Card:</p>
               <p>HTML, CSS and Vanilla JavaScript.</p>
             </article>
-            <div class="showBtn">
-              <button class="btn" id="frontEndBtn">Show Courses</button>
-            </div>
           </section>
         </header>
+        <div class="showBtn">
+          <button class="btn" id="frontEndBtn">Front-End Training</button>
+        </div>
         <section class="frontEndDev">
           <ul class="webDevelopment-list frontEndList" id="frontEndList">
             <li class="webDevelopment-list__html listItem">
@@ -541,11 +561,11 @@
               <p>Report Card:</p>
               <p>MERN, MEAN & MEVN Stack</p>
             </article>
-            <div class="showBtn">
-              <button class="btn" id="fullStackBtn">Show Courses</button>
-            </div>
           </div>
         </header>
+        <div class="showBtn">
+          <button class="btn" id="fullStackBtn">Full-Stack Training</button>
+        </div>
         <section class="fullStackDev">
           <ul class="webDevelopment-list fullStackList" id="fullStackList">
             <li class="webDevelopment-list__mongo listItem">
@@ -639,11 +659,11 @@
               <p>Report Card:</p>
               <p>Focus on Server Side Rendering</p>
             </article>
-            <div class="showBtn">
-              <button class="btn" id="serverSideBtn">Show Courses</button>
-            </div>
           </section>
         </header>
+        <div class="showBtn">
+          <button class="btn" id="serverSideBtn">Server-Side Training</button>
+        </div>
         <section class="serverSideDev">
           <ul class="webDevelopment-list serverSideList" id="serverSideList">
             <li class="webDevelopment-list__python listItem">
