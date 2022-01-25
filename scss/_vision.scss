@@ -7,7 +7,7 @@
   max-width: 850px;
   margin: 100px auto;
   transform-style: preserve-3d;
-  h4 {
+  p {
     font-size: 1.25em;
     text-align: left;
     margin-right: 50px;
@@ -16,7 +16,7 @@
     color: var(--secondaryClr);
     //text-shadow: 0px 0px 2px var(--white);
   }
-  h4:nth-last-child(1) {
+  p:nth-last-child(1) {
     text-align: right;
   }
   .card {
@@ -51,11 +51,11 @@
     backface-visibility: hidden;
     width: 250px;
     height: 150px;
-    color: var(--secondaryTxt);
     text-shadow: 0px 0px 7px var(--black);
   }
   .card__front-title {
     padding: 0;
+    color: var(--secondaryTxt);
     position: absolute;
     transform: translateZ(2.5em);
     top: 0.5em;
@@ -64,6 +64,7 @@
     font-size: 22px;
   }
   .card__subtitle {
+    color: var(--secondaryTxt);
     padding: 0;
     transform: translateZ(2.5em);
     position: absolute;
@@ -75,6 +76,7 @@
   }
   .card__back-title {
     position: absolute;
+    color: var(--secondaryTxt);
     width: 100%;
     top: 1em;
     transform: translateZ(2.5em);
@@ -82,6 +84,27 @@
     line-height: 2;
   }
 }
+
+.slideLeft {
+  //opacity: 0;
+  transform: translateX(2.5em);
+}
+.slideRight {
+  //opacity: 0;
+  transform: translateX(-2.5em);
+}
+.slideLeft,
+.slideRight {
+  transition: transform 500ms ease-in;
+}
+.slideLeft.slideTxt,
+.slideRight.slideTxt {
+  //opacity: 1;
+  transform: translateX(0);
+}
+
+
+
 .visionSlider {
     display: flex;
     align-items: center;
