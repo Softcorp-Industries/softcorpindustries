@@ -87,20 +87,17 @@
 
 .slideLeft {
   transform: translateX(1.5em);
-  opacity: 0;
 }
 .slideRight {
   transform: translateX(-1.5em);
-  opacity: 0;
 }
 .slideLeft,
 .slideRight {
-  transition: all 500ms ease-in;
+  transition: transform 500ms ease-in;
 }
 .slideLeft.slideTxt,
 .slideRight.slideTxt {
   transform: translateX(0);
-  opacity: 1;
 }
 
 

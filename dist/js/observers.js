@@ -19,6 +19,6 @@ const slideOnScroll = new IntersectionObserver(function(entries, slideOnScroll) 
     })
 }, slideOptions);
 
-txtSliders.forEach(slider => {
-    slideOnScroll.observe(slider);
+txtSliders.forEach(txtslider => {
+    slideOnScroll.observe(txtslider);
 });
