@@ -1,11 +1,9 @@
-alert('Fuck You');
-
 /*  This selects all the elements with a class of txtSlider */
 const txtSliders = document.querySelectorAll('.txtSlider');
 
 /*  This sets the Options for the Observer  */
 const slideOptions = {
-    rootMargin: "0% 0% -50% 0%",
+    rootMargin: "0px 0px -100px 0px",
     threshold: 1
 }
 
@@ -21,6 +19,6 @@ const slideOnScroll = new IntersectionObserver(function(entries, slideOnScroll) 
     })
 }, slideOptions);
 
-txtSliders.forEach(txtSlider => {
-    slideOnScroll.observe(txtSlider);
+txtSliders.forEach(slider => {
+    slideOnScroll.observe(slider);
 });

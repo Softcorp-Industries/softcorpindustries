@@ -1435,21 +1435,24 @@ footer span {
 }
 
 .slideLeft {
-  transform: translateX(2.5em);
+  transform: translateX(1.5em);
+  opacity: 0;
 }
 
 .slideRight {
-  transform: translateX(-2.5em);
+  transform: translateX(-1.5em);
+  opacity: 0;
 }
 
 .slideLeft,
 .slideRight {
-  transition: transform 500ms ease-in;
+  transition: all 500ms ease-in;
 }
 
 .slideLeft.slideTxt,
 .slideRight.slideTxt {
   transform: translateX(0);
+  opacity: 1;
 }
 
 .visionSlider {

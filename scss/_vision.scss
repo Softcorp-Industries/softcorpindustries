@@ -86,21 +86,21 @@
 }
 
 .slideLeft {
-  //opacity: 0;
-  transform: translateX(2.5em);
+  transform: translateX(1.5em);
+  opacity: 0;
 }
 .slideRight {
-  //opacity: 0;
-  transform: translateX(-2.5em);
+  transform: translateX(-1.5em);
+  opacity: 0;
 }
 .slideLeft,
 .slideRight {
-  transition: transform 500ms ease-in;
+  transition: all 500ms ease-in;
 }
 .slideLeft.slideTxt,
 .slideRight.slideTxt {
-  //opacity: 1;
   transform: translateX(0);
+  opacity: 1;
 }
 
 
