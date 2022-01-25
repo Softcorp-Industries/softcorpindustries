@@ -650,7 +650,7 @@ footer span {
 }
 
 .chapter {
-  margin-bottom: 2em;
+  margin-bottom: 5em;
 }
 .chapter__header {
   margin: auto;
@@ -778,6 +778,7 @@ footer span {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1em;
+  list-style: none;
 }
 .fccProjects .listItem {
   display: none;
@@ -1356,7 +1357,7 @@ footer span {
   margin: 100px auto;
   transform-style: preserve-3d;
 }
-.cardBox h4 {
+.cardBox p {
   font-size: 1.25em;
   text-align: left;
   margin-right: 50px;
@@ -1364,7 +1365,7 @@ footer span {
   font-family: "Audiowide";
   color: var(--secondaryClr);
 }
-.cardBox h4:nth-last-child(1) {
+.cardBox p:nth-last-child(1) {
   text-align: right;
 }
 .cardBox .card {
@@ -1400,11 +1401,11 @@ footer span {
           backface-visibility: hidden;
   width: 250px;
   height: 150px;
-  color: var(--secondaryTxt);
   text-shadow: 0px 0px 7px var(--black);
 }
 .cardBox .card__front-title {
   padding: 0;
+  color: var(--secondaryTxt);
   position: absolute;
   transform: translateZ(2.5em);
   top: 0.5em;
@@ -1413,6 +1414,7 @@ footer span {
   font-size: 22px;
 }
 .cardBox .card__subtitle {
+  color: var(--secondaryTxt);
   padding: 0;
   transform: translateZ(2.5em);
   position: absolute;
@@ -1424,11 +1426,30 @@ footer span {
 }
 .cardBox .card__back-title {
   position: absolute;
+  color: var(--secondaryTxt);
   width: 100%;
   top: 1em;
   transform: translateZ(2.5em);
   font-size: 18px;
   line-height: 2;
+}
+
+.slideLeft {
+  transform: translateX(2.5em);
+}
+
+.slideRight {
+  transform: translateX(-2.5em);
+}
+
+.slideLeft,
+.slideRight {
+  transition: transform 500ms ease-in;
+}
+
+.slideLeft.slideTxt,
+.slideRight.slideTxt {
+  transform: translateX(0);
 }
 
 .visionSlider {
@@ -2005,4 +2026,18 @@ footer span {
   .link-container {
     flex-direction: row;
   }
+}
+.hand img {
+  width: 300px;
+}
+.hand__right {
+  transform: rotateX(180deg);
+}
+
+.ai img {
+  width: 300px;
+}
+
+.robotics img {
+  width: 300px;
 }/*# sourceMappingURL=main.css.map */
