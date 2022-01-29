@@ -9,15 +9,8 @@
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Softcorp-Industries/softcorpindustries.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Softcorp-Industries/softcorpindustries/issues"
-  },
-  "homepage": "https://github.com/Softcorp-Industries/softcorpindustries",
+  "homepage": "https://Softcorp-Industries.github.com/softcorpindustries",
   "description": ""
 }
