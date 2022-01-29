@@ -1461,9 +1461,15 @@ footer span {
 }
 
 .visionSliderSection {
+  background-color: blue;
+  background-image: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
   min-width: 100%;
   margin: 0 auto;
   padding: 0 0.5em;
+}
+.visionSliderSection__header {
+  padding: 0.5em 0;
+  font-size: 1.5em;
 }
 
 .displayTablets {
@@ -2027,11 +2033,21 @@ footer span {
     flex-direction: row;
   }
 }
+.hands {
+  display: flex;
+  margin: auto;
+  width: 80%;
+}
+
 .hand img {
-  width: 300px;
+  width: 250px;
+}
+.hand__left {
+  border-radius: 1em 0 0.5em 1em;
 }
 .hand__right {
-  transform: rotateX(180deg);
+  border-radius: 1em 0 0.5em 1em;
+  transform: rotateY(180deg);
 }
 
 .ai img {
