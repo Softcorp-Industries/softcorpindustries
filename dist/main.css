@@ -589,13 +589,12 @@ footer span {
   background-color: var(--themeBlk);
   margin-bottom: 50px;
 }
-.featureHeader p {
-  font-family: "Bedrock";
+.featureHeader .author {
+  font-family: "The Nautigal";
   color: var(--white);
-  font-size: 1em;
+  font-size: 3em;
   font-weight: 600;
   letter-spacing: 3px;
-  padding: 0.25em;
   text-shadow: 0px 0px 3px var(--black);
 }
 .featureHeader h2 {
@@ -743,16 +742,9 @@ footer span {
 }
 
 @media (min-width: 700px) {
-  .featureHeader {
-    padding: 0.5em;
-  }
   .featureHeader h2 {
     font-size: 1.5em;
   }
-  .featureHeader p {
-    padding: 0.5em;
-  }
-
   .chapter__header {
     flex-direction: row;
   }
@@ -766,10 +758,6 @@ footer span {
   }
   .featureHeader h2 {
     font-size: 1.3em;
-  }
-  .featureHeader p {
-    font-size: 0.7em;
-    padding: 0.5em;
   }
 }
 .fccProjects {
@@ -799,14 +787,14 @@ footer span {
 }
 
 .webDevelopment-list {
-  margin: auto;
+  margin: 2em auto;
   max-width: 700px;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 15px;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 4em;
 }
 .webDevelopment-list .listItem {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6), -4px -4px 7px white, 4px 4px 7px rgba(0, 0, 0, 0.4);
@@ -2033,14 +2021,33 @@ footer span {
     flex-direction: row;
   }
 }
+.future {
+  margin: auto;
+  width: 90%;
+  max-width: 800px;
+}
+.future p {
+  font-size: 1.25em;
+  text-align: left;
+  margin-right: 50px;
+  letter-spacing: 0.1rem;
+  font-family: "Audiowide";
+  color: var(--secondaryClr);
+}
+.future p:nth-last-child(1) {
+  text-align: right;
+}
+
 .hands {
   display: flex;
-  margin: auto;
+  margin: 1.5em auto;
   width: 80%;
+  align-items: center;
+  justify-content: center;
 }
 
 .hand img {
-  width: 250px;
+  width: 225px;
 }
 .hand__left {
   border-radius: 1em 0 0.5em 1em;
@@ -2056,4 +2063,4 @@ footer span {
 
 .robotics img {
   width: 300px;
-}/*# sourceMappingURL=main.css.map */
+}

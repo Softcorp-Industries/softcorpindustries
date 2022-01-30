@@ -1,15 +1,33 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
-
+.future {
+    margin: auto;
+    width: 90%;
+    max-width: 800px;
+    p {
+        font-size: 1.25em;
+        text-align: left;
+        margin-right: 50px;
+        letter-spacing: 0.1rem;
+        font-family: "Audiowide";
+        color: var(--secondaryClr);
+        //text-shadow: 0px 0px 2px var(--white);
+      }
+      p:nth-last-child(1) {
+        text-align: right;
+      }
+}
 .hands {
     display: flex;
-    margin: auto;
+    margin: 1.5em auto;
     width: 80%;
+    align-items: center;
+    justify-content: center;
 }
 .hand {
     img {
-        width: 250px;
+        width: 225px;
     }
     &__left {
         border-radius: 1em 0 .5em 1em;

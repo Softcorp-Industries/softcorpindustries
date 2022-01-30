@@ -16,13 +16,13 @@
   background-size: cover;
   background-color: var(--themeBlk);
   margin-bottom: 50px;
-  p {
-    font-family: "Bedrock";
+  .author {
+    font-family: "The Nautigal";
     color: var(--white);
-    font-size: 1em;
+    font-size: 3em;
     font-weight: 600;
     letter-spacing: 3px;
-    padding: .25em;
+    //padding: .25em;
     text-shadow: 0px 0px 3px var(--black);
   }
   h2 {
@@ -179,12 +179,12 @@
 }
 @media (min-width: 700px) {
   .featureHeader{
-    padding: .5em;
+    //padding: .5em;
     h2{
       font-size: 1.5em;
     }
     p{
-      padding: .5em;
+      //padding: .5em;
     }
   }
   .chapter {
@@ -203,8 +203,8 @@
       font-size: 1.3em;
     }
     p{
-      font-size: .7em;
-      padding: .5em;
+      //font-size: .7em;
+      //padding: .5em;
     }
   }
 }
