@@ -36,7 +36,7 @@ const images = document.querySelectorAll('[data-src]');
 /*  sets when the observer fires */
 const imgOptions = {
     thrshold: 0,
-    rootMargin: "0px 0px 300px 0px"
+    rootMargin: "0px 0px 500px 0px"
 }
 
 /*  seperate function outside of the observer   */
