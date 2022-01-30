@@ -28,6 +28,8 @@
 .hand {
     img {
         width: 225px;
+        height:161px ;
+        //border: 1px solid var(--secondaryClr);
     }
     &__left {
         border-radius: 1em 0 .5em 1em;
