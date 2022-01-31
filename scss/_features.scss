@@ -41,9 +41,7 @@
   margin: auto;
   padding: 1rem 1.5rem;
   text-align: center;
-  //background-color: var(--themeBg);
   background-image: url("./img/backgrounds/clouds_72634.jpg");
-  //background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
   border-radius: 1rem;
   color: var(--black);
   margin-bottom: 100px;
@@ -183,9 +181,6 @@
     h2{
       font-size: 1.5em;
     }
-    p{
-      //padding: .5em;
-    }
   }
   .chapter {
     &__header {
@@ -201,10 +196,6 @@
     padding: .5em;
     h2{
       font-size: 1.3em;
-    }
-    p{
-      //font-size: .7em;
-      //padding: .5em;
     }
   }
 }
