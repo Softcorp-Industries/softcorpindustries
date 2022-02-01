@@ -41,13 +41,14 @@
   margin: auto;
   padding: 1rem 1.5rem;
   text-align: center;
-  background-image: url("./img/backgrounds/clouds_72634.jpg");
+  //background-image: url("./img/backgrounds/clouds_72634.jpg");
   border-radius: 1rem;
   color: var(--black);
   margin-bottom: 100px;
-  p:last-child {
+  .author {
+    margin: 1rem 0;
     color: var(--secondaryClr);
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 1.5rem;
     font-weight: 900;
     font-family: "The Nautigal";
@@ -111,7 +112,7 @@
         padding: 0.5rem;
         text-align: center;
         letter-spacing: 2px;
-        background-image: url("./img/backgrounds/clouds_72634.jpg");
+        //background-image: url("./img/backgrounds/clouds_72634.jpg");
         border-radius: 0.5rem;
         p {
           line-height: 1.4;
