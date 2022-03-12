@@ -1,120 +1,83 @@
-const fccProjects = document.getElementById('fccProjects');
-const fccProjectsBtn = document.getElementById('fccProjectsBtn');
+const fccResBtn = document.getElementById('fccResBtn');
+const frontEndBtn = document.getElementById('frontEndBtn');
+const fullStackBtn = document.getElementById('fullStackBtn');
+const serverSideBtn = document.getElementById('serverSideBtn');
 
-let fccProjectsOn = false;
+let fccResBtnOn = false;
+let frontEndListOn = false;
+let fullStackListOn = false;
+let serverSideListOn = false;
 
-function fccProjectsActive() {
+function enableShowBtn(e) {
+    e.target.parentElement.nextElementSibling.firstElementChild.classList.add('openWebDev');
+    fccResBtn.style.color = 'var(--secondaryTxt)';
+    fccResBtn.style.backgroundColor = 'var(--secondaryClr)';
+    //console.log(e.target.previousElementSibling.previousElementSibling);
+}
+function disableShowBtn(e) {
+    e.target.parentElement.nextElementSibling.firstElementChild.classList.remove('openWebDev');
+    fccResBtn.style.color = 'var(--secondaryClr)';
+    fccResBtn.style.backgroundColor = 'var(--secondaryTxt)';
+    fccResBtn.style.boxShadow = 'inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6)';
+    //console.log(e.target.previousElementSibling.previousElementSibling);
+}
+
+function showFccRes() {
     document.addEventListener('DOMContentLoaded', () => {
-        fccProjectsBtn.addEventListener('click', () => {
-            if (!fccProjectsOn) {
-                // console.log('Front End Button Clicked')
-                fccProjects.classList.add('openWebDev');
-                fccProjectsBtn.style.color = 'var(--secondaryTxt)';
-                fccProjectsBtn.style.backgroundColor = 'var(--secondaryClr)';
-                //frontEndBtn.style.border = '2px solid whitesmoke';
-                //fccProjectsBtn.style.boxShadow = 'none';
-                fccProjectsOn = true;
+        fccResBtn.addEventListener('click', (e) => {
+            if (!fccResBtnOn) {
+                enableShowBtn(e);
+                fccResBtnOn = true;
             } else {
-                fccProjects.classList.remove('openWebDev');
-                fccProjectsBtn.style.color = '';
-                fccProjectsBtn.style.backgroundColor = '';
-                //frontEndBtn.style.border = 'none';
-                fccProjectsBtn.style.boxShadow = 'inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6)';
-                fccProjectsOn = false;
+                disableShowBtn(e);
+                fccResBtnOn = false;
             }
         })
     })
 }
-fccProjectsActive()
+showFccRes();
 
-
-const frontEndList = document.getElementById('frontEndList');
-const frontEndBtn = document.getElementById('frontEndBtn');
-
-let frontEndListOn = false;
-
-function fronEndListActive() {
+function ShowFrontEndList() {
     document.addEventListener('DOMContentLoaded', () => {
-        frontEndBtn.addEventListener('click', () => {
+        frontEndBtn.addEventListener('click', (e) => {
             if (!frontEndListOn) {
-                // console.log('Front End Button Clicked')
-                frontEndList.classList.add('openWebDev');
-                frontEndBtn.style.color = 'var(--secondaryTxt)';
-                frontEndBtn.style.backgroundColor = 'var(--secondaryClr';
-                //frontEndBtn.style.border = '2px solid whitesmoke';
-                //frontEndBtn.style.boxShadow = 'none';
+                enableShowBtn(e);
                 frontEndListOn = true;
             } else {
-                frontEndList.classList.remove('openWebDev');
-                frontEndBtn.style.color = '';
-                frontEndBtn.style.backgroundColor = '';
-                //frontEndBtn.style.border = 'none';
-                frontEndBtn.style.boxShadow = 'inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6)';
+                disableShowBtn(e);
                 frontEndListOn = false;
             }
         })
     })
 }
-fronEndListActive()
+ShowFrontEndList()
 
-
-
-const fullStackList = document.getElementById('fullStackList');
-const fullStackBtn = document.getElementById('fullStackBtn');
-
-let fullStackListOn = false;
-
-function fullStackListActive() {
+function showFullStackList() {
     document.addEventListener('DOMContentLoaded', () => {
-        fullStackBtn.addEventListener('click', () => {
+        fullStackBtn.addEventListener('click', (e) => {
             if (!fullStackListOn) {
-                // console.log('Full Stack Button Clicked')
-                fullStackList.classList.add('openWebDev')
-                fullStackBtn.style.color = 'var(--secondaryTxt)';
-                fullStackBtn.style.backgroundColor = 'var(--secondaryClr';
-                //fullStackBtn.style.border = '2px solid var(--jsThemeClr)';
-                //fullStackBtn.style.boxShadow = 'none';
+                enableShowBtn(e);
                 fullStackListOn = true;
             } else {
-                fullStackList.classList.remove('openWebDev')
-                fullStackBtn.style.color = '';
-                fullStackBtn.style.backgroundColor = '';
-                //fullStackBtn.style.border = '1px solid purple';
-                fullStackBtn.style.boxShadow = 'inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6)';
+                disableShowBtn(e);
                 fullStackListOn = false;
             }
         })
     })
 }
-fullStackListActive()
+showFullStackList();
 
-
-
-const serverSideList = document.getElementById('serverSideList');
-const serverSideBtn = document.getElementById('serverSideBtn');
-
-let serverSideListOn = false;
-
-function serverSideListActive() {
+function showServerSideList() {
     document.addEventListener('DOMContentLoaded', () => {
-        serverSideBtn.addEventListener('click', () => {
+        serverSideBtn.addEventListener('click', (e) => {
             if (!serverSideListOn) {
-                // console.log('Server Side Button Clicked')
-                serverSideList.classList.add('openWebDev')
-                serverSideBtn.style.color = 'var(--secondaryTxt)';
-                serverSideBtn.style.backgroundColor = 'var(--secondaryClr)';
-                //serverSideBtn.style.border = '2px solid whitesmoke'
-                //serverSideBtn.style.boxShadow = 'none'
+                enableShowBtn(e);
                 serverSideListOn = true;
             } else {
-                serverSideList.classList.remove('openWebDev')
-                serverSideBtn.style.color = '';
-                serverSideBtn.style.backgroundColor = ''
-                //serverSideBtn.style.border = '1px solid purple'
-                serverSideBtn.style.boxShadow = 'inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6)'
+                disableShowBtn(e);
                 serverSideListOn = false;
             }
         })
     })
 }
-serverSideListActive()
+showServerSideList();

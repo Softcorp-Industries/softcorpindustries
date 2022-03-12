@@ -704,20 +704,16 @@ footer span {
   align-items: center;
 }
 
-.showBtn {
+button {
   margin: 15px auto;
   width: 50%;
-  max-width: 500px;
   background: none;
   border-radius: 1rem;
-}
-.showBtn button {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   cursor: pointer;
   outline: none;
   border: none;
   display: block;
-  width: 100%;
   padding: 0.5rem 1rem;
   font-family: "Audiowide";
   font-size: 14px;

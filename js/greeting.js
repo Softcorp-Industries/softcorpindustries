@@ -23,7 +23,7 @@ let captionText = document.getElementById("caption");
 
 certImg1.onclick = function() {
     certModal1.style.display = "block";
-    modalImg1.src = this.src;
+    modalImg1.dataset.src = this.dataset.src;
     captionText.innerHTML = this.alt;
 }
 
