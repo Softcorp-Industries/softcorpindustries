@@ -135,19 +135,19 @@
     }
   }
 }
-.showBtn {
-  margin: 15px auto;
-  width: 50%;
-  max-width: 500px;
-  background: none;
-  border-radius: 1rem;
+
   button {
+    margin: 15px auto;
+    width: 50%;
+    //max-width: 500px;
+    background: none;
+    border-radius: 1rem;
     @include darkMode;
     cursor: pointer;
     outline: none;
     border: none;
     display: block;
-    width: 100%;
+    //width: 100%;
     padding: 0.5rem 1rem;
     font-family: "Audiowide";
     font-size: 14px;
@@ -159,7 +159,7 @@
     background-color: var(--secondaryTxt);
     border-radius: 1rem;
   }
-}
+
 .btn:hover {
   background-color: var(--secondaryClr);
   color: var(--secondaryTxt);
