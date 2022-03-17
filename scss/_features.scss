@@ -19,7 +19,7 @@
   .author {
     font-family: "The Nautigal";
     color: var(--white);
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 600;
     letter-spacing: 3px;
     //padding: .25em;
@@ -28,7 +28,7 @@
   h2 {
     font-family: "audiowide", cursive;
     text-shadow: 0px 0px 5px var(--black);
-    font-size: 1.8em;
+    font-size: 1.75em;
     font-weight: 900;
     color: var(--secondaryTxt);
     letter-spacing: 4px;
@@ -48,27 +48,27 @@
   .author {
     margin: 1rem 0;
     color: var(--secondaryClr);
-    font-size: 3rem;
-    line-height: 1.5rem;
+    font-size: 3em;
+    line-height: .5em;
     font-weight: 900;
     font-family: "The Nautigal";
     //text-shadow: 0px 0px 3px var(--black);
   }
   p {
-    font-size: 1.2rem;
+    font-size: 1em;
     padding: .2rem;
     letter-spacing: 1px;
   }
 }
 .sectionHeader {
   text-align: center;
-  color: var(--secondaryClr);
+  color: var(--txtChange);
   font-size: 2em;
   margin-bottom: 1em;
 }
 .subHeader {
   margin: 1em auto;
-  color: var(--secondaryClr);
+  color: var(--txtChange);
   font-family: "Roboto";
   font-size: 1.5em;
   font-weight: 700;

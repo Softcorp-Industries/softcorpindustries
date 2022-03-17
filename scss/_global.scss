@@ -5,6 +5,7 @@
   --primaryBg: #e3e3e3;
   --secondaryClr: purple;
   --secondaryTxt: #C0FFF4;
+  --txtChange: purple;
 
   --bgGradient: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
 
@@ -64,6 +65,7 @@ body[data-darkMode="darkMode"] {
   --themeBlk: rgb(99, 99, 99); // from whitesmoke
   --themeBg: black;
   --themeSec: yellow;
+  --txtChange: #C0FFF4;
 }
 
 body.transition,
@@ -124,14 +126,14 @@ footer span {
 
 @media screen and (min-width: 700px) {
   body{
-    font-size: 28px;
+    //font-size: 28px;
   }
   
 }
 
 @media screen and (min-width: 1024px) {
   body{
-    font-size: 32px;
+    //font-size: 32px;
   }
 }
 

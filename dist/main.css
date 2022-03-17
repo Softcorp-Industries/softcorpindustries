@@ -2,6 +2,7 @@
   --primaryBg: #e3e3e3;
   --secondaryClr: purple;
   --secondaryTxt: #C0FFF4;
+  --txtChange: purple;
   --bgGradient: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
   --jsThemeClr: yellow;
   --htmlThemeClr: orangered;
@@ -54,6 +55,7 @@ body[data-darkMode=darkMode] {
   --themeBlk: rgb(99, 99, 99);
   --themeBg: black;
   --themeSec: yellow;
+  --txtChange: #C0FFF4;
 }
 
 body.transition,
@@ -101,16 +103,6 @@ footer span {
 @media screen and (min-width: 550px) {
   body {
     font-size: 24px;
-  }
-}
-@media screen and (min-width: 700px) {
-  body {
-    font-size: 28px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  body {
-    font-size: 32px;
   }
 }
 .darkMode {
@@ -220,14 +212,14 @@ footer span {
   align-items: left;
   top: 1.5em;
   left: 0.75em;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2.5em;
+  height: 2.5em;
   border-radius: 50%;
   transition: all 0.5s ease-in-out;
 }
 .navBtn__menu__btn {
-  width: 1.2em;
-  height: 0.14em;
+  width: 2.25em;
+  height: 0.24em;
   border-radius: 25%;
   background-color: #C0FFF4;
   box-shadow: 0px 0px 2px var(--black);
@@ -235,18 +227,18 @@ footer span {
 .navBtn__menu__btn::after, .navBtn__menu__btn::before {
   content: "";
   position: absolute;
-  width: 1.2em;
-  height: 0.14em;
+  width: 2.25em;
+  height: 0.24em;
   border-radius: 25%;
   background-color: var(--secondaryClr);
   box-shadow: 0px 0px 2px var(--black);
   transition: all 0.5s ease-in-out;
 }
 .navBtn__menu__btn::before {
-  transform: translateY(-0.3em);
+  transform: translateY(-0.45em);
 }
 .navBtn__menu__btn::after {
-  transform: translateY(0.3em);
+  transform: translateY(0.45em);
 }
 
 .siteNav {
@@ -592,7 +584,7 @@ footer span {
 .featureHeader .author {
   font-family: "The Nautigal";
   color: var(--white);
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 600;
   letter-spacing: 3px;
   text-shadow: 0px 0px 3px var(--black);
@@ -600,7 +592,7 @@ footer span {
 .featureHeader h2 {
   font-family: "audiowide", cursive;
   text-shadow: 0px 0px 5px var(--black);
-  font-size: 1.8em;
+  font-size: 1.75em;
   font-weight: 900;
   color: var(--secondaryTxt);
   letter-spacing: 4px;
@@ -620,27 +612,27 @@ footer span {
 .quote .author {
   margin: 1rem 0;
   color: var(--secondaryClr);
-  font-size: 3rem;
-  line-height: 1.5rem;
+  font-size: 3em;
+  line-height: 0.5em;
   font-weight: 900;
   font-family: "The Nautigal";
 }
 .quote p {
-  font-size: 1.2rem;
+  font-size: 1em;
   padding: 0.2rem;
   letter-spacing: 1px;
 }
 
 .sectionHeader {
   text-align: center;
-  color: var(--secondaryClr);
+  color: var(--txtChange);
   font-size: 2em;
   margin-bottom: 1em;
 }
 
 .subHeader {
   margin: 1em auto;
-  color: var(--secondaryClr);
+  color: var(--txtChange);
   font-family: "Roboto";
   font-size: 1.5em;
   font-weight: 700;
@@ -901,7 +893,7 @@ button {
   margin-bottom: 4em;
 }
 .webDevelopment-list .listItem {
-  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6), -4px -4px 7px white, 4px 4px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   margin: auto;
   height: 175px;
   width: 145px;
@@ -1455,7 +1447,7 @@ button {
   margin-right: 50px;
   letter-spacing: 0.1rem;
   font-family: "Audiowide";
-  color: var(--secondaryClr);
+  color: var(--txtChange);
 }
 .cardBox p:nth-last-child(1) {
   text-align: right;
@@ -1498,19 +1490,18 @@ button {
   padding: 0;
   color: var(--secondaryTxt);
   position: absolute;
-  transform: translateZ(2.5em);
-  top: 0.5em;
-  left: 1em;
+  transform: translateZ(2.5rem);
+  top: 0.5rem;
+  left: 1rem;
   letter-spacing: 2px;
   font-size: 22px;
 }
 .cardBox .card__subtitle {
   color: var(--secondaryTxt);
-  padding: 0;
-  transform: translateZ(2.5em);
+  padding-right: 10px;
+  transform: translateZ(2.5rem);
   position: absolute;
-  bottom: 0.5em;
-  right: 0.75em;
+  bottom: 0.5rem;
   width: 100%;
   text-align: right;
   font-size: 32px;
@@ -1519,10 +1510,11 @@ button {
   position: absolute;
   color: var(--secondaryTxt);
   width: 100%;
-  top: 1em;
-  transform: translateZ(2.5em);
+  top: 55px;
+  padding: 10px;
+  transform: translateZ(2.5rem);
   font-size: 18px;
-  line-height: 2;
+  line-height: 1;
 }
 
 .slideLeft {
@@ -1561,6 +1553,9 @@ button {
 .visionSliderSection__header {
   padding: 0.5em 0;
   font-size: 1.5em;
+  color: var(--secondaryTxt);
+  font-family: "Audiowide";
+  text-align: center;
 }
 
 .displayTablets {
@@ -1569,6 +1564,7 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   margin-bottom: 100px;
+  display: none;
 }
 
 .tabletBox {
@@ -1850,6 +1846,7 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   margin-bottom: 100px;
+  display: none;
 }
 
 .phones {
@@ -1889,7 +1886,7 @@ button {
 }
 
 .desktop {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .desktop__monitor {
   margin: auto;
@@ -1954,9 +1951,8 @@ button {
 }
 .welcome p span {
   font-size: 1.5em;
-  color: #c0fff4;
+  color: var(--txtChange);
   font-family: "Audiowide";
-  text-shadow: 0px 0px 3px var(--black);
   font-weight: 900;
   letter-spacing: 2px;
 }
@@ -1969,7 +1965,6 @@ button {
 
 .link-container {
   max-width: 1200px;
-  padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1982,7 +1977,7 @@ button {
 }
 
 .links {
-  width: 95%;
+  width: 90%;
   max-width: 1200px;
   margin: auto;
 }
@@ -1991,24 +1986,21 @@ button {
 }
 
 .link {
-  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6), -4px -4px 7px white, 4px 4px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   display: flex;
   cursor: pointer;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  min-width: 200px;
-  height: 175px;
   text-align: center;
+  width: 250px;
   letter-spacing: 1px;
   background-image: linear-gradient(to left top, #c0fff4, var(--secondaryClr));
-  border-radius: 1rem;
-  margin: auto;
-  margin-bottom: 25px;
+  border-radius: 0.5em;
+  margin: 2em auto;
 }
 .link a {
-  width: 100%;
-  height: 100%;
+  display: block;
+  margin: auto;
 }
 .link a p {
   line-height: 1.4;
@@ -2024,6 +2016,7 @@ button {
 .link a img {
   width: 90%;
   border-radius: 0.5rem;
+  margin-bottom: 0.25em;
 }
 
 .link:hover {
@@ -2078,7 +2071,7 @@ button {
   width: 100%;
   height: 100%;
   opacity: 0.8;
-  border: 3px solid var(--secondaryClr);
+  border: 2px solid black;
 }
 .tripleMonitors .imgs .img1 {
   z-index: 1;
@@ -2114,14 +2107,14 @@ button {
     text-align: right;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   .link {
-    margin: 0;
     margin-left: auto;
   }
 
   .link-container {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 .future {
@@ -2150,8 +2143,8 @@ button {
 }
 
 .hand img {
-  width: 225px;
-  height: 161px;
+  width: 9.25em;
+  height: 7.75em;
 }
 .hand__left {
   border-radius: 1em 0 0.5em 1em;

@@ -35,8 +35,6 @@ function showFccRes() {
         })
     })
 }
-showFccRes();
-
 function ShowFrontEndList() {
     document.addEventListener('DOMContentLoaded', () => {
         frontEndBtn.addEventListener('click', (e) => {
@@ -50,8 +48,6 @@ function ShowFrontEndList() {
         })
     })
 }
-ShowFrontEndList()
-
 function showFullStackList() {
     document.addEventListener('DOMContentLoaded', () => {
         fullStackBtn.addEventListener('click', (e) => {
@@ -65,8 +61,6 @@ function showFullStackList() {
         })
     })
 }
-showFullStackList();
-
 function showServerSideList() {
     document.addEventListener('DOMContentLoaded', () => {
         serverSideBtn.addEventListener('click', (e) => {
@@ -80,4 +74,8 @@ function showServerSideList() {
         })
     })
 }
+
+showFccRes();
+ShowFrontEndList();
+showFullStackList();
 showServerSideList();

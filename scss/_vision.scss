@@ -13,7 +13,7 @@
     margin-right: 50px;
     letter-spacing: 0.1rem;
     font-family: "Audiowide";
-    color: var(--secondaryClr);
+    color: var(--txtChange);
     //text-shadow: 0px 0px 2px var(--white);
   }
   p:nth-last-child(1) {
@@ -57,19 +57,18 @@
     padding: 0;
     color: var(--secondaryTxt);
     position: absolute;
-    transform: translateZ(2.5em);
-    top: 0.5em;
-    left: 1em;
+    transform: translateZ(2.5rem);
+    top: 0.5rem;
+    left: 1rem;
     letter-spacing: 2px;
     font-size: 22px;
   }
   .card__subtitle {
     color: var(--secondaryTxt);
-    padding: 0;
-    transform: translateZ(2.5em);
+    padding-right: 10px;
+    transform: translateZ(2.5rem);
     position: absolute;
-    bottom: 0.5em;
-    right: 0.75em;
+    bottom: 0.5rem;
     width: 100%;
     text-align: right;
     font-size: 32px;
@@ -78,10 +77,11 @@
     position: absolute;
     color: var(--secondaryTxt);
     width: 100%;
-    top: 1em;
-    transform: translateZ(2.5em);
+    top: 55px;
+    padding: 10px;
+    transform: translateZ(2.5rem);
     font-size: 18px;
-    line-height: 2;
+    line-height: 1;
   }
 }
 
@@ -101,23 +101,30 @@
 }
 
 .visionSlider {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    width: 100%;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  overflow: hidden;
+}
+.visionSliderSection {
+  background-color: blue;
+  background-image: linear-gradient(
+    to left top,
+    var(--secondaryTxt),
+    var(--secondaryClr)
+  );
+  //height: 820px;
+  min-width: 100%;
+  margin: 0 auto;
+  padding: 0 0.5em;
+  &__header {
+    padding: 0.5em 0;
+    font-size: 1.5em;
+    color: var(--secondaryTxt);
+    font-family: "Audiowide";
+    text-align: center;
   }
-  .visionSliderSection {
-    background-color: blue;
-    background-image: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
-    //height: 820px;
-    min-width: 100%;
-    margin: 0 auto;
-    padding: 0 .5em;
-    &__header {
-      padding: .5em 0;
-      font-size: 1.5em;
-    }
 }
 
 .displayTablets {
@@ -126,7 +133,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   margin-bottom: 100px;
-  //display: none;
+  display: none;
 }
 .tabletBox {
   //display: none;
@@ -409,13 +416,13 @@
   display: none;
 }
 .displayPhones {
-    max-width: 950px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    margin-bottom: 100px;
-    //display: none;
-  }
+  max-width: 950px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  margin-bottom: 100px;
+  display: none;
+}
 .phones {
   //display: none;
   margin: 50px auto;
@@ -457,9 +464,9 @@
 }
 .desktop {
   //display: none;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   &__monitor {
-      margin: auto;
+    margin: auto;
     //width: 90%;
     max-width: 950px;
     max-height: 675px;
