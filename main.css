@@ -313,9 +313,9 @@ footer span {
 .pageNav .pageNav-list .cHeader {
   display: none;
   margin-bottom: 15px;
-  color: orangered;
+  color: var(--txtChange);
   letter-spacing: 0.15em;
-  text-shadow: 0px 0px 3px var(--black);
+  font-weight: 900;
 }
 .pageNav .pageNav-list .pageNav-listItem {
   margin-bottom: 7px;
@@ -344,8 +344,9 @@ footer span {
   color: white;
 }
 .pageNav .pageNav-list a:hover {
-  color: var(--white);
+  color: var(--secondaryClr);
   box-shadow: none;
+  font-weight: 900;
 }
 .pageNav .pageNav-list a:active {
   width: 100%;
@@ -421,11 +422,23 @@ footer span {
   -webkit-animation-delay: 450ms;
           animation-delay: 450ms;
 }
+.openNav .pageNav-listItem:nth-child(6) {
+  -webkit-animation: navBarAn 300ms ease-in forwards;
+          animation: navBarAn 300ms ease-in forwards;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+.openNav .pageNav-listItem:nth-child(7) {
+  -webkit-animation: navBarAn 300ms ease-in forwards;
+          animation: navBarAn 300ms ease-in forwards;
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
+}
 
 @-webkit-keyframes chapterH {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(-35px);
   }
   100% {
     opacity: 1;
@@ -436,7 +449,7 @@ footer span {
 @keyframes chapterH {
   0% {
     opacity: 0;
-    transform: translateY(-50px);
+    transform: translateY(-35px);
   }
   100% {
     opacity: 1;
@@ -572,9 +585,9 @@ footer span {
   text-align: center;
   margin: auto;
   margin-top: 2em;
-  padding: 1em;
-  width: 80%;
-  max-width: 650px;
+  padding: 1em 0;
+  width: 95%;
+  max-width: 600px;
   border-radius: 1rem;
   background-image: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
   background-size: cover;
@@ -590,7 +603,6 @@ footer span {
   text-shadow: 0px 0px 3px var(--black);
 }
 .featureHeader h2 {
-  font-family: "audiowide", cursive;
   text-shadow: 0px 0px 5px var(--black);
   font-size: 1.75em;
   font-weight: 900;
@@ -602,12 +614,11 @@ footer span {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   width: 95%;
   max-width: 500px;
-  margin: auto;
+  margin: 3em auto;
   padding: 1rem 1.5rem;
   text-align: center;
   border-radius: 1rem;
   color: var(--black);
-  margin-bottom: 100px;
 }
 .quote .author {
   margin: 1rem 0;
@@ -618,24 +629,22 @@ footer span {
   font-family: "The Nautigal";
 }
 .quote p {
-  font-size: 1em;
+  font-size: 0.95em;
   padding: 0.2rem;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .sectionHeader {
   text-align: center;
-  color: var(--txtChange);
+  color: var(--darkModeTxtClr);
   font-size: 2em;
-  margin-bottom: 1em;
+  margin: 1em;
 }
 
 .subHeader {
   margin: 1em auto;
-  color: var(--txtChange);
-  font-family: "Roboto";
+  color: var(--darkModeTxtClr);
   font-size: 1.5em;
-  font-weight: 700;
   text-align: center;
   letter-spacing: 2px;
 }
@@ -646,76 +655,64 @@ footer span {
 .chapter__header {
   margin: auto;
   margin-bottom: 2em;
-  width: 90%;
   max-width: 1000px;
   margin-bottom: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
   letter-spacing: 2px;
 }
-.chapter__header__title h4 {
+.chapter__header__title {
   text-align: center;
-  width: 90%;
-  max-width: 400px;
-  color: var(--secondaryTxt);
+  width: 100%;
+  color: var(--darkModeTxtClr);
   font-size: 1em;
-  margin: auto;
-  text-shadow: 0px 0px 3px var(--black);
 }
-.chapter__header__body {
-  width: 90%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-}
-.chapter__header__body .reportCard {
+
+.reportCard {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-  width: 275px;
+  width: 90%;
+  max-width: 600px;
   margin: auto;
-  padding: 0.5rem;
+  padding: 1.5em 0.25em;
   text-align: center;
   letter-spacing: 2px;
   border-radius: 0.5rem;
 }
-.chapter__header__body .reportCard p {
-  line-height: 1.4;
-  font-family: "The Nautigal";
-  font-size: 1.5em;
+.reportCard p {
+  padding-bottom: 0.25em;
+  line-height: 1.3;
+}
+.reportCard p:nth-child(1) {
   color: var(--secondaryClr);
+  font-size: 2.75em;
   font-weight: 900;
+  font-family: "The Nautigal";
 }
-.chapter__header__body .reportCard p:nth-child(2) {
-  color: Var(--black);
-  font-size: 14px;
-  font-family: "Roboto";
-}
-.chapter__header__body .showBtn {
+
+.showBtn {
   display: flex;
   align-items: center;
 }
 
 button {
-  margin: 15px auto;
-  width: 50%;
-  background: none;
-  border-radius: 1rem;
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   cursor: pointer;
-  outline: none;
-  border: none;
   display: block;
-  padding: 0.5rem 1rem;
-  font-family: "Audiowide";
-  font-size: 14px;
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  padding: 0.75em 0;
+  font-size: 1em;
   font-weight: 600;
-  color: var(--secondaryClr);
+  font-family: "Lobster";
+  color: var(--secondaryTxt);
   text-align: center;
   text-decoration: none;
   letter-spacing: 0.25rem;
-  background-color: var(--secondaryTxt);
-  border-radius: 1rem;
+  background: none;
+  background-color: var(--secondaryClr);
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
 }
 
 .btn:hover {
@@ -724,15 +721,10 @@ button {
 }
 
 .idSpacer {
-  content: "";
-  height: 0.25em;
+  padding-top: 0.75em;
 }
 
 @media (min-width: 700px) {
-  .featureHeader h2 {
-    font-size: 1.5em;
-  }
-
   .chapter__header {
     flex-direction: row;
   }
@@ -740,16 +732,8 @@ button {
     margin-left: auto;
   }
 }
-@media (min-width: 1024px) {
-  .featureHeader {
-    padding: 0.5em;
-  }
-  .featureHeader h2 {
-    font-size: 1.3em;
-  }
-}
 .fccProjects {
-  margin: auto;
+  margin: 1.5em auto;
   width: 90%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1443,14 +1427,10 @@ button {
 }
 .cardBox p {
   font-size: 1.25em;
-  text-align: left;
   margin-right: 50px;
   letter-spacing: 0.1rem;
   font-family: "Audiowide";
   color: var(--txtChange);
-}
-.cardBox p:nth-last-child(1) {
-  text-align: right;
 }
 .cardBox .card {
   box-shadow: inset -4px -4px 7px #fff, inset 4px 4px 7px rgba(0, 0, 0, 0.4);
@@ -1518,11 +1498,12 @@ button {
 }
 
 .slideLeft {
-  transform: translateX(1.5em);
+  transform: translateX(-1.5em);
 }
 
 .slideRight {
-  transform: translateX(-1.5em);
+  text-align: right;
+  transform: translateX(1.5em);
 }
 
 .slideLeft,
@@ -1544,15 +1525,13 @@ button {
 }
 
 .visionSliderSection {
-  background-color: blue;
-  background-image: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
   min-width: 100%;
   margin: 0 auto;
   padding: 0 0.5em;
 }
 .visionSliderSection__header {
   padding: 0.5em 0;
-  font-size: 1.5em;
+  font-size: 1.25em;
   color: var(--secondaryTxt);
   font-family: "Audiowide";
   text-align: center;
@@ -1943,24 +1922,22 @@ button {
     height: 225px;
   }
 }
-.welcome p {
+.welcome__header {
   padding: 1em;
   line-height: 1.4;
-  font-size: 0.8em;
   letter-spacing: 1px;
+  color: var(--darkModeTxtClr);
+  margin: auto;
+  width: 95%;
+  max-width: 800px;
+  font-size: 1em;
 }
-.welcome p span {
+.welcome__header span {
   font-size: 1.5em;
   color: var(--txtChange);
   font-family: "Audiowide";
   font-weight: 900;
   letter-spacing: 2px;
-}
-.welcome__header {
-  color: var(--darkModeTxtClr);
-  margin: auto;
-  width: 95%;
-  max-width: 800px;
 }
 
 .link-container {
@@ -1973,7 +1950,18 @@ button {
   margin: 50px auto;
 }
 .link-container p {
-  max-width: 750px;
+  padding: 1em;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  max-width: 700px;
+  font-size: 0.9em;
+}
+.link-container p span {
+  font-size: 1.5em;
+  color: var(--txtChange);
+  font-family: "Audiowide";
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 .links {
