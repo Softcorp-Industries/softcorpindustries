@@ -2,11 +2,15 @@
 @use "_mixin" as *;
 
 .welcome {
-  p {
+  &__header {
     padding: 1em;
     line-height: 1.4;
-    font-size: 0.8em;
     letter-spacing: 1px;
+    color: var(--darkModeTxtClr);
+    margin: auto;
+    width: 95%;
+    max-width: 800px;
+    font-size: 1em;
     span {
       font-size: 1.5em;
       color: var(--txtChange);
@@ -15,12 +19,6 @@
       font-weight: 900;
       letter-spacing: 2px;
     }
-  }
-  &__header {
-    color: var(--darkModeTxtClr);
-    margin: auto;
-    width: 95%;
-    max-width: 800px;
   }
 }
 .link-container {
@@ -33,7 +31,19 @@
   color: var(--darkModeTxtClr);
   margin: 50px auto;
   p {
-    max-width: 750px;
+    padding: 1em;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    max-width: 700px;
+    font-size: .9em;
+    span {
+      font-size: 1.5em;
+      color: var(--txtChange);
+      font-family: "Audiowide";
+      //text-shadow: 0px 0px 3px var(--black);
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
   }
 }
 .links {

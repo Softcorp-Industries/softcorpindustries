@@ -176,9 +176,10 @@
     .cHeader{
       display: none;
       margin-bottom: 15px;
-      color: orangered;
+      color: var(--txtChange);
       letter-spacing: .15em;
-      text-shadow: 0px 0px 3px var(--black);
+      font-weight: 900;
+      //text-shadow: 0px 0px 3px var(--black);
     }
     .pageNav-listItem {
       margin-bottom: 7px;
@@ -209,8 +210,9 @@
       color: white;
     }
     a:hover{
-      color: var(--white);
+      color: var(--secondaryClr);
       box-shadow: none;
+      font-weight: 900;
     }
     a:active {
       width: 100%;
@@ -250,7 +252,7 @@
     opacity: 0;
     transform-origin: top left;
   }
-  @for $i from 1 through 5 {
+  @for $i from 1 through 7 {
     .pageNav-listItem:nth-child(#{$i}) {
       animation: navBarAn 300ms ease-in forwards;
       animation-delay: (150ms * $i) - 300ms;
@@ -260,7 +262,7 @@
 @keyframes chapterH {
   0%{
 opacity: 0;
-transform: translateY(-50px);
+transform: translateY(-35px);
   }
   100%{
 opacity: 1;

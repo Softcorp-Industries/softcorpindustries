@@ -2,7 +2,7 @@
 @use "_mixin" as *;
 
 .fccProjects {
-  margin: auto;
+  margin: 1.5em auto;
   width: 90%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
