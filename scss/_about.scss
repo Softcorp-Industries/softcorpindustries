@@ -21,7 +21,7 @@
     font-size: 1em;
     margin-bottom: 25px;
   }
-  span{
+  span {
     font-family: "audiowide";
     letter-spacing: 0.1rem;
     font-size: 1.2em;
@@ -131,37 +131,254 @@
     margin: auto;
   }
 }
-.constructionSlider {
-  width: 100%;
-  max-height: 550px;
+.tabletBox {
+  width: 300px;
   margin: auto;
-  overflow: scroll;
+  border-radius: 1.5rem;
+  .tablet {
+    @include tablet;
+    padding: 0.4rem;
+    background-color: rgb(10, 10, 10);
+    border-radius: 1.5rem;
+    text-align: center;
+    &__screen {
+      margin: auto;
+      margin-top: 10px;
+      max-width: 280px;
+      width: 95%;
+      height: 380px;
+      border-radius: 0.75rem;
+      background-color: grey;
+      //overflow: scroll;
+      outline: 2px solid silver;
+      outline-offset: 3px;
+      -moz-outline-radius: 1rem;
+    }
+    &__speakers {
+      width: 100%;
+      display: flex;
+      align-self: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      //margin-bottom: 0.5rem;
+      letter-spacing: 0.1rem;
+      height: 13px;
+      p {
+        font-size: 10px;
+        font-weight: 700;
+        color: white;
+      }
+      .speaker {
+        font-size: 12px;
+        width: 65px;
+        color: black;
+        padding-top: 0.5rem;
+        background-color: silver;
+        border-radius: 4px 4px 13px 13px;
+        line-height: 0.3;
+      }
+    }
+    &__controls {
+      margin: 10px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 12px;
+        letter-spacing: 0.1rem;
+        width: 125px;
+        height: 35px;
+        margin: 0px 25px;
+        border-radius: 0.75rem 0.75rem 1.5rem 1.5rem;
+        outline: none;
+        @include tablet;
+      }
+      .tabletBtn {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.constructionSlider {
+  margin: auto;
+  width: 272px;
+  height: 380px;
+  overflow: hidden;
+  display: flex;
   background-color: var(--themeBlk);
-  border-radius: .75rem;
+  border-radius: 0.75rem;
   z-index: 30;
   .slideContainer {
-    margin: auto;
-    width: 396px;
-    height: 550px;
-    //border: 2px solid black;
+    position: relative;
+    min-width: 272px;
+    height: 380px;
     color: var(--darkModeTxtClr);
     border-radius: 0.75rem;
-    
-    h1{
-      letter-spacing: 2px;
-      padding: .5em 1em;
-      font-size: 28px;
-    }
-    h3{
-      margin: 10px;
-      font-size: 18px;
-      letter-spacing: 1px;
-      color: var(--jsThemeClr);
-      text-shadow: 0px 0px 3px var(--black);
-    }
-    img{
-      height: 450px;
+    h4,
+    h5 {
       width: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--black);
+      text-shadow: 0px 0px 3px var(--white);
+      letter-spacing: 1px;
+    }
+    h4 {
+      top: 10px;
+      font-size: 22px;
+    }
+    h5 {
+      bottom: 10px;
+      font-size: 18px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .solar {
+    position: relative;
+    &__img {
+      position: relative;
+      opacity: 0.8;
+      display: block;
+      margin: auto;
+      width: 150px;
+      height: 100px;
+      background-image: url("img/tech_img/manny-becerra-NgdhrwAx0J8-unsplash.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      box-shadow: 0px 0px 5px var(--darkModeTxtClr);
+      border-radius: 1rem;
+      h3 {
+        position: absolute;
+        width: 100%;
+        padding: 0.5rem 0;
+        text-align: center;
+        letter-spacing: 0.15rem;
+        font-size: 10px;
+        color: var(--darkModeBg);
+        //text-shadow: 0px 0px 5px var(--darkModeTxtClr);
+      }
+    }
+  }
+  .change {
+    &__img {
+      position: relative;
+      height: 275px;
+      margin: 25px auto;
+      &__2 {
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        overflow: hidden;
+        z-index: 1;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 0.5rem;
+        }
+      }
+      &__1 {
+        position: absolute;
+        width: 150px;
+        left: 0px;
+        border-radius: 1rem;
+        overflow: hidden;
+        img {
+          width: 100%;
+          border-radius: 0.5rem;
+        }
+      }
+      &__3 {
+        position: absolute;
+        width: 150px;
+        top: 120px;
+        right: 0px;
+        border-radius: 1rem;
+        overflow: hidden;
+        img {
+          width: 100%;
+          border-radius: 0.5rem;
+        }
+      }
+      h4 {
+        font-size: 16px;
+        margin: 5px auto;
+      }
+    }
+  }
+  .rome {
+    position: relative;
+    article {
+      position: relative;
+      background-image: url("img/tech_img/tech_img3.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.8;
+      margin: auto;
+      width: 350px;
+      height: 200px;
+      border-radius: 1rem;
+      box-shadow: 0px 0px 5px var(--darkModeTxtClr);
+      color: var(--white);
+      z-index: 1;
+    }
+    p {
+      margin: 15px;
+      letter-spacing: 0.1rem;
+      line-height: 1.5;
+      font-weight: 700;
+      span {
+        color: var(--jsThemeClr);
+        text-shadow: 0px 0px 3px var(--black);
+      }
+    }
+    p:last-child {
+      text-align: right;
+    }
+    .p1 {
+      position: absolute;
+      top: 10px;
+      left: 70px;
+    }
+    .p2 {
+      position: absolute;
+      top: 85px;
+      left: 5%;
+    }
+    h4 {
+      position: absolute;
+      width: 100%;
+      top: 85%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 20px;
+    }
+  }
+  .why {
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p {
+        line-height: 1.6;
+        margin: 10px auto;
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+    h2 {
+      text-align: center;
     }
   }
 }
@@ -173,20 +390,35 @@
 .constructionSlider::-webkit-scrollbar {
   display: none;
 }
-.contactModal{
+#prevBtn,
+#nextBtn {
+  color: white;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: white;
+}
+#prevBtn {
+  clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+#nextBtn {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
+}
+
+.contactModal {
   margin: auto;
   width: 85%;
   text-align: center;
-  .contactBtn{
-    padding: .5em 1em;
-    font-family: 'audiowide';
+  .contactBtn {
+    padding: 0.5em 1em;
+    font-family: "audiowide";
     font-size: 16px;
     letter-spacing: 2px;
     color: var(--bgSecondary);
     border: none;
     border-radius: 1em;
   }
-  .contactBtn:hover{
+  .contactBtn:hover {
     color: white;
     background-color: var(--bgSecondary);
   }
@@ -194,48 +426,48 @@
 @media screen and (min-width: 310px) {
 }
 @media screen and (min-width: 400px) {
-  .profile{
-    
-    .pastBio, .presentBio{
-      max-width: 340px ;
-      
+  .profile {
+    .pastBio,
+    .presentBio {
+      max-width: 340px;
     }
   }
 }
 @media screen and (min-width: 550px) {
-  .profile{
-    
-    .pastBio, .presentBio{
+  .profile {
+    .pastBio,
+    .presentBio {
       max-width: 400px;
-      
     }
   }
 }
 @media screen and (min-width: 700px) {
-  .profile{
-    .avatar{
+  .profile {
+    .avatar {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
       max-width: 700px;
-      .seals{
+      .seals {
         margin: auto;
         flex-direction: column;
         max-width: 100px;
       }
-      .logo-bar__img{
+      .logo-bar__img {
         margin: auto;
         max-width: 100px;
         flex-direction: column;
       }
-      .profileImg, .profileImg2{
+      .profileImg,
+      .profileImg2 {
         margin: auto;
         width: 175px;
         height: 175px;
       }
     }
-    .pastBio, .presentBio{
-      max-width:700px ;
+    .pastBio,
+    .presentBio {
+      max-width: 700px;
     }
   }
 }
@@ -245,14 +477,15 @@
       font-size: 3em;
     }
   }
-  .profile{
-    .avatar{
-      .profileImg{
+  .profile {
+    .avatar {
+      .profileImg {
         width: 200px;
         height: 200px;
       }
     }
-    .pastBio, .presentBio{
+    .pastBio,
+    .presentBio {
       max-width: 1000px;
     }
   }
