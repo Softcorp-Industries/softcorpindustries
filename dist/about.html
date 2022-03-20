@@ -5,49 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Roboto:ital,wght@0,500;0,700;0,900;1,300&family=The+Nautigal:wght@400;700&display=swap"
+        rel="stylesheet" />
+        <link rel="shortcut icon" type="image/png" href="img/icon/favicon2.jpg" />
     <title>About Softcorp Industries</title>
     <link rel="stylesheet" href="main.css">
-    <script defer src="main.js" type="module"></script>
+    <script defer type="module" src="main.js"></script>
 </head>
 
 <body data-darkMode="light">
-<header>
-    <section id="darkMode" class="darkMode">
-        <button id="darkModeBtn" class="dmToggle"></button>
-      </section>
-      <section class="navBtn">
-        <div class="navBtn__menu">
-          <div class="navBtn__menu__btn"></div>
+    <header>
+        <section id="darkMode" class="darkMode">
+            <span id="darkModeBtn" class="dmToggle"></span>
+        </section>
+        <div class="navBtn">
+            <div class="navBtn__menu">
+                <div class="navBtn__menu__btn"></div>
+            </div>
         </div>
-      </section>
-      <nav id="siteNav" class="siteNav" aria-label="siteNav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </nav>
-      <nav class="pageNav" aria-label="pageNav">
-        <ul id="pageNav-list" class="pageNav-list">
-          <p class="cHeader">Chapters</p>
-          <li class="pageNav-listItem"><a href="#theVision">The Vision</a></li>
-          <li class="pageNav-listItem"><a href="#thePath">The Path</a></li>
-          <li class="pageNav-listItem"><a href="#theFuture">The Future</a></li>
-        </ul>
-      </nav>
-</header>
+        <nav class="pageNav" aria-label="pageNav">
+            <ul id="pageNav-list" class="pageNav-list">
+                <li class="pageNav-listItem"><a href="index.html">Home</a></li>
+                <li class="pageNav-listItem"><a href="contact.html">Contact</a></li>
+                <li class="pageNav-listItem"><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <section class="about" id="about">
         <h1>Christopher T. Guy</h1>
-        <article class="quote">
+        <div class="quote lazyload" data-bgset="./img/backgrounds/clouds_72634.jpg">
             <p>“Change is Inevitable,</p>
             <p>Growth is Optional.”</p>
-            <p>John C. Maxwell</p>
-        </article>
+            <p class="author">John C. Maxwell</p>
+        </div>
         <section class="profile">
             <article class="pastBio">
                 <p>
@@ -63,22 +57,7 @@
                     <div class="img"></div>
                 </picture>
             </section>
-            <article class="presentBio">
-                <p>
-                    Learning<span> "Web Development" </span>Since 2020 &#128525
-                </p>
-            </article>
-            <section class="avatar">
-                <picture class="profileImg2 profileImg">
-                    <div class="img"></div>
-                </picture>
-                <picture class="logo-bar__img">
-                    <img src="img/icon/HTML5_logo.svg.png" alt="HTML Logo">
-                    <img src="img/icon/css3-logo3.svg.png" alt="CSS Logo">
-                </picture>
-            </section>
-        </section>
-        <section class="tabletBox">
+            <section class="tabletBox">
             <section class="tablet">
                 <section class="tablet__speakers">
                     <article class="speakerL speaker">***********</article>
@@ -182,6 +161,22 @@
                 </section>
             </section>
         </section>
+            <article class="presentBio">
+                <p>
+                    Learning<span> "Web Development" </span>Since 2020 &#128525
+                </p>
+            </article>
+            <section class="avatar">
+                <picture class="profileImg2 profileImg">
+                    <div class="img"></div>
+                </picture>
+                <picture class="logo-bar__img">
+                    <img src="img/icon/HTML5_logo.svg.png" alt="HTML Logo">
+                    <img src="img/icon/css3-logo3.svg.png" alt="CSS Logo">
+                </picture>
+            </section>
+        </section>
+        
     </section>
     <footer>Copyright &copy 2021 Christopher Guy <span>O/A</span> Softcorp Industries</footer>
 </body>

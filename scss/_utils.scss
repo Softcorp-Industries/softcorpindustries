@@ -10,17 +10,20 @@
   padding: .15rem;
   top: 1.9rem;
   right: .25rem;
-  width: 3.25rem;
-  height: 2rem;
+  width: 60px;
+  height: 30px;
   background-color: var(--bgDarkMode);
   border-radius: 1.2rem;
   z-index: 10;
   .dmToggle {
     cursor: pointer;
-    width: 1.7rem;
-    height: 1.7rem;
+    content: "";
+    width: 22px;
+    height: 22px;
+    margin-left: 2px;
     border-radius: 50%;
     border: none;
+    background-color: whitesmoke;
     background-image: url("img/icon/darkMode-icon.png");
     background-size: contain;
     background-position: center;
@@ -49,18 +52,18 @@
 }
 @keyframes dmAnim {
   0%{
-    transform: translateX(0rem);
+    transform: translateX(0px);
   }
   100%{
-    transform: translateX(1.2rem);
+    transform: translateX(30px);
   }
 }
 @keyframes dmAnimRev {
   0%{
-    transform: translateX(1.2rem);
+    transform: translateX(30px);
   }
   100%{
-    transform: translateX(0rem);
+    transform: translateX(0px);
   }
 }
 

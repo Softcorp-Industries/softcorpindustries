@@ -10,14 +10,14 @@ menuBtn.addEventListener("click", () => {
   if (!menuOpen) {
     pageNavList.classList.add("openNav");
     menuBtn.classList.add("openNav");
-    cHeader.classList.add("openNav");
+    //cHeader.classList.add("openNav");
     //navBarSite.classList.add('showNav');
     darkMode.classList.add('showDarkMode');
     menuOpen = true;
   } else {
     pageNavList.classList.remove("openNav");
     menuBtn.classList.remove("openNav");
-    cHeader.classList.remove("openNav");
+    //cHeader.classList.remove("openNav");
     //navBarSite.classList.remove('showNav');
     darkMode.classList.remove('showDarkMode');
     menuOpen = false;

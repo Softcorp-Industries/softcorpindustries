@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Lobster&family=Roboto:ital,wght@0,500;0,700;0,900;1,300&family=The+Nautigal:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Contact Softcorp Industries</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body data-darkMode="light">
+    <link rel="stylesheet" href="main.css" />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body data-darkMode="light">
     <header>
-        <h1>Contact</h1>
+      <section id="darkMode" class="darkMode">
+        <span id="darkModeBtn" class="dmToggle"></span>
+      </section>
+      <div class="navBtn">
+        <div class="navBtn__menu">
+          <div class="navBtn__menu__btn"></div>
+        </div>
+      </div>
+      <nav class="pageNav" aria-label="pageNav">
+        <ul id="pageNav-list" class="pageNav-list">
+          <li class="pageNav-listItem"><a href="index.html">Home</a></li>
+          <li class="pageNav-listItem"><a href="#">Contact</a></li>
+          <li class="pageNav-listItem"><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <section class="contact">
+        <div class="contact__header">
+          <h1>Softcorp Industries</h1>
+        </div>
+      </section>
     </header>
-</body>
+    <main>
+        <div
+          class="quote lazyload"
+          data-bgset="./img/backgrounds/clouds_72634.jpg"
+        >
+          <p>
+            “Education is the passport to the future, for tomorrow belongs to
+            those who prepare for it today.”
+          </p>
+          <p class="author">Malcolm X</p>
+        </div>
+    </main>
+  </body>
 </html>
