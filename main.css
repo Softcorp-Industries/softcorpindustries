@@ -2021,8 +2021,7 @@ button {
   display: none;
 }
 
-#prevBtn,
-#nextBtn {
+.tabletBtn {
   color: white;
   content: "";
   width: 25px;
@@ -2030,12 +2029,12 @@ button {
   background-color: white;
 }
 
-#prevBtn {
+.prevBtn {
   -webkit-clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
           clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
 }
 
-#nextBtn {
+.nextBtn {
   -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
           clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
 }
@@ -2070,3 +2069,45 @@ button {
   }
 }
 */
+@media (min-width: 1024px) {
+  .tabletBox {
+    width: 460px;
+  }
+  .tabletBox .tablet {
+    padding: 0.4rem;
+  }
+  .tabletBox .tablet__screen {
+    margin-top: 15px;
+    max-width: 425px;
+    width: 95%;
+    height: 500px;
+  }
+  .tabletBox .tablet__speakers {
+    padding: 0 1.25rem;
+    letter-spacing: 0.1rem;
+    height: 17px;
+  }
+  .tabletBox .tablet__speakers p {
+    font-size: 12px;
+  }
+  .tabletBox .tablet__speakers .speaker {
+    font-size: 14px;
+    width: 85px;
+    padding-top: 0.65rem;
+  }
+  .tabletBox .tablet__controls {
+    margin: 15px auto;
+  }
+  .tabletBox .tablet__controls a {
+    font-size: 12px;
+    letter-spacing: 0.1rem;
+    width: 175px;
+    height: 40px;
+    margin: 0px 35px;
+  }
+
+  .constructionSlider {
+    width: 425px;
+    height: 500px;
+  }
+}
