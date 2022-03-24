@@ -75,6 +75,10 @@
   text-align: center;
   letter-spacing: 2px;
 }
+.helpTip {
+  font-size: .8em;
+  text-align: center;
+}
 .chapter {
   margin-bottom: 5em;
   &__header {
@@ -118,32 +122,41 @@
 .showBtn {
   display: flex;
   align-items: center;
-}
-button {
-  @include darkMode;
-  cursor: pointer;
-  display: block;
-  margin: auto;
-  width: 90%;
-  max-width: 600px;
-  padding: .75em 0;
-  font-size: 1em;
-  font-weight: 600;
-  font-family: "Lobster";
-  color: var(--secondaryTxt);
-  text-align: center;
-  text-decoration: none;
-  letter-spacing: 0.25rem;
-  background: none;
-  background-color: var(--secondaryClr);
-  border: none;
-  border-radius: .5rem;
-  outline: none;
+  .btn {
+    @include darkMode;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    padding: .75em 0;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: "Lobster";
+    color: var(--secondaryTxt);
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.25rem;
+    background: none;
+    background-color: var(--secondaryClr);
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+  }
 }
 
 .btn:hover {
   background-color: var(--secondaryClr);
   color: var(--secondaryTxt);
+}
+.showMore {
+  display: block;
+  margin: 1em auto;
+  padding: .5em 1em;
+  font-size: .8em;
+}
+.showMoreSection {
+  display: none;
 }
 .idSpacer {
   padding-top: .75em;

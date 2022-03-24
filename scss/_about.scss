@@ -10,17 +10,6 @@
   }
 }
 .profile {
-  margin: auto;
-  width: 95%;
-  max-width: 1000px;
-  border-radius: 1rem;
-  p {
-    color: var(--darkModeTxtClr);
-    letter-spacing: 0.1rem;
-    line-height: 1.5;
-    font-size: 1em;
-    margin-bottom: 25px;
-  }
   span {
     font-family: "audiowide";
     letter-spacing: 0.1rem;
@@ -32,10 +21,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 500px;
-    //height: 300px;
-    margin: auto;
-    margin-bottom: 100px;
+    width: 80%;
+    margin: 2.5em auto;
     .seals {
       margin: auto;
       width: 95%;
@@ -73,11 +60,11 @@
     .logo-bar__img {
       margin: 25px auto;
       width: 95%;
-      max-width: 500px;
+      max-width: 200px;
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: center;
       bottom: 0.5rem;
       img {
         margin: 5px;
@@ -105,37 +92,50 @@
       }
     }
     .profileImg2 {
+      min-width: 150px;
+      min-height: 150px;
       .img {
         scale: 1.5;
         background-image: url("img/personal/profile_img_2.jpg");
       }
     }
   }
-  .pastBio {
+  .pastBio,
+  .presentBio {
+    margin: auto;
     display: flex;
     flex-direction: column;
     width: 95%;
-    max-width: 375px;
-    margin: auto;
-    p:first-child {
+    max-width: 800px;
+    padding: 1em;
+    .lead {
       text-align: center;
-
+      font-size: 1.2em;
     }
-    p {
-      text-align: left;
+  }
+  .pastBio {
+    .bioBody {
+      p:first-child {
+        max-width: 800px;
+        font-size: 1em;
+        margin-bottom: 0.5em;
+      }
+      p {
+        font-size: 0.8em;
+        text-align: left;
+        line-height: 1.4;
+        letter-spacing: 1px;
+      }
     }
     span {
       color: red;
     }
   }
   .presentBio {
-    display: flex;
-    flex-direction: column;
+    margin-top: 3em;
     text-align: center;
-    width: 95%;
-    max-width: 400px;
-    margin: auto;
   }
+  
 }
 
 .contactModal {
@@ -159,20 +159,8 @@
 @media screen and (min-width: 310px) {
 }
 @media screen and (min-width: 400px) {
-  .profile {
-    .pastBio,
-    .presentBio {
-      max-width: 340px;
-    }
-  }
 }
 @media screen and (min-width: 550px) {
-  .profile {
-    .pastBio,
-    .presentBio {
-      max-width: 400px;
-    }
-  }
 }
 @media screen and (min-width: 700px) {
   .profile {
@@ -188,19 +176,20 @@
       }
       .logo-bar__img {
         margin: auto;
-        max-width: 100px;
         flex-direction: column;
+        img {
+          max-width: 85px;
+        }
       }
-      .profileImg,
-      .profileImg2 {
+      .profileImg {
         margin: auto;
         width: 175px;
         height: 175px;
       }
-    }
-    .pastBio,
-    .presentBio {
-      max-width: 700px;
+      .profileImg2 {
+        min-width: 175px;
+        min-height: 175px;
+      }
     }
   }
 }
@@ -217,10 +206,10 @@
         width: 200px;
         height: 200px;
       }
-    }
-    .pastBio,
-    .presentBio {
-      max-width: 1000px;
+      .profileImg2 {
+        min-width: 200px;
+        min-height: 200px;
+      }
     }
   }
 }

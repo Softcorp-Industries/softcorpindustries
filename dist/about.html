@@ -14,6 +14,7 @@
     <title>About Softcorp Industries</title>
     <link rel="stylesheet" href="main.css">
     <script defer type="module" src="main.js"></script>
+    <script defer src="js/imgSliders.js"></script>
 </head>
 
 <body data-darkMode="light">
@@ -29,7 +30,7 @@
         <nav class="pageNav" aria-label="pageNav">
             <ul id="pageNav-list" class="pageNav-list">
                 <li class="pageNav-listItem"><a href="index.html">Home</a></li>
-                <li class="pageNav-listItem"><a href="contact.html">Contact</a></li>
+                <li class="pageNav-listItem"><a href="about.html#contact">Contact</a></li>
                 <li class="pageNav-listItem"><a href="#">About</a></li>
             </ul>
         </nav>
@@ -44,7 +45,7 @@
         </div>
         <section class="profile">
             <article class="pastBio">
-                <p>
+                <p class="lead">
                     Certified <span>"Red Seal"</span> Electrician Since 1996.
                 </p>
                 <section class="avatar">
@@ -56,12 +57,14 @@
                         <div class="img"></div>
                     </picture>
                 </section>
-                <p>
-                    I started my Electrical apprenticeship in March 1990.
-                </p>
-                <p>
-                    I worked mostly as a commercial electrician for the first 8 years in the trade. I moved on to the Oil Sands in the late 1990's. From 2000 to 2017 I worked mostly as an Industrial Electrician. I learned quite a few other skills in the time as well. I worked in the QA/QC departments for a few different Oil Sands Projects, where I learned a bit about databases and how useful they are (MS Access). I held Sub-foreman/Foreman/GeneralForeman positions later on in my career, this gave me management skills like Planning, Safety and Accountability. I always loved building things, so I ended up learning other trades along the way in my 30 years in construction, Plumbing basics, Carpentry basics, Drywalling & Taping, Painting and most general Handyman skills.
-                </p>
+                <div class="bioBody">
+                    <p>
+                        I started my Electrical apprenticeship in March 1990.
+                    </p>
+                    <p>
+                        I worked mostly as a commercial electrician for the first 8 years in the trade. I moved on to the Oil Sands in the late 1990's. From 2000 to 2017 I worked mostly as an Industrial Electrician. I learned quite a few other skills in the time as well. I worked in the QA/QC departments for a few different Oil Sands Projects, where I learned a bit about databases and how useful they are (MS Access). I held Sub-foreman/Foreman/GeneralForeman positions later on in my career, this gave me management skills like Planning, Safety and Accountability. I always loved building things, so I ended up learning other trades along the way in my 30 years in construction, Plumbing basics, Carpentry basics, Drywalling & Taping, Painting and most general Handyman skills.
+                    </p>
+                </div>
             </article>
             <br>
             <p class="subHeader">
@@ -164,20 +167,20 @@
                     </div>
                     <section class="tablet__controls buttons">
                         <div class="tabletBtn prevBtn" id="prevBtn"></div>
-                        <a href="" target="_blank" title="">Construction</a>
-                        <div class="tabletBtn nextBtn" id="nextBtn">Next</div>
+                        <div class="pwrBtn" href="" target="_blank" title="">Construction</div>
+                        <div class="tabletBtn nextBtn" id="nextBtn"></div>
                     </section>
                 </section>
             </section>
-            <p>
+            <p class="helpTip">
                 Click the arrow buttons for a visual resume tour... 
             </p>
             <br>
-            <article class="presentBio">
-                <p>
+            <div class="presentBio">
+                <p class="lead">
                     Learning<span> "Web Development" </span>Since 2020 &#128525
                 </p>
-            </article>
+            </div>
             <section class="avatar">
                 <picture class="profileImg2 profileImg">
                     <div class="img"></div>
@@ -189,6 +192,22 @@
             </section>
         </section>
         
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact__header">
+            <h2>Softcorp Industries</h2>
+            <div class="subHeader">Contact Us:</div>
+        </div>
+        <div
+          class="quote lazyload"
+          data-bgset="./img/backgrounds/clouds_72634.jpg"
+        >
+          <p>
+            “Education is the passport to the future, for tomorrow belongs to
+            those who prepare for it today.”
+          </p>
+          <p class="author">Malcolm X</p>
+        </div>
     </section>
     <footer>Copyright &copy 2021 Christopher Guy <span>O/A</span> Softcorp Industries</footer>
 </body>

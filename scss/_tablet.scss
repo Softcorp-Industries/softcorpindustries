@@ -3,7 +3,7 @@
 
 .tabletBox {
   width: 300px;
-  margin: auto;
+  margin: 1em auto;
   border-radius: 1.5rem;
   .tablet {
     @include tablet;
@@ -16,7 +16,7 @@
       margin-top: 10px;
       max-width: 280px;
       width: 95%;
-      height: 380px;
+      height: 400px;
       border-radius: 0.75rem;
       background-color: grey;
       //overflow: scroll;
@@ -53,32 +53,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      a {
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        font-size: 12px;
-        letter-spacing: 0.1rem;
-        width: 125px;
-        height: 35px;
-        margin: 0px 25px;
-        border-radius: 0.75rem 0.75rem 1.5rem 1.5rem;
-        outline: none;
-        @include tablet;
-      }
-      .tabletBtn {
-        cursor: pointer;
-      }
     }
   }
 }
 
 .constructionSlider {
   margin: auto;
-  width: 272px;
-  height: 380px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   display: flex;
   background-color: var(--themeBlk);
@@ -175,8 +157,9 @@
   display: none;
 }
 .tabletBtn {
-  color: white;
+  cursor: pointer;
   content: "";
+  color: white;
   width: 25px;
   height: 25px;
   background-color: white;
@@ -187,76 +170,69 @@
 .nextBtn {
   clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
 }
-/*
-.buttons {
-  button.btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    outline: none;
-    border: none;
+.pwrBtn {
+  @include darkMode;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  width: 130px;
+  height: 35px;
+  margin: 0px 20px;
+  border-radius: 0.75rem 0.75rem 1.5rem 1.5rem;
+  outline: none;
+}
+
+@media (min-width: 700px) {
+  .tabletBox {
+    width: 430px;
+    .tablet {
+      padding: 0.4rem;
+      &__screen {
+        margin-top: 15px;
+        max-width: 415px;
+        width: 95%;
+        height: 500px;
+      }
+      &__speakers {
+        padding: 0 1.25rem;
+        letter-spacing: 0.1rem;
+        height: 17px;
+        p {
+          font-size: 12px;
+        }
+        .speaker {
+          font-size: 14px;
+          width: 85px;
+          padding-top: 0.65rem;
+        }
+      }
+      &__controls {
+        margin: 15px auto;
+        a {
+          font-size: 12px;
+          letter-spacing: 0.1rem;
+          width: 175px;
+          height: 40px;
+          margin: 0px 35px;
+        }
+      }
+    }
+  }
+  .tabletBtn {
     width: 30px;
     height: 30px;
-    cursor: pointer;
-    background-color: var(--themeTxtClr);
-    border-radius: 50%;
   }
-  button#prevBtn.btn {
-    left: calc(0.5vw + 0.5rem);
-    clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+  .pwrBtn {
+    width: 150px;
+    font-size: 12px;
   }
-  button#prevBtn.btn:hover {
-    transform: scale(1.2);
+  .constructionSlider {
+    width: 100%;
+    height: 500px;
   }
-  button#nextBtn.btn {
-    right: calc(0.5vw + 0.5rem);
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
-  }
-  button#nextBtn.btn:hover {
-    transform: scale(1.2);
-  }
-}
-*/
-
-
-@media (min-width: 1024px) {
-  .tabletBox {
-  width: 460px;
-  .tablet {
-    padding: 0.4rem;
-    &__screen {
-      margin-top: 15px;
-      max-width: 425px;
-      width: 95%;
-      height: 500px;
-    }
-    &__speakers {
-      padding: 0 1.25rem;
-      letter-spacing: 0.1rem;
-      height: 17px;
-      p {
-        font-size: 12px;
-      }
-      .speaker {
-        font-size: 14px;
-        width: 85px;
-        padding-top: .65rem;
-      }
-    }
-    &__controls {
-      margin: 15px auto;
-      a {
-        font-size: 12px;
-        letter-spacing: 0.1rem;
-        width: 175px;
-        height: 40px;
-        margin: 0px 35px;
-      }
-    }
-  }
-}
-.constructionSlider {
-  width: 425px;
-  height: 500px;
-}
 }
