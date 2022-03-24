@@ -46,3 +46,4 @@ let trans = () => {
     document.body.classList.remove("transition");
   }, 1000);
 };
+

@@ -652,6 +652,11 @@ footer span {
   letter-spacing: 2px;
 }
 
+.helpTip {
+  font-size: 0.8em;
+  text-align: center;
+}
+
 .chapter {
   margin-bottom: 5em;
 }
@@ -695,8 +700,7 @@ footer span {
   display: flex;
   align-items: center;
 }
-
-button {
+.showBtn .btn {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   cursor: pointer;
   display: block;
@@ -721,6 +725,17 @@ button {
 .btn:hover {
   background-color: var(--secondaryClr);
   color: var(--secondaryTxt);
+}
+
+.showMore {
+  display: block;
+  margin: 1em auto;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+}
+
+.showMoreSection {
+  display: none;
 }
 
 .idSpacer {
@@ -1199,19 +1214,6 @@ button {
   letter-spacing: 2px;
 }
 
-.profile {
-  margin: auto;
-  width: 95%;
-  max-width: 1000px;
-  border-radius: 1rem;
-}
-.profile p {
-  color: var(--darkModeTxtClr);
-  letter-spacing: 0.1rem;
-  line-height: 1.5;
-  font-size: 1em;
-  margin-bottom: 25px;
-}
 .profile span {
   font-family: "audiowide";
   letter-spacing: 0.1rem;
@@ -1223,9 +1225,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 500px;
-  margin: auto;
-  margin-bottom: 100px;
+  width: 80%;
+  margin: 2.5em auto;
 }
 .profile .avatar .seals {
   margin: auto;
@@ -1264,11 +1265,11 @@ button {
 .profile .avatar .logo-bar__img {
   margin: 25px auto;
   width: 95%;
-  max-width: 500px;
+  max-width: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   bottom: 0.5rem;
 }
 .profile .avatar .logo-bar__img img {
@@ -1295,33 +1296,45 @@ button {
   background-size: contain;
   background-position: center;
 }
+.profile .avatar .profileImg2 {
+  min-width: 150px;
+  min-height: 150px;
+}
 .profile .avatar .profileImg2 .img {
   scale: 1.5;
   background-image: url("img/personal/profile_img_2.jpg");
 }
-.profile .pastBio {
+.profile .pastBio,
+.profile .presentBio {
+  margin: auto;
   display: flex;
   flex-direction: column;
   width: 95%;
-  max-width: 375px;
-  margin: auto;
+  max-width: 800px;
+  padding: 1em;
 }
-.profile .pastBio p:first-child {
+.profile .pastBio .lead,
+.profile .presentBio .lead {
   text-align: center;
+  font-size: 1.2em;
 }
-.profile .pastBio p {
+.profile .pastBio .bioBody p:first-child {
+  max-width: 800px;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+.profile .pastBio .bioBody p {
+  font-size: 0.8em;
   text-align: left;
+  line-height: 1.4;
+  letter-spacing: 1px;
 }
 .profile .pastBio span {
   color: red;
 }
 .profile .presentBio {
-  display: flex;
-  flex-direction: column;
+  margin-top: 3em;
   text-align: center;
-  width: 95%;
-  max-width: 400px;
-  margin: auto;
 }
 
 .contactModal {
@@ -1343,18 +1356,6 @@ button {
   background-color: var(--bgSecondary);
 }
 
-@media screen and (min-width: 400px) {
-  .profile .pastBio,
-.profile .presentBio {
-    max-width: 340px;
-  }
-}
-@media screen and (min-width: 550px) {
-  .profile .pastBio,
-.profile .presentBio {
-    max-width: 400px;
-  }
-}
 @media screen and (min-width: 700px) {
   .profile .avatar {
     flex-direction: row;
@@ -1369,18 +1370,19 @@ button {
   }
   .profile .avatar .logo-bar__img {
     margin: auto;
-    max-width: 100px;
     flex-direction: column;
   }
-  .profile .avatar .profileImg,
-.profile .avatar .profileImg2 {
+  .profile .avatar .logo-bar__img img {
+    max-width: 85px;
+  }
+  .profile .avatar .profileImg {
     margin: auto;
     width: 175px;
     height: 175px;
   }
-  .profile .pastBio,
-.profile .presentBio {
-    max-width: 700px;
+  .profile .avatar .profileImg2 {
+    min-width: 175px;
+    min-height: 175px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1393,9 +1395,9 @@ button {
     width: 200px;
     height: 200px;
   }
-  .profile .pastBio,
-.profile .presentBio {
-    max-width: 1000px;
+  .profile .avatar .profileImg2 {
+    min-width: 200px;
+    min-height: 200px;
   }
 }
 .cardBox {
@@ -1859,7 +1861,7 @@ button {
 
 .tabletBox {
   width: 300px;
-  margin: auto;
+  margin: 1em auto;
   border-radius: 1.5rem;
 }
 .tabletBox .tablet {
@@ -1874,7 +1876,7 @@ button {
   margin-top: 10px;
   max-width: 280px;
   width: 95%;
-  height: 380px;
+  height: 400px;
   border-radius: 0.75rem;
   background-color: grey;
   outline: 2px solid silver;
@@ -1910,29 +1912,11 @@ button {
   align-items: center;
   justify-content: center;
 }
-.tabletBox .tablet__controls a {
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: 0.1rem;
-  width: 125px;
-  height: 35px;
-  margin: 0px 25px;
-  border-radius: 0.75rem 0.75rem 1.5rem 1.5rem;
-  outline: none;
-  box-shadow: inset -3px -3px 6px rgba(202, 202, 202, 0.6), inset 3px 3px 6px rgba(202, 202, 202, 0.6);
-}
-.tabletBox .tablet__controls .tabletBtn {
-  cursor: pointer;
-}
 
 .constructionSlider {
   margin: auto;
-  width: 272px;
-  height: 380px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   display: flex;
   background-color: var(--themeBlk);
@@ -2028,8 +2012,9 @@ button {
 }
 
 .tabletBtn {
-  color: white;
+  cursor: pointer;
   content: "";
+  color: white;
   width: 25px;
   height: 25px;
   background-color: white;
@@ -2045,46 +2030,33 @@ button {
           clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
 }
 
-/*
-.buttons {
-  button.btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    outline: none;
-    border: none;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    background-color: var(--themeTxtClr);
-    border-radius: 50%;
-  }
-  button#prevBtn.btn {
-    left: calc(0.5vw + 0.5rem);
-    clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
-  }
-  button#prevBtn.btn:hover {
-    transform: scale(1.2);
-  }
-  button#nextBtn.btn {
-    right: calc(0.5vw + 0.5rem);
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
-  }
-  button#nextBtn.btn:hover {
-    transform: scale(1.2);
-  }
+.pwrBtn {
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  width: 130px;
+  height: 35px;
+  margin: 0px 20px;
+  border-radius: 0.75rem 0.75rem 1.5rem 1.5rem;
+  outline: none;
 }
-*/
-@media (min-width: 1024px) {
+
+@media (min-width: 700px) {
   .tabletBox {
-    width: 460px;
+    width: 430px;
   }
   .tabletBox .tablet {
     padding: 0.4rem;
   }
   .tabletBox .tablet__screen {
     margin-top: 15px;
-    max-width: 425px;
+    max-width: 415px;
     width: 95%;
     height: 500px;
   }
@@ -2112,8 +2084,18 @@ button {
     margin: 0px 35px;
   }
 
+  .tabletBtn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pwrBtn {
+    width: 150px;
+    font-size: 12px;
+  }
+
   .constructionSlider {
-    width: 425px;
+    width: 100%;
     height: 500px;
   }
 }

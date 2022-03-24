@@ -14,6 +14,8 @@
     <title>Softcorp Industries</title>
     <link rel="stylesheet" href="main.css" />
     <script defer type="module" src="main.js"></script>
+    <script defer src="js/greeting.js"></script>
+    <script defer src="js/showBtns.js"></script>
   </head>
 
   <body data-darkMode="light">
@@ -29,8 +31,8 @@
       <nav class="pageNav" aria-label="pageNav">
         <ul id="pageNav-list" class="pageNav-list">
           <li class="pageNav-listItem"><a href="#">Home</a></li>
-          <li class="pageNav-listItem"><a href="contact.html">Contact</a></li>
           <li class="pageNav-listItem"><a href="about.html">About</a></li>
+          <li class="pageNav-listItem"><a href="about.html#contact">Contact</a></li>
           <p class="cHeader">Chapters</p>
           <li class="pageNav-listItem"><a href="#theVision">The Vision</a></li>
           <li class="pageNav-listItem"><a href="#thePath">The Path</a></li>
@@ -343,9 +345,13 @@
           </p>
           <p class="author">Malcolm X</p>
         </div>
-        <h3 class="sectionHeader">Courses</h3>
+        <h3 class="sectionHeader">Web Development Courses</h3>
+        <button class="showMore" id="devCoursesBtn">Show Courses</button>
+        <section class="showMoreSection">
         <p class="subHeader">Free Code Camp</p>
-        <section class="fccCourse chapter">
+        <button class="showMore" id="fccCoursesBtn">Show Subjects</button>
+        <section class="showMoreSection">
+          <section class="fccCourse chapter">
           <header class="chapter__header">
             <section
               class="reportCard lazyload"
@@ -422,8 +428,8 @@
             <img id="modalImg1" class="modal-content" data-src="" />
             <div id="caption"></div>
           </div>
-        </section>
-        <section class="fccCourse chapter">
+          </section>
+          <section class="fccCourse chapter">
           <header class="chapter__header">
             <section
               class="reportCard lazyload"
@@ -436,9 +442,37 @@
           <div class="showBtn">
             <button class="btn" id="">Show Projects</button>
           </div>
+          </section>
         </section>
-        <h3 class="sectionHeader">Training</h3>
-        <section class="webDevelopment chapter">
+        <p class="subHeader">W3 Schools</p>
+        <button class="showMore">Show Subjects</button>
+        <section class="showMoreSection">
+          <section class="W3school chapter">
+            <header class="chapter__header">
+            <section
+              class="reportCard lazyload"
+              data-bgset="./img/backgrounds/clouds_72634.jpg"
+            >
+              <p class="chapter__header__title">JavaScript</p>
+              <p>Basic Vanilla JavaScript</p>
+            </section>
+          </header>
+          </section>
+        </section>
+        <p class="subHeader">Softcorp Notes</p>
+        <button class="showMore" id="softcorpNotesBtn">Show Notes</button>
+        <section class="showMoreSection">
+          <section class="softcorp chapter">
+            <header class="chapter__header">
+              <p class="subHeader">Basic Vanilla JavaScript</p>
+            </section>
+          </header>
+          </section>
+          </section>
+        <br>
+        <h3 class="sectionHeader">Web Development Skills</h3>
+        <button class="showMore" id="techSkillsBtn">Show Tech Skills</button>
+        <section class="showMoreSection webDevelopment chapter">
           <header class="chapter__header">
             <section
               class="reportCard lazyload"

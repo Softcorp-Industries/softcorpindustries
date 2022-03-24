@@ -79,3 +79,79 @@ showFccRes();
 ShowFrontEndList();
 showFullStackList();
 showServerSideList();
+
+
+function enableShowMore(e) {
+    e.target.nextElementSibling.style.display = 'block';
+}
+function disableShowMore(e) {
+    e.target.nextElementSibling.style.display = 'none'
+}
+
+const devCoursesBtn = document.getElementById('devCoursesBtn')
+const fccCourseBtn = document.getElementById('fccCoursesBtn')
+const softcorpNotesBtn = document.getElementById('softcorpNotesBtn')
+const techSkillsBtn = document.getElementById('techSkillsBtn')
+
+let devCoursesOpen = false;
+let fccCourseOpen = false;
+let softcorpNotesOpen = false;
+let techSkillsOpen = false;
+
+function showDevCourses() {
+    document.addEventListener('DOMContentLoaded', () => {
+        devCoursesBtn.addEventListener('click', (e) => {
+            if (!devCoursesOpen) {
+                enableShowMore(e);
+                devCoursesOpen = true;
+            } else {
+                disableShowMore(e);
+                devCoursesOpen = false;
+            }
+        })
+    })
+}
+function showFccCourse() {
+    document.addEventListener('DOMContentLoaded', () => {
+        fccCourseBtn.addEventListener('click', (e) => {
+            if (!fccCourseOpen) {
+                enableShowMore(e);
+                fccCourseOpen = true;
+            } else {
+                disableShowMore(e);
+                fccCourseOpen = false;
+            }
+        })
+    })
+}
+function showSoftcorpNotes() {
+    document.addEventListener('DOMContentLoaded', () => {
+        softcorpNotesBtn.addEventListener('click', (e) => {
+            if (!softcorpNotesOpen) {
+                enableShowMore(e);
+                softcorpNotesOpen = true;
+            } else {
+                disableShowMore(e);
+                softcorpNotesOpen = false;
+            }
+        })
+    })
+}
+function showTechSkills() {
+    document.addEventListener('DOMContentLoaded', () => {
+        techSkillsBtn.addEventListener('click', (e) => {
+            if (!techSkillsOpen) {
+                enableShowMore(e);
+                techSkillsOpen = true;
+            } else {
+                disableShowMore(e);
+                techSkillsOpen = false;
+            }
+        })
+    })
+}
+
+showDevCourses();
+showFccCourse();
+showSoftcorpNotes();
+showTechSkills();
