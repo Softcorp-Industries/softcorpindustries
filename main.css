@@ -739,7 +739,7 @@ footer span {
 }
 
 .idSpacer {
-  padding-top: 0.75em;
+  padding-top: 2em;
 }
 
 @media (min-width: 700px) {
@@ -1333,8 +1333,14 @@ footer span {
   color: red;
 }
 .profile .presentBio {
-  margin-top: 3em;
   text-align: center;
+}
+
+.contact__header h2 {
+  padding-top: 2.25em;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 2px;
 }
 
 .contactModal {
@@ -1398,6 +1404,11 @@ footer span {
   .profile .avatar .profileImg2 {
     min-width: 200px;
     min-height: 200px;
+  }
+
+  .contact__header h2 {
+    padding-top: 1em;
+    font-size: 3em;
   }
 }
 .cardBox {

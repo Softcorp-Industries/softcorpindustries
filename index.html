@@ -32,7 +32,9 @@
         <ul id="pageNav-list" class="pageNav-list">
           <li class="pageNav-listItem"><a href="#">Home</a></li>
           <li class="pageNav-listItem"><a href="about.html">About</a></li>
-          <li class="pageNav-listItem"><a href="about.html#contact">Contact</a></li>
+          <li class="pageNav-listItem">
+            <a href="about.html#contact">Contact</a>
+          </li>
           <p class="cHeader">Chapters</p>
           <li class="pageNav-listItem"><a href="#theVision">The Vision</a></li>
           <li class="pageNav-listItem"><a href="#thePath">The Path</a></li>
@@ -346,130 +348,140 @@
           <p class="author">Malcolm X</p>
         </div>
         <h3 class="sectionHeader">Web Development Courses</h3>
-        <button class="showMore" id="devCoursesBtn">Show Courses</button>
+        <button class="showMore" id="devCoursesBtn">View Courses</button>
         <section class="showMoreSection">
-        <p class="subHeader">Free Code Camp</p>
-        <button class="showMore" id="fccCoursesBtn">Show Subjects</button>
-        <section class="showMoreSection">
-          <section class="fccCourse chapter">
-          <header class="chapter__header">
-            <section
-              class="reportCard lazyload"
-              data-bgset="./img/backgrounds/clouds_72634.jpg"
-            >
-              <p class="chapter__header__title">Responsive Web Design</p>
-              <p>HTML, CSS.</p>
+          <p class="subHeader">Free Code Camp</p>
+          <button class="showMore" id="fccCoursesBtn">Show Subjects</button>
+          <section class="showMoreSection">
+            <section class="fccCourse chapter">
+              <header class="chapter__header">
+                <section
+                  class="reportCard lazyload"
+                  data-bgset="./img/backgrounds/clouds_72634.jpg"
+                >
+                  <p class="chapter__header__title">Responsive Web Design</p>
+                  <p>HTML, CSS.</p>
+                </section>
+              </header>
+              <div class="showBtn">
+                <button class="btn" id="fccResBtn">Show Projects</button>
+              </div>
+              <section>
+                <ul class="fccProjects" id="fccProjects">
+                  <li class="courseProject listItem">
+                    <p>Tribute Page</p>
+                    <a
+                      href="https://codepen.io/Softcorp-Industries/full/PoJGwGG"
+                      ><img
+                        data-src="./img/education/Tribute Page.png"
+                        alt="Tribute"
+                    /></a>
+                  </li>
+                  <li class="courseProject listItem">
+                    <p>E-Commerce</p>
+                    <a
+                      href="https://codepen.io/Softcorp-Industries/full/bGoBqwe"
+                      target="_blank"
+                      ><img
+                        data-src="./img/education/Product Landing Page.png"
+                        alt="E-Commerce"
+                    /></a>
+                  </li>
+                  <li class="courseProject listItem">
+                    <p>Survey Form</p>
+                    <a
+                      href="https://codepen.io/Softcorp-Industries/full/xxXRGVb"
+                      target="_blank"
+                      ><img
+                        data-src="./img/education/Survey Form.png"
+                        alt="Survey"
+                    /></a>
+                  </li>
+                  <li class="courseProject listItem">
+                    <p>Technical Documentation</p>
+                    <a
+                      href="https://codepen.io/Softcorp-Industries/full/bGoBqee"
+                      target="_blank"
+                      ><img
+                        data-src="./img/education/Technical Documentation Page.png"
+                        alt="Technical Documentation"
+                    /></a>
+                  </li>
+                  <li class="courseProject listItem">
+                    <p>Portfolio Page</p>
+                    <a
+                      href="https://codepen.io/Softcorp-Industries/full/bGoBqee"
+                      target="_blank"
+                      ><img
+                        data-src="./img/education/Personal Portfolio Webpage.png"
+                        alt="Technical Documentation"
+                    /></a>
+                  </li>
+                  <li class="courseProject listItem">
+                    <p>Certificate</p>
+                    <img
+                      data-src="./img/education/freeCodeCamp.png"
+                      id="certImg1"
+                      alt="Responsive Web Design Certification"
+                      style="width: 100%"
+                    />
+                  </li>
+                </ul>
+              </section>
+              <div class="modal" id="certModal1">
+                <span class="close">&times;</span>
+                <img id="modalImg1" class="modal-content" data-src="" />
+                <div id="caption"></div>
+              </div>
             </section>
-          </header>
-          <div class="showBtn">
-            <button class="btn" id="fccResBtn">Show Projects</button>
-          </div>
-          <section>
-            <ul class="fccProjects" id="fccProjects">
-              <li class="courseProject listItem">
-                <p>Tribute Page</p>
-                <a href="https://codepen.io/Softcorp-Industries/full/PoJGwGG"
-                  ><img
-                    data-src="./img/education/Tribute Page.png"
-                    alt="Tribute"
-                /></a>
-              </li>
-              <li class="courseProject listItem">
-                <p>E-Commerce</p>
-                <a
-                  href="https://codepen.io/Softcorp-Industries/full/bGoBqwe"
-                  target="_blank"
-                  ><img
-                    data-src="./img/education/Product Landing Page.png"
-                    alt="E-Commerce"
-                /></a>
-              </li>
-              <li class="courseProject listItem">
-                <p>Survey Form</p>
-                <a
-                  href="https://codepen.io/Softcorp-Industries/full/xxXRGVb"
-                  target="_blank"
-                  ><img data-src="./img/education/Survey Form.png" alt="Survey"
-                /></a>
-              </li>
-              <li class="courseProject listItem">
-                <p>Technical Documentation</p>
-                <a
-                  href="https://codepen.io/Softcorp-Industries/full/bGoBqee"
-                  target="_blank"
-                  ><img
-                    data-src="./img/education/Technical Documentation Page.png"
-                    alt="Technical Documentation"
-                /></a>
-              </li>
-              <li class="courseProject listItem">
-                <p>Portfolio Page</p>
-                <a
-                  href="https://codepen.io/Softcorp-Industries/full/bGoBqee"
-                  target="_blank"
-                  ><img
-                    data-src="./img/education/Personal Portfolio Webpage.png"
-                    alt="Technical Documentation"
-                /></a>
-              </li>
-              <li class="courseProject listItem">
-                <p>Certificate</p>
-                <img
-                  data-src="./img/education/freeCodeCamp.png"
-                  id="certImg1"
-                  alt="Responsive Web Design Certification"
-                  style="width: 100%"
-                />
-              </li>
-            </ul>
-          </section>
-          <div class="modal" id="certModal1">
-            <span class="close">&times;</span>
-            <img id="modalImg1" class="modal-content" data-src="" />
-            <div id="caption"></div>
-          </div>
-          </section>
-          <section class="fccCourse chapter">
-          <header class="chapter__header">
-            <section
-              class="reportCard lazyload"
-              data-bgset="./img/backgrounds/clouds_72634.jpg"
-            >
-              <p class="chapter__header__title">JavaScript</p>
-              <p>Vanilla JavaScript</p>
+            <section class="fccCourse chapter">
+              <header class="chapter__header">
+                <section
+                  class="reportCard lazyload"
+                  data-bgset="./img/backgrounds/clouds_72634.jpg"
+                >
+                  <p class="chapter__header__title">JavaScript</p>
+                  <p>Vanilla JavaScript</p>
+                </section>
+              </header>
+              <div class="showBtn">
+                <button class="btn" id="">Show Projects</button>
+              </div>
             </section>
-          </header>
-          <div class="showBtn">
-            <button class="btn" id="">Show Projects</button>
-          </div>
+          </section>
+          <p class="subHeader">W3 Schools</p>
+          <button class="showMore">Show Subjects</button>
+          <section class="showMoreSection">
+            <section class="W3school chapter">
+              <header class="chapter__header">
+                <section
+                  class="reportCard lazyload"
+                  data-bgset="./img/backgrounds/clouds_72634.jpg"
+                >
+                  <p class="chapter__header__title">JavaScript</p>
+                  <p>Basic Vanilla JavaScript</p>
+                </section>
+              </header>
+            </section>
+          </section>
+          <p class="subHeader">Softcorp Notes</p>
+          <button class="showMore" id="softcorpNotesBtn">Read Notes</button>
+          <section class="showMoreSection">
+            <section class="softcorp chapter">
+              <div class="quote lazyload" data-bgset="./img/backgrounds/clouds_72634.jpg">
+                <p>
+                  <a href="https://softcorp-industries.github.io/Vanilla_javaScript/">Vanilla JavaScript Notes:</a>
+                </p>
+              </div>
+              <div class="quote lazyload" data-bgset="./img/backgrounds/clouds_72634.jpg">
+                <p>
+                  <a href="https://softcorp-industries.github.io/Async_javaScript/">Asynchronous JavaScript Notes:</a>
+                </p>
+              </div>
+            </section>
           </section>
         </section>
-        <p class="subHeader">W3 Schools</p>
-        <button class="showMore">Show Subjects</button>
-        <section class="showMoreSection">
-          <section class="W3school chapter">
-            <header class="chapter__header">
-            <section
-              class="reportCard lazyload"
-              data-bgset="./img/backgrounds/clouds_72634.jpg"
-            >
-              <p class="chapter__header__title">JavaScript</p>
-              <p>Basic Vanilla JavaScript</p>
-            </section>
-          </header>
-          </section>
-        </section>
-        <p class="subHeader">Softcorp Notes</p>
-        <button class="showMore" id="softcorpNotesBtn">Show Notes</button>
-        <section class="showMoreSection">
-          <section class="softcorp chapter">
-            <header class="chapter__header">
-              <p class="subHeader">Basic Vanilla JavaScript</p>
-            </section>
-          </header>
-          </section>
-          </section>
-        <br>
+        <br />
         <h3 class="sectionHeader">Web Development Skills</h3>
         <button class="showMore" id="techSkillsBtn">Show Tech Skills</button>
         <section class="showMoreSection webDevelopment chapter">
@@ -643,7 +655,10 @@
           </div>
           <section class="fullStackDev">
             <ul class="webDevelopment-list fullStackList" id="fullStackList">
-              <li class="webDevelopment-list__mongo listItem lazyload" data-bgset="./img/backgrounds/clouds_72634.jpg">
+              <li
+                class="webDevelopment-list__mongo listItem lazyload"
+                data-bgset="./img/backgrounds/clouds_72634.jpg"
+              >
                 <img
                   data-src="img/icon/mongodb-logo1.png"
                   alt="Mongodb Logo"
