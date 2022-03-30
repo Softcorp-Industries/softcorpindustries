@@ -10,15 +10,15 @@ let serverSideListOn = false;
 
 function enableShowBtn(e) {
     e.target.parentElement.nextElementSibling.firstElementChild.classList.add('openWebDev');
-    fccResBtn.style.color = 'var(--secondaryTxt)';
-    fccResBtn.style.backgroundColor = 'var(--secondaryClr)';
+    //e.target.style.color = 'var(--secondaryTxt)';
+    //e.target.style.backgroundColor = 'var(--secondaryTxt)';
     //console.log(e.target.previousElementSibling.previousElementSibling);
 }
 function disableShowBtn(e) {
     e.target.parentElement.nextElementSibling.firstElementChild.classList.remove('openWebDev');
-    fccResBtn.style.color = 'var(--secondaryClr)';
-    fccResBtn.style.backgroundColor = 'var(--secondaryTxt)';
-    fccResBtn.style.boxShadow = 'inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6)';
+    //e.target.style.color = 'var(--secondaryClr)';
+    //e.target.style.backgroundColor = 'var(--secondaryTxt)';
+    //e.target.style.boxShadow = 'inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6)';
     //console.log(e.target.previousElementSibling.previousElementSibling);
 }
 
@@ -155,3 +155,30 @@ showDevCourses();
 showFccCourse();
 showSoftcorpNotes();
 showTechSkills();
+
+
+const readMoreBtn = document.getElementById('readMoreBtn')
+
+let readMoreOpen = false;
+
+function enableReadMore(e) {
+    e.target.previousElementSibling.style.display = 'block';
+}
+function disableReadMore(e) {
+    e.target.previousElementSibling.style.display = 'none';
+}
+
+function readMore() {
+    document.addEventListener('DOMContentLoaded', () => {
+        readMoreBtn.addEventListener('click', (e) => {
+            if (!readMoreOpen) {
+                enableReadMore(e);
+                readMoreOpen = true;
+            } else {
+                disableReadMore(e);
+                readMoreOpen = false;
+            }
+        })
+    })
+}
+readMore()
