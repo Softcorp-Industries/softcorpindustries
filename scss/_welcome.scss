@@ -100,10 +100,8 @@
 }
 .tripleMonitors {
   padding: var(--mdSpacer) 0em;
-  //background-color: var(--bgDarkMode);
   max-width: 1000px;
   margin: auto;
-  margin-bottom: 50px;
   h2 {
     color: var(--white);
     padding: 1em;
@@ -124,10 +122,10 @@
     margin: auto;
     padding: 2em;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    //align-items: center;
+    //justify-content: center;
     width: 95%;
-    max-width: 650px;
+    max-width: 850px;
     border-radius: 1.5rem;
     .img {
       perspective: 200px;
@@ -185,12 +183,33 @@
     }  
   }
   @media (min-width: 700px) {
-    
+    .tripleMonitors {
+      h2 {
+        font-size: 1.1em;
+        padding: 1.5em;
+      }
+      span {
+        font-size: 1.75em;
+      }
+      .imgs {
+        padding: 3em;
+        .img {
+          min-width: 5.5em;
+          min-height: 4.25em;
+        }
+      }
+    }
   }
   @media (min-width: 1000px) {
-    
+    .tripleMonitors {
+      .imgs {
+        .img {
+          min-width: 8.25em;
+          min-height: 6.75em;
+        }
+      }
+    }
     .link{
-      //margin: auto;
       margin-left: auto;
     }
     .link-container{
