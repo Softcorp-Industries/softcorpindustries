@@ -742,6 +742,19 @@ footer span {
   padding-top: 2em;
 }
 
+.filler {
+  margin: auto;
+  width: 80%;
+  max-width: 800px;
+}
+.filler .lead {
+  font-size: 1em;
+}
+.filler p {
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+}
+
 @media (min-width: 700px) {
   .chapter__header {
     flex-direction: row;
@@ -1862,12 +1875,27 @@ footer span {
   transform: rotateY(180deg);
 }
 
-.ai img {
-  width: 300px;
+#buildIt {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#buildIt h3 {
+  padding: 0.5em;
+  text-align: center;
 }
 
-.robotics img {
+.ai,
+.robotics {
+  display: block;
   width: 300px;
+  height: 400px;
+}
+.ai img,
+.robotics img {
+  margin: auto;
+  display: block;
+  height: 100%;
 }
 
 .tabletBox {

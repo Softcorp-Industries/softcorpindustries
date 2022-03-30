@@ -161,6 +161,18 @@
 .idSpacer {
   padding-top: 2em;
 }
+.filler {
+  margin: auto;
+  width: 80%;
+  max-width: 800px;
+  .lead {
+      font-size: 1em;
+    }
+    p {
+    margin-bottom: .5em;
+    font-size: .8em;
+  }
+}
 
 @media (min-width: 320px) {
 }
