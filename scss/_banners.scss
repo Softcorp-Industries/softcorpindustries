@@ -95,11 +95,15 @@
       height: 38vw;
     }
     &__title {
+      height: calc(5vw + 5em);
       h1 {
-        font-size: 1.6em;
+        font-size: 2em;
         bottom: .5em;
       }
     }
+  }
+  .greeting {
+    font-size: 2em;
   }
 }
 

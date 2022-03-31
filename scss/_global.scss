@@ -26,8 +26,8 @@
   --darkModeTxtClr: rgb(54, 54, 54);
   --darkModeTxtlgt: #e3e3e3;
   
-  --bgFilter: rgba(255, 255, 255, 0.2);
-  --bgFilterBlk: rgba(0, 0, 0, 0.4);
+  --bgFilter: rgba(255, 255, 255, 0.3);
+  --bgFilterBlk: rgba(0, 0, 0, 0.3);
   --bgFilterBlkDrk: rgba(0, 0, 0, 0.8);
   --bgFilterDrk: rgba(255, 255, 255, 0.8);
   
@@ -54,8 +54,16 @@
   padding: 0;
 }
 body {
-    background-color: var(--darkModeBg);
+  background-image: url('./img/backgrounds/clouds_72634.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+.darkModeFilter {
+  background-color: var(--bgFilterBlk);
+}
+
 body[data-darkMode="darkMode"] {
   --darkModeBg: rgb(39, 39, 39); // from #e3e3e3
   --darkModeBgblk: rgb(0, 0, 0); // from

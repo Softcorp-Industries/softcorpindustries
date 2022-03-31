@@ -12,7 +12,7 @@
     margin-right: 50px;
     letter-spacing: 0.1rem;
     font-family: "Audiowide";
-    color: var(--txtChange);
+    color: var(--darkModeBlk);
   }
   .card {
     @include shadowSm-inset;
@@ -111,12 +111,13 @@
   //  var(--secondaryClr)
   //height: 820px;
   min-width: 100%;
-  margin: 0 auto;
+  margin: auto;
+  margin-top: 2em;
   padding: 0 0.5em;
   &__header {
     padding: 0.5em 0;
     font-size: 1.25em;
-    color: var(--txtChange);
+    //color: var(--txtChange);
     font-family: "Audiowide";
     text-align: center;
   }
@@ -226,6 +227,9 @@
 
 @media (min-width: 700px) {
   .cardBox {
+    p {
+      font-size: 1.75em;
+    }
     .card__front-title {
       font-size: 28px;
       top: 1em;
@@ -235,17 +239,17 @@
       font-size: 40px;
     }
     .card__back-title {
-      top: 2em;
+      top: 4em;
       font-size: 28px;
     }
     .card {
-      width: 350px;
-      height: 225px;
+      width: 425px;
+      height: 275px;
     }
     .card__back,
     .card__front {
-      width: 350px;
-      height: 225px;
+      width: 425px;
+      height: 275px;
     }
   }
 }
