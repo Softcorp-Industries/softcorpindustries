@@ -67,9 +67,10 @@
 }
 .sectionHeader {
   text-align: center;
-  //color: var(--darkModeTxtClr);
-  font-size: 1.75em;
-  //margin-top: 2em;
+  font-family: 'The Nautigal';
+  font-weight: 700;
+  font-size: 2em;
+  color: var(--secondaryClr);
 }
 .subHeader {
   margin: 1em auto;
@@ -146,24 +147,95 @@
     outline: none;
   }
 }
-
 .btn:hover {
   background-color: var(--secondaryClr);
   color: var(--secondaryTxt);
 }
+.readMoreBtn {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100px;
+}
 .readMore {
-  margin-bottom: 10em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-weight: 500;
+  padding-bottom: 1px;
+}
+.readMoreBtn:hover {
+  transform: scale(1.1);
+}
+#readMoreImg {
+  width: 15px;
+  height: 15px;
+  transform: rotateZ(90deg);
+}
+.showMoreHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1em auto;
+  max-width: 800px;
+  margin-bottom: 2em;
 }
 .showMore {
   display: block;
-  margin: 1em auto;
+  //margin: 1em auto;
   padding: 0.5em 1em;
   font-size: 0.8em;
-  margin-bottom: 4em;
+  //margin-bottom: 4em;
 }
 .showMoreSection {
   display: none;
 }
+.readMoreSection {
+  margin-top: -23em;
+  overflow: hidden;
+  opacity: 0;
+  display: none;
+  min-height: 26em;
+}
+.readMoreAnim {
+  animation: readMoreAnim ease-out 750ms forwards;
+}
+.readMoreAnimRev {
+  animation: readMoreAnimRev ease-out 750ms forwards;
+}
+
+@keyframes readMoreAnim {
+  0% {
+    opacity: 0;
+    margin-top: -23em;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+@keyframes readMoreAnimRev {
+  0% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    margin-top: -26em;
+  }
+}
+
+
 .idSpacer {
   padding-top: 2em;
 }
@@ -171,8 +243,9 @@
   margin: auto;
   width: 80%;
   max-width: 800px;
+  text-align: center;
   .lead {
-    font-size: 1em;
+    font-size: 1.25em;
     font-weight: 600;
   }
   p {
@@ -183,13 +256,101 @@
   }
 }
 
-@media (min-width: 320px) {
-}
 @media (min-width: 400px) {
+  .readMoreSection {
+    min-height: 20em;
+  }
+  @keyframes readMoreAnim {
+    0% {
+      opacity: 0;
+      margin-top: -20em;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+  @keyframes readMoreAnimRev {
+    0% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-top: -20em;
+    }
+  }
 }
-@media (min-width: 550px) {
+@media (min-width: 680px) {
+  .readMoreSection {
+    min-height: 18em;
+  }
+  @keyframes readMoreAnim {
+    0% {
+      opacity: 0;
+      margin-top: -18em;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+  @keyframes readMoreAnimRev {
+    0% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-top: -18em;
+    }
+  }
+  .showMoreHeader {
+  flex-direction: row;
 }
-@media (min-width: 700px) {
+}
+@media (min-width: 800px) {
+  .readMoreSection {
+    min-height: 16em;
+  }
+  @keyframes readMoreAnim {
+    0% {
+      opacity: 0;
+      margin-top: -16em;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+  @keyframes readMoreAnimRev {
+    0% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-top: -16em;
+    }
+  }
   .chapter {
     &__header {
       flex-direction: row;
@@ -199,10 +360,37 @@
     }
   }
 }
-@media (min-width: 1024px) {
-  .sectionHeader {
-    font-size: 2.25em;
+@media (min-width: 1000px) {
+  .readMoreSection {
+    min-height: 14em;
   }
-}
-@media (min-width: 1200px) {
+  @keyframes readMoreAnim {
+    0% {
+      opacity: 0;
+      margin-top: -14em;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+  @keyframes readMoreAnimRev {
+    0% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      margin-top: -14em;
+    }
+  }
+  .sectionHeader {
+    //font-size: 2.25em;
+  }
 }
