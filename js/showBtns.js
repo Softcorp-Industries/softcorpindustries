@@ -82,10 +82,10 @@ showServerSideList();
 
 
 function enableShowMore(e) {
-    e.target.nextElementSibling.style.display = 'block';
+    e.target.parentElement.nextElementSibling.style.display = 'block';
 }
 function disableShowMore(e) {
-    e.target.nextElementSibling.style.display = 'none'
+    e.target.parentElement.nextElementSibling.style.display = 'none'
 }
 
 const devCoursesBtn = document.getElementById('devCoursesBtn')
@@ -157,15 +157,25 @@ showSoftcorpNotes();
 showTechSkills();
 
 
-const readMoreBtn = document.getElementById('readMoreBtn')
+const readMoreBtn = document.getElementById('readMoreBtn');
+const readMoreImg = document.getElementById('readMoreImg');
 
 let readMoreOpen = false;
 
 function enableReadMore(e) {
-    e.target.previousElementSibling.style.display = 'block';
+    console.log(e.target.parentElement.nextElementSibling);
+    e.target.parentElement.previousElementSibling.style.display = 'block';
+    e.target.parentElement.previousElementSibling.classList.add('readMoreAnim')
+    e.target.parentElement.previousElementSibling.classList.remove('readMoreAnimRev')
+    e.target.innerHTML = 'Read Less';
+    readMoreImg.style.transform = 'rotateZ(0deg)';
 }
 function disableReadMore(e) {
-    e.target.previousElementSibling.style.display = 'none';
+    e.target.parentElement.previousElementSibling.classList.remove('readMoreAnim')
+    e.target.parentElement.previousElementSibling.classList.add('readMoreAnimRev')
+    //e.target.parentElement.previousElementSibling.style.display = 'none'
+    e.target.innerHTML = 'Read More';
+    readMoreImg.style.transform = 'rotateZ(90deg)';
 }
 
 function readMore() {
