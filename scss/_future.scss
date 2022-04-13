@@ -42,6 +42,7 @@
 
 #buildIt {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   h3 {
@@ -59,5 +60,11 @@
     margin: auto;
     display: block;
     height: 100%;
+  }
+}
+
+@media (min-width: 700px) {
+  #buildIt {
+    flex-direction: row;
   }
 }

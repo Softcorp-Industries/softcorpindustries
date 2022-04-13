@@ -1,0 +1,221 @@
+@use "_global" as *;
+@use "_mixin" as *;
+
+.webDevelopment {
+  margin: auto;
+  margin-top: 2em;
+  max-width: 1000px;
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.webDevelopment-list {
+  margin: 1.5em auto;
+  width: 90%;
+  max-width: 600px;
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  grid-gap: 15px;
+  text-align: center;
+  margin-bottom: 4em;
+  .listItem {
+    @include darkMode;
+    display: none;
+    margin: auto;
+    width: 175px;
+    height: 175px;
+    padding: 0.5em;
+    color: var(--secondaryClr);
+    border-radius: .25em;
+    .listItemInfo {
+      width: 100%;
+      margin: auto;
+      padding-bottom: 5px;
+      letter-spacing: 1px;
+      h4 {
+        text-align: center;
+        font-size: 16px;
+      }
+      p {
+        line-height: 1.3;
+        font-size: 14px;
+        padding: 3px;
+      }
+    }
+    img {
+      margin: 10px auto;
+      height: 70px;
+      width: 70px;
+    }
+  }
+  &__html {
+    .listItemInfo {
+      border-bottom: 4px solid green;
+    }
+  }
+  &__css {
+    .listItemInfo {
+      border-bottom: 4px solid green;
+    }
+  }
+  &__sass {
+    .listItemInfo {
+      border-bottom: 4px solid green;
+    }
+  }
+  &__tailwind {
+    img {
+      scale: 1.2;
+    }
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__bootStrap {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__javaScript {
+    .listItemInfo {
+      border-bottom: 4px solid green;
+    }
+  }
+  &__typeScript {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__git {
+    .listItemInfo {
+      border-bottom: 4px solid yellow;
+    }
+  }
+  &__npm {
+    img {
+      scale: 1.2;
+    }
+    .listItemInfo {
+      border-bottom: 4px solid yellow;
+    }
+  }
+  &__jquery {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__mongo {
+    img {
+      scale: 1.1;
+    }
+    .listItemInfo {
+      border-bottom: 4px solid yellow;
+    }
+  }
+  &__express {
+    .listItemInfo {
+      border-bottom: 4px solid yellow;
+    }
+  }
+  &__react {
+    .listItemInfo {
+      border-bottom: 4px solid yellow;
+    }
+  }
+  &__node {
+    .listItemInfo {
+      border-bottom: 4px solid yellow;
+    }
+  }
+  &__angular {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__vue {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__redux {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__next {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__python {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__php {
+    img {
+      scale: 1.4;
+    }
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__sql {
+    img {
+      scale: 1.4;
+    }
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+  &__apache {
+    .listItemInfo {
+      border-bottom: 4px solid red;
+    }
+  }
+}
+.frontEndList .listItem {
+  display: none;
+}
+.fullStackList .listItem {
+  display: none;
+}
+.serverSideList .listItem {
+  display: none;
+}
+.openWebDev {
+  .listItem {
+    opacity: 0;
+    transform-origin: center;
+  }
+  @for $i from 1 through 20 {
+    .listItem:nth-child(#{$i}) {
+      animation: webDevAnim 300ms ease-in-out forwards;
+      animation-delay: (150ms * $i) - 300ms;
+    }
+  }
+}
+.openWebDev.fccProjects .listItem {
+  display: block;
+}
+
+.openWebDev.frontEndList .listItem {
+  display: block;
+}
+.openWebDev.fullStackList .listItem {
+  display: block;
+}
+.openWebDev.serverSideList .listItem {
+  display: block;
+}
+@keyframes webDevAnim {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
