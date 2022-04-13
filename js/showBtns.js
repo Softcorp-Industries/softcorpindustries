@@ -82,31 +82,38 @@ showServerSideList();
 
 
 function enableShowMore(e) {
-    e.target.parentElement.nextElementSibling.style.display = 'block';
+    e.target.parentElement.nextElementSibling.style.display = 'grid';
 }
 function disableShowMore(e) {
     e.target.parentElement.nextElementSibling.style.display = 'none'
 }
 
-const devCoursesBtn = document.getElementById('devCoursesBtn')
-const fccCourseBtn = document.getElementById('fccCoursesBtn')
-const softcorpNotesBtn = document.getElementById('softcorpNotesBtn')
-const techSkillsBtn = document.getElementById('techSkillsBtn')
+const fccCourseBtn = document.getElementById('fccCoursesBtn');
+const w3CourseBtn = document.getElementById('w3CoursesBtn')
+const softcorpNotesBtn = document.getElementById('softcorpNotesBtn');
 
-let devCoursesOpen = false;
+const tutorialsBtn = document.getElementById('tutorialsBtn')
+const devCoursesBtn = document.getElementById('devCoursesBtn');
+const techSkillsBtn = document.getElementById('techSkillsBtn');
+
 let fccCourseOpen = false;
+let w3CourseOpen = false;
 let softcorpNotesOpen = false;
+
+let tutorialsOpen = false;
+let devCoursesOpen = false;
 let techSkillsOpen = false;
 
-function showDevCourses() {
+
+function showW3Course() {
     document.addEventListener('DOMContentLoaded', () => {
-        devCoursesBtn.addEventListener('click', (e) => {
-            if (!devCoursesOpen) {
-                enableShowMore(e);
-                devCoursesOpen = true;
+        w3CourseBtn.addEventListener('click', (e) => {
+            if (!w3CourseOpen) {
+                enableCourseShow(e);
+                w3CourseOpen = true;
             } else {
-                disableShowMore(e);
-                devCoursesOpen = false;
+                disableCourseShow(e);
+                w3CourseOpen = false;
             }
         })
     })
@@ -128,11 +135,39 @@ function showSoftcorpNotes() {
     document.addEventListener('DOMContentLoaded', () => {
         softcorpNotesBtn.addEventListener('click', (e) => {
             if (!softcorpNotesOpen) {
-                enableShowMore(e);
+                enableCourseShow(e);
                 softcorpNotesOpen = true;
             } else {
-                disableShowMore(e);
+                disableCourseShow(e);
                 softcorpNotesOpen = false;
+            }
+        })
+    })
+}
+
+function showtutorials() {
+    document.addEventListener('DOMContentLoaded', () => {
+        tutorialsBtn.addEventListener('click', (e) => {
+            if (!tutorialsOpen) {
+                enableShowMore(e);
+                tutorialsOpen = true;
+            } else {
+                disableShowMore(e);
+                tutorialsOpen = false;
+            }
+        })
+    })
+}
+
+function showDevCourses() {
+    document.addEventListener('DOMContentLoaded', () => {
+        devCoursesBtn.addEventListener('click', (e) => {
+            if (!devCoursesOpen) {
+                enableShowMore(e);
+                devCoursesOpen = true;
+            } else {
+                disableShowMore(e);
+                devCoursesOpen = false;
             }
         })
     })
@@ -151,31 +186,49 @@ function showTechSkills() {
     })
 }
 
-showDevCourses();
 showFccCourse();
+showW3Course();
 showSoftcorpNotes();
+
+
+showtutorials();
+showDevCourses();
 showTechSkills();
+
+function enableCourseShow(e) {
+    e.target.nextElementSibling.style.display = 'block'
+}
+function disableCourseShow(e) {
+    e.target.nextElementSibling.style.display = 'none'
+}
 
 
 const readMoreBtn = document.getElementById('readMoreBtn');
+const readMoreBtn2 = document.getElementById('readMoreBtn2');
+const readMoreBtn3 = document.getElementById('readMoreBtn3');
 const readMoreImg = document.getElementById('readMoreImg');
 
 let readMoreOpen = false;
+let readMore2Open = false;
+let readMore3Open = false;
 
 function enableReadMore(e) {
     console.log(e.target.parentElement.nextElementSibling);
     e.target.parentElement.previousElementSibling.style.display = 'block';
     e.target.parentElement.previousElementSibling.classList.add('readMoreAnim')
     e.target.parentElement.previousElementSibling.classList.remove('readMoreAnimRev')
+    //e.target.parentElement.previousElementSibling.classList.remove('hiddenContent')
     e.target.innerHTML = 'Read Less';
-    readMoreImg.style.transform = 'rotateZ(0deg)';
+    e.target.nextElementSibling.style.transform = 'rotateZ(0deg)';
 }
 function disableReadMore(e) {
     e.target.parentElement.previousElementSibling.classList.remove('readMoreAnim')
     e.target.parentElement.previousElementSibling.classList.add('readMoreAnimRev')
-    //e.target.parentElement.previousElementSibling.style.display = 'none'
+    //e.target.parentElement.previousElementSibling.classList.add('hiddenContent')
+    e.target.parentElement.previousElementSibling.style.display = 'none'
     e.target.innerHTML = 'Read More';
-    readMoreImg.style.transform = 'rotateZ(90deg)';
+    e.target.nextElementSibling.style.transform = 'rotateZ(90deg)';
+    readMoreBtn.style.display = 'block';
 }
 
 function readMore() {
@@ -191,4 +244,32 @@ function readMore() {
         })
     })
 }
-readMore()
+function readMore2() {
+    document.addEventListener('DOMContentLoaded', () => {
+        readMoreBtn2.addEventListener('click', (e) => {
+            if (!readMore2Open) {
+                enableReadMore(e);
+                readMore2Open = true;
+            } else {
+                disableReadMore(e);
+                readMore2Open = false;
+            }
+        })
+    })
+}
+function readMore3() {
+    document.addEventListener('DOMContentLoaded', () => {
+        readMoreBtn3.addEventListener('click', (e) => {
+            if (!readMore3Open) {
+                enableReadMore(e);
+                readMore3Open = true;
+            } else {
+                disableReadMore(e);
+                readMore3Open = false;
+            }
+        })
+    })
+}
+readMore();
+readMore2();
+readMore3();
