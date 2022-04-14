@@ -9,16 +9,16 @@ let fullStackListOn = false;
 let serverSideListOn = false;
 
 function enableShowBtn(e) {
-    console.log(e.target.parentElement.parentElement.nextElementSibling)
-    e.target.parentElement.parentElement.nextElementSibling.style.display = 'grid';
-    e.target.parentElement.parentElement.nextElementSibling.classList.add('openWebDev');
+    console.log(e.target.parentElement.parentElement.nextElementSibling.firstElementChild)
+    e.target.parentElement.parentElement.nextElementSibling.firstElementChild.style.display = 'grid';
+    e.target.parentElement.parentElement.nextElementSibling.firstElementChild.classList.add('openWebDev');
     //e.target.style.color = 'var(--secondaryTxt)';
     //e.target.style.backgroundColor = 'var(--secondaryTxt)';
     //console.log(e.target.previousElementSibling.previousElementSibling);
 }
 function disableShowBtn(e) {
-    e.target.parentElement.parentElement.nextElementSibling.style.display = 'grid';
-    e.target.parentElement.parentElement.nextElementSibling.classList.remove('openWebDev');
+    e.target.parentElement.parentElement.nextElementSibling.firstElementChild.style.display = 'none';
+    e.target.parentElement.parentElement.nextElementSibling.firstElementChild.classList.remove('openWebDev');
     //e.target.style.color = 'var(--secondaryClr)';
     //e.target.style.backgroundColor = 'var(--secondaryTxt)';
     //e.target.style.boxShadow = 'inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6)';
@@ -85,7 +85,7 @@ showServerSideList();
 
 
 function enableShowMore(e) {
-    e.target.parentElement.nextElementSibling.style.display = 'grid';
+    e.target.parentElement.nextElementSibling.style.display = 'block';
 }
 function disableShowMore(e) {
     e.target.parentElement.nextElementSibling.style.display = 'none'
@@ -195,8 +195,8 @@ showSoftcorpNotes();
 
 
 showtutorials();
-showDevCourses();
 showTechSkills();
+showDevCourses();
 
 function enableCourseShow(e) {
     e.target.nextElementSibling.style.display = 'block'

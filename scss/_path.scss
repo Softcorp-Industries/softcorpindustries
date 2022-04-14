@@ -6,25 +6,35 @@
   display: none;
   margin: auto;
   width: 90%;
-  max-width: 700px;
+  max-width: 1000px;
 }
 .devCourse {
   margin: 1em auto;
   width: 100%;
+  max-width: 650px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   &__header {
     font-family: "The Nautigal";
-    font-size: 1.5em;
+    font-size: 1.75em;
+    letter-spacing: 2px;
     color: var(--secondaryClr);
   }
 }
+.courseCard {
+  margin: 1em auto;
+  width: 80%;
+  max-width: 300px;
+}
+
 .w3Course, .softcorp {
   display: none;
   grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
 }
-
+.fccCourse {
+  display: none;
+}
 .fccProjects {
   margin: 1.5em auto;
   width: 90%;
@@ -174,6 +184,11 @@
 }
 
 @media screen and (min-width: 1024px) {
+  .devCourse {
+    &__header {
+      font-size: 2.5em;
+    }
+  }
   /*
   .webDevelopment-list {
     max-width: 900px;
