@@ -598,7 +598,27 @@ footer span {
     font-size: 2em;
   }
 }
-.fccCourse, .w3Course {
+.devCourses {
+  display: none;
+  margin: auto;
+  width: 90%;
+  max-width: 700px;
+}
+
+.devCourse {
+  margin: 1em auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.devCourse__header {
+  font-family: "The Nautigal";
+  font-size: 1.5em;
+  color: var(--secondaryClr);
+}
+
+.w3Course, .softcorp {
   display: none;
   grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
 }
@@ -607,7 +627,7 @@ footer span {
   margin: 1.5em auto;
   width: 90%;
   max-width: 600px;
-  display: grid;
+  display: none;
   grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   gap: 1em;
   list-style: none;
@@ -860,7 +880,7 @@ footer span {
   text-align: center;
   font-family: "The Nautigal";
   font-weight: 700;
-  font-size: 2em;
+  font-size: 2.5em;
   color: var(--secondaryClr);
   margin-bottom: 0.5em;
 }
@@ -963,9 +983,9 @@ footer span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 1em auto;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 .showMore {
@@ -1289,7 +1309,7 @@ footer span {
     }
   }
   .sectionHeader {
-    font-size: 2.25em;
+    font-size: 3em;
   }
 
   .filler-body p {

@@ -1,7 +1,26 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
-.fccCourse, .w3Course {
+
+.devCourses {
+  display: none;
+  margin: auto;
+  width: 90%;
+  max-width: 700px;
+}
+.devCourse {
+  margin: 1em auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__header {
+    font-family: "The Nautigal";
+    font-size: 1.5em;
+    color: var(--secondaryClr);
+  }
+}
+.w3Course, .softcorp {
   display: none;
   grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
 }
@@ -10,7 +29,7 @@
   margin: 1.5em auto;
   width: 90%;
   max-width: 600px;
-  display: grid;
+  display: none;
   grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   gap: 1em;
   list-style: none;

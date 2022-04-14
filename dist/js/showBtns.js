@@ -9,13 +9,16 @@ let fullStackListOn = false;
 let serverSideListOn = false;
 
 function enableShowBtn(e) {
-    e.target.parentElement.nextElementSibling.firstElementChild.classList.add('openWebDev');
+    console.log(e.target.parentElement.parentElement.nextElementSibling)
+    e.target.parentElement.parentElement.nextElementSibling.style.display = 'grid';
+    e.target.parentElement.parentElement.nextElementSibling.classList.add('openWebDev');
     //e.target.style.color = 'var(--secondaryTxt)';
     //e.target.style.backgroundColor = 'var(--secondaryTxt)';
     //console.log(e.target.previousElementSibling.previousElementSibling);
 }
 function disableShowBtn(e) {
-    e.target.parentElement.nextElementSibling.firstElementChild.classList.remove('openWebDev');
+    e.target.parentElement.parentElement.nextElementSibling.style.display = 'grid';
+    e.target.parentElement.parentElement.nextElementSibling.classList.remove('openWebDev');
     //e.target.style.color = 'var(--secondaryClr)';
     //e.target.style.backgroundColor = 'var(--secondaryTxt)';
     //e.target.style.boxShadow = 'inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6)';
@@ -109,10 +112,10 @@ function showW3Course() {
     document.addEventListener('DOMContentLoaded', () => {
         w3CourseBtn.addEventListener('click', (e) => {
             if (!w3CourseOpen) {
-                enableCourseShow(e);
+                enableShowMore(e);
                 w3CourseOpen = true;
             } else {
-                disableCourseShow(e);
+                disableShowMore(e);
                 w3CourseOpen = false;
             }
         })
@@ -135,10 +138,10 @@ function showSoftcorpNotes() {
     document.addEventListener('DOMContentLoaded', () => {
         softcorpNotesBtn.addEventListener('click', (e) => {
             if (!softcorpNotesOpen) {
-                enableCourseShow(e);
+                enableShowMore(e);
                 softcorpNotesOpen = true;
             } else {
-                disableCourseShow(e);
+                disableShowMore(e);
                 softcorpNotesOpen = false;
             }
         })
