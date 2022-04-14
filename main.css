@@ -836,7 +836,22 @@ footer span {
   margin-bottom: 2.5em;
 }
 
+.filler-body {
+  margin: auto;
+  width: 90%;
+  max-width: 1000px;
+  text-align: left;
+}
+.filler-body p {
+  margin: 0.5em;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+}
+
 .lead {
+  margin: auto;
+  width: 90%;
+  max-width: 700px;
   font-size: 1.25em;
   font-weight: 600;
 }
@@ -1215,6 +1230,10 @@ footer span {
   .chapter__header__body {
     margin-left: auto;
   }
+
+  .filler-body p {
+    font-size: 0.9em;
+  }
 }
 @media (min-width: 1000px) {
   @-webkit-keyframes readMoreAnim {
@@ -1271,6 +1290,10 @@ footer span {
   }
   .sectionHeader {
     font-size: 2.25em;
+  }
+
+  .filler-body p {
+    font-size: 1em;
   }
 }
 .about h1 {
