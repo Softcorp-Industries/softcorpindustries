@@ -1,3 +1,24 @@
+/*
+
+    There is bug that clears the read more btn text
+
+let selectedBtn = false;
+
+document.querySelector('#thePath').addEventListener('click', (e) => {
+    //console.log(e.target);
+
+    if (!selectedBtn && e.target.classList.contains('showBtn')) {
+        e.target.parentElement.parentElement.nextElementSibling.firstElementChild.style.display = 'grid';
+        e.target.parentElement.parentElement.nextElementSibling.firstElementChild.classList.add('openWebDev');
+        selectedBtn = true;
+    } else {
+        e.target.parentElement.parentElement.nextElementSibling.firstElementChild.style.display = 'none';
+        e.target.parentElement.parentElement.nextElementSibling.firstElementChild.classList.remove('openWebDev');
+        selectedBtn = false;
+    }
+})
+*/
+
 const fccResBtn = document.getElementById('fccResBtn');
 const frontEndBtn = document.getElementById('frontEndBtn');
 const fullStackBtn = document.getElementById('fullStackBtn');
@@ -9,7 +30,7 @@ let fullStackListOn = false;
 let serverSideListOn = false;
 
 function enableShowBtn(e) {
-    console.log(e.target.parentElement.parentElement.nextElementSibling.firstElementChild)
+    //console.log(e.target.parentElement.parentElement.nextElementSibling.firstElementChild)
     e.target.parentElement.parentElement.nextElementSibling.firstElementChild.style.display = 'grid';
     e.target.parentElement.parentElement.nextElementSibling.firstElementChild.classList.add('openWebDev');
     //e.target.style.color = 'var(--secondaryTxt)';
@@ -85,9 +106,11 @@ showServerSideList();
 
 
 function enableShowMore(e) {
+    console.log(e.target.parentElement.nextElementSibling)
     e.target.parentElement.nextElementSibling.style.display = 'block';
 }
 function disableShowMore(e) {
+    console.log(e.target.parentElement.nextElementSibling)
     e.target.parentElement.nextElementSibling.style.display = 'none'
 }
 
@@ -161,7 +184,6 @@ function showtutorials() {
         })
     })
 }
-
 function showDevCourses() {
     document.addEventListener('DOMContentLoaded', () => {
         devCoursesBtn.addEventListener('click', (e) => {
@@ -193,7 +215,6 @@ showFccCourse();
 showW3Course();
 showSoftcorpNotes();
 
-
 showtutorials();
 showTechSkills();
 showDevCourses();
@@ -216,7 +237,7 @@ let readMore2Open = false;
 let readMore3Open = false;
 
 function enableReadMore(e) {
-    console.log(e.target.parentElement.nextElementSibling);
+    console.log(e.target.parentElement.previousElementSibling);
     e.target.parentElement.previousElementSibling.style.display = 'block';
     e.target.parentElement.previousElementSibling.classList.add('readMoreAnim')
     e.target.parentElement.previousElementSibling.classList.remove('readMoreAnimRev')
@@ -276,3 +297,4 @@ function readMore3() {
 readMore();
 readMore2();
 readMore3();
+
