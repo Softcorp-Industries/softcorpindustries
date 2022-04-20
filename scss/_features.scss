@@ -50,13 +50,13 @@
 .quote {
   font-size: 0.95em;
   font-weight: 600;
-  padding: 0.2rem;
-  letter-spacing: 2px;
+  padding: 0.2em;
+  letter-spacing: 1px;
   @include darkMode;
-  width: 95%;
+  width: 80%;
   max-width: 500px;
   margin: 3em auto;
-  padding: 1rem 1.5rem;
+  padding: 1em;
   text-align: center;
   background-color: var(--darkModeBg);
   //background-image: url("./img/backgrounds/clouds_72634.jpg");
@@ -64,13 +64,16 @@
   color: var(--darkModeTxtClr);
   //color: var(--black);
   .author {
-    margin: 1rem 0;
+    margin: .5em 0;
     color: var(--secondaryClr);
-    font-size: 2.5em;
+    font-size: 2.3em;
     line-height: 0.5em;
     font-weight: 900;
     font-family: "The Nautigal";
     //text-shadow: 0px 0px 3px var(--black);
+  }
+  h2 {
+    font-size: 1.85em;
   }
   p {
     font-size: 0.95em;
@@ -292,6 +295,11 @@
       margin-top: -30em;
     }
   }
+  .quote {
+    .author {
+      font-size: 2.5em;
+    }
+  }
 }
 @media (min-width: 680px) {
   @keyframes readMoreAnim {
@@ -323,6 +331,11 @@
   
 }
 @media (min-width: 800px) {
+  .quote {
+    .author {
+      font-size: 3em;
+    }
+  }
   @keyframes readMoreAnim {
     0% {
       opacity: 0;

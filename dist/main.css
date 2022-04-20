@@ -868,25 +868,28 @@ footer span {
 .quote {
   font-size: 0.95em;
   font-weight: 600;
-  padding: 0.2rem;
-  letter-spacing: 2px;
+  padding: 0.2em;
+  letter-spacing: 1px;
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-  width: 95%;
+  width: 80%;
   max-width: 500px;
   margin: 3em auto;
-  padding: 1rem 1.5rem;
+  padding: 1em;
   text-align: center;
   background-color: var(--darkModeBg);
   border-radius: 1rem;
   color: var(--darkModeTxtClr);
 }
 .quote .author {
-  margin: 1rem 0;
+  margin: 0.5em 0;
   color: var(--secondaryClr);
-  font-size: 2.5em;
+  font-size: 2.3em;
   line-height: 0.5em;
   font-weight: 900;
   font-family: "The Nautigal";
+}
+.quote h2 {
+  font-size: 1.85em;
 }
 .quote p {
   font-size: 0.95em;
@@ -1178,6 +1181,9 @@ footer span {
       margin-top: -30em;
     }
   }
+  .quote .author {
+    font-size: 2.5em;
+  }
 }
 @media (min-width: 680px) {
   @-webkit-keyframes readMoreAnim {
@@ -1234,6 +1240,10 @@ footer span {
   }
 }
 @media (min-width: 800px) {
+  .quote .author {
+    font-size: 3em;
+  }
+
   @-webkit-keyframes readMoreAnim {
     0% {
       opacity: 0;
@@ -1247,6 +1257,7 @@ footer span {
       margin-top: 0px;
     }
   }
+
   @keyframes readMoreAnim {
     0% {
       opacity: 0;
@@ -1369,16 +1380,18 @@ footer span {
 .about h1 {
   padding-top: 2.25em;
   text-align: center;
-  font-size: 1.5em;
+  color: var(--txtChange);
+  font-size: 1.75em;
   letter-spacing: 2px;
+  text-shadow: 0px 0px 3px var(--darkModeBg);
 }
 
 .profile span {
   font-family: "audiowide";
   letter-spacing: 0.1rem;
   font-size: 1.2em;
-  color: var(--jsThemeClr);
-  text-shadow: 0px 0px 3px var(--black);
+  color: var(--txtChange);
+  text-shadow: 0px 0px 3px var(--darkModeBg);
 }
 .profile .avatar {
   display: flex;
@@ -1490,6 +1503,7 @@ footer span {
 }
 .profile .pastBio span {
   color: red;
+  text-shadow: none;
 }
 .profile .presentBio {
   text-align: center;
@@ -1499,7 +1513,9 @@ footer span {
   padding-top: 2.25em;
   text-align: center;
   font-size: 1.5em;
+  color: var(--txtChange);
   letter-spacing: 2px;
+  text-shadow: 0px 0px 3px var(--darkModeBg);
 }
 
 .contactModal {
@@ -1522,6 +1538,10 @@ footer span {
 }
 
 @media screen and (min-width: 700px) {
+  .about h1 {
+    font-size: 2em;
+  }
+
   .profile .avatar {
     flex-direction: row;
     align-items: center;
@@ -1817,6 +1837,7 @@ footer span {
   font-size: 1.5em;
   color: var(--txtChange);
   font-family: "Audiowide";
+  text-shadow: 0px 0px 3px var(--darkModeBg);
   font-weight: 900;
   letter-spacing: 2px;
 }
@@ -1840,6 +1861,7 @@ footer span {
   font-size: 1.5em;
   color: var(--txtChange);
   font-family: "Audiowide";
+  text-shadow: 0px 0px 3px var(--darkModeBg);
   font-weight: 900;
   letter-spacing: 2px;
 }
