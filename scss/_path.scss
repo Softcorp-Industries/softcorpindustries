@@ -27,7 +27,32 @@
   width: 80%;
   max-width: 300px;
 }
-
+#softcorpNotes {
+  h4 {
+    font-family: "Audiowide";
+    font-size: 1em;
+  }
+}
+.noteLink {
+  @include darkMode;
+  cursor: pointer;
+  margin: 1em auto;
+  width: 90%;
+  max-width: 500px;
+  padding: .5em;
+  font-family: "Audiowide";
+  font-size: .9em;
+  background-color: var(--darkModeBtn);
+  border-radius: 1em;
+  p {
+    a{
+      display: block;
+      text-decoration: none;
+      color: black;
+      letter-spacing: 1px;
+    }
+  }
+}
 .w3Course, .softcorp {
   display: none;
   grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));

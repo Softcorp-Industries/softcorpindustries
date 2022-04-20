@@ -155,18 +155,15 @@
     margin: auto;
     width: 90%;
     max-width: 600px;
-    padding: 0.75em 0;
-    font-size: 1em;
-    font-weight: 600;
-    font-family: "Lobster";
-    color: var(--secondaryTxt);
+    padding: 0.5em 0;
+    font-size: .75em;
+    font-family: "Audiowide";
     text-align: center;
     text-decoration: none;
     letter-spacing: 0.25rem;
-    background: transparent;
-    //background-color: var(--secondaryClr);
+    background: var(--darkModeBtn);
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 1.5em;
     outline: none;
   }
 }
@@ -323,12 +320,7 @@
       margin-top: -18em;
     }
   }
-  .showMoreHeader {
-    flex-direction: row;
-  }
-  .sectionHeader {
-    margin-bottom: 0em;
-  }
+  
 }
 @media (min-width: 800px) {
   @keyframes readMoreAnim {
@@ -356,6 +348,12 @@
       opacity: 0;
       margin-top: -16em;
     }
+  }
+  .showMoreHeader {
+    flex-direction: row;
+  }
+  .sectionHeader {
+    margin-bottom: 0em;
   }
   .chapter {
     &__header {

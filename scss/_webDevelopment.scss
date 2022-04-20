@@ -26,8 +26,9 @@
     width: 175px;
     height: 175px;
     padding: 0.5em;
+    background-color: var(--darkModeBtn);
     color: var(--secondaryClr);
-    border-radius: .25em;
+    border-radius: 1em;
     .listItemInfo {
       width: 100%;
       margin: auto;

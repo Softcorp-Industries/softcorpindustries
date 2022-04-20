@@ -23,7 +23,7 @@
   --themeWht: black;
   
   --darkModeBg: rgb(250, 250, 250);
-  --darkModeBtn: rgb(230, 230, 230);
+  --darkModeBtn: rgb(230, 230, 230, 0.4);
   --darkModeTxtClr: rgb(54, 54, 54);
   --darkModeTxtlgt: #e3e3e3;
   
@@ -67,7 +67,7 @@ body {
 
 body[data-darkMode="darkMode"] {
   --darkModeBg: rgb(0, 0, 0); // from rgb(250, 250, 250)
-  --darkModeBtn: rgb(189, 189, 189);
+  --darkModeBtn: rgba(189, 189, 189, 0.4);
 
   --darkModeBgblk: rgb(0, 0, 0); // from
   --darkModeTxtClr: white; // from rgb(54, 54, 54)
