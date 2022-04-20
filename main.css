@@ -15,7 +15,7 @@
   --themeBlk: whitesmoke;
   --themeWht: black;
   --darkModeBg: rgb(250, 250, 250);
-  --darkModeBtn: rgb(230, 230, 230);
+  --darkModeBtn: rgb(230, 230, 230, 0.4);
   --darkModeTxtClr: rgb(54, 54, 54);
   --darkModeTxtlgt: #e3e3e3;
   --bgFilter: rgba(255, 255, 255, 0.3);
@@ -56,7 +56,7 @@ body {
 
 body[data-darkMode=darkMode] {
   --darkModeBg: rgb(0, 0, 0);
-  --darkModeBtn: rgb(189, 189, 189);
+  --darkModeBtn: rgba(189, 189, 189, 0.4);
   --darkModeBgblk: rgb(0, 0, 0);
   --darkModeTxtClr: white;
   --darkModeClrlgt: rgb(54, 54, 54);
@@ -628,6 +628,30 @@ footer span {
   max-width: 300px;
 }
 
+#softcorpNotes h4 {
+  font-family: "Audiowide";
+  font-size: 1em;
+}
+
+.noteLink {
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
+  cursor: pointer;
+  margin: 1em auto;
+  width: 90%;
+  max-width: 500px;
+  padding: 0.5em;
+  font-family: "Audiowide";
+  font-size: 0.9em;
+  background-color: var(--darkModeBtn);
+  border-radius: 1em;
+}
+.noteLink p a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1px;
+}
+
 .w3Course, .softcorp {
   display: none;
   grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
@@ -954,17 +978,15 @@ footer span {
   margin: auto;
   width: 90%;
   max-width: 600px;
-  padding: 0.75em 0;
-  font-size: 1em;
-  font-weight: 600;
-  font-family: "Lobster";
-  color: var(--secondaryTxt);
+  padding: 0.5em 0;
+  font-size: 0.75em;
+  font-family: "Audiowide";
   text-align: center;
   text-decoration: none;
   letter-spacing: 0.25rem;
-  background: transparent;
+  background: var(--darkModeBtn);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 1.5em;
   outline: none;
 }
 
@@ -1210,13 +1232,6 @@ footer span {
       margin-top: -18em;
     }
   }
-  .showMoreHeader {
-    flex-direction: row;
-  }
-
-  .sectionHeader {
-    margin-bottom: 0em;
-  }
 }
 @media (min-width: 800px) {
   @-webkit-keyframes readMoreAnim {
@@ -1271,6 +1286,14 @@ footer span {
       margin-top: -16em;
     }
   }
+  .showMoreHeader {
+    flex-direction: row;
+  }
+
+  .sectionHeader {
+    margin-bottom: 0em;
+  }
+
   .chapter__header {
     flex-direction: row;
   }
@@ -1835,7 +1858,7 @@ footer span {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 150px;
+  width: 250px;
   letter-spacing: 1px;
   border-radius: 0.5em;
   margin: auto;
@@ -1853,8 +1876,8 @@ footer span {
   font-weight: 700;
 }
 .link a img {
-  width: 150px;
-  height: 100px;
+  width: 250px;
+  height: 145px;
   border-radius: 0.5rem;
   margin-bottom: 0.75em;
 }
@@ -2308,8 +2331,9 @@ footer span {
   width: 175px;
   height: 175px;
   padding: 0.5em;
+  background-color: var(--darkModeBtn);
   color: var(--secondaryClr);
-  border-radius: 0.25em;
+  border-radius: 1em;
 }
 .webDevelopment-list .listItem .listItemInfo {
   width: 100%;
