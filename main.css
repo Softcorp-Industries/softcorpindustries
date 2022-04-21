@@ -91,13 +91,14 @@ hr {
 
 footer {
   margin: auto;
-  padding: 2em;
+  padding: 1em;
   text-align: center;
   font-family: "audiowide", cursive;
-  font-size: 0.45em;
+  font-size: 0.8em;
+  line-height: 1.4;
   letter-spacing: 0.2em;
   color: var(--darkModeTxtClr);
-  background-color: var(--themeBlk);
+  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
 }
 
 footer span {
@@ -555,6 +556,13 @@ footer span {
   font-family: "The Nautigal";
   letter-spacing: 2px;
   text-shadow: 0px 0px 5px var(--black);
+}
+.landing img {
+  display: block;
+  margin: 1.5em auto;
+  opacity: 0.8;
+  width: calc(8vw + 8em);
+  border-radius: 0.25em;
 }
 
 .greeting {
@@ -1590,11 +1598,13 @@ footer span {
   transform-style: preserve-3d;
 }
 .cardBox p {
-  font-size: 1.25em;
   margin-right: 50px;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1em;
+  color: var(--txtChange);
   font-family: "Audiowide";
-  color: var(--darkModeBlk);
+  font-size: 1.25em;
+  font-weight: 600;
+  text-shadow: 0px 0px 3px var(--darkModeBg);
 }
 .cardBox .card {
   box-shadow: inset -4px -4px 7px #fff, inset 4px 4px 7px rgba(0, 0, 0, 0.4);
@@ -2020,12 +2030,13 @@ footer span {
   max-width: 800px;
 }
 .future p {
-  font-size: 1.25em;
+  font-size: 1.5em;
   text-align: left;
   margin-right: 50px;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1em;
   font-family: "Audiowide";
-  color: var(--secondaryClr);
+  color: var(--txtChange);
+  text-shadow: 0px 0px 3px var(--darkModeBg);
 }
 .future p:nth-last-child(1) {
   text-align: right;
@@ -2060,6 +2071,8 @@ footer span {
 #buildIt h3 {
   padding: 0.5em;
   text-align: center;
+  color: var(--txtChange);
+  text-shadow: 0px 0px 3px var(--darkModeBg);
 }
 
 .ai,
