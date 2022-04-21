@@ -3,7 +3,7 @@
 
 .landing {
   &__top {
-    background-image: url("img/tech/landing-bg2.jpg");
+    //background-image: url("img/tech/landing-bg2.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -27,9 +27,8 @@
       text-shadow: 0px 0px 7px var(--black);
     }
   }
-  &__title {
-    position: relative;
-    height: calc(5vw + 5em);
+  .title {
+    padding: 1em;
     width: 100%;
     z-index: 0;
     background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
@@ -39,22 +38,23 @@
     background-color: var(--themeBlk);
     border-bottom: 3px solid var(--secondaryClr);
     box-shadow: 0px 3px 3px rgb(70, 70, 70);
-    h1 {
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      bottom: 0.75em;
-      font-weight: 900;
-      color: var(--white);
-      font-size: 1.2em;
-      letter-spacing: 0.25em;
-      text-shadow: 0px 0px 7px var(--black);
-    }
+  }
+  h1 {
+    //position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0.75em;
+    font-weight: 900;
+    color: var(--white);
+    font-size: 2.25em;
+    font-family: 'The Nautigal';
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 5px var(--black);
   }
 }
 .greeting {
   width: 100%;
-  padding: 2.5em 0;
+  padding: 1em 0;
   text-align: center;
   font-size: 1.25em;
   font-family: "Audiowide";
@@ -66,13 +66,19 @@
 }
 @media screen and (min-width: 400px) {
   .landing {
-    &__title {
-      height: calc(4vw + 4em);
-    }
+    
   }
 }
 
 @media screen and (min-width: 550px) {
+  .landing {
+    h1{
+      font-size: 2.5em;
+    }
+  }
+  .greeting {
+    font-size: 1.5em;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -81,26 +87,16 @@
       background-size: cover;
       background-position: center;
     }
-    &__title{
-      h1{
-        font-size: 1.4em;
-      }
-    }
+    
+    
   }
 }
 
 @media screen and (min-width: 1024px) {
   .landing {
-    &__top {
-      height: 38vw;
-    }
-    &__title {
-      height: calc(5vw + 5em);
       h1 {
-        font-size: 2em;
-        bottom: .5em;
+        font-size: 3.5em;
       }
-    }
   }
   .greeting {
     font-size: 2em;
