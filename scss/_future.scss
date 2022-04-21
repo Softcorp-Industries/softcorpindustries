@@ -6,13 +6,13 @@
   width: 90%;
   max-width: 800px;
   p {
-    font-size: 1.25em;
+    font-size: 1.5em;
     text-align: left;
     margin-right: 50px;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.1em;
     font-family: "Audiowide";
-    color: var(--secondaryClr);
-    //text-shadow: 0px 0px 2px var(--white);
+    color: var(--txtChange);
+    text-shadow: 0px 0px 3px var(--darkModeBg);
   }
   p:nth-last-child(1) {
     text-align: right;
@@ -48,6 +48,9 @@
   h3 {
       padding: .5em;
     text-align: center;
+    color: var(--txtChange);
+      text-shadow: 0px 0px 3px var(--darkModeBg);
+
   }
 }
 
