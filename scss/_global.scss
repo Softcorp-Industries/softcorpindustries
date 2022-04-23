@@ -28,7 +28,7 @@
   --darkModeTxtlgt: #e3e3e3;
   
   --bgFilter: rgba(255, 255, 255, 0.3);
-  --bgFilterBlk: rgba(0, 0, 0, 0.3);
+  --bgFilterBlk: rgba(0, 0, 0, 0.55);
   --bgFilterBlkDrk: rgba(0, 0, 0, 0.8);
   --bgFilterDrk: rgba(255, 255, 255, 0.8);
   
@@ -137,7 +137,9 @@ footer span {
 }
 
 @media screen and (min-width: 700px) {
-  
+  body {
+    font-size: 28px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
