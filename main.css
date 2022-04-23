@@ -19,7 +19,7 @@
   --darkModeTxtClr: rgb(54, 54, 54);
   --darkModeTxtlgt: #e3e3e3;
   --bgFilter: rgba(255, 255, 255, 0.3);
-  --bgFilterBlk: rgba(0, 0, 0, 0.3);
+  --bgFilterBlk: rgba(0, 0, 0, 0.55);
   --bgFilterBlkDrk: rgba(0, 0, 0, 0.8);
   --bgFilterDrk: rgba(255, 255, 255, 0.8);
   --black: black;
@@ -113,6 +113,11 @@ footer span {
 @media screen and (min-width: 550px) {
   body {
     font-size: 24px;
+  }
+}
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 28px;
   }
 }
 .darkMode {
@@ -510,7 +515,7 @@ footer span {
     opacity: 1;
   }
 }
-.landing__top {
+.top {
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -522,7 +527,7 @@ footer span {
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
   margin-bottom: -7vw;
 }
-.landing__top h2 {
+.top h2 {
   position: absolute;
   bottom: calc(7vw - 1em);
   right: 4%;
@@ -535,29 +540,20 @@ footer span {
   letter-spacing: 0.15rem;
   text-shadow: 0px 0px 7px var(--black);
 }
-.landing .title {
-  padding: 1em;
-  width: 100%;
-  z-index: 0;
-  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
-  background-size: cover;
-  background-position: top;
-  background-color: var(--themeBlk);
-  border-bottom: 3px solid var(--secondaryClr);
-  box-shadow: 0px 3px 3px rgb(70, 70, 70);
-}
-.landing h1 {
+
+.title {
+  padding-top: 0.25em;
   width: 100%;
   text-align: center;
-  bottom: 0.75em;
   font-weight: 900;
-  color: var(--white);
-  font-size: 2.25em;
+  color: var(--secondaryTxt);
+  font-size: 2.75em;
   font-family: "The Nautigal";
   letter-spacing: 2px;
-  text-shadow: 0px 0px 5px var(--black);
+  text-shadow: 0px 0px 7px var(--black);
 }
-.landing img {
+
+.landingImg {
   display: block;
   margin: 1.5em auto;
   opacity: 0.8;
@@ -569,7 +565,7 @@ footer span {
   width: 100%;
   padding: 1em 0;
   text-align: center;
-  font-size: 1.25em;
+  font-size: 1em;
   font-family: "Audiowide";
   color: #C0FFF4;
   text-shadow: 0px 0px 3px var(--black);
@@ -577,12 +573,8 @@ footer span {
 }
 
 @media screen and (min-width: 550px) {
-  .landing h1 {
+  .title {
     font-size: 2.5em;
-  }
-
-  .greeting {
-    font-size: 1.5em;
   }
 }
 @media screen and (min-width: 700px) {
@@ -592,12 +584,12 @@ footer span {
   }
 }
 @media screen and (min-width: 1024px) {
-  .landing h1 {
-    font-size: 3.5em;
+  .title {
+    font-size: 4.5em;
   }
 
   .greeting {
-    font-size: 2em;
+    font-size: 1.2em;
   }
 }
 .devCourses {
