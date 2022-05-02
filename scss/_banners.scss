@@ -32,11 +32,11 @@
     width: 100%;
     text-align: center;
     font-weight: 900;  
-    color: var(--secondaryTxt);
+    color: var(--txtChange);
     font-size: 2.75em;
     font-family: 'The Nautigal';
     letter-spacing: 2px;
-    text-shadow: 0px 0px 7px var(--black);
+    text-shadow: 0px 0px 7px var(--darkModeBg);
   }
   
   .landingImg {
@@ -53,8 +53,8 @@
   text-align: center;
   font-size: 1em;
   font-family: "Audiowide";
-  color: #C0FFF4;
-  text-shadow: 0px 0px 3px var(--black);
+  color: var(--txtChange);
+  text-shadow: 0px 0px 3px var(--darkModeBg);
   letter-spacing: 2px;
 }
 @media screen and (min-width: 310px) {

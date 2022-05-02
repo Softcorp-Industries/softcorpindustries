@@ -97,7 +97,7 @@ footer {
   font-size: 0.8em;
   line-height: 1.4;
   letter-spacing: 0.2em;
-  color: var(--darkModeTxtClr);
+  color: var(--darkModeBg);
   background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
 }
 
@@ -331,41 +331,41 @@ footer span {
 .pageNav .pageNav-list .cHeader {
   display: none;
   margin-bottom: 15px;
-  color: var(--secondaryClr);
+  color: var(--txtChange);
   letter-spacing: 0.15em;
   font-weight: 900;
+  text-shadow: 0px 0px 3px var(--darkModeBg);
 }
 .pageNav .pageNav-list .pageNav-listItem {
   margin-bottom: 7px;
-  width: calc(7.5vw + 8rem);
-  max-width: 200px;
   background: none;
-  background-color: var(--bgPrimary);
-  border-radius: 1rem;
+  border-radius: 1.5em;
 }
 .pageNav .pageNav-list a {
+  background-color: var(--white);
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   display: block;
   width: 100%;
-  padding: 0.4rem 0.5rem;
+  padding: 0.5rem 1rem;
+  color: var(--txtChange);
   font-family: "Audiowide";
-  font-size: 14px;
+  font-size: 0.8em;
   font-weight: 600;
-  color: var(--bgSecondary);
   text-align: center;
   text-decoration: none;
   letter-spacing: 0.25rem;
-  background-color: var(--bgFilterDrk);
-  border-radius: 1rem;
+  border-radius: 1.5em;
+  text-shadow: 0px 0px 3px var(--darkModeBg);
 }
 .pageNav .pageNav-list .pageNav-listItem:hover {
-  background-color: var(--bgSecondary);
-  color: white;
-}
-.pageNav .pageNav-list a:hover {
-  color: var(--secondaryClr);
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   box-shadow: none;
   font-weight: 900;
+}
+.pageNav .pageNav-list a:hover {
+  background-color: var(--secondaryClr);
+  color: var(--secondaryTxt);
+  text-shadow: 0px 0px 2px var(--darkModeBg);
 }
 .pageNav .pageNav-list a:active {
   width: 100%;
@@ -546,11 +546,11 @@ footer span {
   width: 100%;
   text-align: center;
   font-weight: 900;
-  color: var(--secondaryTxt);
+  color: var(--txtChange);
   font-size: 2.75em;
   font-family: "The Nautigal";
   letter-spacing: 2px;
-  text-shadow: 0px 0px 7px var(--black);
+  text-shadow: 0px 0px 7px var(--darkModeBg);
 }
 
 .landingImg {
@@ -567,8 +567,8 @@ footer span {
   text-align: center;
   font-size: 1em;
   font-family: "Audiowide";
-  color: #C0FFF4;
-  text-shadow: 0px 0px 3px var(--black);
+  color: var(--txtChange);
+  text-shadow: 0px 0px 3px var(--darkModeBg);
   letter-spacing: 2px;
 }
 
@@ -858,7 +858,7 @@ footer span {
 }
 
 .quote {
-  font-size: 0.95em;
+  font-size: 0.9em;
   font-weight: 600;
   padding: 0.2em;
   letter-spacing: 1px;
@@ -912,7 +912,8 @@ footer span {
   margin: auto;
   width: 90%;
   max-width: 700px;
-  font-size: 1.25em;
+  color: var(--darkModeTxtClr);
+  text-shadow: 0px 0px 3px var(--darkModeBg);
   font-weight: 600;
 }
 
@@ -929,6 +930,7 @@ footer span {
 .subHeader {
   margin: 1em auto;
   color: var(--darkModeTxtClr);
+  text-shadow: 0px 0px 3px var(--darkModeBg);
   font-size: 1.5em;
   text-align: center;
   letter-spacing: 2px;
@@ -1589,15 +1591,6 @@ footer span {
   margin: 100px auto;
   transform-style: preserve-3d;
 }
-.cardBox p {
-  margin-right: 50px;
-  letter-spacing: 0.1em;
-  color: var(--txtChange);
-  font-family: "Audiowide";
-  font-size: 1.25em;
-  font-weight: 600;
-  text-shadow: 0px 0px 3px var(--darkModeBg);
-}
 .cardBox .card {
   box-shadow: inset -4px -4px 7px #fff, inset 4px 4px 7px rgba(0, 0, 0, 0.4);
   cursor: pointer;
@@ -1605,6 +1598,11 @@ footer span {
   height: 150px;
   border-radius: 1rem;
   margin: 50px auto;
+}
+.cardBox .card p {
+  letter-spacing: 0.1em;
+  color: var(--secondaryTxt);
+  font-family: "Audiowide";
 }
 .cardBox .card__content {
   transform-style: preserve-3d;
@@ -1630,7 +1628,7 @@ footer span {
           backface-visibility: hidden;
   width: 250px;
   height: 150px;
-  text-shadow: 0px 0px 7px var(--black);
+  text-shadow: 0px 0px 7px black;
 }
 .cardBox .card__front-title {
   padding: 0;
@@ -1675,6 +1673,13 @@ footer span {
 .slideLeft,
 .slideRight {
   transition: transform 500ms ease-in;
+  margin-right: 50px;
+  letter-spacing: 0.1em;
+  color: var(--txtChange);
+  font-family: "Audiowide";
+  font-size: 1.25em;
+  font-weight: 600;
+  text-shadow: 0px 0px 3px var(--darkModeBg);
 }
 
 .slideLeft.slideTxt,
@@ -1888,14 +1893,14 @@ footer span {
   line-height: 1.4;
   color: var(--txtChange);
   padding: 0.5em 0;
+  text-shadow: 0px 0px 3px var(--darkModeBg);
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 900;
 }
 .link a img {
   width: 250px;
   height: 145px;
   border-radius: 0.5rem;
-  margin-bottom: 0.75em;
 }
 
 .link:hover {
