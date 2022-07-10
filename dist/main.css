@@ -96,7 +96,7 @@ footer {
   padding: 1em;
   text-align: center;
   font-family: "audiowide", cursive;
-  font-size: 0.8em;
+  font-size: 0.65em;
   line-height: 1.4;
   letter-spacing: 0.2em;
   color: var(--darkModeBg);
@@ -910,6 +910,7 @@ footer span {
   margin: 0.5em;
   letter-spacing: 1px;
   font-size: 0.8em;
+  color: black;
 }
 
 .lead {
