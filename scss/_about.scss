@@ -1,5 +1,6 @@
 @use "_global" as *;
 @use "_mixin" as *;
+@use "_vision" as *;
 
 .about {
   h1 {
@@ -176,6 +177,26 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  a{
+    color: var(--secondaryClr);
+    i {
+      transform: scale(2);
+      margin: 50px auto;
+    }
+  }
+}
+.location {
+  margin: auto;
+  width: 300px;
+  text-align: center;
+  a{
+    color: var(--secondaryClr);
+    i{
+      margin-top: 40px;
+      margin-bottom: 50px;
+      transform: scale(3);
+    }
+  }
 }
 @media screen and (min-width: 310px) {
 }
