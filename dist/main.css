@@ -1,9 +1,13 @@
 :root {
   --primaryBg: #e3e3e3;
   --secondaryClr: purple;
-  --secondaryTxt: #C0FFF4;
+  --secondaryTxt: #c0fff4;
   --txtChange: purple;
-  --bgGradient: linear-gradient(to left top, var(--secondaryTxt), var(--secondaryClr));
+  --bgGradient: linear-gradient(
+    to left top,
+    var(--secondaryTxt),
+    var(--secondaryClr)
+  );
   --jsThemeClr: yellow;
   --htmlThemeClr: orangered;
   --cssThemeClr: blue;
@@ -29,7 +33,7 @@
   --inputToggleTheme: #c7c7c7;
   --inputToggleTxt: rgb(54, 54, 54);
   --xsmSpacer: 0.25em;
-  --smSpacer: .5em;
+  --smSpacer: 0.5em;
   --mdSpacer: 1em;
   --lgSpacer: 1.5em;
   --xlgSpacer: 2em;
@@ -66,7 +70,7 @@ body[data-darkMode=darkMode] {
   --themeBlk: rgb(99, 99, 99);
   --themeBg: black;
   --themeSec: yellow;
-  --txtChange: #C0FFF4;
+  --txtChange: #c0fff4;
 }
 
 body.transition,
@@ -76,10 +80,14 @@ body.transition *:after {
   transition: all 750ms;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Audiowide";
+h1 {
+  padding-top: 0.25em;
+  text-align: center;
+  color: var(--txtChange);
+  font-family: "The Nautigal";
+  font-size: 4.25em;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 3px var(--darkModeBg);
 }
 
 hr {
@@ -101,7 +109,7 @@ footer {
   letter-spacing: 0.2em;
   color: var(--darkModeBg);
   text-shadow: 0px 0px 2px var(--darkModeTxtClr);
-  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
+  background-image: linear-gradient(to left top, #c0fff4, var(--secondaryClr));
 }
 
 footer span {
@@ -538,30 +546,18 @@ footer span {
   transform: rotate(-3.8deg);
   font-family: "Audiowide", cursive;
   font-size: 0.8em;
-  color: #C0FFF4;
+  color: #c0fff4;
   margin-bottom: 0;
   padding-bottom: 0.5em;
   letter-spacing: 0.15rem;
   text-shadow: 0px 0px 7px var(--black);
 }
 
-.title {
-  padding-top: 0.25em;
-  width: 100%;
-  text-align: center;
-  font-weight: 900;
-  color: var(--txtChange);
-  font-size: 2.75em;
-  font-family: "The Nautigal";
-  letter-spacing: 2px;
-  text-shadow: 0px 0px 7px var(--darkModeBg);
-}
-
 .landingImg {
   display: block;
   margin: 1.5em auto;
   opacity: 0.8;
-  width: calc(8vw + 8em);
+  width: calc(12vw + 12em);
   border-radius: 0.25em;
 }
 
@@ -576,11 +572,6 @@ footer span {
   letter-spacing: 2px;
 }
 
-@media screen and (min-width: 550px) {
-  .title {
-    font-size: 2.5em;
-  }
-}
 @media screen and (min-width: 700px) {
   .landing__top {
     background-size: cover;
@@ -588,9 +579,6 @@ footer span {
   }
 }
 @media screen and (min-width: 1024px) {
-  .title {
-    font-size: 4.5em;
-  }
   .greeting {
     font-size: 1.2em;
   }
@@ -904,8 +892,8 @@ footer span {
 
 .lead {
   margin: auto;
-  width: 90%;
-  max-width: 700px;
+  width: 95%;
+  max-width: 800px;
   color: var(--darkModeTxtClr);
   text-shadow: 0px 0px 3px var(--darkModeBg);
   font-weight: 600;
@@ -1463,11 +1451,18 @@ footer span {
 }
 
 .visionSlider {
-  display: flex;
   align-items: center;
   justify-content: left;
   width: 100%;
   overflow: hidden;
+}
+.visionSlider__header {
+  padding: 0.5em 0;
+  font-size: 1.25em;
+  color: var(--txtChange);
+  font-family: "Audiowide";
+  text-align: center;
+  text-shadow: 0px 0px 3px var(--darkModeBg);
 }
 
 .visionSliderSection {
@@ -1475,12 +1470,6 @@ footer span {
   margin: auto;
   margin-top: 2em;
   padding: 0 0.5em;
-}
-.visionSliderSection__header {
-  padding: 0.5em 0;
-  font-size: 1.25em;
-  font-family: "Audiowide";
-  text-align: center;
 }
 
 .displayTablets {
@@ -1598,15 +1587,6 @@ footer span {
     height: 275px;
   }
 }
-.about h1 {
-  padding-top: 2.25em;
-  text-align: center;
-  color: var(--txtChange);
-  font-size: 1.75em;
-  letter-spacing: 2px;
-  text-shadow: 0px 0px 3px var(--darkModeBg);
-}
-
 .profile span {
   font-family: "audiowide";
   letter-spacing: 0.1rem;
@@ -1734,6 +1714,7 @@ footer span {
   padding-top: 2.25em;
   text-align: center;
   font-size: 1.5em;
+  font-family: "Audiowide";
   color: var(--txtChange);
   letter-spacing: 2px;
   text-shadow: 0px 0px 3px var(--darkModeBg);
@@ -1767,7 +1748,7 @@ footer span {
   justify-content: space-evenly;
 }
 .mediaLink a {
-  color: var(--secondaryClr);
+  color: var(--txtChange);
 }
 .mediaLink a i {
   transform: scale(2);
@@ -1789,9 +1770,6 @@ footer span {
 }
 
 @media screen and (min-width: 700px) {
-  .about h1 {
-    font-size: 2em;
-  }
   .profile .avatar {
     flex-direction: row;
     align-items: center;
@@ -1821,10 +1799,6 @@ footer span {
   }
 }
 @media screen and (min-width: 1024px) {
-  .about h1 {
-    padding-top: 1em;
-    font-size: 3em;
-  }
   .profile .avatar .profileImg {
     width: 200px;
     height: 200px;

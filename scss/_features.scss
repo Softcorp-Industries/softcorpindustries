@@ -101,12 +101,10 @@
 }
 .lead {
   margin: auto;
-  width: 90%;
-  max-width: 700px;
+  width: 95%;
+  max-width: 800px;
   color: var(--darkModeTxtClr);
   text-shadow: 0px 0px 3px var(--darkModeBg);
-
-  //font-size: 1.25em;
   font-weight: 600;
 }
 .sectionHeader {

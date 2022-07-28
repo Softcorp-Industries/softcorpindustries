@@ -102,11 +102,19 @@
 }
 
 .visionSlider {
-  display: flex;
+  //display: flex;
   align-items: center;
   justify-content: left;
   width: 100%;
   overflow: hidden;
+  &__header {
+    padding: 0.5em 0;
+    font-size: 1.25em;
+    color: var(--txtChange);
+    font-family: "Audiowide";
+    text-align: center;
+    text-shadow: 0px 0px 3px var(--darkModeBg);
+  }
 }
 .visionSliderSection {
   //background-color: blue;
@@ -119,13 +127,7 @@
   margin: auto;
   margin-top: 2em;
   padding: 0 0.5em;
-  &__header {
-    padding: 0.5em 0;
-    font-size: 1.25em;
-    //color: var(--txtChange);
-    font-family: "Audiowide";
-    text-align: center;
-  }
+  
 }
 
 .displayTablets {

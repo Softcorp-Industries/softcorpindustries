@@ -1,52 +1,38 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
-
-  .top {
-    //background-image: url("img/tech/landing-bg2.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: top;
-    z-index: 1;
-    position: relative;
-    height: 55vw;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
-    margin-bottom: -7vw;
-    h2 {
-      position: absolute;
-      bottom: calc(7vw - 1em);
-      right: 4%;
-      transform: rotate(-3.8deg);
-      font-family: "Audiowide", cursive;
-      font-size: 0.8em;
-      color: #C0FFF4;
-      margin-bottom: 0;
-      padding-bottom: 0.5em;
-      letter-spacing: 0.15rem;
-      text-shadow: 0px 0px 7px var(--black);
-    }
+.top {
+  //background-image: url("img/tech/landing-bg2.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  z-index: 1;
+  position: relative;
+  height: 55vw;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
+  margin-bottom: -7vw;
+  h2 {
+    position: absolute;
+    bottom: calc(7vw - 1em);
+    right: 4%;
+    transform: rotate(-3.8deg);
+    font-family: "Audiowide", cursive;
+    font-size: 0.8em;
+    color: #c0fff4;
+    margin-bottom: 0;
+    padding-bottom: 0.5em;
+    letter-spacing: 0.15rem;
+    text-shadow: 0px 0px 7px var(--black);
   }
-  .title {
-    padding-top: .25em;
-    width: 100%;
-    text-align: center;
-    font-weight: 900;  
-    color: var(--txtChange);
-    font-size: 2.75em;
-    font-family: 'The Nautigal';
-    letter-spacing: 2px;
-    text-shadow: 0px 0px 7px var(--darkModeBg);
-  }
-  
-  .landingImg {
-    display: block;
-    margin: 1.5em auto;
-    opacity: .8;
-    width: calc(8vw + 8em);
-    border-radius: .25em;
-  }
-
+}
+.landingImg {
+  display: block;
+  margin: 1.5em auto;
+  opacity: 0.8;
+  width: calc(12vw + 12em);
+  border-radius: 0.25em;
+}
 .greeting {
   width: 100%;
   padding: 1em 0;
@@ -60,36 +46,21 @@
 @media screen and (min-width: 310px) {
 }
 @media screen and (min-width: 400px) {
-  
 }
-
 @media screen and (min-width: 550px) {
-  
-    .title{
-      font-size: 2.5em;
-    }
 }
-
 @media screen and (min-width: 700px) {
   .landing {
     &__top {
       background-size: cover;
       background-position: center;
     }
-    
-    
   }
 }
-
 @media screen and (min-width: 1024px) {
-      .title {
-        font-size: 4.5em;
-      }
   .greeting {
     font-size: 1.2em;
   }
 }
-
 @media screen and (min-width: 1200px) {
-  
 }
