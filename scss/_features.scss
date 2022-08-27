@@ -109,10 +109,10 @@
 }
 .sectionHeader {
   text-align: center;
-  font-family: "The Nautigal";
+  //font-family: "The Nautigal";
   font-weight: 700;
-  font-size: 2.5em;
-  letter-spacing: 2px;
+  font-size: 1.25em;
+  letter-spacing: 1px;
   color: var(--secondaryClr);
   margin-bottom: 0.5em;
 }
@@ -131,17 +131,18 @@
 
 .reportCard {
   margin: auto;
+  padding-top: 2.5em;
   width: 90%;
-  max-width: 300px;
-  height: 250px;
+  max-width: 500px;
+  //height: 250px;
   text-align: center;
   letter-spacing: 2px;
   &__header {
     width: 100%;
-    padding: 0.25em 0;
+    //padding: 0.25em 0;
     text-align: center;
-    font-family: "The Nautigal";
-    font-size: 1.5em;
+    font-family: "Audiowide";
+    font-size: 1em;
     font-weight: 900;
     color: var(--secondaryClr);
   }
@@ -206,9 +207,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 1em auto;
-  max-width: 900px;
-  //margin-bottom: 2em;
+  margin: auto;
+  margin-top: 2.5em;
+  max-width: 1000px;
 }
 .showMore {
   @include darkMode;
@@ -366,10 +367,11 @@
     }
   }
   .showMoreHeader {
-    flex-direction: row;
+    //flex-direction: row;
   }
   .sectionHeader {
-    margin-bottom: 0em;
+    font-size: 1.75em;
+    margin-bottom: 0.25em;
   }
   .chapter {
     &__header {
@@ -413,7 +415,7 @@
     }
   }
   .sectionHeader {
-    font-size: 3em;
+    font-size: 2.25em;
   }
   .filler-body {
     p {
