@@ -99,7 +99,7 @@
     color: black;
   }
 }
-.lead {
+p.lead {
   margin: auto;
   width: 95%;
   max-width: 800px;
@@ -139,13 +139,13 @@
   text-align: center;
   letter-spacing: 2px;
   &__header {
-    width: 100%;
+    //width: 100%;
     //padding: 0.25em 0;
-    text-align: center;
-    font-family: "Audiowide";
+    //text-align: center;
+  //font-family: "Audiowide";
     font-size: 1em;
     font-weight: 900;
-    color: var(--secondaryClr);
+    //color: var(--secondaryClr);
   }
   p {
     padding: 0.5em;
