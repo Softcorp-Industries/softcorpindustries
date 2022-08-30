@@ -132,8 +132,11 @@
       width: 100%;
       position: absolute;
       bottom: 0.5em;
-      left: 50%;
-      transform: translateX(-50%);
+      //left: 50%;
+      opacity: 0;
+      transform: scale(.5);
+      //transform: translateX(-50%);
+      
     }
   }
 }
@@ -143,8 +146,8 @@
 }
 .desktop__monitor.current .desktop__monitor__header{
   opacity: 1;
-  //transform: translateY(-300px);
-  //transition: all 0.7s ease-in-out 0.3s;
+  transform: scale(1);
+  transition: all 0.7s ease-in-out 0.3s;
 }
 
 .desktop__monitor:first-child {

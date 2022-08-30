@@ -93,7 +93,7 @@
   max-width: 1000px;
   text-align: left;
   p {
-    //margin: 0.5em;
+    margin: 0.5em;
     letter-spacing: 1px;
     font-size: 0.8em;
     color: black;
@@ -110,10 +110,11 @@
 .sectionHeader {
   text-align: center;
   //font-family: "The Nautigal";
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.25em;
   letter-spacing: 1px;
-  color: var(--secondaryClr);
+  color: var(--darkModeTxtClr);
+  text-shadow: 0px 0px 3px var(--darkModeBg);
   margin-bottom: 0.5em;
 }
 .subHeader {
@@ -417,7 +418,7 @@
   }
   .filler-body {
     p {
-      font-size: 1em;
+      font-size: .95em;
     }
   }
 }
