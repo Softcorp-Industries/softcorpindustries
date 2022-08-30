@@ -890,7 +890,7 @@ footer span {
   color: black;
 }
 
-.lead {
+p.lead {
   margin: auto;
   width: 95%;
   max-width: 800px;
@@ -932,12 +932,8 @@ footer span {
   letter-spacing: 2px;
 }
 .reportCard__header {
-  width: 100%;
-  text-align: center;
-  font-family: "Audiowide";
   font-size: 1em;
   font-weight: 900;
-  color: var(--secondaryClr);
 }
 .reportCard p {
   padding: 0.5em;
