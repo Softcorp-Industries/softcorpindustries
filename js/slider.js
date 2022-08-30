@@ -1,11 +1,11 @@
-alert("slider page working")
+//alert("slider page working")
 
 
 const slides = document.querySelectorAll(".desktop__monitor");
 //const next = document.querySelector("#nextBtn");
 //const prev = document.querySelector("#prevBtn");
 const auto = true;
-const intervalTime = 3000;
+const intervalTime = 3500;
 let slideInterval;
 
 const nextSlide = () => {
