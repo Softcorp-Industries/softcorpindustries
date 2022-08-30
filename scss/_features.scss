@@ -93,7 +93,7 @@
   max-width: 1000px;
   text-align: left;
   p {
-    margin: 0.5em;
+    //margin: 0.5em;
     letter-spacing: 1px;
     font-size: 0.8em;
     color: black;
@@ -180,6 +180,7 @@
 }
 .readMoreBtn {
   margin: auto;
+  margin-top: 15px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -365,9 +366,6 @@
       opacity: 0;
       margin-top: -16em;
     }
-  }
-  .showMoreHeader {
-    //flex-direction: row;
   }
   .sectionHeader {
     font-size: 1.75em;
