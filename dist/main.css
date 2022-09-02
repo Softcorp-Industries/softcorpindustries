@@ -1445,61 +1445,6 @@ p.lead {
   transform: translateX(0);
 }
 
-.desktop {
-  position: relative;
-  margin: auto;
-  width: 16em;
-  height: 10em;
-  box-shadow: inset -3px -3px 6px rgba(202, 202, 202, 0.6), inset 3px 3px 6px rgba(202, 202, 202, 0.6);
-  border-radius: 0.5rem;
-  background-color: black;
-  text-align: center;
-}
-.desktop__monitor {
-  position: absolute;
-  width: 95%;
-  height: 95%;
-  top: 0.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0;
-  overflow: hidden;
-  font-size: 0.9em;
-  color: var(--white);
-  letter-spacing: 1px;
-}
-.desktop__monitor__header {
-  width: 100%;
-  position: absolute;
-  bottom: 0.5em;
-  opacity: 0;
-  transform: scale(0.5);
-}
-
-.desktop__monitor.current {
-  opacity: 1;
-}
-
-.desktop__monitor.current .desktop__monitor__header {
-  opacity: 1;
-  transform: scale(1);
-  transition: all 0.7s ease-in-out 0.3s;
-}
-
-.desktop__monitor:first-child {
-  background-image: url("./img/backgrounds/softcorp-900.png");
-}
-
-.desktop__monitor:nth-child(2) {
-  background-image: url("./img/backgrounds/12-23-06 Softcorp Industries.png");
-}
-
-.desktop__monitor:nth-child(3) {
-  background-image: url("./img/backgrounds/14-09-55 Document.png");
-}
-
 .displayTablets {
   max-width: 950px;
   margin: auto;
@@ -2161,6 +2106,61 @@ p.lead {
   justify-content: center;
 }
 
+.desktop {
+  position: relative;
+  margin: auto;
+  width: 16em;
+  height: 10em;
+  box-shadow: inset -3px -3px 6px rgba(202, 202, 202, 0.6), inset 3px 3px 6px rgba(202, 202, 202, 0.6);
+  border-radius: 0.5rem;
+  background-color: black;
+  text-align: center;
+}
+.desktop__monitor {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  overflow: hidden;
+  font-size: 0.9em;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+.desktop__monitor__header {
+  width: 100%;
+  position: absolute;
+  bottom: 0.5em;
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.desktop__monitor.current {
+  opacity: 1;
+}
+
+.desktop__monitor.current .desktop__monitor__header {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.desktop__monitor:first-child {
+  background-image: url("./img/backgrounds/softcorp-900.png");
+}
+
+.desktop__monitor:nth-child(2) {
+  background-image: url("./img/backgrounds/12-23-06 Softcorp Industries.png");
+}
+
+.desktop__monitor:nth-child(3) {
+  background-image: url("./img/backgrounds/14-09-55 Document.png");
+}
+
 .constructionSlider {
   margin: auto;
   width: 100%;
@@ -2203,49 +2203,64 @@ p.lead {
   bottom: 10px;
   font-size: 18px;
 }
-.constructionSlider .constructionSlide.current {
+
+.constructionSlide.currentSlide {
   opacity: 1;
 }
-.constructionSlider .constructionSlide:first-child {
+
+.constructionSlide:first-child {
   background-image: url("img/construction/construction_1550_Before 0988.JPG");
 }
-.constructionSlider .constructionSlide:nth-child(2) {
+
+.constructionSlide:nth-child(2) {
   background-image: url("img/construction/construction_1550_Before 0989.JPG");
 }
-.constructionSlider .constructionSlide:nth-child(3) {
+
+.constructionSlide:nth-child(3) {
   background-image: url("img/construction/construction_1579.JPG");
 }
-.constructionSlider .constructionSlide:nth-child(4) {
+
+.constructionSlide:nth-child(4) {
   background-image: url("img/construction/construction_1581.JPG");
 }
-.constructionSlider .constructionSlide:nth-child(5) {
+
+.constructionSlide:nth-child(5) {
   background-image: url("img/construction/construction_1.JPG");
 }
-.constructionSlider .constructionSlide:nth-child(6) {
+
+.constructionSlide:nth-child(6) {
   background-image: url("img/construction/construction_1581a.JPG");
 }
-.constructionSlider .constructionSlide:nth-child(7) {
+
+.constructionSlide:nth-child(7) {
   background-image: url("img/construction/construction_3.JPG");
 }
-.constructionSlider .constructionSlide:nth-child(8) {
+
+.constructionSlide:nth-child(8) {
   background-image: url("img/construction/construction_1055.JPG");
 }
-.constructionSlider .constructionSlide:nth-child(9) {
+
+.constructionSlide:nth-child(9) {
   background-image: url("img/construction/construction_1056.JPG");
 }
-.constructionSlider .constructionSlide:nth-child(10) {
+
+.constructionSlide:nth-child(10) {
   background-image: url("img/construction/construction_1084.JPG");
 }
-.constructionSlider .constructionSlide:nth-child(11) {
+
+.constructionSlide:nth-child(11) {
   background-image: url("img/construction/construction_1089.JPG");
 }
-.constructionSlider .constructionSlide:nth-child(12) {
+
+.constructionSlide:nth-child(12) {
   background-image: url("img/construction/construction_1090.JPG");
 }
-.constructionSlider .constructionSlide:nth-child(13) {
+
+.constructionSlide:nth-child(13) {
   background-image: url("img/construction/construction_Bath Room - 001.jpg");
 }
-.constructionSlider .constructionSlide:nth-child(14) {
+
+.constructionSlide:nth-child(14) {
   background-image: url("img/construction/construction_Bath Room - 003.jpg");
 }
 
@@ -2295,6 +2310,18 @@ p.lead {
   outline: none;
 }
 
+@media (min-width: 550px) {
+  .desktop {
+    width: 20em;
+    height: 11.5em;
+  }
+  .desktop__monitor {
+    top: 0.75rem;
+  }
+  .desktop__monitor__header {
+    bottom: 0.25em;
+  }
+}
 @media (min-width: 700px) {
   .tabletBox {
     width: 430px;
@@ -2342,6 +2369,18 @@ p.lead {
   .constructionSlider {
     width: 100%;
     height: 500px;
+  }
+}
+@media (min-width: 1024px) {
+  .desktop {
+    width: 32em;
+    height: 17.5em;
+  }
+  .desktop__monitor {
+    top: 1.5rem;
+  }
+  .desktop__monitor__header {
+    bottom: 0.35em;
   }
 }
 .webDevelopment {
