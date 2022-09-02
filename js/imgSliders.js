@@ -1,26 +1,26 @@
-const slides = document.querySelectorAll(".constructionSlide");
+const slide = document.querySelectorAll(".constructionSlide");
 const next = document.querySelector("#nextBtn");
 const prev = document.querySelector("#prevBtn");
 
 const nextSlide = () => {
-  const current = document.querySelector(".current");
-  current.classList.remove("current");
-  if (current.nextElementSibling) {
-    current.nextElementSibling.classList.add("current");
+  const currentSlide = document.querySelector(".currentSlide");
+  currentSlide.classList.remove("currentSlide");
+  if (currentSlide.nextElementSibling) {
+    currentSlide.nextElementSibling.classList.add("currentSlide");
   } else {
-    slides[0].classList.add("current");
+    slide[0].classList.add("currentSlide");
   }
-  setTimeout(() => current.classList.remove("current"));
+  setTimeout(() => currentSlide.classList.remove("currentSlide"));
 };
 const prevSlide = () => {
-  const current = document.querySelector(".current");
-  current.classList.remove("current");
-  if (current.previousElementSibling) {
-    current.previousElementSibling.classList.add("current");
+  const currentSlide = document.querySelector(".currentSlide");
+  currentSlide.classList.remove("currentSlide");
+  if (currentSlide.previousElementSibling) {
+    currentSlide.previousElementSibling.classList.add("currentSlide");
   } else {
-    slides[slides.length - 1].classList.add("current");
+    slide[slide.length - 1].classList.add("currentSlide");
   }
-  setTimeout(() => current.classList.remove("current"));
+  setTimeout(() => currentSlide.classList.remove("currentSlide"));
 };
 
 //  Construction Tablet Controls
@@ -33,7 +33,7 @@ prev.addEventListener("click", (e) => {
 
 
 // Automatic Image Slider
-/*
+
 const auto = true;
 const intervalTime = 5000;
 let slideInterval;
@@ -56,4 +56,3 @@ prev.addEventListener("click", () => {
 if (auto) {
   slideInterval = setInterval(nextSlide, intervalTime);
 }
-*/
