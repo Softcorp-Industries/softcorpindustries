@@ -611,17 +611,19 @@ footer span {
 
 .devCourse {
   margin: 1em auto;
+  padding-top: 2em;
   width: 100%;
-  max-width: 650px;
+  max-width: 700px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 .devCourse__header {
-  font-family: "The Nautigal";
-  font-size: 1.75em;
+  margin-bottom: 0.5em;
+  font-size: 1.25em;
   letter-spacing: 2px;
-  color: var(--secondaryClr);
+  color: var(--darkModeTxtClr);
 }
 
 .courseCard {
@@ -632,7 +634,6 @@ footer span {
 
 #softcorpNotes h4 {
   font-family: "Audiowide";
-  font-size: 1em;
 }
 
 .noteLink {
@@ -809,7 +810,7 @@ footer span {
 }
 @media screen and (min-width: 1024px) {
   .devCourse__header {
-    font-size: 2.5em;
+    font-size: 2em;
   }
   /*
   .webDevelopment-list {
@@ -944,20 +945,20 @@ p.lead {
 
 .reportCard {
   margin: auto;
-  padding-top: 2.5em;
+  padding: 2em 0;
   width: 90%;
-  max-width: 500px;
+  max-width: 700px;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+}
+.reportCard__summary {
+  padding: 0.25em 0;
+  font-size: 0.9em;
 }
 .reportCard__header {
-  font-size: 1em;
-  font-weight: 900;
-}
-.reportCard p {
-  padding: 0.5em;
   line-height: 1.3;
-  font-size: 0.75em;
+  font-size: 1.1em;
+  font-weight: 900;
 }
 
 .reportCardBtn {
@@ -968,8 +969,8 @@ p.lead {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   cursor: pointer;
   display: block;
-  margin: auto;
-  width: 90%;
+  margin: 0.5em auto;
+  width: 75%;
   max-width: 600px;
   padding: 0.5em 0;
   color: var(--txtChange);
@@ -1831,10 +1832,12 @@ p.lead {
   align-items: center;
   justify-content: center;
   color: var(--darkModeTxtClr);
-  margin: 50px auto;
+  margin: 1em auto;
+  min-height: 150px;
+  padding: 2.5em;
 }
 .link-container p {
-  padding: 1em;
+  padding-bottom: 2em;
   line-height: 1.4;
   letter-spacing: 1px;
   max-width: 650px;
@@ -1890,13 +1893,6 @@ p.lead {
 
 .link:hover {
   transform: scale(1.05);
-}
-.link:hover a p {
-  letter-spacing: 2px;
-  font-size: 16px;
-}
-.link:hover a img {
-  box-shadow: 0px 0px 8px black;
 }
 
 .triple-container {
@@ -1979,7 +1975,7 @@ p.lead {
     text-align: right;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 680px) {
   .tripleMonitors h2 {
     font-size: 1.1em;
     padding: 1.5em;
@@ -1995,6 +1991,18 @@ p.lead {
     min-height: 4.25em;
   }
 }
+@media (min-width: 800px) {
+  .link-container {
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-between;
+    margin: 2em auto;
+    padding: 0 1.5em;
+  }
+  .link-container p {
+    padding-right: 1em;
+  }
+}
 @media (min-width: 1000px) {
   .tripleMonitors .imgs .img {
     min-width: 8.25em;
@@ -2002,10 +2010,6 @@ p.lead {
   }
   .link {
     margin-left: auto;
-  }
-  .link-container {
-    flex-direction: row;
-    justify-content: space-between;
   }
 }
 .future {
@@ -2410,18 +2414,18 @@ p.lead {
 }
 .webDevelopment {
   margin: auto;
-  max-width: 850px;
+  max-width: 800px;
   display: none;
 }
 
 .webDevelopment-list {
   margin: 1.5em auto;
-  width: 90%;
-  max-width: 850px;
+  width: 95%;
+  max-width: 800px;
   display: none;
   list-style: none;
-  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+  grid-gap: 0.7em;
   text-align: center;
   margin-bottom: 2em;
 }
