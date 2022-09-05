@@ -141,7 +141,7 @@ footer span {
 }
 @media screen and (min-width: 1024px) {
   h1 {
-    padding-top: 0.25em;
+    padding-top: 0;
     font-size: 4.75em;
   }
 }
@@ -594,7 +594,12 @@ footer span {
 }
 @media screen and (min-width: 1024px) {
   .greeting {
+    padding: 0.5em 0;
     font-size: 1.2em;
+  }
+  .landingImg {
+    margin: auto;
+    width: calc(13vw + 13em);
   }
 }
 .devCourses {

@@ -59,7 +59,12 @@
 }
 @media screen and (min-width: 1024px) {
   .greeting {
+    padding: .5em 0;
     font-size: 1.2em;
+  }
+  .landingImg {
+    margin: auto;
+  width: calc(13vw + 13em);
   }
 }
 @media screen and (min-width: 1200px) {
