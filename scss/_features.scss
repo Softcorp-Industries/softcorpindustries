@@ -164,12 +164,13 @@ p.lead {
     width: 90%;
     max-width: 600px;
     padding: 0.5em 0;
+    color: var(--txtChange);
     font-size: .75em;
     font-family: "Audiowide";
     text-align: center;
     text-decoration: none;
     letter-spacing: 0.25rem;
-    background: var(--darkModeBtn);
+    background: var(--darkModeClrlgt);
     border: none;
     border-radius: 1.5em;
     outline: none;
@@ -218,14 +219,17 @@ p.lead {
   @include darkMode;
   cursor: pointer;
   display: block;
+  width: 75%;
+  max-width: 600px;
   padding: 0.5em 1em;
+  color: var(--txtChange);
   font-size: 0.75em;
   font-family: "Audiowide";
   letter-spacing: 1px;
   outline: none;
   border: none;
   border-radius: 1em;
-  background-color: var(--darkModeBtn);
+  background-color: var(--darkModeClrlgt);
 }
 .showMoreSection {
   display: none;
