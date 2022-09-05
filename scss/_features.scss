@@ -58,14 +58,14 @@
   margin: 3em auto;
   padding: 1em;
   text-align: center;
-  background-color: var(--darkModeBg);
+  background-color: var(--darkModeClrlgt);
   //background-image: url("./img/backgrounds/clouds_72634.jpg");
   border-radius: 1rem;
   color: var(--darkModeTxtClr);
   //color: var(--black);
   .author {
     margin: .5em 0;
-    color: var(--secondaryClr);
+    color: var(--txtChange);
     font-size: 2.3em;
     line-height: 0.5em;
     font-weight: 900;
@@ -86,6 +86,7 @@
   margin: auto;
   text-align: center;
   margin-bottom: 2.5em;
+  color: var(--darkModeTxtClr);
 }
 .filler-body {
   margin: auto;
@@ -96,7 +97,6 @@
     margin: 0.5em;
     letter-spacing: 1px;
     font-size: 0.8em;
-    color: black;
   }
 }
 p.lead {
@@ -189,6 +189,7 @@ p.lead {
   width: 100px;
 }
 .readMore {
+  color: var(--darkModeTxtClr);
   cursor: pointer;
   border: none;
   outline: none;

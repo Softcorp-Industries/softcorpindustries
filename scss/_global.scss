@@ -31,9 +31,11 @@
   --darkModeLgt: rgb(226, 226, 226);
   --darkModeTxtClr: rgb(54, 54, 54);
   --darkModeTxtlgt: #e3e3e3;
+  --darkModeClrlgt: rgb(226, 226, 226); // from
+
 
   --bgFilter: rgba(255, 255, 255, 0.3);
-  --bgFilterBlk: rgba(0, 0, 0, 0.55);
+  --bgFilterBlk: rgba(0, 0, 0);
   --bgFilterBlkDrk: rgba(0, 0, 0, 0.8);
   --bgFilterDrk: rgba(255, 255, 255, 0.8);
 
@@ -76,7 +78,7 @@ body[data-darkMode="darkMode"] {
 
   --darkModeBgblk: rgb(0, 0, 0); // from
   --darkModeTxtClr: white; // from rgb(54, 54, 54)
-  --darkModeClrlgt: rgb(54, 54, 54); // from
+  --darkModeClrlgt: rgb(20, 20, 20); // from
   --themeTxtClr: white; // from
   --themeBlk: rgb(99, 99, 99); // from whitesmoke
   --themeBg: black;

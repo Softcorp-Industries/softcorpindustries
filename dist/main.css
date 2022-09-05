@@ -23,8 +23,9 @@
   --darkModeLgt: rgb(226, 226, 226);
   --darkModeTxtClr: rgb(54, 54, 54);
   --darkModeTxtlgt: #e3e3e3;
+  --darkModeClrlgt: rgb(226, 226, 226);
   --bgFilter: rgba(255, 255, 255, 0.3);
-  --bgFilterBlk: rgba(0, 0, 0, 0.55);
+  --bgFilterBlk: rgba(0, 0, 0);
   --bgFilterBlkDrk: rgba(0, 0, 0, 0.8);
   --bgFilterDrk: rgba(255, 255, 255, 0.8);
   --black: black;
@@ -65,7 +66,7 @@ body[data-darkMode=darkMode] {
   --darkModeLgt: rgb(134, 134, 134);
   --darkModeBgblk: rgb(0, 0, 0);
   --darkModeTxtClr: white;
-  --darkModeClrlgt: rgb(54, 54, 54);
+  --darkModeClrlgt: rgb(20, 20, 20);
   --themeTxtClr: white;
   --themeBlk: rgb(99, 99, 99);
   --themeBg: black;
@@ -862,13 +863,13 @@ footer span {
   margin: 3em auto;
   padding: 1em;
   text-align: center;
-  background-color: var(--darkModeBg);
+  background-color: var(--darkModeClrlgt);
   border-radius: 1rem;
   color: var(--darkModeTxtClr);
 }
 .quote .author {
   margin: 0.5em 0;
-  color: var(--secondaryClr);
+  color: var(--txtChange);
   font-size: 2.3em;
   line-height: 0.5em;
   font-weight: 900;
@@ -888,6 +889,7 @@ footer span {
   margin: auto;
   text-align: center;
   margin-bottom: 2.5em;
+  color: var(--darkModeTxtClr);
 }
 
 .filler-body {
@@ -900,7 +902,6 @@ footer span {
   margin: 0.5em;
   letter-spacing: 1px;
   font-size: 0.8em;
-  color: black;
 }
 
 p.lead {
@@ -993,6 +994,7 @@ p.lead {
 }
 
 .readMore {
+  color: var(--darkModeTxtClr);
   cursor: pointer;
   border: none;
   outline: none;
@@ -1799,6 +1801,7 @@ p.lead {
   padding: 1em;
   line-height: 1.4;
   letter-spacing: 1px;
+  color: var(--darkModeTxtClr);
   margin: auto;
   width: 95%;
   max-width: 800px;
@@ -1818,6 +1821,7 @@ p.lead {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: var(--darkModeTxtClr);
   margin: 50px auto;
 }
 .link-container p {
