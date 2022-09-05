@@ -3,19 +3,19 @@
 
 .webDevelopment {
   margin: auto;
-  max-width: 850px;
+  max-width: 800px;
   display: none;
   //grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .webDevelopment-list {
   margin: 1.5em auto;
-  width: 90%;
-  max-width: 850px;
+  width: 95%;
+  max-width: 800px;
   display: none;
   list-style: none;
-  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+  grid-gap: .7em;
   text-align: center;
   margin-bottom: 2em;
   .listItem {

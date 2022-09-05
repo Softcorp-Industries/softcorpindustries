@@ -10,16 +10,18 @@
 }
 .devCourse {
   margin: 1em auto;
+  padding-top: 2em;
   width: 100%;
-  max-width: 650px;
+  max-width: 700px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   &__header {
-    font-family: "The Nautigal";
-    font-size: 1.75em;
+    margin-bottom: .5em;
+    font-size: 1.25em;
     letter-spacing: 2px;
-    color: var(--secondaryClr);
+    color: var(--darkModeTxtClr);
   }
 }
 .courseCard {
@@ -30,7 +32,7 @@
 #softcorpNotes {
   h4 {
     font-family: "Audiowide";
-    font-size: 1em;
+    //font-size: 1em;
   }
 }
 .noteLink {
@@ -211,7 +213,7 @@
 @media screen and (min-width: 1024px) {
   .devCourse {
     &__header {
-      font-size: 2.5em;
+      font-size: 2em;
     }
   }
   /*
