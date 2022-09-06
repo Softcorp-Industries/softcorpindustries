@@ -39,18 +39,18 @@
   @include darkMode;
   cursor: pointer;
   margin: 1em auto;
-  width: 90%;
+  width: 75%;
   max-width: 500px;
   padding: .5em;
   font-family: "Audiowide";
   font-size: .9em;
-  background-color: var(--darkModeBtn);
+  background-color: var(--darkModeClrlgt);
   border-radius: 1em;
   p {
     a{
       display: block;
       text-decoration: none;
-      color: black;
+      color: var(--txtChange);
       letter-spacing: 1px;
     }
   }
