@@ -636,25 +636,6 @@ footer span {
   font-family: "Audiowide";
 }
 
-.noteLink {
-  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-  cursor: pointer;
-  margin: 1em auto;
-  width: 75%;
-  max-width: 500px;
-  padding: 0.5em;
-  font-family: "Audiowide";
-  font-size: 0.9em;
-  background-color: var(--darkModeClrlgt);
-  border-radius: 1em;
-}
-.noteLink p a {
-  display: block;
-  text-decoration: none;
-  color: var(--txtChange);
-  letter-spacing: 1px;
-}
-
 .w3Course, .softcorp {
   display: none;
   grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
@@ -1826,11 +1807,11 @@ p.lead {
 }
 
 .link-container {
-  max-width: 1000px;
+  max-width: 1050px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   color: var(--darkModeTxtClr);
   margin: 1em auto;
   min-height: 150px;
@@ -1854,6 +1835,7 @@ p.lead {
 
 .links {
   width: 100%;
+  max-width: 1200px;
   margin: auto;
 }
 .links a {
@@ -1861,19 +1843,18 @@ p.lead {
 }
 
 .link {
-  display: flex;
   cursor: pointer;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 250px;
-  letter-spacing: 1px;
+  max-width: 250px;
   border-radius: 0.5em;
   margin: auto;
   z-index: 0;
 }
 .link a {
-  display: block;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
 }
 .link a p {
@@ -2000,6 +1981,7 @@ p.lead {
     padding: 0 1.5em;
   }
   .link-container p {
+    width: 500px;
     padding-right: 1em;
   }
 }
@@ -2007,6 +1989,9 @@ p.lead {
   .tripleMonitors .imgs .img {
     min-width: 8.25em;
     min-height: 6.75em;
+  }
+  .link-container p {
+    width: 600px;
   }
   .link {
     margin-left: auto;
