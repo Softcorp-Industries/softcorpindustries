@@ -4,12 +4,12 @@
 .darkMode {
   @include shadowSm-inset;
   position: fixed;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: left;
   padding: .15rem;
-  top: 1.9rem;
-  right: .25rem;
+  top: .9em;
+  right: .5em;
   width: 60px;
   height: 30px;
   background-color: var(--bgDarkMode);
@@ -308,6 +308,15 @@ transform: translateY(0) ;
 }
 
 @media screen and (min-width: 1024px) {
+  .darkMode {
+    height: 40px;
+    width: 70px;
+    right: 1.25em;
+    .dmToggle {
+      width: 30px;
+      height: 30px;
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {

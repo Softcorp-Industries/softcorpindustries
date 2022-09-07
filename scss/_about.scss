@@ -4,7 +4,7 @@
 
 .profile {
   span {
-    font-family: "audiowide";
+    font-family: "Audiowide";
     letter-spacing: 0.1rem;
     font-size: 1.2em;
     color: var(--txtChange);
@@ -28,8 +28,8 @@
     }
     .seal {
       top: 70px;
-      width: calc(4vw + 4rem);
-      height: calc(4vw + 4rem);
+      width: calc(4vw + 4em);
+      height: calc(4vw + 4em);
       opacity: 0.9;
     }
     .seal1 {
@@ -38,7 +38,9 @@
       justify-content: center;
       border-radius: 50%;
       img {
-        width: calc(5.5vw + 5.5rem);
+        width: 100%;
+        transform: scale(1.6);
+        //width: calc(5.5vw + 5.5rem);
       }
     }
     .seal2 {
@@ -46,8 +48,12 @@
       align-items: center;
       justify-content: center;
       border-radius: 50%;
+      background-color: var(--darkModeLgt);
       img {
         width: 100%;
+        transform: scale(1.25);
+        margin-top: 1px;
+        margin-left: -3px;
       }
     }
     .logo-bar__img {
@@ -95,6 +101,7 @@
   }
   .pastBio,
   .presentBio {
+  color: var(--darkModeTxtClr);
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -121,7 +128,7 @@
       }
     }
     span {
-      color: red;
+      //color: red;
       text-shadow: none;
     }
   }

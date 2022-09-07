@@ -82,11 +82,11 @@ body.transition *:after {
 }
 
 h1 {
-  padding-top: 1em;
+  padding-top: 2em;
   text-align: center;
   color: var(--txtChange);
-  font-family: "The Nautigal";
-  font-size: 2.75em;
+  font-family: "Audiowide";
+  font-size: 1.5em;
   letter-spacing: 2px;
   text-shadow: 0px 0px 3px var(--darkModeBg);
 }
@@ -127,33 +127,30 @@ footer span {
     font-size: 24px;
   }
   h1 {
-    padding-top: 0.5em;
-    font-size: 3em;
+    padding-top: 1.5em;
   }
 }
 @media screen and (min-width: 700px) {
-  body {
-    font-size: 28px;
-  }
   h1 {
-    font-size: 3.5em;
+    padding-top: 1em;
+    font-size: 2.25em;
   }
 }
 @media screen and (min-width: 1024px) {
   h1 {
-    padding-top: 0;
-    font-size: 4.75em;
+    padding-top: 0.5em;
+    font-size: 3.5em;
   }
 }
 .darkMode {
   box-shadow: inset -4px -4px 7px #fff, inset 4px 4px 7px rgba(0, 0, 0, 0.4);
   position: fixed;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: left;
   padding: 0.15rem;
-  top: 1.9rem;
-  right: 0.25rem;
+  top: 0.9em;
+  right: 0.5em;
   width: 60px;
   height: 30px;
   background-color: var(--bgDarkMode);
@@ -541,6 +538,17 @@ footer span {
     opacity: 1;
   }
 }
+@media screen and (min-width: 1024px) {
+  .darkMode {
+    height: 40px;
+    width: 70px;
+    right: 1.25em;
+  }
+  .darkMode .dmToggle {
+    width: 30px;
+    height: 30px;
+  }
+}
 .top {
   background-size: contain;
   background-repeat: no-repeat;
@@ -802,6 +810,7 @@ footer span {
 .featureHeader {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   text-align: center;
+  font-family: "Audiowide";
   margin: auto;
   margin-top: 2em;
   padding: 1em 0;
@@ -1564,7 +1573,7 @@ p.lead {
   }
 }
 .profile span {
-  font-family: "audiowide";
+  font-family: "Audiowide";
   letter-spacing: 0.1rem;
   font-size: 1.2em;
   color: var(--txtChange);
@@ -1589,8 +1598,8 @@ p.lead {
 }
 .profile .avatar .seal {
   top: 70px;
-  width: calc(4vw + 4rem);
-  height: calc(4vw + 4rem);
+  width: calc(4vw + 4em);
+  height: calc(4vw + 4em);
   opacity: 0.9;
 }
 .profile .avatar .seal1 {
@@ -1600,16 +1609,21 @@ p.lead {
   border-radius: 50%;
 }
 .profile .avatar .seal1 img {
-  width: calc(5.5vw + 5.5rem);
+  width: 100%;
+  transform: scale(1.6);
 }
 .profile .avatar .seal2 {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  background-color: var(--darkModeLgt);
 }
 .profile .avatar .seal2 img {
   width: 100%;
+  transform: scale(1.25);
+  margin-top: 1px;
+  margin-left: -3px;
 }
 .profile .avatar .logo-bar__img {
   margin: 25px auto;
@@ -1655,6 +1669,7 @@ p.lead {
 }
 .profile .pastBio,
 .profile .presentBio {
+  color: var(--darkModeTxtClr);
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -1679,7 +1694,6 @@ p.lead {
   letter-spacing: 1px;
 }
 .profile .pastBio span {
-  color: red;
   text-shadow: none;
 }
 .profile .presentBio {
