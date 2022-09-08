@@ -14,20 +14,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
-    margin: 2.5em auto;
+    width: 100%;
+    max-width: 600px;
+    margin: 1.5em auto;
     .seals {
-      margin: auto;
-      width: 95%;
-      max-width: 500px;
+      //margin: 2em auto;
+      width: 100%;
+      //max-width: 500px;
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-evenly;
-      margin-bottom: 25px;
+      justify-content: space-between;
     }
     .seal {
-      top: 70px;
+      //top: 70px;
       width: calc(4vw + 4em);
       height: calc(4vw + 4em);
       opacity: 0.9;
@@ -48,7 +48,7 @@
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      background-color: var(--darkModeLgt);
+      background-color: dodgerblue;
       img {
         width: 100%;
         transform: scale(1.25);
@@ -71,7 +71,7 @@
       }
     }
     .profileImg {
-      opacity: 0.7;
+      opacity: 0.8;
       border-radius: 50%;
       overflow: hidden;
       width: 150px;
@@ -105,8 +105,8 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    width: 95%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 1000px;
     padding: 1em;
     .lead {
       text-align: center;
@@ -201,19 +201,30 @@
 @media screen and (min-width: 400px) {
 }
 @media screen and (min-width: 550px) {
+  .profile {
+    .avatar {
+      .profileImg {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
 }
 @media screen and (min-width: 700px) {
   
   .profile {
     .avatar {
+      margin: 2em auto;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      max-width: 700px;
       .seals {
-        margin: auto;
         flex-direction: column;
-        max-width: 100px;
+        align-items: center;
+        width: 125px;
+        .seal {
+          margin: .5em auto;
+        }
       }
       .logo-bar__img {
         margin: auto;
@@ -223,9 +234,9 @@
         }
       }
       .profileImg {
-        margin: auto;
-        width: 175px;
-        height: 175px;
+        //margin: auto;
+        width: 225px;
+        height: 225px;
       }
       .profileImg2 {
         min-width: 175px;
@@ -238,9 +249,10 @@
 
   .profile {
     .avatar {
+      max-width: 750px;
       .profileImg {
-        width: 200px;
-        height: 200px;
+        width: 325px;
+        height: 325px;
       }
       .profileImg2 {
         min-width: 200px;

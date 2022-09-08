@@ -142,6 +142,11 @@ footer span {
     font-size: 3.5em;
   }
 }
+@media screen and (min-width: 1200px) {
+  h1 {
+    padding-top: 0.25em;
+  }
+}
 .darkMode {
   box-shadow: inset -4px -4px 7px #fff, inset 4px 4px 7px rgba(0, 0, 0, 0.4);
   position: fixed;
@@ -1583,21 +1588,18 @@ p.lead {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
-  margin: 2.5em auto;
+  width: 100%;
+  max-width: 600px;
+  margin: 1.5em auto;
 }
 .profile .avatar .seals {
-  margin: auto;
-  width: 95%;
-  max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 25px;
+  justify-content: space-between;
 }
 .profile .avatar .seal {
-  top: 70px;
   width: calc(4vw + 4em);
   height: calc(4vw + 4em);
   opacity: 0.9;
@@ -1617,7 +1619,7 @@ p.lead {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: var(--darkModeLgt);
+  background-color: dodgerblue;
 }
 .profile .avatar .seal2 img {
   width: 100%;
@@ -1640,7 +1642,7 @@ p.lead {
   max-width: 65px;
 }
 .profile .avatar .profileImg {
-  opacity: 0.7;
+  opacity: 0.8;
   border-radius: 50%;
   overflow: hidden;
   width: 150px;
@@ -1673,8 +1675,8 @@ p.lead {
   margin: auto;
   display: flex;
   flex-direction: column;
-  width: 95%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 1000px;
   padding: 1em;
 }
 .profile .pastBio .lead,
@@ -1759,17 +1761,26 @@ p.lead {
   transform: scale(3);
 }
 
+@media screen and (min-width: 550px) {
+  .profile .avatar .profileImg {
+    width: 200px;
+    height: 200px;
+  }
+}
 @media screen and (min-width: 700px) {
   .profile .avatar {
+    margin: 2em auto;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-width: 700px;
   }
   .profile .avatar .seals {
-    margin: auto;
     flex-direction: column;
-    max-width: 100px;
+    align-items: center;
+    width: 125px;
+  }
+  .profile .avatar .seals .seal {
+    margin: 0.5em auto;
   }
   .profile .avatar .logo-bar__img {
     margin: auto;
@@ -1779,9 +1790,8 @@ p.lead {
     max-width: 85px;
   }
   .profile .avatar .profileImg {
-    margin: auto;
-    width: 175px;
-    height: 175px;
+    width: 225px;
+    height: 225px;
   }
   .profile .avatar .profileImg2 {
     min-width: 175px;
@@ -1789,9 +1799,12 @@ p.lead {
   }
 }
 @media screen and (min-width: 1024px) {
+  .profile .avatar {
+    max-width: 750px;
+  }
   .profile .avatar .profileImg {
-    width: 200px;
-    height: 200px;
+    width: 325px;
+    height: 325px;
   }
   .profile .avatar .profileImg2 {
     min-width: 200px;

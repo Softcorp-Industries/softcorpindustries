@@ -159,10 +159,13 @@ footer span {
 
 @media screen and (min-width: 1024px) {
   h1 {
-    padding-top: .5em;
+    padding-top: 0.5em;
     font-size: 3.5em;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  h1 {
+    padding-top: 0.25em;
+  }
 }
