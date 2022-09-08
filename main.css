@@ -1593,7 +1593,8 @@ p.lead {
   margin: 1.5em auto;
 }
 .profile .avatar .seals {
-  width: 100%;
+  width: 80%;
+  padding-top: 1em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1628,18 +1629,16 @@ p.lead {
   margin-left: -3px;
 }
 .profile .avatar .logo-bar__img {
-  margin: 25px auto;
+  padding: 1em 0;
   width: 95%;
-  max-width: 200px;
-  display: flex;
-  flex-direction: row;
+  max-width: 250px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 0.25em;
   align-items: center;
-  justify-content: center;
-  bottom: 0.5rem;
 }
 .profile .avatar .logo-bar__img img {
-  margin: 5px;
-  max-width: 65px;
+  max-width: 50px;
 }
 .profile .avatar .profileImg {
   opacity: 0.8;
@@ -1684,18 +1683,21 @@ p.lead {
   text-align: center;
   font-size: 1.2em;
 }
-.profile .pastBio .bioBody p:first-child {
-  max-width: 800px;
+.profile .pastBio .bioBody, .profile .presentBio .bioBody {
+  padding: 1em;
+}
+.profile .pastBio .bioBody p:first-child, .profile .presentBio .bioBody p:first-child {
   font-size: 1em;
   margin-bottom: 0.5em;
 }
-.profile .pastBio .bioBody p {
+.profile .pastBio .bioBody p, .profile .presentBio .bioBody p {
+  margin: 0.5em auto;
   font-size: 0.8em;
   text-align: left;
   line-height: 1.4;
   letter-spacing: 1px;
 }
-.profile .pastBio span {
+.profile .pastBio span, .profile .presentBio span {
   text-shadow: none;
 }
 .profile .presentBio {
@@ -1766,6 +1768,14 @@ p.lead {
     width: 200px;
     height: 200px;
   }
+  .profile .avatar .logo-bar__img {
+    padding: 1.5em 0;
+    max-width: 400px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+  .profile .avatar .logo-bar__img img {
+    max-width: 80px;
+  }
 }
 @media screen and (min-width: 700px) {
   .profile .avatar {
@@ -1775,6 +1785,7 @@ p.lead {
     justify-content: space-between;
   }
   .profile .avatar .seals {
+    padding-top: 0;
     flex-direction: column;
     align-items: center;
     width: 125px;
@@ -1783,11 +1794,12 @@ p.lead {
     margin: 0.5em auto;
   }
   .profile .avatar .logo-bar__img {
-    margin: auto;
-    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    max-width: 250px;
+    gap: 1em;
   }
   .profile .avatar .logo-bar__img img {
-    max-width: 85px;
+    max-width: 100px;
   }
   .profile .avatar .profileImg {
     width: 225px;
@@ -1809,6 +1821,13 @@ p.lead {
   .profile .avatar .profileImg2 {
     min-width: 200px;
     min-height: 200px;
+  }
+  .profile .avatar .logo-bar__img {
+    max-width: 300px;
+    gap: 1.5em;
+  }
+  .profile .avatar .logo-bar__img img {
+    max-width: 125px;
   }
   .contact__header h2 {
     padding-top: 1em;
