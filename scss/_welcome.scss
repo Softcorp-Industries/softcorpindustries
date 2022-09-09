@@ -21,121 +21,6 @@
     }
   }
 }
-.link-container {
-  //max-width: 1050px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--darkModeTxtClr);
-  margin: 1em auto;
-  min-height: 150px;
-  padding: 2.5em;
-  p {
-    padding-bottom: 2em;
-    line-height: 1.4;
-    letter-spacing: 1px;
-    max-width: 650px;
-    font-size: 0.9em;
-    span {
-      font-size: 1.5em;
-      color: var(--txtChange);
-      font-family: "Audiowide";
-      text-shadow: 0px 0px 3px var(--darkModeBg);
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
-  }
-}
-.links {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  a {
-    text-decoration: none;
-  }
-}
-.link {
-  cursor: pointer;
-  max-width: 250px;
-  border-radius: 0.5em;
-  margin: auto;
-  z-index: 0;
-  a {
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    p {
-      line-height: 1.4;
-      color: var(--txtChange);
-      padding: 0.5em 0;
-      text-shadow: 0px 0px 3px var(--darkModeBg);
-      font-size: 14px;
-      font-weight: 900;
-    }
-    img {
-      width: 250px;
-      height: 145px;
-      border-radius: 0.5rem;
-      box-shadow: 0px 0px 4px black;
-      //margin-bottom: 0.75em;
-    }
-  }
-}
-.link:hover {
-  transform: scale(1.05);
-}
-
-.tutorLinks {
-  max-width: 900px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  .tutorLink-container {
-    margin: 0.5em auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 300px;
-    min-width: 300px;
-    .tutorLink {
-      max-width: 150px;
-      min-width: 150px;
-      height: 100px;
-      border: 2px solid var(--darkModeTxtClr);
-      iframe {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-}
-.trifectaLinks {
-  .trifectaLink-container {
-    margin: 0.5em auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    .tutorLinkHeader {
-      max-width: 325px;
-    }
-    .trifectaLink {
-      max-width: 150px;
-      min-width: 150px;
-      height: 100px;
-      border: 2px solid var(--darkModeTxtClr);
-      iframe {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-}
-
 .triple-container {
   background-image: linear-gradient(to left top, #c0fff4, var(--secondaryClr));
   border-top: 3px solid var(--secondaryTxt);
@@ -215,40 +100,50 @@
     }
   }
 }
-@media (min-width: 400px) {
-  .tutorLinks {
-    .tutorLink-container {
-      .tutorLinkHeader {
-        max-width: 300px;
-      }
-    }
+.quote {
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 0.2em;
+  letter-spacing: 1px;
+  @include darkMode;
+  width: 80%;
+  max-width: 500px;
+  margin: 3em auto;
+  padding: 1em;
+  text-align: center;
+  background-color: var(--darkModeClrlgt);
+  //background-image: url("./img/backgrounds/clouds_72634.jpg");
+  border-radius: 1rem;
+  color: var(--darkModeTxtClr);
+  //color: var(--black);
+  .author {
+    margin: .5em 0;
+    color: var(--txtChange);
+    font-size: 2.3em;
+    line-height: 0.5em;
+    font-weight: 900;
+    font-family: "The Nautigal";
+    //text-shadow: 0px 0px 3px var(--black);
   }
-  .trifectaLinks {
-    .trifectaLink-container {
-      flex-direction: row;
+  h2 {
+    font-size: 1.85em;
+  }
+  p {
+    font-size: 0.95em;
+    font-weight: 600;
+    padding: 0.2rem;
+    letter-spacing: 2px;
+  }
+}
+@media (min-width: 400px) {
+  .quote {
+    .author {
+      font-size: 2.5em;
     }
   }
 }
 
 @media (min-width: 550px) {
-  .tripleMonitors {
-    h2 {
-      text-align: left;
-    }
-    h2:nth-last-child(1) {
-      text-align: right;
-    }
-  }
-  .trifectaLinks {
-    .trifectaLink-container {
-      margin: 1.5em auto;
-      .trifectaLink {
-        max-width: 225px;
-        min-width: 225px;
-        height: 150px;
-      }
-    }
-  }
 }
 @media (min-width: 680px) {
   .tripleMonitors {
@@ -269,38 +164,9 @@
   }
 }
 @media (min-width: 800px) {
-  .link-container {
-    flex-direction: row;
-    align-items: top;
-    justify-content: space-between;
-    margin: 2em auto;
-    padding: 0 1.5em;
-    p {
-      width: 500px;
-      padding-right: 1em;
-    }
-  }
-  .tutorLinks {
-    margin: auto;
-    .tutorLink-container {
-      .tutorLink {
-        max-width: 225px;
-      min-width: 225px;
-      height: 150px;
-      }
-      .tutorLinkHeader {
-        max-width: 300px;
-      }
-    }
-  }
-  .trifectaLinks {
-    .trifectaLink-container {
-      max-width: 800px;
-      .trifectaLink {
-        max-width: 300px;
-        min-width: 300px;
-        height: 200px;
-      }
+  .quote {
+    .author {
+      font-size: 3em;
     }
   }
 }
@@ -312,13 +178,5 @@
         min-height: 6.75em;
       }
     }
-  }
-  .link-container {
-    p {
-      width: 600px;
-    }
-  }
-  .link {
-    margin-left: auto;
   }
 }

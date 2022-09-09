@@ -1,0 +1,212 @@
+@use "_global" as *;
+@use "_mixin" as *;
+
+.link-container {
+  //max-width: 1050px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--darkModeTxtClr);
+  margin: 1em auto;
+  min-height: 150px;
+  padding: 2.5em;
+  p {
+    padding-bottom: 2em;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    max-width: 650px;
+    font-size: 0.9em;
+    span {
+      font-size: 1.5em;
+      color: var(--txtChange);
+      font-family: "Audiowide";
+      text-shadow: 0px 0px 3px var(--darkModeBg);
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+  }
+}
+.links {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  a {
+    text-decoration: none;
+  }
+}
+.link {
+  cursor: pointer;
+  max-width: 250px;
+  border-radius: 0.5em;
+  margin: auto;
+  z-index: 0;
+  a {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    p {
+      line-height: 1.4;
+      color: var(--txtChange);
+      padding: 0.5em 0;
+      text-shadow: 0px 0px 3px var(--darkModeBg);
+      font-size: 14px;
+      font-weight: 900;
+    }
+    img {
+      width: 250px;
+      height: 145px;
+      border-radius: 0.5rem;
+      box-shadow: 0px 0px 4px black;
+      //margin-bottom: 0.75em;
+    }
+  }
+}
+.link:hover {
+  transform: scale(1.05);
+}
+.tutorLinks {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  .tutorLink-container {
+    margin: 0.5em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    min-width: 300px;
+    .tutorLink {
+      max-width: 150px;
+      min-width: 150px;
+      height: 100px;
+      border: 2px solid var(--darkModeTxtClr);
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+.trifectaIntro {
+  margin-left: .5em;
+  .trifectaLead {
+    width: 100%;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  p {
+    line-height: 1.3;
+    margin-bottom: .5em;
+  }
+}
+.trifectaLinks {
+  margin: 2em auto;
+  padding-bottom: 2em;
+  .trifectaLink-container {
+    margin: 2.5em auto;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    .trifectaLinkHeader {
+      text-align: center;
+      width: 325px;
+      max-width: 325px;
+      p {
+        margin-bottom: 0;
+        letter-spacing: 1px;
+        font-size: .8em;
+      }
+      p:nth-child(1) {
+        letter-spacing: 2px;
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+    }
+    .trifectaLink {
+      max-width: 150px;
+      min-width: 150px;
+      height: 100px;
+      border: 2px solid var(--darkModeTxtClr);
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 400px) {
+  .tutorLinks {
+    .tutorLink-container {
+      .tutorLinkHeader {
+        max-width: 300px;
+      }
+    }
+  }
+  .trifectaLinks {
+    .trifectaLink-container {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 550px) {
+  .trifectaLinks {
+    .trifectaLink-container {
+      margin: 1.5em auto;
+      .trifectaLink {
+        max-width: 225px;
+        min-width: 225px;
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .trifectaLinks {
+    .trifectaLink-container {
+      .trifectaLink {
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .link-container {
+    flex-direction: row;
+    p {
+      width: 500px;
+    }
+  }
+  .link {
+    margin-left: auto;
+  }
+  .trifectaLinks {
+    .trifectaLink-container {
+      .trifectaLinkHeader {
+        p {
+          font-size: .9em;
+        }
+        p:nth-child(1) {
+          font-size: 2em;
+        }
+      }
+      .trifectaLink {
+        margin: 0;
+        max-width: 300px;
+        min-width: 300px;
+        height: 200px;
+      }
+    }
+  }
+}
