@@ -135,6 +135,15 @@
     letter-spacing: 2px;
   }
 }
+
+.youtubeIcon {
+  margin: auto;
+  margin-top: -1em;
+  width: 5.5em;
+  img {
+    width: 100%;
+  }
+}
 @media (min-width: 400px) {
   .quote {
     .author {
