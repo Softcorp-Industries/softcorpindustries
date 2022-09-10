@@ -77,6 +77,21 @@ p.lead {
   text-shadow: 0px 0px 3px var(--darkModeBg);
   font-weight: 600;
 }
+.showMoreHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 2em;
+  max-width: 1000px;
+  p {
+    text-align: left;
+    padding: 1em;
+    font-size: .9em;
+    max-width: 800px;
+  }
+}
 .sectionHeader {
   text-align: center;
   //font-family: "The Nautigal";
@@ -167,15 +182,7 @@ p.lead {
   height: 15px;
   transform: rotateZ(90deg);
 }
-.showMoreHeader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin: auto;
-  margin-top: 2.5em;
-  max-width: 1000px;
-}
+
 .showMore {
   @include darkMode;
   cursor: pointer;

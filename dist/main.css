@@ -883,6 +883,22 @@ p.lead {
   font-weight: 600;
 }
 
+.showMoreHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 2em;
+  max-width: 1000px;
+}
+.showMoreHeader p {
+  text-align: left;
+  padding: 1em;
+  font-size: 0.9em;
+  max-width: 800px;
+}
+
 .sectionHeader {
   text-align: center;
   font-weight: 600;
@@ -978,16 +994,6 @@ p.lead {
   width: 15px;
   height: 15px;
   transform: rotateZ(90deg);
-}
-
-.showMoreHeader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin: auto;
-  margin-top: 2.5em;
-  max-width: 1000px;
 }
 
 .showMore {
@@ -2736,10 +2742,10 @@ p.lead {
 
 #tutorLinks {
   margin: 1em auto;
-  max-width: 900px;
+  max-width: 1000px;
   display: grid;
-  gap: 0.5em;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 #tutorLinks .tutorLink-container {
   margin: 0.5em auto;
@@ -2747,16 +2753,22 @@ p.lead {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  max-width: 300px;
-  min-width: 300px;
+  max-width: 200px;
+  min-width: 200px;
 }
 #tutorLinks .tutorLink-container .tutorLinkHeader {
+  padding: 0.5em 0;
   width: 100%;
+  max-width: 200px;
+  background-color: var(--darkModeClrlgt);
+  border-radius: 0.5em;
+  box-shadow: 0px 0px 3px var(--darkModeTxtClr);
 }
 #tutorLinks .tutorLink-container .tutorLinkHeader p {
   text-align: center;
 }
 #tutorLinks .tutorLink-container .tutorLinkHeader .tutorIcon {
+  margin-top: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2764,6 +2776,11 @@ p.lead {
 }
 #tutorLinks .tutorLink-container .tutorLinkHeader .tutorIcon img {
   width: 40px;
+}
+#tutorLinks .tutorLink-container .tutorLinkHeader a img {
+  display: block;
+  margin: 0.5em auto;
+  width: 50%;
 }
 #tutorLinks .tutorLink-container .tutorLink {
   max-width: 125px;
@@ -2853,16 +2870,6 @@ p.lead {
 @media (min-width: 700px) {
   .trifectaLinks .trifectaLink-container .trifectaLink {
     margin: auto;
-  }
-}
-@media (min-width: 700px) and (min-width: 800px) {
-  #tutorLinks {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1em;
-  }
-  #tutorLinks .tutorLink-container {
-    max-width: 350px;
-    min-width: 350px;
   }
 }
 @media (min-width: 1000px) {
