@@ -867,7 +867,7 @@ footer span {
   text-align: left;
   line-height: 1.3;
   margin-bottom: 0.5em;
-  padding: 1em;
+  padding: 1.5em;
 }
 
 p {
@@ -876,8 +876,6 @@ p {
 }
 
 p.lead {
-  width: 90%;
-  max-width: 1000px;
   color: var(--darkModeTxtClr);
   text-shadow: 0px 0px 3px var(--darkModeBg);
   font-weight: 600;
@@ -2745,7 +2743,7 @@ p.lead {
   max-width: 1000px;
   display: grid;
   gap: 1em;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 #tutorLinks .tutorLink-container {
   margin: 0.5em auto;
@@ -2753,13 +2751,13 @@ p.lead {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  max-width: 200px;
-  min-width: 200px;
+  max-width: 150px;
+  min-width: 150px;
 }
 #tutorLinks .tutorLink-container .tutorLinkHeader {
   padding: 0.5em 0;
   width: 100%;
-  max-width: 200px;
+  max-width: 150px;
   background-color: var(--darkModeClrlgt);
   border-radius: 0.5em;
   box-shadow: 0px 0px 3px var(--darkModeTxtClr);
@@ -2775,7 +2773,7 @@ p.lead {
   justify-content: space-evenly;
 }
 #tutorLinks .tutorLink-container .tutorLinkHeader .tutorIcon img {
-  width: 40px;
+  width: 35px;
 }
 #tutorLinks .tutorLink-container .tutorLinkHeader a img {
   display: block;
@@ -2804,6 +2802,8 @@ p.lead {
 }
 
 .trifectaLinks {
+  display: flex;
+  flex-direction: column;
   margin: 2em auto;
   padding-bottom: 2em;
 }
@@ -2836,10 +2836,10 @@ p.lead {
   max-width: 150px;
   min-width: 150px;
   height: 100px;
-  border-radius: 0.25em;
+  border-radius: 0.5em;
 }
 .trifectaLinks .trifectaLink-container .trifectaLink iframe {
-  border-radius: 0.25em;
+  border-radius: 0.5em;
   width: 100%;
   height: 100%;
 }
@@ -2847,6 +2847,20 @@ p.lead {
 @media (min-width: 400px) {
   .trifectaLinks .trifectaLink-container {
     flex-direction: row;
+  }
+  #tutorLinks {
+    margin: 2em auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  #tutorLinks .tutorLink-container {
+    min-width: 200px;
+    max-width: 200px;
+  }
+  #tutorLinks .tutorLink-container .tutorLinkHeader {
+    max-width: 200px;
+  }
+  #tutorLinks .tutorLink-container .tutorLinkHeader .tutorIcon img {
+    width: 50px;
   }
 }
 @media (min-width: 550px) {
@@ -2872,6 +2886,18 @@ p.lead {
     margin: auto;
   }
 }
+@media (min-width: 800px) {
+  .trifectaLinks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .trifectaLinks .trifectaLink-container {
+    flex-direction: column;
+  }
+  .trifectaLinks .trifectaLink-container .trifectaLinkHeader {
+    margin-bottom: 0.5em;
+  }
+}
 @media (min-width: 1000px) {
   .link-container {
     flex-direction: row;
@@ -2884,17 +2910,5 @@ p.lead {
   }
   #tutorLinks {
     gap: 1.5em;
-  }
-  .trifectaLinks .trifectaLink-container .trifectaLinkHeader p {
-    font-size: 0.9em;
-  }
-  .trifectaLinks .trifectaLink-container .trifectaLinkHeader p:nth-child(1) {
-    font-size: 2em;
-  }
-  .trifectaLinks .trifectaLink-container .trifectaLink {
-    margin: 0;
-    max-width: 300px;
-    min-width: 300px;
-    height: 200px;
   }
 }
