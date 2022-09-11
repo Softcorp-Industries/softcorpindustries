@@ -106,6 +106,7 @@ showServerSideList();
 
 
 function enableShowMore(e) {
+    console.log(e.target.nextElementSibling)
     e.target.parentElement.nextElementSibling.style.display = 'block';
     e.target.style.outline = "2px solid var(--txtChange)"
 }
@@ -113,69 +114,24 @@ function disableShowMore(e) {
     e.target.parentElement.nextElementSibling.style.display = 'none'
     e.target.style.outline = "none"
 }
-
-const fccCourseBtn = document.getElementById('fccCoursesBtn');
-const w3CourseBtn = document.getElementById('w3CoursesBtn')
-const softcorpNotesBtn = document.getElementById('softcorpNotesBtn');
+function enableShowCourse(e) {
+    console.log(e.target.nextElementSibling)
+    e.target.nextElementSibling.style.display = 'block';
+    e.target.style.outline = "2px solid var(--txtChange)"
+}
+function disableShowCourse(e) {
+    e.target.nextElementSibling.style.display = 'none'
+    e.target.style.outline = "none"
+}
 
 const tutorialsBtn = document.getElementById('tutorialsBtn')
 const techSkillsBtn = document.getElementById('techSkillsBtn');
 const devCoursesBtn = document.getElementById('devCoursesBtn');
 
-let fccCourseOpen = false;
-let w3CourseOpen = false;
-let softcorpNotesOpen = false;
-
 let tutorialsOpen = false;
 let devCoursesOpen = false;
 let techSkillsOpen = false;
 
-
-function showW3Course() {
-    document.addEventListener('DOMContentLoaded', () => {
-        w3CourseBtn.addEventListener('click', (e) => {
-            if (!w3CourseOpen) {
-                enableShowMore(e);
-                e.target.innerHTML = "Hide Subjects"
-                w3CourseOpen = true;
-            } else {
-                disableShowMore(e);
-                e.target.innerHTML = "Show Subjects"
-                w3CourseOpen = false;
-            }
-        })
-    })
-}
-function showFccCourse() {
-    document.addEventListener('DOMContentLoaded', () => {
-        fccCourseBtn.addEventListener('click', (e) => {
-            if (!fccCourseOpen) {
-                enableShowMore(e);
-                e.target.innerHTML = "Hide Subjects"
-                fccCourseOpen = true;
-            } else {
-                disableShowMore(e);
-                e.target.innerHTML = "Show Subjects"
-                fccCourseOpen = false;
-            }
-        })
-    })
-}
-function showSoftcorpNotes() {
-    document.addEventListener('DOMContentLoaded', () => {
-        softcorpNotesBtn.addEventListener('click', (e) => {
-            if (!softcorpNotesOpen) {
-                enableShowMore(e);
-                e.target.innerHTML = "Hide Notes"
-                softcorpNotesOpen = true;
-            } else {
-                disableShowMore(e);
-                e.target.innerHTML = "Read My Notes"
-                softcorpNotesOpen = false;
-            }
-        })
-    })
-}
 
 function showtutorials() {
     document.addEventListener('DOMContentLoaded', () => {
@@ -223,13 +179,67 @@ function showTechSkills() {
     })
 }
 
+showtutorials();
+showTechSkills();
+showDevCourses();
+
+const fccCourseBtn = document.getElementById('fccCoursesBtn');
+const w3CourseBtn = document.getElementById('w3CoursesBtn')
+const softcorpNotesBtn = document.getElementById('softcorpNotesBtn');
+
+let fccCourseOpen = false;
+let w3CourseOpen = false;
+let softcorpNotesOpen = false;
+
+function showW3Course() {
+    document.addEventListener('DOMContentLoaded', () => {
+        w3CourseBtn.addEventListener('click', (e) => {
+            if (!w3CourseOpen) {
+                enableShowCourse(e);
+                e.target.innerHTML = "Hide Subjects"
+                w3CourseOpen = true;
+            } else {
+                disableShowCourse(e);
+                e.target.innerHTML = "Show Subjects"
+                w3CourseOpen = false;
+            }
+        })
+    })
+}
+function showFccCourse() {
+    document.addEventListener('DOMContentLoaded', () => {
+        fccCourseBtn.addEventListener('click', (e) => {
+            if (!fccCourseOpen) {
+                enableShowCourse(e);
+                e.target.innerHTML = "Hide Subjects"
+                fccCourseOpen = true;
+            } else {
+                disableShowCourse(e);
+                e.target.innerHTML = "Show Subjects"
+                fccCourseOpen = false;
+            }
+        })
+    })
+}
+function showSoftcorpNotes() {
+    document.addEventListener('DOMContentLoaded', () => {
+        softcorpNotesBtn.addEventListener('click', (e) => {
+            if (!softcorpNotesOpen) {
+                enableShowCourse(e);
+                e.target.innerHTML = "Hide Notes"
+                softcorpNotesOpen = true;
+            } else {
+                disableShowCourse(e);
+                e.target.innerHTML = "Read My Notes"
+                softcorpNotesOpen = false;
+            }
+        })
+    })
+}
 showFccCourse();
 showW3Course();
 showSoftcorpNotes();
 
-showtutorials();
-showTechSkills();
-showDevCourses();
 
 function enableCourseShow(e) {
     e.target.nextElementSibling.style.display = 'block'
