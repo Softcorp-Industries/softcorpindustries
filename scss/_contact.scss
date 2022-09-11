@@ -26,7 +26,10 @@
         font-family: "Audiowide";
       }
       p {
-        font-size: .9em;
+        font-size: .8em;
+      }
+      p:nth-child(2) {
+        font-weight: 700;
       }
       a {
         display: block;
@@ -60,18 +63,22 @@
   
 }
 @media screen and (min-width: 550px) {
-.contact {
-  .businessProfiles {
-    .businessProfile {
-      max-width: 400px;
+  .contact {
+    .businessProfiles {
+      .businessProfile {
+        //font-size: .8em;
+        margin-bottom: 0em;
+      }
     }
   }
-}
 }
 @media screen and (min-width: 800px) {
   .contact {
     .businessProfiles {
       flex-direction: row;
+      .businessProfile {
+        font-size: .8em;
+      }
     }
   }
 }
@@ -81,6 +88,7 @@
       max-width: 1000px;
       .businessProfile {
         max-width: 400px;
+        font-size: .9em;
       }
     }
   }
