@@ -30,20 +30,14 @@ let fullStackListOn = false;
 let serverSideListOn = false;
 
 function enableShowBtn(e) {
-    //console.log(e.target.parentElement.parentElement.nextElementSibling.firstElementChild)
     e.target.parentElement.parentElement.nextElementSibling.firstElementChild.style.display = 'grid';
     e.target.parentElement.parentElement.nextElementSibling.firstElementChild.classList.add('openWebDev');
-    //e.target.style.color = 'var(--secondaryTxt)';
-    //e.target.style.backgroundColor = 'var(--secondaryTxt)';
-    //console.log(e.target.previousElementSibling.previousElementSibling);
+    e.target.style.outline = "2px solid var(--txtChange)"
 }
 function disableShowBtn(e) {
     e.target.parentElement.parentElement.nextElementSibling.firstElementChild.style.display = 'none';
     e.target.parentElement.parentElement.nextElementSibling.firstElementChild.classList.remove('openWebDev');
-    //e.target.style.color = 'var(--secondaryClr)';
-    //e.target.style.backgroundColor = 'var(--secondaryTxt)';
-    //e.target.style.boxShadow = 'inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6)';
-    //console.log(e.target.previousElementSibling.previousElementSibling);
+    e.target.style.outline = "none"
 }
 
 function showFccRes() {
@@ -64,9 +58,11 @@ function ShowFrontEndList() {
         frontEndBtn.addEventListener('click', (e) => {
             if (!frontEndListOn) {
                 enableShowBtn(e);
+                e.target.innerHTML = "Hide Report Card"
                 frontEndListOn = true;
             } else {
                 disableShowBtn(e);
+                e.target.innerHTML = "Show Report Card"
                 frontEndListOn = false;
             }
         })
@@ -77,9 +73,11 @@ function showFullStackList() {
         fullStackBtn.addEventListener('click', (e) => {
             if (!fullStackListOn) {
                 enableShowBtn(e);
+                e.target.innerHTML = "Hide Report Card"
                 fullStackListOn = true;
             } else {
                 disableShowBtn(e);
+                e.target.innerHTML = "Show Report Card"
                 fullStackListOn = false;
             }
         })
@@ -90,9 +88,11 @@ function showServerSideList() {
         serverSideBtn.addEventListener('click', (e) => {
             if (!serverSideListOn) {
                 enableShowBtn(e);
+                e.target.innerHTML = "Hide Report Card"
                 serverSideListOn = true;
             } else {
                 disableShowBtn(e);
+                e.target.innerHTML = "Show Report Card"
                 serverSideListOn = false;
             }
         })
@@ -106,12 +106,12 @@ showServerSideList();
 
 
 function enableShowMore(e) {
-    console.log(e.target.parentElement.nextElementSibling)
     e.target.parentElement.nextElementSibling.style.display = 'block';
+    e.target.style.outline = "2px solid var(--txtChange)"
 }
 function disableShowMore(e) {
-    console.log(e.target.parentElement.nextElementSibling)
     e.target.parentElement.nextElementSibling.style.display = 'none'
+    e.target.style.outline = "none"
 }
 
 const fccCourseBtn = document.getElementById('fccCoursesBtn');
@@ -119,8 +119,8 @@ const w3CourseBtn = document.getElementById('w3CoursesBtn')
 const softcorpNotesBtn = document.getElementById('softcorpNotesBtn');
 
 const tutorialsBtn = document.getElementById('tutorialsBtn')
-const devCoursesBtn = document.getElementById('devCoursesBtn');
 const techSkillsBtn = document.getElementById('techSkillsBtn');
+const devCoursesBtn = document.getElementById('devCoursesBtn');
 
 let fccCourseOpen = false;
 let w3CourseOpen = false;
@@ -136,9 +136,11 @@ function showW3Course() {
         w3CourseBtn.addEventListener('click', (e) => {
             if (!w3CourseOpen) {
                 enableShowMore(e);
+                e.target.innerHTML = "Hide Subjects"
                 w3CourseOpen = true;
             } else {
                 disableShowMore(e);
+                e.target.innerHTML = "Show Subjects"
                 w3CourseOpen = false;
             }
         })
@@ -149,9 +151,11 @@ function showFccCourse() {
         fccCourseBtn.addEventListener('click', (e) => {
             if (!fccCourseOpen) {
                 enableShowMore(e);
+                e.target.innerHTML = "Hide Subjects"
                 fccCourseOpen = true;
             } else {
                 disableShowMore(e);
+                e.target.innerHTML = "Show Subjects"
                 fccCourseOpen = false;
             }
         })
@@ -162,9 +166,11 @@ function showSoftcorpNotes() {
         softcorpNotesBtn.addEventListener('click', (e) => {
             if (!softcorpNotesOpen) {
                 enableShowMore(e);
+                e.target.innerHTML = "Hide Notes"
                 softcorpNotesOpen = true;
             } else {
                 disableShowMore(e);
+                e.target.innerHTML = "Read Notes"
                 softcorpNotesOpen = false;
             }
         })
@@ -176,9 +182,11 @@ function showtutorials() {
         tutorialsBtn.addEventListener('click', (e) => {
             if (!tutorialsOpen) {
                 enableShowMore(e);
+                e.target.innerHTML = "Hide Tutor's"
                 tutorialsOpen = true;
             } else {
                 disableShowMore(e);
+                e.target.innerHTML = "Show Tutor's"
                 tutorialsOpen = false;
             }
         })
@@ -189,9 +197,11 @@ function showDevCourses() {
         devCoursesBtn.addEventListener('click', (e) => {
             if (!devCoursesOpen) {
                 enableShowMore(e);
+                e.target.innerHTML = "Hide Courses"
                 devCoursesOpen = true;
             } else {
                 disableShowMore(e);
+                e.target.innerHTML = "Show Courses"
                 devCoursesOpen = false;
             }
         })
@@ -202,9 +212,11 @@ function showTechSkills() {
         techSkillsBtn.addEventListener('click', (e) => {
             if (!techSkillsOpen) {
                 enableShowMore(e);
+                e.target.innerHTML =  "Hide Skills"
                 techSkillsOpen = true;
             } else {
                 disableShowMore(e);
+                e.target.innerHTML = "Show Skills"
                 techSkillsOpen = false;
             }
         })
@@ -237,21 +249,17 @@ let readMore2Open = false;
 let readMore3Open = false;
 
 function enableReadMore(e) {
-    console.log(e.target.parentElement.previousElementSibling);
+    //console.log(e.target.parentElement.previousElementSibling);
     e.target.parentElement.previousElementSibling.style.display = 'block';
     e.target.parentElement.previousElementSibling.classList.add('readMoreAnim')
     e.target.parentElement.previousElementSibling.classList.remove('readMoreAnimRev')
-    //e.target.parentElement.previousElementSibling.classList.remove('hiddenContent')
     e.target.innerHTML = 'Read Less';
-    e.target.nextElementSibling.style.transform = 'rotateZ(0deg)';
 }
 function disableReadMore(e) {
     e.target.parentElement.previousElementSibling.classList.remove('readMoreAnim')
     e.target.parentElement.previousElementSibling.classList.add('readMoreAnimRev')
-    //e.target.parentElement.previousElementSibling.classList.add('hiddenContent')
     e.target.parentElement.previousElementSibling.style.display = 'none'
     e.target.innerHTML = 'Read More';
-    e.target.nextElementSibling.style.transform = 'rotateZ(90deg)';
     readMoreBtn.style.display = 'block';
 }
 
