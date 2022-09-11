@@ -149,7 +149,6 @@ p.lead {
     font-family: "Audiowide";
     text-align: center;
     text-decoration: none;
-    letter-spacing: 0.25rem;
     background: var(--darkModeClrlgt);
     border: none;
     border-radius: .75em;
@@ -157,7 +156,8 @@ p.lead {
   }
 }
 .reportCardBtn .btn:hover {
-  outline: 2px solid var(--txtChange) ;
+  transform: scale(1.05);
+  letter-spacing: 2px;
 }
 .readMoreBtn {
   margin: auto;
@@ -190,7 +190,7 @@ p.lead {
   @include darkMode;
   cursor: pointer;
   display: block;
-  width: 75%;
+  width: 50%;
   max-width: 350px;
   padding: .75em 0;
   color: var(--txtChange);
@@ -203,7 +203,8 @@ p.lead {
   background-color: var(--darkModeClrlgt);
 }
 .showMore:hover {
-  outline: 2px solid var(--txtChange) ;
+  transform: scale(1.05);
+  letter-spacing: 2px;
 }
 .showMoreSection {
   display: none;
@@ -215,6 +216,7 @@ p.lead {
   //overflow: hidden;
   opacity: 0;
   display: none;
+  transition: all 3ms ease-in-out;
 }
 .readMoreAnim {
   animation: readMoreAnim ease-out 750ms forwards;
@@ -283,6 +285,9 @@ p.lead {
   
 }
 @media (min-width: 680px) {
+  .sectionHeader {
+    font-size: 1.75em;
+  }
   .subHeader {
     font-size: 2em;
   }
@@ -315,6 +320,7 @@ p.lead {
   
 }
 @media (min-width: 800px) {
+
   
   @keyframes readMoreAnim {
     0% {
@@ -343,7 +349,7 @@ p.lead {
     }
   }
   .sectionHeader {
-    font-size: 1.75em;
+    //font-size: 1.75em;
     margin-bottom: 0.25em;
   }
   .chapter {
@@ -388,7 +394,7 @@ p.lead {
     }
   }
   .sectionHeader {
-    font-size: 2.25em;
+    font-size: 2.5em;
   }
   .filler-body {
     p {

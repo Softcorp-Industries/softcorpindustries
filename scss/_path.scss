@@ -12,14 +12,14 @@
   margin: 1em auto;
   padding-top: 2em;
   width: 100%;
-  max-width: 700px;
+  max-width: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   &__header {
     margin-bottom: .5em;
-    font-size: 1.25em;
+    font-size: 1.1em;
     letter-spacing: 2px;
     color: var(--darkModeTxtClr);
   }
@@ -189,12 +189,19 @@
 }
 
 @media screen and (min-width: 700px) {
+  .devCourse {
+    flex-direction: row;
+    justify-content: space-between;
+    &__header {
+      font-size: 1.2em;
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .devCourse {
     &__header {
-      font-size: 2em;
+      font-size: 1.75em;
     }
   }
   /*
