@@ -170,7 +170,7 @@ function showSoftcorpNotes() {
                 softcorpNotesOpen = true;
             } else {
                 disableShowMore(e);
-                e.target.innerHTML = "Read Notes"
+                e.target.innerHTML = "Read My Notes"
                 softcorpNotesOpen = false;
             }
         })

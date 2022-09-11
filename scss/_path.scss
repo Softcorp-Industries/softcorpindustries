@@ -10,20 +10,26 @@
 }
 .devCourse {
   margin: 1em auto;
-  padding-top: 2em;
+  //padding-top: 2em;
   width: 100%;
   max-width: 900px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  &__header {
-    margin-bottom: .5em;
-    font-size: 1.1em;
-    letter-spacing: 2px;
-    color: var(--darkModeTxtClr);
+  
+  &__text {
+    font-size: .9em;
+    text-align: left;
   }
 }
+.devCourse-header {
+  margin: 3em;
+  font-size: 1.25em;
+  letter-spacing: 2px;
+  color: var(--darkModeTxtClr);
+  margin-bottom: .5em;
+  }
 .courseCard {
   margin: 1em auto;
   width: 80%;

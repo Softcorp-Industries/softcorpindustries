@@ -1,0 +1,87 @@
+@use "_global" as *;
+@use "_mixin" as *;
+
+.contact {
+  .businessProfiles {
+    margin: 2em auto;
+    max-width: 900px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .businessProfile {
+      margin: 1.5em auto;
+      padding: 1em;
+      width: 75%;
+      max-width: 350px;
+      background-color: var(--darkModeClrlgt);
+      border-radius: .25em;
+      color: var(--darkModeTxtClr);
+      box-shadow: 0px 0px 3px var(--darkModeTxtClr);
+      h2 {
+        margin: .5em auto;
+        width: 100%;
+        font-size: 1.15em;
+        font-family: "Audiowide";
+      }
+      p {
+        font-size: .9em;
+      }
+      a {
+        display: block;
+        padding-top: 1em;
+        width: 100px;
+        i {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}
+
+.mediaLink {
+  margin: auto;
+  width: 80%;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  a{
+    color: var(--txtChange);
+    i {
+      transform: scale(2);
+      margin: 50px auto;
+    }
+  }
+}
+
+@media screen and (min-width: 400px) {
+  
+}
+@media screen and (min-width: 550px) {
+.contact {
+  .businessProfiles {
+    .businessProfile {
+      max-width: 400px;
+    }
+  }
+}
+}
+@media screen and (min-width: 800px) {
+  .contact {
+    .businessProfiles {
+      flex-direction: row;
+    }
+  }
+}
+@media screen and (min-width: 1000px) {
+  .contact {
+    .businessProfiles {
+      max-width: 1000px;
+      .businessProfile {
+        max-width: 400px;
+      }
+    }
+  }
+}

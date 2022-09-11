@@ -189,6 +189,7 @@ p.lead {
 .showMore {
   @include darkMode;
   cursor: pointer;
+  margin: auto;
   display: block;
   width: 50%;
   max-width: 350px;

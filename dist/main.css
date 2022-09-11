@@ -100,6 +100,10 @@ hr {
   border-radius: 5px;
 }
 
+a {
+  color: var(--txtChange);
+}
+
 footer {
   margin: auto;
   padding: 1em;
@@ -624,7 +628,6 @@ footer span {
 
 .devCourse {
   margin: 1em auto;
-  padding-top: 2em;
   width: 100%;
   max-width: 900px;
   display: flex;
@@ -632,11 +635,17 @@ footer span {
   align-items: center;
   justify-content: space-between;
 }
-.devCourse__header {
-  margin-bottom: 0.5em;
-  font-size: 1.1em;
+.devCourse__text {
+  font-size: 0.9em;
+  text-align: left;
+}
+
+.devCourse-header {
+  margin: 3em;
+  font-size: 1.25em;
   letter-spacing: 2px;
   color: var(--darkModeTxtClr);
+  margin-bottom: 0.5em;
 }
 
 .courseCard {
@@ -1010,6 +1019,7 @@ p.lead {
 .showMore {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   cursor: pointer;
+  margin: auto;
   display: block;
   width: 50%;
   max-width: 350px;
@@ -1691,51 +1701,6 @@ p.lead {
   text-align: center;
 }
 
-.contact__header h2 {
-  padding-top: 2.25em;
-  text-align: center;
-  font-size: 1.5em;
-  font-family: "Audiowide";
-  color: var(--txtChange);
-  letter-spacing: 2px;
-  text-shadow: 0px 0px 3px var(--darkModeBg);
-}
-
-.contactModal {
-  margin: auto;
-  width: 85%;
-  text-align: center;
-}
-.contactModal .contactBtn {
-  padding: 0.5em 1em;
-  font-family: "audiowide";
-  font-size: 16px;
-  letter-spacing: 2px;
-  color: var(--bgSecondary);
-  border: none;
-  border-radius: 1em;
-}
-.contactModal .contactBtn:hover {
-  color: white;
-  background-color: var(--bgSecondary);
-}
-
-.mediaLink {
-  margin: auto;
-  width: 80%;
-  max-width: 700px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.mediaLink a {
-  color: var(--txtChange);
-}
-.mediaLink a i {
-  transform: scale(2);
-  margin: 50px auto;
-}
-
 .location {
   margin: auto;
   width: 300px;
@@ -1815,10 +1780,6 @@ p.lead {
   }
   .profile .avatar .logo-bar__img img {
     max-width: 125px;
-  }
-  .contact__header h2 {
-    padding-top: 1em;
-    font-size: 3em;
   }
 }
 .welcome__header {
@@ -2930,5 +2891,76 @@ p.lead {
   }
   #tutorLinks {
     gap: 1.5em;
+  }
+}
+.contact .businessProfiles {
+  margin: 2em auto;
+  max-width: 900px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact .businessProfiles .businessProfile {
+  margin: 1.5em auto;
+  padding: 1em;
+  width: 75%;
+  max-width: 350px;
+  background-color: var(--darkModeClrlgt);
+  border-radius: 0.25em;
+  color: var(--darkModeTxtClr);
+  box-shadow: 0px 0px 3px var(--darkModeTxtClr);
+}
+.contact .businessProfiles .businessProfile h2 {
+  margin: 0.5em auto;
+  width: 100%;
+  font-size: 1.15em;
+  font-family: "Audiowide";
+}
+.contact .businessProfiles .businessProfile p {
+  font-size: 0.9em;
+}
+.contact .businessProfiles .businessProfile a {
+  display: block;
+  padding-top: 1em;
+  width: 100px;
+}
+.contact .businessProfiles .businessProfile a i {
+  font-size: 50px;
+}
+
+.mediaLink {
+  margin: auto;
+  width: 80%;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.mediaLink a {
+  color: var(--txtChange);
+}
+.mediaLink a i {
+  transform: scale(2);
+  margin: 50px auto;
+}
+
+@media screen and (min-width: 550px) {
+  .contact .businessProfiles .businessProfile {
+    max-width: 400px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .contact .businessProfiles {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .contact .businessProfiles {
+    max-width: 1000px;
+  }
+  .contact .businessProfiles .businessProfile {
+    max-width: 400px;
   }
 }
