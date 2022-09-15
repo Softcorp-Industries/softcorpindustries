@@ -1,6 +1,25 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
+.main-header, #main-header {
+  letter-spacing: 2px;
+  .pageTitle {
+    padding: .5em;
+    font-size: 1.75em;
+    font-weight: 700;
+    font-family: "The Nautigal";
+    text-align: center;
+    color: var(--txtChange);
+  }
+  h1 {
+  text-align: center;
+  color: var(--txtChange);
+  font-family: "Audiowide";
+  font-size: 1.5em;
+  //text-shadow: 0px 0px 3px var(--darkModeBg);
+}
+}
+
 .contact {
   .businessProfiles {
     margin: 2em auto;
@@ -11,10 +30,11 @@
     align-items: center;
     justify-content: space-between;
     .businessProfile {
-      margin: 1.5em auto;
+      margin: 1em auto;
       padding: 1em;
       width: 75%;
       max-width: 350px;
+      letter-spacing: 1px;
       background-color: var(--darkModeClrlgt);
       border-radius: .25em;
       color: var(--darkModeTxtClr);
@@ -27,9 +47,6 @@
       }
       p {
         font-size: .8em;
-      }
-      p:nth-child(2) {
-        font-weight: 700;
       }
       a {
         display: block;
@@ -58,7 +75,12 @@
     }
   }
 }
-
+.location {
+  margin:1.5em auto;
+  text-align: center;
+  color: var(--darkModeTxtClr);
+  line-height: 1.4;
+}
 @media screen and (min-width: 400px) {
   
 }
@@ -66,7 +88,7 @@
   .contact {
     .businessProfiles {
       .businessProfile {
-        //font-size: .8em;
+        font-size: .9em;
         margin-bottom: 0em;
       }
     }
@@ -76,9 +98,6 @@
   .contact {
     .businessProfiles {
       flex-direction: row;
-      .businessProfile {
-        font-size: .8em;
-      }
     }
   }
 }

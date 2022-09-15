@@ -93,16 +93,6 @@ body.transition *:after {
   transition: all 750ms;
 }
 
-h1 {
-  padding-top: 2em;
-  text-align: center;
-  color: var(--txtChange);
-  font-family: "Audiowide";
-  font-size: 1.5em;
-  letter-spacing: 2px;
-  text-shadow: 0px 0px 3px var(--darkModeBg);
-}
-
 hr {
   margin: auto;
   margin-bottom: 2em;
@@ -116,7 +106,7 @@ a {
   color: var(--txtChange);
 }
 
-footer {
+#footer {
   margin: auto;
   padding: 1em;
   text-align: center;
@@ -129,7 +119,7 @@ footer {
   background-image: linear-gradient(to left top, #c0fff4, var(--secondaryClr));
 }
 
-footer span {
+#footer span {
   color: red;
 }
 
@@ -148,27 +138,16 @@ footer span {
   body {
     font-size: 24px;
   }
-  h1 {
-    padding-top: 1.5em;
-  }
 }
 
 @media screen and (min-width: 700px) {
-  h1 {
-    padding-top: 1em;
-    font-size: 2.25em;
-  }
+  
 }
 
 @media screen and (min-width: 1024px) {
-  h1 {
-    padding-top: 0.5em;
-    font-size: 3.5em;
-  }
+  
 }
 
 @media screen and (min-width: 1200px) {
-  h1 {
-    padding-top: 0.25em;
-  }
+  
 }

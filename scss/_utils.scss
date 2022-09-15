@@ -1,7 +1,7 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
-.darkMode {
+#darkMode {
   @include shadowSm-inset;
   position: fixed;
   display: flex;
@@ -29,7 +29,7 @@
     background-position: center;
   }
 }
-.darkMode.showDarkMode{
+#darkMode.showDarkMode{
   display: flex;
   animation: darkModeShow 750ms ease-in-out forwards;
 }
@@ -67,20 +67,17 @@
   }
 }
 
-.navBtn {
+.navBtn, #navBtn {
   z-index: 6;
   position: fixed;
+  top: 1.5em;
+  left: .5em;
   cursor: pointer;
   &__menu {
-    position: absolute;
+    //@extend: absolute;
     display: flex;
     justify-content: center;
     align-items: left;
-    //cursor: pointer;
-    top: 1.5em;
-    left: .75em;
-    width: 2.5em;
-    height: 2.5em;
     border-radius: 50%;
     transition: all 0.5s ease-in-out;
     &__btn {
@@ -109,67 +106,7 @@
     }
   }
 }
-.siteNav {
-  position: fixed;
-  width: 100%;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 15% 100%);
-  z-index: 5;
-  border: 2px solid var(--bgSecondary);
-  background-color: var(--bgFilterDrk);
-  max-width: 20em;
-  ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    li {
-      border-right: 2px solid var(--bgSecondary);
-      margin: 3px 0px;
-      min-width: 5em;
-      a {
-        display: block;
-        width: 100%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 1.25rem;
-        padding: 0px 5px;
-        font-size: 0.5em;
-        font-weight: 600;
-        letter-spacing: 0.2em;
-        text-decoration: none;
-        text-align: center;
-        text-shadow: 0px 0px 1px var(--white);
-        color: var(--bgSecondary);
-      }
-      a:active {
-        color: var(--black);
-      }
-      .activePage {
-        color: var(--jsThemeClr);
-        text-shadow: 0px 0px 2px var(--black);
-        font-weight: 700;
-        //background-color: var(--bgFilter);
-      }
-    }
-    li:last-child {
-      border-right: none;
-    }
-    li:hover a {
-      color: var(--jsThemeClr);
-      text-shadow: 0px 0px 2px var(--black);
-      //background-color: var(--bgFilter);
-    }
-  }
-}
-.siteNav.showNav{
-  animation: navBarShow 750ms linear both;
-}
-.pageNav{
+.pageNav, #navMenu{
   .pageNav-list {
     position: fixed;
     top: 80px;
@@ -224,6 +161,9 @@
       color: var(--black);
     }
   }
+}
+.pageNav-list .pageNav-listItem {
+  display: none; // hide
 }
 .pageNav-list .pageNav-listItem {
   display: none; // hide

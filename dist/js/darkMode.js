@@ -1,8 +1,6 @@
 // Dark Mode and Local Storage
 const darkModeBtn = document.getElementById("darkModeBtn");
 const darkModeFilter = document.getElementById('darkModeFilter');
-//const darkModeLanding = document.getElementById('darkModeLanding');
-//const darkModeTitle = document.getElementById('darkModeTitle');
 
 let darkModeSt = localStorage.getItem("darkModeSt");
 
@@ -13,7 +11,8 @@ const enableDarkMode = () => {
   darkModeBtn.style.backgroundImage = "url(img/icon/darkMode-icon-light512.webp)"
   darkModeBtn.classList.add("darkModeAnim");
   darkModeBtn.classList.remove("darkModeAnimRev");
-  darkModeFilter.classList.add("darkModeFilter")
+  darkModeFilter.classList.add("darkModeFilter");
+  darkModeFilter.style.backgroundImage = "none"
   //darkModeLanding.classList.add("darkModeFilter")
   //darkModeTitle.classList.add("darkModeFilter")
   localStorage.setItem("darkModeSt", "enabled");
@@ -23,19 +22,25 @@ const disableDarkMode = () => {
   darkModeBtn.style.backgroundImage = "url(img/icon/darkMode-icon.png)"
   darkModeBtn.classList.add("darkModeAnimRev");
   darkModeBtn.classList.remove("darkModeAnim");
-  darkModeFilter.classList.remove("darkModeFilter")
+  darkModeFilter.classList.remove("darkModeFilter");
+  darkModeFilter.style.backgroundImage = "url(./img/backgrounds/clouds_72634.jpg"
+
+
   //darkModeLanding.classList.remove("darkModeFilter")
   //darkModeTitle.classList.remove("darkModeFilter")
   localStorage.setItem("darkModeSt", "disabled");
 };
+
 if (darkModeSt === "enabled") {
   enableDarkMode();
 }
+
 function darkModeActive() {
   document.addEventListener("DOMContentLoaded", () => {
     darkModeBtn.addEventListener("click", () => {
       darkModeSt = localStorage.getItem("darkModeSt");
       if (darkModeSt !== "enabled" && !darkModeOn) {
+
         enableDarkMode();
         trans();
         darkModeOn = true;
@@ -47,6 +52,7 @@ function darkModeActive() {
     });
   });
 }
+
 darkModeActive();
 
 let trans = () => {
