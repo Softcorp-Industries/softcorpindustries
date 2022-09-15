@@ -16,35 +16,36 @@
     <title>About Softcorp Industries</title>
     <link rel="stylesheet" href="main.css">
     <script defer type="module" src="main.js"></script>
+    <script defer type="module" src="global.js"></script>
     <script defer src="js/imgSliders.js"></script>
 </head>
 
-<body data-darkMode="light">
-    <section id="darkModeFilter">
-        <header>
-            <section id="darkMode" class="darkMode">
-                <span id="darkModeBtn" class="dmToggle"></span>
-            </section>
-            <div class="navBtn">
-                <div class="navBtn__menu">
-                    <div class="navBtn__menu__btn"></div>
-                </div>
-            </div>
+<body data-darkMode="light"  id="darkModeFilter">
+        <header class="main-header">
+            <p class="pageTitle">About</p>
             <h1>Christopher T. Guy</h1>
-            <nav class="pageNav" aria-label="pageNav">
-                <ul id="pageNav-list" class="pageNav-list">
-                    <li class="pageNav-listItem">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li class="pageNav-listItem">
-                        <a href="#">About</a>
-                    </li>
-                    <li class="pageNav-listItem">
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </nav>
         </header>
+        <section id="darkMode">
+            <span id="darkModeBtn" class="dmToggle"></span>
+        </section>
+        <div id="navBtn">
+            <div class="navBtn__menu">
+                <div class="navBtn__menu__btn"></div>
+            </div>
+        </div>
+        <nav class="pageNav" aria-label="pageNav" id="navMenu">
+            <ul id="pageNav-list" class="pageNav-list">
+                <li class="pageNav-listItem">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="pageNav-listItem">
+                    <a href="#">About</a>
+                </li>
+                <li class="pageNav-listItem">
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
         <main>
             <section class="about" id="about">
                 <section class="profile">
@@ -238,7 +239,7 @@
             </section>
         </main>
         <br>
-        <footer>
+        <footer id="footer">
             <p>
                 Christopher Guy <span>O/A</span> Softcorp Industries
             </p>
@@ -246,7 +247,7 @@
                 Copyright &copy 2021
             </p>
         </footer>
-    </section>
+    
 </body>
 
 </html>
