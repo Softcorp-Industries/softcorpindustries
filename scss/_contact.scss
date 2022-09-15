@@ -1,28 +1,9 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
-.main-header, #main-header {
-  letter-spacing: 2px;
-  .pageTitle {
-    padding: .5em;
-    font-size: 1.75em;
-    font-weight: 700;
-    font-family: "The Nautigal";
-    text-align: center;
-    color: var(--txtChange);
-  }
-  h1 {
-  text-align: center;
-  color: var(--txtChange);
-  font-family: "Audiowide";
-  font-size: 1.5em;
-  //text-shadow: 0px 0px 3px var(--darkModeBg);
-}
-}
-
 .contact {
   .businessProfiles {
-    margin: 2em auto;
+    margin: .5em auto;
     max-width: 900px;
     width: 90%;
     display: flex;
@@ -30,7 +11,8 @@
     align-items: center;
     justify-content: space-between;
     .businessProfile {
-      margin: 1em auto;
+      margin: auto;
+      margin-bottom: 1em;
       padding: 1em;
       width: 75%;
       max-width: 350px;
@@ -42,6 +24,7 @@
       h2 {
         margin: .5em auto;
         width: 100%;
+        letter-spacing: 1px;
         font-size: 1.15em;
         font-family: "Audiowide";
       }
@@ -70,8 +53,8 @@
   a{
     color: var(--txtChange);
     i {
-      transform: scale(2);
       margin: 50px auto;
+      font-size: 2em;
     }
   }
 }
@@ -89,7 +72,6 @@
     .businessProfiles {
       .businessProfile {
         font-size: .9em;
-        margin-bottom: 0em;
       }
     }
   }
@@ -98,6 +80,13 @@
   .contact {
     .businessProfiles {
       flex-direction: row;
+    }
+    .mediaLink {
+      a {
+        i {
+          font-size: 2.5em;
+        }
+      }
     }
   }
 }

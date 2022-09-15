@@ -31,7 +31,6 @@ prev.addEventListener("click", (e) => {
   prevSlide(e);
 });
 
-
 // Automatic Image Slider
 
 const auto = true;

@@ -531,8 +531,8 @@ a {
 .devCourses {
   display: none;
   margin: auto;
-  width: 90%;
   max-width: 1000px;
+  padding: 1em;
 }
 
 .devCourse {
@@ -544,9 +544,12 @@ a {
   align-items: center;
   justify-content: space-between;
 }
-.devCourse__text {
-  font-size: 0.9em;
+.devCourse__text p {
+  letter-spacing: 1px;
+  line-height: 1.3;
+  font-size: 1em;
   text-align: left;
+  margin-bottom: 0.5em;
 }
 
 .devCourse-header {
@@ -567,7 +570,7 @@ a {
   font-family: "Audiowide";
 }
 
-.w3Course, .softcorp {
+.w3Course {
   display: none;
   grid-template-columns: repeat(auto-fit, minMax(300px, 1fr));
 }
@@ -739,6 +742,25 @@ a {
   }
   */
 }
+#main-header .pageTitle {
+  letter-spacing: 3px;
+  padding: 0.5em;
+  padding-bottom: 0.25em;
+  font-size: 2em;
+  font-weight: 700;
+  font-family: "The Nautigal";
+  text-align: center;
+  color: var(--txtChange);
+}
+#main-header h1 {
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--txtChange);
+  font-family: "Audiowide";
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+}
+
 .featureHeader {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   text-align: center;
@@ -798,6 +820,7 @@ a {
 }
 .filler-body p {
   line-height: 1.3;
+  letter-spacing: 1px;
   margin-bottom: 0.5em;
 }
 .filler-body p.lead {
@@ -814,11 +837,13 @@ a {
   margin: auto;
   margin-top: 2em;
   max-width: 1000px;
+  padding: 1em;
 }
 .showMoreHeader p {
   text-align: left;
   padding: 1em;
-  font-size: 0.9em;
+  letter-spacing: 1px;
+  font-size: 1em;
   max-width: 800px;
 }
 
@@ -830,16 +855,6 @@ a {
   color: var(--darkModeTxtClr);
   text-shadow: 0px 0px 3px var(--darkModeBg);
   margin-bottom: 0.5em;
-}
-
-.subHeader {
-  margin: 0.5em auto;
-  color: var(--darkModeTxtClr);
-  text-shadow: 0px 0px 3px var(--darkModeBg);
-  font-size: 1.5em;
-  font-weight: 600;
-  text-align: center;
-  letter-spacing: 2px;
 }
 
 .helpTip {
@@ -1081,11 +1096,11 @@ a {
   }
 }
 @media (min-width: 680px) {
-  .sectionHeader {
+  #main-header h1 {
     font-size: 1.75em;
   }
-  .subHeader {
-    font-size: 2em;
+  .sectionHeader {
+    font-size: 1.5em;
   }
   @-webkit-keyframes readMoreAnim {
     0% {
@@ -1193,6 +1208,10 @@ a {
       margin-top: -16em;
     }
   }
+  #main-header h1 {
+    letter-spacing: 4px;
+    font-size: 2.25em;
+  }
   .sectionHeader {
     margin-bottom: 0.25em;
   }
@@ -1259,11 +1278,11 @@ a {
       margin-top: -14em;
     }
   }
+  #main-header h1 {
+    font-size: 2.75em;
+  }
   .sectionHeader {
     font-size: 2.5em;
-  }
-  .filler-body p {
-    font-size: 0.95em;
   }
 }
 .cardBox {
@@ -1489,12 +1508,12 @@ a {
   text-shadow: 0px 0px 3px var(--darkModeBg);
 }
 .profile .avatar {
+  margin: 1em auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 600px;
-  margin: 1.5em auto;
 }
 .profile .avatar .seals {
   width: 80%;
@@ -1581,6 +1600,7 @@ a {
   width: 100%;
   max-width: 1000px;
   padding: 1em;
+  padding-top: 0;
 }
 .profile .pastBio .lead,
 .profile .presentBio .lead {
@@ -1591,12 +1611,12 @@ a {
   padding: 1em;
 }
 .profile .pastBio .bioBody p:first-child, .profile .presentBio .bioBody p:first-child {
-  font-size: 1em;
+  font-size: 1.25em;
   margin-bottom: 0.5em;
 }
 .profile .pastBio .bioBody p, .profile .presentBio .bioBody p {
   margin: 0.5em auto;
-  font-size: 0.8em;
+  font-size: 1em;
   text-align: left;
   line-height: 1.4;
   letter-spacing: 1px;
@@ -1606,6 +1626,17 @@ a {
 }
 .profile .presentBio {
   text-align: center;
+}
+
+.aboutHeader {
+  margin: auto;
+  padding: 1em;
+  color: var(--darkModeTxtClr);
+  text-shadow: 0px 0px 3px var(--darkModeBg);
+  font-size: 1.25em;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 @media screen and (min-width: 550px) {
@@ -1624,7 +1655,7 @@ a {
 }
 @media screen and (min-width: 700px) {
   .profile .avatar {
-    margin: 2em auto;
+    margin: 1.5em auto;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -1653,6 +1684,9 @@ a {
   .profile .avatar .profileImg2 {
     min-width: 175px;
     min-height: 175px;
+  }
+  .aboutHeader {
+    font-size: 2em;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -2558,7 +2592,7 @@ a {
   line-height: 1.4;
   letter-spacing: 1px;
   max-width: 650px;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 .link-container p span {
   font-size: 1.5em;
@@ -2786,26 +2820,8 @@ a {
     gap: 1.5em;
   }
 }
-.main-header, #main-header {
-  letter-spacing: 2px;
-}
-.main-header .pageTitle, #main-header .pageTitle {
-  padding: 0.5em;
-  font-size: 1.75em;
-  font-weight: 700;
-  font-family: "The Nautigal";
-  text-align: center;
-  color: var(--txtChange);
-}
-.main-header h1, #main-header h1 {
-  text-align: center;
-  color: var(--txtChange);
-  font-family: "Audiowide";
-  font-size: 1.5em;
-}
-
 .contact .businessProfiles {
-  margin: 2em auto;
+  margin: 0.5em auto;
   max-width: 900px;
   width: 90%;
   display: flex;
@@ -2814,7 +2830,8 @@ a {
   justify-content: space-between;
 }
 .contact .businessProfiles .businessProfile {
-  margin: 1em auto;
+  margin: auto;
+  margin-bottom: 1em;
   padding: 1em;
   width: 75%;
   max-width: 350px;
@@ -2827,6 +2844,7 @@ a {
 .contact .businessProfiles .businessProfile h2 {
   margin: 0.5em auto;
   width: 100%;
+  letter-spacing: 1px;
   font-size: 1.15em;
   font-family: "Audiowide";
 }
@@ -2854,8 +2872,8 @@ a {
   color: var(--txtChange);
 }
 .mediaLink a i {
-  transform: scale(2);
   margin: 50px auto;
+  font-size: 2em;
 }
 
 .location {
@@ -2868,12 +2886,14 @@ a {
 @media screen and (min-width: 550px) {
   .contact .businessProfiles .businessProfile {
     font-size: 0.9em;
-    margin-bottom: 0em;
   }
 }
 @media screen and (min-width: 800px) {
   .contact .businessProfiles {
     flex-direction: row;
+  }
+  .contact .mediaLink a i {
+    font-size: 2.5em;
   }
 }
 @media screen and (min-width: 1000px) {
