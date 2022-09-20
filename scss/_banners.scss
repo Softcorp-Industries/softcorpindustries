@@ -1,30 +1,25 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
-.top {
-  //background-image: url("img/tech/landing-bg2.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top;
-  z-index: 1;
-  position: relative;
-  height: 55vw;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
-  margin-bottom: -7vw;
-  h2 {
-    position: absolute;
-    bottom: calc(7vw - 1em);
-    right: 4%;
-    transform: rotate(-3.8deg);
-    font-family: "Audiowide", cursive;
-    font-size: 0.8em;
-    color: #c0fff4;
-    margin-bottom: 0;
-    padding-bottom: 0.5em;
-    letter-spacing: 0.15rem;
-    text-shadow: 0px 0px 7px var(--black);
+#main-header {
+  .pageTitle {
+    letter-spacing: 3px;
+    padding: .5em;
+    padding-bottom: .25em;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: "The Nautigal";
+    text-align: center;
+    color: var(--txtChange);
   }
+  h1 {
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--txtChange);
+  font-family: "Audiowide";
+  font-size: 1.5em;
+  padding-bottom: .5em
+}
 }
 .landingImg {
   display: block;
@@ -57,7 +52,7 @@
     font-size: 1.2em;
   }
   .landingImg {
-    margin: auto;
+    margin: 1em auto;
   width: calc(13vw + 13em);
   }
 }
