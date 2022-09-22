@@ -85,6 +85,30 @@
   font-size: 1.5em;
   margin-bottom: 1em;
 }
+.showBtn {
+  button {
+    @include darkMode;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    width: 50%;
+    max-width: 350px;
+    padding: 0.75em 0;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    font-family: "Audiowide";
+    outline: none;
+    border: none;
+    border-radius: 0.75em;
+    color: var(--txtChange);
+    background-color: var(--darkModeClrlgt);
+  }
+}
+.showBtn button:hover {
+  transform: scale(1.05);
+  letter-spacing: 2px;
+
+}
 .showMoreHeader {
   display: flex;
   flex-direction: column;
@@ -251,6 +275,35 @@
   }
 }
 
+
+.spacer{
+  content: "";
+  height: 5em;
+}
+#topBtn {
+  @include darkMode; 
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 10px; /* Place the button 30px from the right */
+  width: 50px;
+  height: 50px;
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-image: linear-gradient(to left top, #C0FFF4, var(--secondaryClr));
+  /* Set a background color */
+  color: var(--secondaryTxt); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  //padding: 15px; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#topBtn:hover {
+  background-color: var(--secondaryTxt); /* Add a dark-grey background on hover */
+  color: var(--secondaryClr);
+}
 .idSpacer {
   padding-top: 2em;
 }
@@ -284,11 +337,7 @@
   }
 }
 @media (min-width: 680px) {
-  #main-header {
-    h1 {
-      font-size: 1.75em;
-    }
-  }
+  
   .sectionHeader {
     font-size: 1.5em;
   }
@@ -347,12 +396,7 @@
       margin-top: -16em;
     }
   }
-  #main-header {
-    h1 {
-      letter-spacing: 4px;
-      font-size: 2.25em;
-    }
-  }
+  
   .sectionHeader {
     //font-size: 1.75em;
     margin-bottom: 0.25em;
@@ -398,11 +442,7 @@
       margin-top: -14em;
     }
   }
-  #main-header {
-    h1 {
-      font-size: 2.75em;
-    }
-  }
+  
   .sectionHeader {
     font-size: 2.5em;
   }

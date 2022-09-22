@@ -1,0 +1,66 @@
+@use "../../global" as *;
+@use "../../mixin" as *;
+
+#imgProductGallery{
+  display: none;
+}
+#imgProductGallery.showProject {
+  display: block;
+}
+
+.productSlider {
+  .productFeatureImg {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+    img {
+      width: 100%;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+#productContainer {
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c9c9c9;
+  border-radius: 1rem;
+}
+.productImgs {
+  width: 280px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  .productImg {
+    margin: 0 5px;
+    max-width: 80px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    opacity: 0.4;
+  }
+}
+.productImg:hover {
+  opacity: 1;
+}
+.activeProduct {
+  opacity: 1;
+}
+#btnL {
+  background-color: var(--themeTxtClr);
+  width: 30px;
+  height: 30px;
+  clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+  cursor: pointer;
+  border-radius: 50%;
+}
+#btnR {
+  background-color: var(--themeTxtClr);
+  width: 30px;
+  height: 30px;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
+  cursor: pointer;
+  border-radius: 50%;
+}

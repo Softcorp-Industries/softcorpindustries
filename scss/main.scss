@@ -11,3 +11,29 @@
 @use "_webDevelopment";
 @use "_links";
 @use "_contact";
+
+@use"./HomeWork/homeWork";
+@use"./HomeWork/codeStyle";
+
+@use "./HomeWork/BtnProjects/darkmodeProject";
+@use "./HomeWork/BtnProjects/toggleProject";
+@use "./HomeWork/BtnProjects/inputBtnProject";
+@use "./HomeWork/BtnProjects/menuProject";
+@use "./HomeWork/BtnProjects/btnProject";
+
+@use "./HomeWork/AnimationProjects/transformProject";
+@use "./HomeWork/AnimationProjects/ninjaHover";
+@use "./HomeWork/AnimationProjects/flipMenuProject";
+@use "./HomeWork/AnimationProjects/canvasProject";
+@use "./HomeWork/AnimationProjects/clockProject";
+
+@use "./HomeWork/ImgProjects/carouselProject";
+@use "./HomeWork/ImgProjects/galleryProject";
+@use "./HomeWork/ImgProjects/productProject";
+@use "./HomeWork/ImgProjects/sliderProject";
+
+@use "./HomeWork/StorageProjects/todo1Project.scss";
+
+@use "./HomeWork/WebPlayerProjects/webPlayerProjects";
+
+@use "./HomeWork/UIProjects/uiProjects"

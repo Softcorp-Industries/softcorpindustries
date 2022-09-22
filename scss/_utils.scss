@@ -196,7 +196,7 @@
     opacity: 0;
     transform-origin: top left;
   }
-  @for $i from 1 through 7 {
+  @for $i from 1 through 12 {
     .pageNav-listItem:nth-child(#{$i}) {
       animation: navBarAn 300ms ease-in forwards;
       animation-delay: (150ms * $i) - 300ms;

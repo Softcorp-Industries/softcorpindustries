@@ -240,7 +240,6 @@ showFccCourse();
 showW3Course();
 showSoftcorpNotes();
 
-
 function enableCourseShow(e) {
     e.target.nextElementSibling.style.display = 'block'
 }

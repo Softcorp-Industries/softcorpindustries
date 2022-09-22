@@ -1,0 +1,173 @@
+@use "../../global" as *;
+@use "../../mixin" as *;
+
+#ninjaHover{
+  display: none;
+}
+#ninjaHover.showProject{
+  display: block;
+}
+.ninjaHover {
+  text-align: center;
+  .container2 {
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+    overflow: hidden;
+    h3 {
+      text-align: center;
+      color: orangered;
+    }
+    &__item1 {
+      overflow: hidden;
+      cursor: pointer;
+      max-width: 600px;
+      height: 400px;
+      margin: auto;
+      background-color: var(--darkModeBg);
+      border-radius: 0.5rem;
+      margin-bottom: 30px;
+      .ninjaBox {
+        overflow: hidden;
+        margin: auto;
+        width: 80%;
+        max-width: 250px;
+        height: 150px;
+        top: 100px;
+        transform-origin: 17px 150px;
+        background-color: var(--inputToggleTheme);
+        border-radius: 0.5rem;
+        opacity: 0;
+        .ninjaBox__header {
+          padding: .25em;
+          display: grid;
+          grid-template-columns: 30px auto 30px;
+          background-color: var(--toggleTheme);
+          h3 {
+            letter-spacing: 1px;
+            font-family: "Audiowide";
+            font-size: 18px;
+            color: var(--darkModeTxtClr);
+          }
+          .screw {
+            content: "";
+            margin: auto;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            width: 21px;
+            height: 18px;
+            background-color: black;
+          }
+        }
+        h4 {
+          font-size: 1rem;
+          padding: 0.75rem;
+          opacity: 0;
+          color: var(--toggleTheme);
+        }
+        p {
+          font-size: 1.5rem;
+          text-align: right;
+          font-weight: 700;
+          letter-spacing: 0.1rem;
+          color: var(--toggleTheme);
+          padding-right: 1rem;
+          padding-top: 1.5rem;
+          opacity: 0;
+        }
+      }
+    }
+  }
+  .container2__item1:hover .ninjaBox {
+    animation: drop 750ms ease-in forwards, swing 2.25s ease-in-out 2s forwards,
+      fall 300ms 4.75s linear forwards;
+    opacity: 1;
+    &__header .screw {
+      animation: spin 500ms linear forwards 1.25s;
+    }
+    h4 {
+      animation: quality 500ms 600ms ease-in-out forwards;
+    }
+    p {
+      animation: counts 2.25s ease-in forwards;
+    }
+  }
+}
+// Project 1 Net Ninja Project
+@keyframes drop {
+  0% {
+    transform: translateY(-100px);
+  }
+  60% {
+    transform: translateY(125px);
+  }
+  90% {
+    transform: translateY(120px);
+  }
+  100% {
+    transform: translateY(125px);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(450deg);
+  }
+}
+@keyframes swing {
+  0% {
+    transform: rotateZ(0deg) translateY(125px);
+  }
+  2% {
+    transform: rotateZ(1deg) translateY(125px);
+  }
+  10% {
+    transform: rotateZ(2deg) translateY(125px);
+  }
+  15% {
+    transform: rotateZ(5deg) translateY(125px);
+  }
+  20% {
+    transform: rotateZ(8deg) translateY(125px);
+  }
+  70% {
+    transform: rotateZ(70deg) translateY(125px);
+  }
+  100% {
+    transform: rotateZ(60deg) translateY(125px);
+  }
+}
+@keyframes fall {
+  0% {
+    transform: rotateZ(60deg) translateY(160px);
+  }
+  100% {
+    transform: translateY(600px) translateX(-30px);
+  }
+}
+@keyframes quality {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes counts {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+          font-size: 1.5rem;
+
+  }
+
+  100% {
+    transform: translateY(-20px);
+    opacity: 1;
+          font-size: 1.75rem;
+
+  }
+}

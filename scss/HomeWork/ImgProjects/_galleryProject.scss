@@ -1,0 +1,49 @@
+@use "../../global" as *;
+@use "../../mixin" as *;
+
+#imgGallery{
+  display: none;
+}
+#imgGallery.showProject{
+  display: block;
+}
+
+.galleryContainer {
+  .featureImg {
+    margin: auto;
+    max-width: 280px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .featureImg img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+  .galleryGrid img {
+    margin: auto;
+    max-height: 80px;
+    border-radius: 0.5rem;
+    padding: 10px 0;
+  }
+  .galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 3px;
+    max-height: 100px;
+    overflow: scroll;
+    width: 100%;
+
+    margin: auto;
+    border-radius: 0.5rem;
+  }
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}

@@ -1,0 +1,73 @@
+@use "../../global" as *;
+@use "../../mixin" as *;
+
+#transform{
+  display: none;
+}
+#transform.showProject{
+  display: block;
+}
+
+.transform {
+  text-align: center;
+  .transform-container1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 0.75rem 0.75rem 0 0;
+    &__item1:hover .hoverBox {
+      translate: 100%;
+    
+    }
+    &__item2 .hoverBox {
+      transition: translate 1s ease-in-out;
+    }
+    &__item2:hover .hoverBox {
+      translate: 100%;
+    }
+    &__item3:hover .hoverBox {
+      animation: aquarnd 1.5s ease-in-out forwards;
+    }
+    &__item {
+      margin: auto;
+      height: 200px;
+      width: 200px;
+      cursor: pointer;
+      background-color: var(--darkModeBg);
+      margin-bottom: 15px;
+      .hoverBox {
+        width: 50%;
+        height: 50%;
+        background-color: var(--toggleTheme);
+      }
+    }
+    p {
+      letter-spacing: 1px;
+      font-size: 1em;
+      text-align: center;
+      color: var(--inputToggleTxt);
+      margin-bottom: 25px;
+    }
+  }
+}
+// Project 1 WDS Animation Project
+@keyframes aquarnd {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(100%) translateX(0);
+  }
+  50% {
+    background-color: aqua;
+    border-radius: 50%;
+  }
+  75% {
+    transform: translateY(100%) translateX(100%);
+  }
+  100% {
+    transform: translateY(0%) translateX(100%);
+  }
+}

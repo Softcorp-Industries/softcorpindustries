@@ -1,0 +1,32 @@
+@use "../../global" as *;
+@use "../../mixin" as *;
+
+#canvas1 {
+  display: none;
+  }
+  #canvas1.showProject{
+    display: block;
+  }
+.aniMusic {
+  display: none;
+  background-color: aliceblue;
+  margin-bottom: 50px;
+}
+.aniMusic.showTimeAnimation {
+  display: flex;
+}
+.aniMusic__lyric {
+  background-color: var(--themeTxtClr);
+  margin-bottom: calc(3vw + 3rem);
+}
+
+.aniMusic__time {
+  position: relative;
+  background-color: var(--darkModeBg);
+  border: 2px solid var(--themeTxtClr);
+  border-radius: 1rem;
+  width: 25vw;
+  margin: auto;
+  margin-bottom: calc(3vw + 3rem);
+  height: calc(15vw + 15rem);
+}

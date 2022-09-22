@@ -1,0 +1,144 @@
+@use "../../global" as *;
+@use "../../mixin" as *;
+
+
+.digitalClockV1 {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  text-align: center;
+}
+.digitalClockV1__time,
+.digitalClockV1__ampm {
+  color: var(--darkModeTxtClr);
+}
+.digitalClockV1__ampm {
+  font-size: calc(1vw + 1rem);
+  margin-left: 10px;
+}
+.digitalClockV1__time {
+  font-size: calc(2vw + 2rem);
+}
+
+.analogClock__face {
+  position: relative;
+  top: 5%;
+  width: calc(3vw + 3rem);
+  height: calc(3vw + 3rem);
+  background-color: var(--darkModeTxtClr);
+  margin: auto;
+  font-size: calc(0.25vw + 0.25rem);
+  border-radius: 50%;
+  border: 2px solid var(--darkModeBg);
+  opacity: 0.75;
+  box-shadow: 0px 0px 10px black;
+}
+.analogClock__face .number {
+  --rotation: 0; // only usining one parameter the other one is the number position in rotation deg
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: calc(0.25vw + 0.5rem);
+  color: var(--darkModeBg);
+}
+.analogClock__face .number1 {
+  --rotation: 30deg;
+}
+.analogClock__face .number2 {
+  --rotation: 60deg;
+}
+.analogClock__face .number3 {
+  --rotation: 90deg;
+}
+.analogClock__face .number4 {
+  --rotation: 120deg;
+}
+.analogClock__face .number5 {
+  --rotation: 150deg;
+}
+.analogClock__face .number6 {
+  --rotation: 180deg;
+}
+.analogClock__face .number7 {
+  --rotation: 210deg;
+}
+.analogClock__face .number8 {
+  --rotation: 240deg;
+}
+.analogClock__face .number9 {
+  --rotation: 270deg;
+}
+.analogClock__face .number10 {
+  --rotation: 300deg;
+}
+.analogClock__face .number11 {
+  --rotation: 330deg;
+}
+.analogClock__face .number12 {
+  --rotation: 360deg;
+}
+
+.analogClock__face .hand {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  background-color: var(--darkModeBg);
+  transform-origin: bottom;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+.analogClock__face::after {
+  content: "";
+  position: absolute;
+  background-color: var(--darkModeBg);
+  z-index: 11;
+  width: 11px;
+  height: 11px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.analogClock__face .hand.second-hand {
+  width: 2.5px;
+  height: 45%;
+  background-color: red;
+}
+.analogClock__face .hand.minute-hand {
+  width: 3px;
+  height: 40%;
+  background-color: var(--darkModeBg);
+}
+.analogClock__face .hand.hour-hand {
+  width: 4px;
+  height: 35%;
+  background-color: var(--darkModeBg);
+}
+
+#day {
+  position: absolute;
+  top: 5%;
+  color: var(--darkModeTxtClr);
+}
+#month {
+  position: absolute;
+  top: 65%;
+  left: 20%;
+  color: var(--darkModeTxtClr);
+}
+#date {
+  position: absolute;
+  top: 65%;
+  left: 40%;
+  color: var(--darkModeTxtClr);
+}
+#year {
+  position: absolute;
+  bottom: 5%;
+  color: var(--darkModeTxtClr);
+}

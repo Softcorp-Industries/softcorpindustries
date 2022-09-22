@@ -35,7 +35,7 @@ if (darkModeSt === "enabled") {
   enableDarkMode();
 }
 
-function darkModeActive() {
+export default function darkModeActive() {
   document.addEventListener("DOMContentLoaded", () => {
     darkModeBtn.addEventListener("click", () => {
       darkModeSt = localStorage.getItem("darkModeSt");
@@ -52,7 +52,6 @@ function darkModeActive() {
     });
   });
 }
-
 darkModeActive();
 
 let trans = () => {

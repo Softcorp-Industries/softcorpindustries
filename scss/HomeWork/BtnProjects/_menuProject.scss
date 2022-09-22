@@ -1,0 +1,88 @@
+@use "../../global" as *;
+@use "../../mixin" as *;
+
+#burgerSection {
+  display: none;
+}
+#burgerSection.showProject {
+  display: block;
+}
+
+.burgerMenu {
+  .projectBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    .card-container {
+      @include shadowSm-inset;
+      border-radius: 1rem;
+      .menuCard {
+        padding: 2rem;
+        height: 250px;
+        h1 {
+          @include darkMode;
+          height: 100px;
+          font-size: calc(0.75vw + 1rem);
+          text-align: center;
+          padding: 1rem;
+          margin-bottom: 3rem;
+          color: var(--themeTxtClr);
+          text-shadow: 0px 0px 2px var(--black);
+          background-image: url("img/background_2.png");
+          background-size: cover;
+          border-radius: 1rem;
+        }
+        .btn {
+          cursor: pointer;
+          width: 80px;
+          margin: auto;
+          .line {
+            background-color: var(--darkModeTxtClr);
+            width: 80px;
+            height: 6px;
+            border-radius: 1rem;
+          }
+          .lineTop {
+            transform: translateY(-5px);
+          }
+          .lineCenter {
+            background-color: var(--themeBdr);
+          }
+          .lineBottom {
+            transform: translateY(5px);
+          }
+        }
+        #menu2-btn .lineTop {
+          transform: translateY(-5px);
+        }
+        #menu2-btn .lineCenter {
+          background-color: orange;
+        }
+        #menu2-btn .lineBottom {
+          transform: translateY(5px);
+        }
+        #menu3-btn .lineTop {
+          transform: translateY(-5px);
+        }
+        #menu3-btn .lineBottom {
+          transform: translateY(5px);
+        }
+        .menuClicked .lineTop {
+          height: 6px;
+          transform: translateY(8.5px) rotate(45deg);
+        }
+        .menuClicked .lineBottom {
+          height: 6px;
+          transform: translateY(-8.5) rotate(-45deg);
+        }
+        .menuClicked .lineCenter {
+          opacity: 0;
+        }
+        .menuClicked.header3 {
+          background-color: var(--themeBdr);
+          transition: all 300ms ease-in-out;
+        }
+      }
+    }
+  }
+}
