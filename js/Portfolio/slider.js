@@ -1,6 +1,5 @@
 //alert("slider page working")
 
-
 const slides = document.querySelectorAll(".desktop__monitor");
 //const next = document.querySelector("#nextBtn");
 //const prev = document.querySelector("#prevBtn");
