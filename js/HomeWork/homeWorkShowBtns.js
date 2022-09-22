@@ -398,16 +398,9 @@ function showAudioLibraryProject() {
 function showVideoPlayerV1Project() {
   videoPlayerV1Btn.addEventListener('click', (e) => {
     if (!videoPlayerV1ShowOpen) {
-      //videoPlayerV1.classList.add('showProject')
-      //videoPlayerV1Btn.style.backgroundColor = "var(--bgSecondary)"
-      //videoPlayerV1Btn.style.color = "var(--white)"
-      //videoPlayerV1Btn.style.boxShadow = "0px 0px 3px var(--white)"
       enableShowProjectBtn(e);
       videoPlayerV1ShowOpen = true;
     } else {
-      //videoPlayerV1.classList.remove('showProject')
-      //videoPlayerV1Btn.style.color = "var(--bgSecondary)"
-      //videoPlayerV1Btn.style.backgroundColor = ""
       disableShowProjectBtn(e);
       videoPlayerV1ShowOpen = false;
     }
@@ -418,3 +411,64 @@ showBasicAudioPlayerProject();
 showAudioPlayerV1Project();
 showAudioLibraryProject();
 showVideoPlayerV1Project();
+
+//  UI Projects
+const TABLET_1Btn = document.getElementById("tablet-1Btn");
+const TABLET_2Btn = document.getElementById("tablet-2Btn");
+const PHONE_1Btn = document.getElementById("phone-1Btn");
+const PHONE_2Btn = document.getElementById("phone-2Btn");
+
+let tablet_1ShowOpen = false;
+let tablet_2ShowOpen = false;
+let phone_1ShowOpen = false;
+let phone_2ShowOpen = false;
+
+function showTablet_1Project() {
+  TABLET_1Btn.addEventListener('click', (e) => {
+    if (!tablet_1ShowOpen) {
+      enableShowProjectBtn(e);
+      tablet_1ShowOpen = true;
+    } else {
+      disableShowProjectBtn(e);
+      tablet_1ShowOpen = false;
+    }
+  })
+}
+function showTablet_2Project() {
+  TABLET_2Btn.addEventListener('click', (e) => {
+    if (!tablet_2ShowOpen) {
+      enableShowProjectBtn(e);
+      tablet_2ShowOpen = true;
+    } else {
+      disableShowProjectBtn(e);
+      tablet_2ShowOpen = false;
+    }
+  })
+}
+function showPhone_1Project() {
+  PHONE_1Btn.addEventListener('click', (e) => {
+    if (!phone_1ShowOpen) {
+      enableShowProjectBtn(e);
+      phone_1ShowOpen = true;
+    } else {
+      disableShowProjectBtn(e);
+      phone_1ShowOpen = false;
+    }
+  })
+}
+function showPhone_2Project() {
+  PHONE_2Btn.addEventListener('click', (e) => {
+    if (!phone_2ShowOpen) {
+      enableShowProjectBtn(e);
+      phone_2ShowOpen = true;
+    } else {
+      disableShowProjectBtn(e);
+      phone_2ShowOpen = false;
+    }
+  })
+}
+
+showTablet_1Project();
+showTablet_2Project();
+showPhone_1Project();
+showPhone_2Project();
