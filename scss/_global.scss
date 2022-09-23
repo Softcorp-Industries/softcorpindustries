@@ -78,12 +78,34 @@ body[data-darkMode="darkMode"] {
 
   --darkModeBgblk: rgb(0, 0, 0); // from
   --darkModeTxtClr: white; // from rgb(54, 54, 54)
-  --darkModeClrlgt: rgb(20, 20, 20); // from
+  --darkModeClrlgt: rgb(20, 20, 20);
+  --darkModeTxtlgt: rgba(255, 255, 255, 0.6);  
   --themeTxtClr: white; // from
   --themeBlk: rgb(99, 99, 99); // from whitesmoke
   --themeBg: black;
   --themeSec: yellow;
   --txtChange: #c0fff4;
+}
+
+body[data-toggleTheme="dark"] {
+  --inputToggleTheme: rgb(150, 150, 150);
+  
+  --inputToggleTxt: var(--white);
+}
+body[data-toggleMode="default"] {
+  --toggleTheme: #bebebe;
+}
+body[data-toggleMode="htmlTheme"] {
+  --toggleTheme: rgb(255, 69, 0);
+}
+body[data-toggleMode="cssTheme"] {
+  --toggleTheme: rgb(22, 83, 252);
+}
+body[data-toggleMode="sassTheme"] {
+  --toggleTheme: rgb(255, 192, 203);
+}
+body[data-toggleMode="jsTheme"] {
+  --toggleTheme: rgb(255, 255, 0);
 }
 
 body.transition,
