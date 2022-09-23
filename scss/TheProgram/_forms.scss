@@ -1,0 +1,169 @@
+@use "../_global" as *;
+@use "../_mixin" as *;
+.formBox {
+  //@include shadowSm;
+  width: 95%;
+  max-width: 725px;
+  margin: 50px auto;
+  border-radius: 1em;
+}
+.form {
+  margin: auto;
+  padding: 0.5rem;
+  letter-spacing: 2px;
+  background-color: black;
+  background-image: url('./img/Vintage Background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  //border-radius: 0.25rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  &__header {
+    width: 100%;
+    margin: auto;
+    padding: .5rem;
+    border: 1.6px solid var(--primaryBackground);
+    border-radius: 0.25rem 0.25rem 0 0;
+    //background-color: var(--bgFilterDrk);
+    //background-image: url("img/background_2.png");
+    background-size: cover;
+    h1 {
+      margin-bottom: 10px;
+      font-size: 26px;
+      color: var(--jsThemeClr);
+      text-shadow: 0px 0px 4px var(--black);
+    }
+    h3 {
+      color: var(--black);
+      font-size: 16px;
+    }
+  }
+  &__subHeader{
+    color: var(--jsThemeClr);
+    font-size: 16px;
+    text-align: left;
+    text-shadow: 0px 0px 3px var(--black);
+    padding: 1rem;
+  }
+  &__body {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    color: var(--jsThemeClr);
+    font-size: 14px;
+    font-weight: 700;
+    //text-shadow: 0px 0px 4px black;
+    letter-spacing: 2px;
+    //background-image: url("img/background_2.png");
+    background-size: cover;
+    //background-color: var(--bgFilterDrk);
+    margin-bottom: calc(1vw + 0.75rem);
+  }
+  hr{
+    color: var(--jsThemeClr);
+    box-shadow: 0px 2px 3px var(--black);
+    height: 3px;
+    margin: 0 .5rem;
+  }
+  button{
+    margin: auto
+  }
+}
+.btn {
+  @include darkMode;
+  display: block;
+  width: calc(7.5vw + 8rem);
+  padding: 0.4rem 0.5rem;
+  font-family: "Audiowide";
+  font-size: 14px;
+  font-weight: 600;
+  color: purple;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.25rem;
+  border: none;
+  background-color: var(--bgFilterDrk);
+  border-radius: 1rem;
+  //text-shadow: 0px 0px 2px var(--white);
+}
+.btn:hover {
+  background-color: purple;
+  color: white;
+  box-shadow: none;
+}
+.section {
+  margin-bottom: 25px;
+}
+.section h3 {
+  background-color: coral;
+  margin-bottom: 25px;
+  padding: 0.25rem;
+}
+.form-box {
+  display: none;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%;
+  label {
+    color: var(--black);
+    padding: 0.25rem;
+    margin-right: 5px;
+  }
+  input {
+    width: 100%;
+    height: 30px;
+    padding: 0.25rem;
+    font-size: calc(0.5vw + 0.5rem);
+    border: none;
+    border-bottom: 2px solid var(--jsThemeClr);
+    background-color: none;
+  }
+}
+
+// Short Profile
+#obj {
+  width: 80%;
+  //padding: 1em;
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 700;
+  //text-shadow: 0px 0px 4px black;
+  letter-spacing: 2px;
+  //background-image: url("img/background_2.png");
+  background-size: cover;
+  //background-color: var(--bgFilterDrk);
+  margin-bottom: calc(1vw + 0.75rem);
+  pre{
+    width: 90%;
+    table{
+      margin: auto;
+      background-color: none;
+      border: none;
+      thead{
+        tr{
+          th{
+            padding: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+.templates-document {
+  width: 900px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 310px) {
+}
+@media screen and (min-width: 400px) {
+}
+@media screen and (min-width: 550px) {
+}
+@media screen and (min-width: 700px) {
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 1200px) {
+}

@@ -7,9 +7,9 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  padding: .15rem;
-  top: .9em;
-  right: .5em;
+  padding: 0.15rem;
+  top: 0.9em;
+  right: 0.5em;
   width: 60px;
   height: 30px;
   background-color: var(--bgDarkMode);
@@ -29,96 +29,100 @@
     background-position: center;
   }
 }
-#darkMode.showDarkMode{
+#darkMode.showDarkMode {
   display: flex;
   animation: darkModeShow 750ms ease-in-out forwards;
 }
-.dmToggle.darkModeAnim{
+.dmToggle.darkModeAnim {
   animation: dmAnim 500ms ease-in-out forwards;
 }
-.dmToggle.darkModeAnimRev{
+.dmToggle.darkModeAnimRev {
   animation: dmAnimRev 500ms ease-in-out forwards;
 }
-@keyframes darkModeShow{
-  0%{
+@keyframes darkModeShow {
+  0% {
     scale: 0;
     opacity: 0;
   }
-  
-  100%{
+
+  100% {
     scale: 1;
-      opacity: 1;
+    opacity: 1;
   }
 }
 @keyframes dmAnim {
-  0%{
+  0% {
     transform: translateX(0px);
   }
-  100%{
+  100% {
     transform: translateX(30px);
   }
 }
 @keyframes dmAnimRev {
-  0%{
+  0% {
     transform: translateX(30px);
   }
-  100%{
+  100% {
     transform: translateX(0px);
   }
 }
 
-.navBtn, #navBtn {
-  z-index: 6;
-  position: fixed;
-  top: 1.5em;
-  left: .5em;
+.navBtn-menu {
   cursor: pointer;
-  &__menu {
-    //@extend: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    border-radius: 50%;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  z-index: 6;
+  top: 0.5em;
+  left: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+  &__btn {
+    cursor: pointer;
+    width: 2.25em;
+    height: 0.24em;
+    border-radius: 25%;
+    background-color: #c0fff4;
+    box-shadow: 0px 0px 2px var(--black);
+  }
+  &__btn::after,
+  &__btn::before {
+    content: "";
+    cursor: pointer;
+    position: absolute;
+    width: 2.25em;
+    height: 0.24em;
+    border-radius: 25%;
+    background-color: var(--secondaryClr);
+    box-shadow: 0px 0px 2px var(--secondaryTxt);
     transition: all 0.5s ease-in-out;
-    &__btn {
-      width: 2.25em;
-      height: .24em;
-      border-radius: 25%;
-      background-color: #C0FFF4;
-      box-shadow: 0px 0px 2px var(--black);
-    }
-    &__btn::after,
-    &__btn::before {
-      content: "";
-      position: absolute;
-      width: 2.25em;
-      height: .24em;
-      border-radius: 25%;
-      background-color: var(--secondaryClr);
-      box-shadow: 0px 0px 2px var(--secondaryTxt);
-      transition: all 0.5s ease-in-out;
-    }
-    &__btn::before {
-      transform: translateY(-.45em);
-    }
-    &__btn::after {
-      transform: translateY(.45em);
-    }
+  }
+  &__btn::before {
+    transform: translateY(-0.45em);
+  }
+  &__btn::after {
+    transform: translateY(0.45em);
   }
 }
-.pageNav, #navMenu{
+
+.pageNav,
+#navMenu {
   .pageNav-list {
     position: fixed;
     top: 80px;
     left: 10px;
-    font-family: 'Audiowide';
+    font-family: "Audiowide";
     text-align: center;
     z-index: 3;
-    .cHeader{
+    .cHeader {
       display: none;
       margin-bottom: 15px;
       color: var(--txtChange);
-      letter-spacing: .15em;
+      letter-spacing: 0.15em;
       font-weight: 900;
       text-shadow: 0px 0px 3px var(--darkModeBg);
     }
@@ -136,7 +140,7 @@
       padding: 0.5rem 1rem;
       color: var(--txtChange);
       font-family: "Audiowide";
-      font-size: .8em;
+      font-size: 0.8em;
       font-weight: 600;
       text-align: center;
       text-decoration: none;
@@ -150,7 +154,7 @@
       box-shadow: none;
       font-weight: 900;
     }
-    a:hover{
+    a:hover {
       background-color: var(--secondaryClr);
       color: var(--secondaryTxt);
       text-shadow: 0px 0px 2px var(--black);
@@ -168,28 +172,28 @@
 .pageNav-list .pageNav-listItem {
   display: none; // hide
 }
-.navBtn__menu.openNav .navBtn__menu__btn {
+.navBtn-menu.openNav .navBtn-menu__btn {
   background: transparent;
   box-shadow: none;
 }
-.navBtn__menu.openNav .navBtn__menu__btn::before {
+.navBtn-menu.openNav .navBtn-menu__btn::before {
   transform: rotate(45deg);
   background-color: orangered;
 }
-.navBtn__menu.openNav .navBtn__menu__btn::after {
+.navBtn-menu.openNav .navBtn-menu__btn::after {
   transform: rotate(-45deg);
   background-color: orangered;
 }
 .openNav.pageNav-list .pageNav-listItem,
-.openNav.pageNav-list .cHeader{
+.openNav.pageNav-list .cHeader {
   /* NEW CLASS FROM JS */
   display: block; // show
 }
 .openNav {
-  .cHeader{
+  .cHeader {
     opacity: 0;
     transform-origin: top center;
-    animation: chapterH  1000ms ease-in-out forwards;
+    animation: chapterH 1000ms ease-in-out forwards;
   }
   perspective: 1000px;
   .pageNav-listItem {
@@ -204,15 +208,14 @@
   }
 }
 @keyframes chapterH {
-  0%{
-opacity: 0;
-transform: translateY(-35px);
+  0% {
+    opacity: 0;
+    transform: translateY(-35px);
   }
-  100%{
-opacity: 1;
-transform: translateY(0) ;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-
 }
 @keyframes navBarAn {
   0% {
@@ -224,12 +227,12 @@ transform: translateY(0) ;
     transform: rotate(0deg) translateX(0px);
   }
 }
-@keyframes navBarShow{
-  0%{
+@keyframes navBarShow {
+  0% {
     top: -40px;
     opacity: 0;
   }
-  100%{
+  100% {
     top: 0px;
     opacity: 1;
   }

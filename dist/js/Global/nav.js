@@ -1,4 +1,4 @@
-const menuBtn = document.querySelector(".navBtn__menu");
+const menuBtn = document.querySelector(".navBtn-menu");
 const pageNavList = document.getElementById('pageNav-list')
 const cHeader = document.querySelector(".cHeader");
 //const navBarSite = document.getElementById('siteNav');

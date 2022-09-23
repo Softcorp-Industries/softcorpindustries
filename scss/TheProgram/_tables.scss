@@ -1,0 +1,108 @@
+@use "../_global" as *;
+@use "../_mixin" as *;
+
+.tableBox {
+  overflow: scroll;
+  margin: auto;
+  width: 100%;
+  background-image: url('./img/brushed-steel.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.toolTableBox{
+  background-image: url('./img/brushed-steel.jpg');
+}
+/*
+.tableBox{
+  -ms-overflow-style: none;
+        scrollbar-width: none;
+        overflow-y: scroll;
+}
+.tableBox::-webkit-scrollbar {
+  display: none;
+}
+*/
+.table {
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  color: var(--darkModeTxtClr);
+  background-color: var(--darkModeBgOp);
+  border: 2px solid var(--themeTxtClr);
+  margin-bottom: 50px;
+  tbody tr {
+    td {
+      background-color: var(--darkModeBg);
+      color: var(--darkModeTxtClr);
+      padding: 0.5rem;
+      text-align: center;
+    }
+  }
+  thead tr th {
+    color: var(--darkModeBg);
+    background-color: var(--jsThemeClr);
+    padding: 0.5rem;
+  }
+  .btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--themeBgOp);
+    color: var(--darkModeTxtClr);
+    font-size: calc(0.75vw + 0.75rem);
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+}
+
+#employeeTable, #toolTable, #vehicleTable{
+  display: none;
+}
+.version {
+  margin: auto;
+  width: 95vw;
+  padding: 0.5rem;
+  text-align: center;
+  color: white;
+  background-color: var(--primaryBackground);
+  margin-bottom: 50px;
+  section {
+    margin: auto;
+    margin-bottom: 20px;
+    max-height: 20rem;
+    overflow-x: auto;
+    scrollbar-width: 5px;
+    h2 {
+      width: 100%;
+      background-color: orangered;
+      margin-bottom: 20px;
+    }
+    table {
+      background-color: lightgray;
+      padding: 1rem;
+      width: 100%;
+      overflow-x: auto;
+
+      thead {
+        color: var(--primaryBackground);
+        background-color: white;
+        tr th {
+          padding: 0.5rem;
+        }
+      }
+      tbody {
+        background-color: orangered;
+        tr td {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: orangered;
+  color: white;
+  font-size: calc(0.75vw + 0.75rem);
+  cursor: pointer;
+  margin-bottom: 10px;
+}
