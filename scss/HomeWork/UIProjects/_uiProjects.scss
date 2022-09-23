@@ -27,15 +27,14 @@
 }
 
 .tabletBox {
-  display: none;
   max-width: 475px;
   margin: 50px auto;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   .tablet {
     @include tablet;
     padding: 0.4rem;
     background-color: rgb(29, 29, 29);
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     text-align: center;
     iframe {
       max-width: 550px;

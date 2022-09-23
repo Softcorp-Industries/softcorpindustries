@@ -2035,45 +2035,43 @@ a {
     flex-direction: row;
   }
 }
-.tabletBox {
-  width: 300px;
+.constructionTablet .tablet {
   margin: 1em auto;
-  border-radius: 1.5rem;
-}
-.tabletBox .tablet {
   box-shadow: inset -3px -3px 6px rgba(202, 202, 202, 0.6), inset 3px 3px 6px rgba(202, 202, 202, 0.6);
+  width: 275px;
+  height: 450px;
   padding: 0.4rem;
   background-color: rgb(10, 10, 10);
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   text-align: center;
 }
-.tabletBox .tablet__screen {
+.constructionTablet .tablet__screen {
   margin: auto;
-  margin-top: 10px;
-  max-width: 280px;
+  margin-top: 15px;
   width: 95%;
-  height: 400px;
+  height: 350px;
   border-radius: 0.75rem;
   background-color: grey;
+  background-position: center;
   outline: 2px solid silver;
   outline-offset: 3px;
   -moz-outline-radius: 1rem;
 }
-.tabletBox .tablet__speakers {
+.constructionTablet .tablet__speakers {
   width: 100%;
   display: flex;
   align-self: center;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   letter-spacing: 0.1rem;
   height: 13px;
 }
-.tabletBox .tablet__speakers p {
-  font-size: 10px;
+.constructionTablet .tablet__speakers p {
+  font-size: 0.55rem;
   font-weight: 700;
   color: white;
 }
-.tabletBox .tablet__speakers .speaker {
+.constructionTablet .tablet__speakers .speaker {
   font-size: 12px;
   width: 65px;
   color: black;
@@ -2082,11 +2080,67 @@ a {
   border-radius: 4px 4px 13px 13px;
   line-height: 0.3;
 }
-.tabletBox .tablet__controls {
-  margin: 10px auto;
+.constructionTablet .tablet__controls {
+  margin: 15px auto 10px auto;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.constructionTablet .tablet__controls .tabletBtn {
+  cursor: pointer;
+  content: "";
+  color: white;
+  width: 35px;
+  height: 35px;
+  z-index: 2;
+  background-color: transparent;
+}
+.constructionTablet .tablet__controls .prevBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.constructionTablet .tablet__controls .prevBtn button {
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  -webkit-clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+          clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
+  color: var(--txtChange);
+}
+.constructionTablet .tablet__controls .nextBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.constructionTablet .tablet__controls .nextBtn button {
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
+          clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
+}
+.constructionTablet .tablet__controls .pwrBtn {
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  width: 130px;
+  height: 35px;
+  margin: 0px 20px;
+  border-radius: 0.75rem 0.75rem 1.5rem 1.5rem;
+  outline: none;
 }
 
 .desktop {
@@ -2257,43 +2311,21 @@ a {
   display: none;
 }
 
-.tabletBtn {
-  cursor: pointer;
-  content: "";
-  color: white;
-  width: 25px;
-  height: 25px;
-  background-color: white;
-}
-
-.prevBtn {
-  -webkit-clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
-          clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
-}
-
-.nextBtn {
-  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
-          clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
-}
-
-.pwrBtn {
-  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
-  width: 130px;
-  height: 35px;
-  margin: 0px 20px;
-  border-radius: 0.75rem 0.75rem 1.5rem 1.5rem;
-  outline: none;
-}
-
 @media (min-width: 550px) {
+  .constructionTablet .tablet {
+    width: 400px;
+    height: 600px;
+  }
+  .constructionTablet .tablet__screen {
+    height: 500px;
+  }
+  .constructionTablet .tablet__speakers {
+    margin-top: 0.25rem;
+    padding: 0 1rem;
+  }
+  .constructionTablet .tablet__speakers p {
+    font-size: 0.85rem;
+  }
   .desktop {
     width: 20em;
     height: 11.5em;
@@ -5616,16 +5648,15 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
 }
 
 .tabletBox {
-  display: none;
   max-width: 475px;
   margin: 50px auto;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
 }
 .tabletBox .tablet {
   box-shadow: inset -3px -3px 6px rgba(202, 202, 202, 0.6), inset 3px 3px 6px rgba(202, 202, 202, 0.6);
   padding: 0.4rem;
   background-color: rgb(29, 29, 29);
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   text-align: center;
 }
 .tabletBox .tablet iframe {

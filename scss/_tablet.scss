@@ -1,25 +1,24 @@
 @use "_global" as *;
 @use "_mixin" as *;
 
-.tabletBox {
-  width: 300px;
-  margin: 1em auto;
-  border-radius: 1.5rem;
+.constructionTablet {
   .tablet {
+    margin: 1em auto;
     @include tablet;
+    width: 275px;
+    height: 450px;
     padding: 0.4rem;
     background-color: rgb(10, 10, 10);
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     text-align: center;
     &__screen {
       margin: auto;
-      margin-top: 10px;
-      max-width: 280px;
+      margin-top: 15px;
       width: 95%;
-      height: 400px;
+      height: 350px;
       border-radius: 0.75rem;
       background-color: grey;
-      //overflow: scroll;
+      background-position: center;
       outline: 2px solid silver;
       outline-offset: 3px;
       -moz-outline-radius: 1rem;
@@ -29,12 +28,11 @@
       display: flex;
       align-self: center;
       justify-content: space-between;
-      padding: 0 1rem;
-      //margin-bottom: 0.5rem;
+      padding: 0 .5rem;
       letter-spacing: 0.1rem;
       height: 13px;
       p {
-        font-size: 10px;
+        font-size: .55rem;
         font-weight: 700;
         color: white;
       }
@@ -49,10 +47,78 @@
       }
     }
     &__controls {
-      margin: 10px auto;
+      margin: 15px auto 10px auto;
       display: flex;
       align-items: center;
       justify-content: center;
+      .tabletBtn {
+        cursor: pointer;
+        content: "";
+        color: white;
+        width: 35px;
+        height: 35px;
+        z-index: 2;
+        background-color: transparent;
+      }
+      .prevBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+          cursor: pointer;
+          display: block;
+          margin: auto;
+          margin-left: 5px;
+          width: 30px;
+          height: 30px;
+          clip-path: polygon(
+            50% 0,
+            25% 50%,
+            50% 100%,
+            25% 100%,
+            0% 50%,
+            25% 0%
+          );
+          color: var(--txtChange);
+        }
+      }
+      .nextBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button {
+          cursor: pointer;
+          display: block;
+          margin: auto;
+          margin-right: 5px;
+          width: 30px;
+          height: 30px;
+          clip-path: polygon(
+            75% 0%,
+            100% 50%,
+            75% 100%,
+            50% 100%,
+            75% 50%,
+            50% 0
+          );
+        }
+      }
+      .pwrBtn {
+        @include darkMode;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        width: 130px;
+        height: 35px;
+        margin: 0px 20px;
+        border-radius: 0.75rem 0.75rem 1.5rem 1.5rem;
+        outline: none;
+      }
     }
   }
 }
@@ -73,14 +139,14 @@
     //margin: auto;
     width: 95%;
     height: 95%;
-    top: .5rem;
+    top: 0.5rem;
     left: 50%;
     transform: translateX(-50%);
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0;
     overflow: hidden;
-    font-size: .9em;
+    font-size: 0.9em;
     color: var(--white);
     letter-spacing: 1px;
     &__header {
@@ -89,9 +155,8 @@
       bottom: 0.5em;
       //left: 50%;
       opacity: 0;
-      transform: scale(.5);
+      transform: scale(0.5);
       //transform: translateX(-50%);
-      
     }
   }
 }
@@ -99,7 +164,7 @@
 .desktop__monitor.current {
   opacity: 1;
 }
-.desktop__monitor.current .desktop__monitor__header{
+.desktop__monitor.current .desktop__monitor__header {
   opacity: 1;
   transform: scale(1);
   transition: all 0.7s ease-in-out 0.3s;
@@ -214,46 +279,31 @@
 .constructionSlider::-webkit-scrollbar {
   display: none;
 }
-.tabletBtn {
-  cursor: pointer;
-  content: "";
-  color: white;
-  width: 25px;
-  height: 25px;
-  background-color: white;
-}
-.prevBtn {
-  clip-path: polygon(50% 0, 25% 50%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
-}
-.nextBtn {
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 75% 50%, 50% 0);
-}
-.pwrBtn {
-  @include darkMode;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
-  width: 130px;
-  height: 35px;
-  margin: 0px 20px;
-  border-radius: 0.75rem 0.75rem 1.5rem 1.5rem;
-  outline: none;
-}
-
 
 @media (min-width: 550px) {
+  .constructionTablet {
+    .tablet {
+      width: 400px;
+    height: 600px;
+    &__screen {
+      height: 500px;
+    }
+    &__speakers {
+      margin-top: .25rem;
+      padding: 0 1rem;
+      p {
+        font-size: .85rem;
+      }
+    }
+    }
+  }
   .desktop {
     width: 20em;
     height: 11.5em;
     &__monitor {
-      top: .75rem;
+      top: 0.75rem;
       &__header {
-        bottom: .25em;
+        bottom: 0.25em;
       }
     }
   }
@@ -314,7 +364,7 @@
     &__monitor {
       top: 1.5rem;
       &__header {
-        bottom: .35em;
+        bottom: 0.35em;
       }
     }
   }
