@@ -37,19 +37,17 @@ Create_DOM_DarkMode();
 
 //  Creates the Nav Button
 function Create_DOM_NavBtn() {
-  let navBtn = document.createElement("div");
+
   let navBtn_Menu = document.createElement("div");
   let navBtn_Menu_Btn = document.createElement("div");
   
-  navBtn.setAttribute("id", "navBtn");
 
-  navBtn_Menu.setAttribute("class", "navBtn__menu");
+  navBtn_Menu.setAttribute("class", "navBtn-menu");
 
-  navBtn_Menu_Btn.setAttribute("class", "navBtn__menu__btn")
+  navBtn_Menu_Btn.setAttribute("class", "navBtn-menu__btn")
 
   navBtn_Menu.appendChild(navBtn_Menu_Btn);
-  navBtn.appendChild(navBtn_Menu);
-  Contact_DOM.appendChild(navBtn);
+  Contact_DOM.appendChild(navBtn_Menu);
 }
 Create_DOM_NavBtn();
 
