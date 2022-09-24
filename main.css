@@ -3822,75 +3822,231 @@ label:active:after {
 
 .burgerMenu {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 .burgerMenu .card-container {
   border-radius: 1rem;
 }
 .burgerMenu .card-container .menuCard {
+  margin: 1em auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
-  height: 200px;
+  padding: 1em 0.5em;
+  width: 80%;
+  max-width: 250px;
+  min-height: 180px;
 }
 .burgerMenu .card-container .menuCard h1 {
-  font-size: calc(0.75vw + 1rem);
+  font-size: 1em;
   text-align: center;
-  padding: 1rem;
   color: var(--inputToggleTxt);
 }
-.burgerMenu .card-container .menuCard .btn {
+.burgerMenu .card-container .menuCard #menu1-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   width: 80px;
-  margin: auto;
+  height: 80px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: none;
+  z-index: 2;
 }
-.burgerMenu .card-container .menuCard .btn .line {
-  background-color: var(--darkModeBg);
-  width: 80px;
+.burgerMenu .card-container .menuCard #menu1-btn .line {
+  transition: all 0.5s ease-in-out;
+  width: 70px;
   height: 6px;
+  background-color: var(--inputToggleTxt);
   border-radius: 1rem;
 }
-.burgerMenu .card-container .menuCard .btn .lineTop {
+.burgerMenu .card-container .menuCard #menu1-btn .lineTop {
   transform: translateY(-5px);
 }
-.burgerMenu .card-container .menuCard .btn .lineCenter {
-  background-color: var(--themeBdr);
-}
-.burgerMenu .card-container .menuCard .btn .lineBottom {
+.burgerMenu .card-container .menuCard #menu1-btn .lineBottom {
   transform: translateY(5px);
 }
-.burgerMenu .card-container .menuCard #menu2-btn .lineTop {
-  transform: translateY(-5px);
+.burgerMenu .card-container .menuCard #menu1-btn.menu1-open .lineCenter {
+  background: transparent;
+  box-shadow: none;
 }
-.burgerMenu .card-container .menuCard #menu2-btn .lineCenter {
+.burgerMenu .card-container .menuCard #menu1-btn.menu1-open .lineTop {
+  transform: translateY(5px) rotate(45deg);
+  background-color: red;
+}
+.burgerMenu .card-container .menuCard #menu1-btn.menu1-open .lineBottom {
+  transform: translateY(-5px) rotate(-45deg);
+  background-color: red;
+}
+.burgerMenu .card-container .menuCard #menu2-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: none;
+  z-index: 2;
+}
+.burgerMenu .card-container .menuCard #menu2-btn .line {
+  position: relative;
+  width: 70px;
+  height: 6px;
+  background-color: var(--toggleTheme);
+  border-radius: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+.burgerMenu .card-container .menuCard #menu2-btn .line::before,
+.burgerMenu .card-container .menuCard #menu2-btn .line::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 70px;
+  height: 6px;
+  background-color: var(--inputToggleTxt);
+  border-radius: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+.burgerMenu .card-container .menuCard #menu2-btn .line::before {
+  transform: translateY(-12px);
+}
+.burgerMenu .card-container .menuCard #menu2-btn .line::after {
+  transform: translateY(12px);
+}
+.burgerMenu .card-container .menuCard #menu2-btn.menu2-open .line {
+  background: transparent;
+  box-shadow: none;
+}
+.burgerMenu .card-container .menuCard #menu2-btn.menu2-open .line::before {
+  transform: translateY(5px) rotate(45deg);
   background-color: var(--toggleTheme);
 }
-.burgerMenu .card-container .menuCard #menu2-btn .lineBottom {
-  transform: translateY(5px);
+.burgerMenu .card-container .menuCard #menu2-btn.menu2-open .line::after {
+  transform: translateY(5px) rotate(-45deg);
+  background-color: var(--toggleTheme);
+}
+.burgerMenu .card-container .menuCard #menu3-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: none;
+  z-index: 2;
+}
+.burgerMenu .card-container .menuCard #menu3-btn .line {
+  background-color: var(--inputToggleTxt);
+  margin-left: -13px;
+  border-radius: 1rem;
 }
 .burgerMenu .card-container .menuCard #menu3-btn .lineTop {
-  transform: translateY(-5px);
+  width: 60px;
+  height: 5px;
+  transform: translateY(-6px);
+}
+.burgerMenu .card-container .menuCard #menu3-btn .lineCenter {
+  width: 70px;
+  height: 6px;
 }
 .burgerMenu .card-container .menuCard #menu3-btn .lineBottom {
-  transform: translateY(5px);
+  width: 80px;
+  height: 8px;
+  transform: translateY(7px);
 }
-.burgerMenu .card-container .menuCard .menuClicked .lineTop {
+.burgerMenu .card-container .menuCard #menu4-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: none;
+  z-index: 2;
+}
+.burgerMenu .card-container .menuCard #menu4-btn .line {
+  margin-left: -13px;
+  width: 70px;
   height: 6px;
-  transform: translateY(8.5px) rotate(45deg);
+  background-color: var(--inputToggleTxt);
 }
-.burgerMenu .card-container .menuCard .menuClicked .lineBottom {
+.burgerMenu .card-container .menuCard #menu4-btn .lineTop {
+  border-radius: 1em;
+  transform: translateY(4px);
+}
+.burgerMenu .card-container .menuCard #menu4-btn .lineTop:before {
+  display: block;
+  content: "";
+  width: 70px;
+  height: 15px;
+  border-radius: 50% 50% 0 0;
+  background-color: var(--toggleTheme);
+  transform: translateY(-21px);
+}
+.burgerMenu .card-container .menuCard #menu4-btn .lineBottom {
+  border-radius: 1em;
+  transform: translateY(-4px);
+}
+.burgerMenu .card-container .menuCard #menu4-btn .lineBottom:after {
+  display: block;
+  content: "";
+  width: 70px;
   height: 6px;
-  transform: translateY(-8.5) rotate(-45deg);
+  border-radius: 0 0 0.5em 0.5em;
+  background-color: var(--toggleTheme);
+  transform: translateY(13px);
 }
-.burgerMenu .card-container .menuCard .menuClicked .lineCenter {
-  opacity: 0;
+.burgerMenu .card-container .menuCard #menu5-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: none;
+  z-index: 2;
 }
-.burgerMenu .card-container .menuCard .menuClicked.header3 {
-  background-color: var(--themeBdr);
-  transition: all 300ms ease-in-out;
+.burgerMenu .card-container .menuCard #menu5-btn .line {
+  margin-left: -13px;
+  width: 70px;
+  height: 6px;
+  background-color: var(--inputToggleTxt);
+}
+.burgerMenu .card-container .menuCard #menu5-btn .lineTop {
+  transform: translateY(-4px);
+}
+.burgerMenu .card-container .menuCard #menu5-btn .lineTop::before {
+  display: block;
+  content: "";
+  height: 15px;
+  border-radius: 50% 50% 0 0;
+  background-color: var(--toggleTheme);
+  transform: translateY(-15px);
+}
+.burgerMenu .card-container .menuCard #menu5-btn .lineBottom {
+  transform: translateY(4px);
+}
+.burgerMenu .card-container .menuCard #menu5-btn .lineBottom::after {
+  display: block;
+  content: "";
+  width: 70px;
+  height: 6px;
+  border-radius: 0 0 0.5em 0.5em;
+  background-color: var(--toggleTheme);
+  transform: translateY(6px);
 }
 
 #btn {
