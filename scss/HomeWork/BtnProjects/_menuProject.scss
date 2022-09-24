@@ -10,72 +10,233 @@
 
 .burgerMenu {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
   .card-container {
     border-radius: 1rem;
     .menuCard {
+      margin: 1em auto;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      padding: 2rem;
-      height: 200px;
+      padding: 1em 0.5em;
+      width: 80%;
+      max-width: 250px;
+      min-height: 180px;
+      //box-shadow: 0px 0px 3px var(--darkModeTxtClr);
       h1 {
-        font-size: calc(0.75vw + 1rem);
+        font-size: 1em;
         text-align: center;
-        padding: 1rem;
+        //padding: 1rem;
         color: var(--inputToggleTxt);
       }
-      .btn {
+      #menu1-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
         width: 80px;
-        margin: auto;
+        height: 80px;
+        border-radius: 50%;
+        background-color: transparent;
+        box-shadow: none;
+        z-index: 2;
         .line {
-          background-color: var(--darkModeBg);
-          width: 80px;
+          transition: all 0.5s ease-in-out;
+          width: 70px;
           height: 6px;
+          background-color: var(--inputToggleTxt);
           border-radius: 1rem;
         }
         .lineTop {
           transform: translateY(-5px);
         }
-        .lineCenter {
-          background-color: var(--themeBdr);
-        }
         .lineBottom {
           transform: translateY(5px);
         }
       }
-      #menu2-btn .lineTop {
-        transform: translateY(-5px);
+      #menu1-btn.menu1-open .lineCenter {
+        background: transparent;
+        box-shadow: none;
       }
-      #menu2-btn .lineCenter {
+      #menu1-btn.menu1-open .lineTop {
+        transform: translateY(5px) rotate(45deg);
+        background-color: red;
+      }
+      #menu1-btn.menu1-open .lineBottom {
+        transform: translateY(-5px) rotate(-45deg);
+        background-color: red;
+      }
+
+      #menu2-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: transparent;
+        box-shadow: none;
+        z-index: 2;
+        .line {
+          position: relative;
+          width: 70px;
+          height: 6px;
+          background-color: var(--toggleTheme);
+          border-radius: 1rem;
+          transition: all 0.5s ease-in-out;
+        }
+        .line::before,
+        .line::after {
+          position: absolute;
+          display: block;
+          content: "";
+          width: 70px;
+          height: 6px;
+          background-color: var(--inputToggleTxt);
+          border-radius: 1rem;
+          transition: all 0.5s ease-in-out;
+        }
+        .line::before {
+          transform: translateY(-12px);
+        }
+        .line::after {
+          transform: translateY(12px);
+        }
+      }
+      #menu2-btn.menu2-open .line {
+        background: transparent;
+        box-shadow: none;
+      }
+      #menu2-btn.menu2-open .line::before {
+        transform: translateY(5px) rotate(45deg);
         background-color: var(--toggleTheme);
       }
-      #menu2-btn .lineBottom {
-        transform: translateY(5px);
+      #menu2-btn.menu2-open .line::after {
+        transform: translateY(5px) rotate(-45deg);
+        background-color: var(--toggleTheme);
       }
-      #menu3-btn .lineTop {
-        transform: translateY(-5px);
+
+      #menu3-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: transparent;
+        box-shadow: none;
+        z-index: 2;
+        .line {
+          background-color: var(--inputToggleTxt);
+          margin-left: -13px;
+          border-radius: 1rem;
+        }
+        .lineTop {
+          width: 60px;
+          height: 5px;
+          transform: translateY(-6px);
+        }
+        .lineCenter {
+          width: 70px;
+          height: 6px;
+        }
+        .lineBottom {
+          width: 80px;
+          height: 8px;
+          transform: translateY(7px);
+        }
+        
       }
-      #menu3-btn .lineBottom {
-        transform: translateY(5px);
+      #menu4-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: transparent;
+        box-shadow: none;
+        z-index: 2;
+        .line {
+          margin-left: -13px;
+          width: 70px;
+          height: 6px;
+          background-color: var(--inputToggleTxt);
+        }
+        .lineTop {
+          border-radius: 1em;
+          transform: translateY(4px);
+        }
+        .lineTop:before {
+          display: block;
+          content: "";
+          width: 70px;
+          height: 15px;
+          border-radius: 50% 50% 0 0 ;
+          background-color: var(--toggleTheme);
+          transform: translateY(-21px);
+        }
+        .lineBottom {
+          border-radius: 1em;
+          transform: translateY(-4px);
+        }
+        .lineBottom:after {
+          display: block;
+          content: "";
+          width: 70px;
+          height: 6px;
+          border-radius: 0 0 .5em .5em;
+          background-color: var(--toggleTheme);
+          transform: translateY(13px);
+        }
       }
-      .menuClicked .lineTop {
-        height: 6px;
-        transform: translateY(8.5px) rotate(45deg);
-      }
-      .menuClicked .lineBottom {
-        height: 6px;
-        transform: translateY(-8.5) rotate(-45deg);
-      }
-      .menuClicked .lineCenter {
-        opacity: 0;
-      }
-      .menuClicked.header3 {
-        background-color: var(--themeBdr);
-        transition: all 300ms ease-in-out;
+      #menu5-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: transparent;
+        box-shadow: none;
+        z-index: 2;
+        .line {
+          margin-left: -13px;
+          width: 70px;
+          height: 6px;
+          background-color: var(--inputToggleTxt);
+        }
+        .lineTop {
+          transform: translateY(-4px);
+        }
+        .lineTop::before {
+          display: block;
+          content: "";
+          height: 15px;
+          border-radius: 50% 50% 0 0 ;
+          background-color: var(--toggleTheme);
+          transform: translateY(-15px);
+        }
+        .lineBottom {
+          transform: translateY(4px);
+        }
+        .lineBottom::after {
+          display: block;
+          content: "";
+          width: 70px;
+          height: 6px;
+          border-radius: 0 0 .5em .5em;
+          background-color: var(--toggleTheme);
+          transform: translateY(6px);
+        }
       }
     }
   }
