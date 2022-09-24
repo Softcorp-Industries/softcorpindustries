@@ -27,7 +27,8 @@
   }
 }
 .devCourse-header {
-  margin: 3em;
+  margin: 2.5em auto;
+  max-width: 900px;
   font-size: 1.25em;
   letter-spacing: 2px;
   color: var(--darkModeTxtClr);
@@ -35,7 +36,6 @@
   }
 .courseCard {
   margin: 1em auto;
-  width: 80%;
   max-width: 300px;
 }
 #softcorpNotes {
@@ -57,18 +57,19 @@
 }
 .fccProjects {
   margin: 1.5em auto;
-  width: 90%;
-  max-width: 600px;
+  max-width: 900px;
   display: none;
-  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
-  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
   list-style: none;
   .listItem {
     @include darkMode;
-    display: none;
-    margin: auto;
-    width: 175px;
-    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin:1em auto;
+    width: 145px;
+    height: 130px;
     padding: 0.5em;
     color: var(--secondaryTxt);
     background-image: linear-gradient(
@@ -86,7 +87,9 @@
     }
     a {
       img {
+        //display: block;
         width: 100%;
+        //padding-bottom: 0;
       }
     }
   }
@@ -98,6 +101,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+  margin-bottom: .25em;
 }
 #certImg1:hover {
   opacity: 0.7;
@@ -198,6 +202,17 @@
 }
 
 @media screen and (min-width: 481px) {
+  .fccProjects {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    .listItem {
+      width: 200px;
+      height: 175px;
+      p {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 700px) {
