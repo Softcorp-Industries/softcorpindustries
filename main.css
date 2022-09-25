@@ -2250,22 +2250,23 @@ a {
   color: var(--darkModeTxtClr);
   border-radius: 0.75rem;
 }
-.constructionSlider .constructionSlide .content h4,
-.constructionSlider .constructionSlide .content h5 {
+.constructionSlider .constructionSlide .content p {
   width: 100%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--black);
-  text-shadow: 0px 0px 3px var(--white);
+  padding: 0.5em;
+  color: black;
+  font-weight: 600;
+  background-color: var(--bgFilterDrk);
   letter-spacing: 1px;
 }
-.constructionSlider .constructionSlide .content h4 {
-  top: 10px;
+.constructionSlider .constructionSlide .content p:first-child {
+  top: 0px;
   font-size: 22px;
 }
-.constructionSlider .constructionSlide .content h5 {
-  bottom: 10px;
+.constructionSlider .constructionSlide .content p:nth-child(2) {
+  bottom: 0px;
   font-size: 18px;
 }
 
@@ -2274,59 +2275,59 @@ a {
 }
 
 .constructionSlide:first-child {
-  background-image: url("img/construction/construction_1550_Before 0988.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img01.JPG");
 }
 
 .constructionSlide:nth-child(2) {
-  background-image: url("img/construction/construction_1550_Before 0989.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img02.JPG");
 }
 
 .constructionSlide:nth-child(3) {
-  background-image: url("img/construction/construction_1579.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img03.JPG");
 }
 
 .constructionSlide:nth-child(4) {
-  background-image: url("img/construction/construction_1581.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img04.JPG");
 }
 
 .constructionSlide:nth-child(5) {
-  background-image: url("img/construction/construction_1.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img05.JPG");
 }
 
 .constructionSlide:nth-child(6) {
-  background-image: url("img/construction/construction_1581a.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img06.JPG");
 }
 
 .constructionSlide:nth-child(7) {
-  background-image: url("img/construction/construction_3.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img07.JPG");
 }
 
 .constructionSlide:nth-child(8) {
-  background-image: url("img/construction/construction_1055.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img08.JPG");
 }
 
 .constructionSlide:nth-child(9) {
-  background-image: url("img/construction/construction_1056.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img09.JPG");
 }
 
 .constructionSlide:nth-child(10) {
-  background-image: url("img/construction/construction_1084.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img10.JPG");
 }
 
 .constructionSlide:nth-child(11) {
-  background-image: url("img/construction/construction_1089.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img11.JPG");
 }
 
 .constructionSlide:nth-child(12) {
-  background-image: url("img/construction/construction_1090.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img12.JPG");
 }
 
 .constructionSlide:nth-child(13) {
-  background-image: url("img/construction/construction_Bath Room - 001.jpg");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img13.jpg");
 }
 
 .constructionSlide:nth-child(14) {
-  background-image: url("img/construction/construction_Bath Room - 003.jpg");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img15.jpg");
 }
 
 .constructionSlider {
@@ -4057,15 +4058,18 @@ label:active:after {
   display: block;
 }
 
-.btn .oneBtn {
+.btns {
+  background-color: var(--inputToggleTheme);
+}
+
+.oneBtn {
   position: relative;
   cursor: pointer;
   width: 100%;
   border: none;
-  background-color: #e9e9e9;
   margin-bottom: 250px;
 }
-.btn .oneBtn .motto {
+.oneBtn .motto {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   position: absolute;
   left: 50%;
@@ -4075,111 +4079,106 @@ label:active:after {
   border-radius: 50%;
   text-align: center;
 }
-.btn .oneBtn .motto p {
+.oneBtn .motto p {
   padding: 3.25rem 1rem 1rem 1rem;
   letter-spacing: 0.1rem;
   font-size: 14px;
 }
-.btn .oneBtn .motto p span {
+.oneBtn .motto p span {
   color: green;
   font-size: 20px;
   font-weight: 700;
 }
-.btn .oneBtn .motto div {
+.oneBtn .motto div {
   font-size: 14px;
   color: red;
   font-weight: 600;
 }
-.btn .oneBtn .motto div span {
+.oneBtn .motto div span {
   color: green;
 }
-.btn .oneBtn .motto div span:last-child {
+.oneBtn .motto div span:last-child {
   color: orange;
 }
-.btn .btnReg h2 {
-  font-size: calc(1vw + 1.25rem);
-  text-align: center;
-  margin: 25px 0px;
-}
-.btn .btnReg .btnDiv {
-  box-shadow: -8px -8px 9px rgb(255, 255, 255), 8px 8px 9px rgba(0, 0, 0, 0.4);
-  background-color: #e3e3e3;
-  padding: 1rem;
-  border-radius: 1rem;
+
+.btnReg .btnDiv {
+  background-color: var(--inputToggleTheme);
   margin-bottom: 75px;
 }
-.btn .btnReg .btnDiv .messageBox {
+.btnReg .btnDiv .messageBox {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 15px;
   margin-bottom: 20px;
 }
-.btn .btnReg .btnDiv .messageBox .activeButton {
+.btnReg .btnDiv .messageBox .activeButton {
   display: none;
-  box-shadow: -8px -8px 9px rgb(255, 255, 255), 8px 8px 9px rgba(0, 0, 0, 0.4);
-  border-radius: 0.75rem;
 }
-.btn .btnReg .btnDiv .messageBox .activeButton h4 {
+.btnReg .btnDiv .messageBox .activeButton p {
   width: 100%;
   text-align: center;
   padding: 0.25rem;
 }
-.btn .btnReg .btnDiv .messageBox .activeButton ul {
+.btnReg .btnDiv .messageBox .activeButton ul {
   list-style: none;
   padding-bottom: 0.25rem;
 }
-.btn .btnReg .btnDiv .messageBox .activeButton ul li {
+.btnReg .btnDiv .messageBox .activeButton ul li {
   text-align: center;
   font-family: "montserrat";
   font-size: calc(0.5vw + 0.4rem);
 }
-.btn .btnReg .btnDiv .btn-cont {
+.btnReg .btnDiv .btn-cont {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  gap: 0.5em;
 }
-.btn .btnReg .btnDiv .btn-cont .btn-box {
-  margin: auto;
-  width: 100px;
+.btnReg .btnDiv .btn-cont .btn-box {
+  margin: 0.5em auto;
+  max-width: 130px;
 }
-.btn .btnReg .btnDiv .btn-cont .btn-box .btn {
+.btnReg .btnDiv .btn-cont .btn-box .btnProject-btn {
   box-shadow: -4px -4px 7px rgb(255, 255, 255), 4px 4px 7px rgba(0, 0, 0, 0.4);
-  min-width: 100px;
   cursor: pointer;
-  height: 30px;
-  background-color: rgb(230, 230, 230);
-  letter-spacing: 0.1rem;
+  height: 100%;
+  width: 100%;
   border: none;
   outline: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: var(--inputToggleTheme);
+  letter-spacing: 0.1rem;
 }
-.btn .btnReg .btnDiv .btn-cont .btn-box .btn:hover {
-  box-shadow: -8px -8px 9px rgb(255, 255, 255), 8px 8px 9px rgba(0, 0, 0, 0.4);
-}
-.btn .btnReg .btnDiv .btn-cont .btn-box .active {
-  box-shadow: inset -8px -8px 9px #fff, inset 8px 8px 9px rgba(0, 0, 0, 0.4);
+.btnReg .btnDiv .btn-cont .btn-box .active {
+  box-shadow: inset -4px -4px 7px #fff, inset 4px 4px 7px rgba(0, 0, 0, 0.4);
   border: none;
 }
-.btn .btnReg .btnDiv .btn-cont .btn-rndCorner {
+.btnReg .btnDiv .btn-cont .btn-box:hover {
+  outline: 2px solid var(--toggleTheme);
+}
+.btnReg .btnDiv .btn-cont .btn-rndCorner {
   border-radius: 1rem;
 }
-.btn .btnReg .btnDiv .btn-cont .btn-caution {
+.btnReg .btnDiv .btn-cont .btn-caution {
   color: yellow;
 }
-.btn .btnReg .btnDiv .btn-cont .btn-danger {
+.btnReg .btnDiv .btn-cont .btn-danger {
   color: orangered;
 }
-.btn .btnReg .btnDiv .btn-cont .btn-active {
+.btnReg .btnDiv .btn-cont .btn-active {
   opacity: 0.7;
 }
-.btn .btnReg .btnDiv .btn-cont.Rnd-btn {
+.btnReg .btnDiv .btn-cont.Rnd-btn {
   text-align: center;
 }
-.btn .btnReg .btnDiv .btn-cont.Rnd-btn .btn-smRnd {
+.btnReg .btnDiv .btn-cont.Rnd-btn .btn-smRnd {
   min-width: 25px;
   height: 25px;
   border-radius: 50%;
 }
-.btn .btnReg .btnDiv .btn-cont.Rnd-btn .btn-lgRnd {
+.btnReg .btnDiv .btn-cont.Rnd-btn .btn-lgRnd {
   min-width: 75px;
   height: 75px;
   border-radius: 50%;
@@ -5349,19 +5348,23 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
 }
 
 .imgSlider {
-  height: 350px;
+  margin-top: 2em;
+  height: 500px;
   position: relative;
 }
 .imgSlider .slide {
   position: absolute;
   top: 0;
-  height: 500px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  max-width: 500px;
+  height: 80%;
+  max-height: 500px;
   transition: opacity 0.4s ease-in-out;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   opacity: 0;
   border-radius: 1rem;
   overflow: hidden;
@@ -5395,25 +5398,25 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   transition: all 0.7s ease-in-out 0.3s;
 }
 .imgSlider .slide:first-child {
-  background-image: url("img/chandler-cruttenden-unsplash_img1.jpg");
+  background-image: url("img/Home Work Projects/Image Slider/Slider_img1-500px.jpg");
 }
 .imgSlider .slide:nth-child(2) {
-  background-image: url("img/sajad-nori-unsplash_img9.jpg");
+  background-image: url("img/Home Work Projects/Image Slider/Slider_img2-500px.jpg");
 }
 .imgSlider .slide:nth-child(3) {
-  background-image: url("img/daniel-sessler-unsplash_img3.jpg");
+  background-image: url("img/Home Work Projects/Image Slider/Slider_img3-500px.jpg");
 }
 .imgSlider .slide:nth-child(4) {
-  background-image: url("img/jarrad-horne-c-unsplash_img4.jpg");
+  background-image: url("img/Home Work Projects/Image Slider/Slider_img4-500px.jpg");
 }
 .imgSlider .slide:nth-child(5) {
-  background-image: url("img/quaid-lagan-unsplash_img5.jpg");
+  background-image: url("img/Home Work Projects/Image Slider/Slider_img5-500px.jpg");
 }
 .imgSlider .slide:nth-child(6) {
-  background-image: url("img/sebastien-jermer-unsplash_img6.jpg");
+  background-image: url("img/Home Work Projects/Image Slider/Slider_img6-500px.jpg");
 }
 .imgSlider .slide:nth-child(7) {
-  background-image: url("img/lewis-roberts-unsplash_img7.jpg");
+  background-image: url("img/Home Work Projects/Image Slider/Slider_img7-500px.jpg");
 }
 
 .buttons button.btn {
