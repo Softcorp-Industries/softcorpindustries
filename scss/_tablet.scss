@@ -204,22 +204,24 @@
     color: var(--darkModeTxtClr);
     border-radius: 0.75rem;
     .content {
-      h4,
-      h5 {
+      p {
         width: 100%;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        color: var(--black);
-        text-shadow: 0px 0px 3px var(--white);
+        padding: .5em;
+        color: black;
+        font-weight: 600;
+        background-color: var(--bgFilterDrk);
+        //text-shadow: 0px 0px 3px var(--white);
         letter-spacing: 1px;
       }
-      h4 {
-        top: 10px;
+      p:first-child {
+        top: 0px;
         font-size: 22px;
       }
-      h5 {
-        bottom: 10px;
+      p:nth-child(2) {
+        bottom: 0px;
         font-size: 18px;
       }
     }
@@ -229,47 +231,47 @@
   opacity: 1;
 }
 .constructionSlide:first-child {
-  background-image: url("img/construction/construction_1550_Before 0988.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img01.JPG");
   //background-color: blue;
 }
 .constructionSlide:nth-child(2) {
-  background-image: url("img/construction/construction_1550_Before 0989.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img02.JPG");
 }
 .constructionSlide:nth-child(3) {
-  background-image: url("img/construction/construction_1579.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img03.JPG");
 }
 .constructionSlide:nth-child(4) {
-  background-image: url("img/construction/construction_1581.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img04.JPG");
 }
 .constructionSlide:nth-child(5) {
-  background-image: url("img/construction/construction_1.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img05.JPG");
 }
 .constructionSlide:nth-child(6) {
-  background-image: url("img/construction/construction_1581a.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img06.JPG");
 }
 .constructionSlide:nth-child(7) {
-  background-image: url("img/construction/construction_3.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img07.JPG");
 }
 .constructionSlide:nth-child(8) {
-  background-image: url("img/construction/construction_1055.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img08.JPG");
 }
 .constructionSlide:nth-child(9) {
-  background-image: url("img/construction/construction_1056.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img09.JPG");
 }
 .constructionSlide:nth-child(10) {
-  background-image: url("img/construction/construction_1084.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img10.JPG");
 }
 .constructionSlide:nth-child(11) {
-  background-image: url("img/construction/construction_1089.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img11.JPG");
 }
 .constructionSlide:nth-child(12) {
-  background-image: url("img/construction/construction_1090.JPG");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img12.JPG");
 }
 .constructionSlide:nth-child(13) {
-  background-image: url("img/construction/construction_Bath Room - 001.jpg");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img13.jpg");
 }
 .constructionSlide:nth-child(14) {
-  background-image: url("img/construction/construction_Bath Room - 003.jpg");
+  background-image: url("img/Construction Tablet/tablet/Construction_Img15.jpg");
 }
 .constructionSlider {
   -ms-overflow-style: none;
