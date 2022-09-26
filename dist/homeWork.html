@@ -860,7 +860,7 @@
               </div>
             </section>
           </header>
-          <section class="project__container imgProductGallery wrapper" id="imgProductGallery">
+          <section class="imgProductGallery wrapper" id="imgProductGallery">
             <div class="rating">
               <div class="rating__box">
                 <img data-src="img/icon/HTML5_logo.svg.png" alt="JS" />
@@ -877,12 +877,7 @@
             </div>
             <div class="imgProductGallery projectBox">
               <div class="productSlider">
-                <div class="productFeatureImg">
-                  <img id="productFeature" data-src="img/Home Work Projects/Product Gallery/ProductGallery_img01.jpg"
-                    alt="" />
-                </div>
                 <div id="productContainer">
-                  <div id="btnL"></div>
                   <div id="productImgs" class="productImgs">
                     <img class="productImg activeProduct"
                       data-src="img/Home Work Projects/Product Gallery/ProductGallery_img01.jpg" alt="" />
@@ -893,7 +888,10 @@
                     <img class="productImg" data-src="img/Home Work Projects/Product Gallery/ProductGallery_img04.jpg"
                       alt="" />
                   </div>
-                  <div id="btnR"></div>
+                </div>
+                <div class="productFeatureImg">
+                  <img id="productFeature" data-src="img/Home Work Projects/Product Gallery/ProductGallery_img01.jpg"
+                    alt="" />
                 </div>
               </div>
             </div>
@@ -1032,7 +1030,7 @@
             <div class="imgSlider projectBox">
               <div class="slide current">
                 <div class="content">
-                  <h2>Slide 1</h2>
+                  <p>Slide 1</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing
                     elit. Est, excepturi!
@@ -1041,7 +1039,7 @@
               </div>
               <div class="slide">
                 <div class="content">
-                  <h2>Slide 2</h2>
+                  <p>Slide 2</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing
                     elit. Est, excepturi!
@@ -1050,7 +1048,7 @@
               </div>
               <div class="slide">
                 <div class="content">
-                  <h2>Slide 3</h2>
+                  <p>Slide 3</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing
                     elit. Est, excepturi!
@@ -1059,7 +1057,7 @@
               </div>
               <div class="slide">
                 <div class="content">
-                  <h2>Slide 4</h2>
+                  <p>Slide 4</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing
                     elit. Est, excepturi!
@@ -1068,7 +1066,7 @@
               </div>
               <div class="slide">
                 <div class="content">
-                  <h2>Slide 5</h2>
+                  <p>Slide 5</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing
                     elit. Est, excepturi!
@@ -1077,7 +1075,7 @@
               </div>
               <div class="slide">
                 <div class="content">
-                  <h2>Slide 6</h2>
+                  <p>Slide 6</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing
                     elit. Est, excepturi!
@@ -1086,7 +1084,7 @@
               </div>
               <div class="slide">
                 <div class="content">
-                  <h2>Slide 7</h2>
+                  <p>Slide 7</p>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing
                     elit. Est, excepturi!
@@ -1094,8 +1092,12 @@
                 </div>
               </div>
               <div class="buttons">
-                <button class="btn" id="prevBtn"></button>
-                <button class="btn" id="nextBtn"></button>
+                <div class="btnDirection" id="prevBtn">
+                  <button class="btn" ></button>
+                </div>
+                <div class="btnDirection" id="nextBtn">
+                  <button class="btn" ></button>
+                </div>
               </div>
             </div>
             <div class="contributorLinks">

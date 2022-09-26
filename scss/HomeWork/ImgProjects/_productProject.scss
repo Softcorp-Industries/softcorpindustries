@@ -9,10 +9,14 @@
 }
 
 .productSlider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   .productFeatureImg {
     width: 100%;
+    max-width: 400px;
     margin: auto;
-    margin-bottom: 10px;
     img {
       width: 100%;
       border-radius: 1rem;
@@ -21,21 +25,17 @@
   }
 }
 #productContainer {
-  width: 100%;
-  min-height: 80px;
+  width: 100px;
+  padding: .5em 1em;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: #c9c9c9;
   border-radius: 1rem;
 }
 .productImgs {
-  width: 280px;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
   .productImg {
-    margin: 0 5px;
     max-width: 80px;
     border-radius: 0.5rem;
     cursor: pointer;
