@@ -9,10 +9,6 @@
 }
 
 // One Button Click Events
-.btns {
-
-  background-color: var(--inputToggleTheme);
-}
 .oneBtn {
   position: relative;
   cursor: pointer;
@@ -54,7 +50,7 @@
 }
 .btnReg {
   .btnDiv {
-          background-color: var(--inputToggleTheme);
+          //background-color: var(--inputToggleTheme);
     
     margin-bottom: 75px;
     .messageBox {

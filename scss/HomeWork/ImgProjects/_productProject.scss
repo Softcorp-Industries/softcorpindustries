@@ -10,7 +10,7 @@
 
 .productSlider {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-between;
   .productFeatureImg {
@@ -24,18 +24,17 @@
     }
   }
 }
-#productContainer {
+.productImgs {
   width: 100px;
   padding: .5em 1em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #c9c9c9;
+  //background-color: #c9c9c9;
   border-radius: 1rem;
-}
-.productImgs {
   .productImg {
+    margin: 5px;
     max-width: 80px;
     border-radius: 0.5rem;
     cursor: pointer;

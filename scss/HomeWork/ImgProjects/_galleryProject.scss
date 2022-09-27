@@ -7,13 +7,16 @@
 #imgGallery.showProject {
   display: block;
 }
-
 .galleryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   .featureImg {
-    margin: auto;
     width: 80%;
     max-width: 500px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-bottom: 10px;
   }
@@ -23,7 +26,7 @@
   }
 
   .galleryGrid {
-    margin:2em auto;
+    margin: 2em;
     padding: 1em;
     width: 70%;
     max-width: 400px;
@@ -51,4 +54,18 @@
 .fadeIn {
   opacity: 0;
   animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+@media (min-width: 1000px) {
+  .galleryContainer {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    .featureImg {
+      max-width: 600px;
+    }
+    .galleryGrid {
+      max-width: 275px;
+      max-height: 300px;
+    }
+  }
 }
