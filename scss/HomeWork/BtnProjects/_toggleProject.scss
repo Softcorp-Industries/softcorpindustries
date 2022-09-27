@@ -8,6 +8,8 @@
   display: block;
 }
 .toggleButton {
+  margin: auto;
+  max-width: 750px;
   .toggleSummary {
     padding: 0.5em;
     font-size: 13px;
@@ -25,13 +27,14 @@
     flex-direction: column;
     width: 120px;
     margin: 0.25em auto;
-    h4 {
-      letter-spacing: 1px;
-      font-size: 16px;
-      color: var(--inputToggleTxt);
+    &__header {
       padding: 0.5em;
       text-align: center;
-      //text-shadow: 0px 0px 2px var(--darkModeTxtClr)
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      //color: var(--toggleTheme);
+      //text-shadow: 0px 0px 2px var(--bgFilterBlk);
     }
     .btn-container {
       @include shadowSm-inset;

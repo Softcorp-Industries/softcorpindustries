@@ -266,10 +266,10 @@
   .projectBox {
     // All code for the Project will inside the Project Box
     padding: 1em;
+    color: var(--darkModeTxtClr);
     .tributeBox {
       margin: auto;
       padding: 0.5rem;
-      color: var(--inputToggleTxt);
       &__video {
         height: 275px;
         margin: auto;
