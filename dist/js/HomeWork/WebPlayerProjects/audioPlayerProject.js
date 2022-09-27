@@ -21,7 +21,7 @@ var audio,
 
 function initAudioPlayer() {
   audio = new Audio();
-  audio.src = "audio/OOH_LA_LA_Rod_Stewart.mp3";
+  audio.src = "audio/Gordon_Lightfoot-Sundown.mp3";
   audio.loop = true;
 
   analyzerBox = document.getElementById("analyzerBox").appendChild(audio);
