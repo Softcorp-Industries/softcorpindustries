@@ -171,13 +171,13 @@
 }
 
 .desktop__monitor:first-child {
-  background-image: url("./img/backgrounds/softcorp-900.png");
+  background-image: url("./img/Desktop Slider/softcorp-900.png");
 }
 .desktop__monitor:nth-child(2) {
-  background-image: url("./img/backgrounds/12-23-06 Softcorp Industries.png");
+  background-image: url("./img/Desktop Slider/12-23-06 Softcorp Industries.png");
 }
 .desktop__monitor:nth-child(3) {
-  background-image: url("./img/backgrounds/14-09-55 Document.png");
+  background-image: url("./img/Desktop Slider/14-09-55 Document.png");
 }
 
 .constructionSlider {
@@ -209,7 +209,8 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        padding: .5em;
+        padding: .25em
+        0;
         color: black;
         font-weight: 600;
         background-color: var(--bgFilterDrk);
@@ -218,11 +219,11 @@
       }
       p:first-child {
         top: 0px;
-        font-size: 22px;
+        font-size: 1em;
       }
       p:nth-child(2) {
         bottom: 0px;
-        font-size: 18px;
+        font-size: .9em;
       }
     }
   }

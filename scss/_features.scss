@@ -60,12 +60,11 @@
   width: 100%;
   max-width: 1000px;
   text-align: left;
-  
   margin-bottom: 0.5em;
   padding: 1em;
   p {
-    line-height: 1.4;
-    letter-spacing: 2px;
+    line-height: 1.2;
+    letter-spacing: 1px;
     margin-bottom: 0.5em;
   }
   p.lead {
@@ -279,7 +278,6 @@
     margin-top: -30em;
   }
 }
-
 
 .spacer{
   content: "";
