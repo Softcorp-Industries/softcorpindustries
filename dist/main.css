@@ -5753,11 +5753,11 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   display: block;
 }
 
-#webPlayerV1 {
+#webPlayerV2 {
   display: none;
 }
 
-#webPlayerV1.showProject {
+#webPlayerV2.showProject {
   display: block;
 }
 
@@ -5777,15 +5777,15 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   display: block;
 }
 
-.webplayer1 {
+.webPlayer2 {
+  margin: auto;
   position: relative;
   max-width: 600px;
-  height: 200px;
-  margin: auto;
+  height: 300px;
   border-radius: 2rem;
   background-color: #e3e3e3;
 }
-.webplayer1 #analyzerBox {
+.webPlayer2 #analyzerBox {
   position: absolute;
   top: 15px;
   left: 50%;
@@ -5793,49 +5793,48 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   padding: 0.5rem;
   width: 90%;
 }
-.webplayer1 #analyzerBox #graphics {
+.webPlayer2 #analyzerBox #graphics {
   width: 100%;
-  height: 75px;
-  background-color: rgb(0, 253, 14);
+  height: 150px;
   border-radius: 0.5rem 0.5rem 0 0;
 }
-.webplayer1 .btn {
+.webPlayer2 .btn {
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   background-color: black;
-  color: rgb(0, 253, 14);
+  color: var(--toggleTheme);
   font-size: calc(0.5vw + 0.75rem);
   outline: none;
-  border: 2px solid rgb(0, 253, 14);
+  border: 2px solid var(--toggleTheme);
   border-radius: 50%;
 }
-.webplayer1 .btn-playPause {
+.webPlayer2 .btn-playPause {
   position: absolute;
   bottom: calc(0.2vw + 2.5em);
   left: calc(1vw + 0.5rem);
 }
-.webplayer1 .btn-mute {
+.webPlayer2 .btn-mute {
   position: absolute;
   bottom: calc(0.2vw + 2.5em);
   right: calc(1vw + 0.5rem);
 }
-.webplayer1 input {
+.webPlayer2 input {
   outline: none;
 }
-.webplayer1 input[type=range]::-moz-range-thumb {
+.webPlayer2 input[type=range]::-moz-range-thumb {
   width: 10px;
   height: 10px;
-  background-color: rgb(0, 253, 14);
+  background-color: var(--toggleTheme);
   border-radius: 50%;
 }
-.webplayer1 input[type=range]::-moz-range-track {
-  background-color: rgba(0, 253, 14, 0.6);
+.webPlayer2 input[type=range]::-moz-range-track {
+  background-color: var(--toggleTheme);
 }
-.webplayer1 input[type=range] {
+.webPlayer2 input[type=range] {
   background: none;
 }
-.webplayer1 #seekSlider2 {
+.webPlayer2 #seekSlider2 {
   position: absolute;
   width: 150px;
   height: 20px;
@@ -5843,60 +5842,77 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   left: 50%;
   transform: translateX(-50%);
 }
-.webplayer1 #volumeSlider2 {
+.webPlayer2 #volumeSlider2 {
   position: absolute;
-  top: 105px;
+  top: 185px;
   left: 50%;
   transform: translateX(-50%);
   background: none;
   width: 100px;
 }
-.webplayer1 #timeBox2 {
+.webPlayer2 #timeBox2 {
   position: absolute;
   bottom: 42px;
   left: 50%;
   transform: translateX(-50%);
   background-color: black;
   padding: 0.25rem;
-  color: rgb(0, 253, 14);
+  color: var(--toggleTheme);
   width: 80px;
   height: 20px;
   text-align: center;
 }
 
-.audioLlibrary #trackBox {
-  padding: 1rem;
+.audioLibrary #trackBox {
+  margin: auto;
+  max-width: 600px;
+  background-color: var(--darkModeBg);
+  box-shadow: 0px 0px 2px var(--darkModeTxtClr);
+  border-radius: 0.5em;
 }
-.audioLlibrary #trackBox .trackBar {
-  background: #ddd;
+.audioLibrary #trackBox .trackBar {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--darkModeTxtClr);
   font-family: "audiowide";
 }
-.audioLlibrary #trackBox .playButton {
-  opacity: 0.8;
-  display: block;
-  background: #000;
-  color: white;
-  width: 50px;
-  padding: 5px;
-  margin: 14px 0px 0px 14px;
+.audioLibrary #trackBox .playButton {
+  margin-right: auto;
   cursor: pointer;
-  border: none;
-  border-radius: 5px;
   outline: none;
+  border: none;
+  display: block;
+  padding: 0.5em 1em;
+  color: var(--toggleTheme);
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0px 0px 2px var(--darkModeTxtClr);
+  border-radius: 5px;
 }
-.audioLlibrary #trackBox .playButton:hover {
+.audioLibrary #trackBox .playButton:hover {
   opacity: 1;
 }
-.audioLlibrary #trackBox .trackName {
-  color: #000;
-  margin: 12px 0px 0px 14px;
-  font-size: 20px;
+.audioLibrary #trackBox .trackName {
+  font-size: 0.9em;
   font-weight: bold;
+  margin-right: auto;
+  margin-bottom: 0.5em;
 }
-.audioLlibrary #trackBox .trackBar:nth-child(even) {
-  background: #eee;
+.audioLibrary #trackBox .trackBar:nth-child(even) {
+  background-color: var(--darkModeClrlgt);
 }
 
+@media (min-width: 600px) {
+  .audioLibrary #trackBox .trackBar {
+    flex-direction: row-reverse;
+  }
+  .audioLibrary #trackBox .playButton {
+    margin-right: 0;
+  }
+}
 #tablet-1 {
   display: none;
 }
