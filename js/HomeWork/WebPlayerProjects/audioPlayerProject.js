@@ -1,4 +1,3 @@
-/*
 var audio,
   playBtn,
   muteBtn,
@@ -116,7 +115,7 @@ function initAudioPlayer() {
     durTimeText.innerHTML = durmins + ":" + dursecs;
   }
 }
-*/
+
 
 
 // frameLooper() animates any style of graphics you wish to move to audio frequency
@@ -141,6 +140,7 @@ function frameLooper() {
 function _(id) {
   return document.getElementById(id);
 }
+
 
 function audioApp() {
   let naudio = new Audio();
@@ -205,7 +205,7 @@ function audioApp() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  //initAudioPlayer();
+  initAudioPlayer();
   audioApp();
 });
 
