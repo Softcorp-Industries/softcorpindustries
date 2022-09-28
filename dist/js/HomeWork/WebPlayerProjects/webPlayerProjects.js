@@ -1,1 +1,2 @@
-import * as AudioPlayerProject from './audioPlayerProject.js';
+import * as AudioLibraryProject from './audioLibraryProject.js';
+import * as AnalyzerPlayerProject from './analyzerPlayerProject.js';

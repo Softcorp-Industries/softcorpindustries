@@ -1,0 +1,80 @@
+@use "../../global" as *;
+@use "../../mixin" as *;
+
+
+#basicAudioPlayer {
+  display: none;
+}
+#basicAudioPlayer.showProject {
+  display: block;
+}
+
+#audioLibrary {
+  display: none;
+}
+#audioLibrary.showProject {
+  display: block;
+}
+
+#videoPlayerV1 {
+  display: none;
+}
+#videoPlayerV1.showProject{
+  display: block;
+}
+.audioLibrary {
+  #trackBox {
+    margin: auto;
+    max-width: 600px;
+    //padding: 1em;
+    background-color: var(--darkModeBg);
+    box-shadow: 0px 0px 2px var(--darkModeTxtClr);
+    border-radius: .5em;
+    .trackBar {
+      padding: .5em;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--darkModeTxtClr);
+      font-family: "audiowide";
+    }
+    .playButton {
+      margin-right: auto;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      display: block;
+      padding: .5em 1em;
+      color: var(--toggleTheme);
+      font-weight: 600;
+      letter-spacing: 1px;
+      box-shadow: 0px 0px 2px var(--darkModeTxtClr);
+      border-radius: 5px;
+    }
+    .playButton:hover {
+      opacity: 1;
+    }
+    .trackName {
+      font-size: .9em;
+      font-weight: bold;
+      margin-right: auto;
+      margin-bottom: .5em;
+    }
+    .trackBar:nth-child(even) {
+      background-color: var(--darkModeClrlgt);
+    }
+  }
+}
+@media (min-width:600px) {
+  .audioLibrary {
+    #trackBox {
+      .trackBar {
+        flex-direction: row-reverse;
+      }
+      .playButton {
+        margin-right: 0;
+      }
+    }
+  }
+}
