@@ -5537,22 +5537,22 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
     right: 15%;
   }
 }
-#toDoList1 {
+#btdList {
   display: none;
 }
 
-#toDoList1.showProject {
+#btdList.showProject {
   display: block;
 }
 
-.todo1-container {
+.btdList-container {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
   color: var(--darkModeTxtClr);
   padding-bottom: 75px;
 }
-.todo1-container .title {
+.btdList-container .title {
   margin: 1em auto;
   text-align: center;
   font-size: 1.5em;
@@ -5561,54 +5561,55 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   border-radius: 0.75rem;
   letter-spacing: 2px;
 }
-.todo1-container .all-tasks {
+.btdList-container .all-tasks {
   margin: auto;
   max-width: 600px;
   text-align: left;
 }
-.todo1-container .all-tasks .task-list-title {
+.btdList-container .all-tasks .task-list-title {
   font-size: 1em;
-  margin: 2em auto;
 }
-.todo1-container .all-tasks .task-list {
+.btdList-container .all-tasks .task-list {
+  margin: 1em 0;
+  list-style: none;
   font-size: 1.2rem;
   line-height: 1.7;
 }
-.todo1-container .all-tasks .newListForm {
+.btdList-container .all-tasks .newListForm {
   display: flex;
   flex-direction: column-reverse;
 }
-.todo1-container .list-name {
+.btdList-container .list-name {
   cursor: pointer;
 }
-.todo1-container .list-name:hover {
+.btdList-container .list-name:hover {
   opacity: 0.7;
 }
-.todo1-container .btdBtn {
+.btdList-container .btdBtn {
   cursor: pointer;
   background: 0;
   border: 0;
   padding: 0;
   color: inherit;
 }
-.todo1-container .btdBtn.create {
+.btdList-container .btdBtn.create {
   font-size: 1.5rem;
   font-weight: 900;
   margin-right: 0.25em;
   transition: opacity 250ms ease-in;
 }
-.todo1-container .btdBtn.create:hover {
+.btdList-container .btdBtn.create:hover {
   opacity: 0.7;
 }
-.todo1-container .btdBtn.delete {
+.btdList-container .btdBtn.delete {
   font-size: 1rem;
   opacity: 0.7;
   transition: color 200ms;
 }
-.todo1-container .btdBtn.delete:hover {
+.btdList-container .btdBtn.delete:hover {
   color: var(--clr-warning);
 }
-.todo1-container .new {
+.btdList-container .new {
   background: transparent;
   border: 0;
   color: inherit;
@@ -5619,75 +5620,77 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   transition: border-bottom 150ms ease-in;
   order: 2;
 }
-.todo1-container .new::-moz-placeholder {
+.btdList-container .new::-moz-placeholder {
   opacity: 0.35;
 }
-.todo1-container .new:-ms-input-placeholder {
+.btdList-container .new:-ms-input-placeholder {
   opacity: 0.35;
 }
-.todo1-container .new::placeholder {
+.btdList-container .new::placeholder {
   opacity: 0.35;
 }
-.todo1-container .new:focus {
+.btdList-container .new:focus {
   border-bottom-width: 3px;
 }
-.todo1-container .new:focus::-moz-placeholder {
+.btdList-container .new:focus::-moz-placeholder {
   opacity: 0.15;
 }
-.todo1-container .new:focus:-ms-input-placeholder {
+.btdList-container .new:focus:-ms-input-placeholder {
   opacity: 0.15;
 }
-.todo1-container .new:focus::placeholder {
+.btdList-container .new:focus::placeholder {
   opacity: 0.15;
 }
-.todo1-container .new.list {
+.btdList-container .new.list {
   font-size: 1.2rem;
 }
-.todo1-container .new.task {
-  margin-bottom: 0;
+.btdList-container .new.task {
+  font-size: 1.2rem;
 }
-.todo1-container .active-list {
+.btdList-container .active-list {
   font-weight: 700;
 }
-.todo1-container .todo-list {
+.btdList-container .todo-list {
   margin: 1em auto;
+  padding-top: 1em;
   color: var(--darkModeTxtClr);
 }
-.todo1-container .todo-header {
+.btdList-container .tasksHeader {
+  font-size: 1.25em;
+}
+.btdList-container .todo-header {
   margin: auto;
   max-width: 600px;
-  padding: 1em 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.todo1-container .list-title {
-  margin: 0 1em 0 0;
-}
-.todo1-container .task-count {
+.btdList-container .task-count {
   margin: 0;
 }
-.todo1-container .todo-body {
+.btdList-container .todo-body {
   padding: 1em;
-  position: relative;
 }
-.todo1-container .new-task-creator .create {
+.btdList-container .new-task-creator {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.btdList-container .new-task-creator .create {
   color: var(--darkModeTxtClr);
 }
-.todo1-container [type=checkbox] {
+.btdList-container [type=checkbox] {
   opacity: 0;
-  position: absolute;
 }
-.todo1-container .task label {
+.btdList-container .task label {
   display: inline-flex;
   align-items: center;
   position: relative;
 }
-.todo1-container .task {
+.btdList-container .task {
   position: relative;
   margin-bottom: 1.25em;
 }
-.todo1-container .task::after {
+.btdList-container .task::after {
   content: "";
   position: absolute;
   right: 0;
@@ -5697,7 +5700,7 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   background: currentColor;
   opacity: 0.1;
 }
-.todo1-container .custom-checkbox {
+.btdList-container .custom-checkbox {
   display: inline-block;
   width: 0.75em;
   height: 0.75em;
@@ -5708,17 +5711,17 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   transform: scale(1);
   transition: transform 200ms ease-in-out;
 }
-.todo1-container .task:hover .custom-checkbox,
-.todo1-container [type=checkbox]:focus + label .custom-checkbox {
+.btdList-container .task:hover .custom-checkbox,
+.btdList-container [type=checkbox]:focus + label .custom-checkbox {
   transform: scale(1.2);
   color: var(--darkModeTxtClr);
 }
-.todo1-container [type=checkbox]:checked + label .custom-checkbox {
+.btdList-container [type=checkbox]:checked + label .custom-checkbox {
   background: var(--darkModeTxtClr);
   border-color: var(--darkModeTxtClr);
   box-shadow: inset 0 0 0px 2px var(--darkModeTxtClr);
 }
-.todo1-container .task label:after {
+.btdList-container .task label:after {
   content: "";
   position: absolute;
   left: 1.5em;
@@ -5730,20 +5733,83 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   transform-origin: right;
   transition: transform 250ms ease-in-out;
 }
-.todo1-container [type=checkbox]:checked + label:after {
+.btdList-container [type=checkbox]:checked + label:after {
   transform: scale(1);
   transform-origin: left;
 }
-.todo1-container .delete-stuff {
+.btdList-container .delete-stuff {
   margin: 1.5em auto;
   display: flex;
   justify-content: space-evenly;
   width: 100%;
   color: var(--darkModeTxtClr);
 }
-.todo1-container .delete-stuff .delete {
+.btdList-container .delete-stuff .delete {
   padding: 0.5em 1em;
   background-color: red;
+}
+
+#bookList {
+  display: none;
+}
+
+#bookList.showProject {
+  display: block;
+}
+
+.bookList .container .form {
+  padding: 1rem;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  margin: auto;
+}
+.bookList .container .form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+.bookList .container .form .form-group .form-control {
+  height: 30px;
+  font-size: calc(1vw + 0.5rem);
+}
+.bookList .container .form .btn {
+  width: 100%;
+  margin: 20px auto;
+  padding: 0.5rem;
+  letter-spacing: 2px;
+  color: var(--darkModeTxtClr);
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--darkModeBg);
+}
+.bookList .container .table {
+  display: table;
+  padding: 1rem;
+  margin: 20px auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.bookList .container .table thead tr th {
+  width: 125px;
+  padding: 0.5rem 1rem;
+}
+.bookList .container .table tbody tr:nth-of-type(odd) {
+  background-color: #c4c4c4;
+}
+.bookList .container .table tbody tr td {
+  text-align: center;
+  width: 125px;
+  padding: 1rem 0.5rem;
+}
+.bookList .container .table tbody tr td a {
+  margin: 5px;
+  padding: 0.25rem 0.5rem;
+  background-color: red;
+  color: white;
+  border-radius: 0.25rem;
+  text-decoration: none;
 }
 
 #basicAudioPlayer {

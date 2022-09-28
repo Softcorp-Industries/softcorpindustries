@@ -333,23 +333,37 @@ showFlipMenuProject();
 showCanvas1Project();
 
 // Storage Projects
-const todoList1Btn = document.getElementById('toDoList1Btn');
+const btdBtn = document.getElementById('btdBtn');
+const bookListBtn = document.getElementById('bookListBtn');
 
-let todoList1BtnShowOpen = false;
+let btdBtnShowOpen = false;
+let bookListBtnShowOpen = false;
 
-function showTodoList1() {
-  todoList1Btn.addEventListener('click', (e) => {
-    if (!todoList1BtnShowOpen) {
+function showBTDList() {
+  btdBtn.addEventListener('click', (e) => {
+    if (!btdBtnShowOpen) {
       enableShowProjectBtn(e);
-      todoList1BtnShowOpen = true;
+      btdBtnShowOpen = true;
     } else {
       disableShowProjectBtn(e);
-      todoList1BtnShowOpen = false
+      btdBtnShowOpen = false
+    }
+  })
+}
+function showBookList() {
+  bookListBtn.addEventListener('click', (e) => {
+    if (!bookListBtnShowOpen) {
+      enableShowProjectBtn(e);
+      bookListBtnShowOpen = true;
+    } else {
+      disableShowProjectBtn(e);
+      bookListBtnShowOpen = false
     }
   })
 }
 
-showTodoList1();
+showBTDList();
+showBookList();
 
 // Web Player Projects
 const basicAudioPlayerBtn = document.getElementById('basicAudioPlayerBtn');
