@@ -1515,7 +1515,7 @@
       <section class="projects" id="storageProject">
         <div class="project">
           <header class="project__header">
-            <h3 class="project__header__title">ToDo List 1</h3>
+            <h3 class="project__header__title">The Better To Do List</h3>
             <article class="project__header__body">
               <p class="project-synopsis">Synopsis:</p>
               <p>
@@ -1562,12 +1562,12 @@
                 </div>
               </div>
               <div class="showBtn">
-                <button id="toDoList1Btn">Show Project</button>
+                <button id="btdBtn">Show Project</button>
               </div>
             </article>
           </header>
-          <section class="todo1" id="toDoList1">
-            <div class="projectBox todo1-container">
+          <section class="btdList" id="btdList">
+            <div class="projectBox btdList-container">
               <p class="title">The Better To Do List</p>
               <div class="all-tasks">
                 <p class="task-list-title">My Lists</p>
@@ -1582,22 +1582,20 @@
               </div>
               <br>
               <div class="todo-list" data-list-display-container>
-
                 <div class="todo-header">
                   <p class="list-title" data-list-title>YouTube</p>
                   <p class="task-count" data-list-count>
                     3 Tasks Remaining
                   </p>
                 </div>
-                <p>
+                <p class="tasksHeader">
                   Tasks
                 </p>
                 <div class="todo-body">
                   <div class="tasks" data-tasks></div>
                   <div class="new-task-creator">
                     <form action="" data-new-task-form>
-                      <input type="text" data-new-task-input class="new task" placeholder="enter new task"
-                        aria-label="enter new task" />
+                      <input type="text" data-new-task-input class="new task" placeholder="enter new task" aria-label="enter new task" />
                       <button class="btdBtn create" aria-label="create new task">
                         +
                       </button>
@@ -1621,14 +1619,89 @@
                   </div>
                 </template>
               </div>
-              <div class="tributeBox">
-                <h3 class="tributeBox__header">Kevin Powell</h3>
-                <div class="trubteBox__text">
-                  <p>para</p>
+            </div>
+            <p class="webTechHeader">Built with</p>
+            <div class="webTech">
+              <div class="webTech__box">
+                <img data-src="img/icon/HTML5_logo.svg.png" alt="JS" />
+              </div>
+              <div class="webTech__box">
+                <img data-src="img/icon/css3-logo3.svg.png" alt="JS" width="31px" />
+              </div>
+              <div class="webTech__box">
+                <img data-src="img/icon/sass-1.svg" alt="JS" width="33px" />
+              </div>
+              <div class="webTech__box">
+                <img data-src="img/icon/javascript-logo.svg.png" alt="JS" width="28px" />
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="project">
+          <header class="project__header">
+            <h3 class="project__header__title">Traversy Book List</h3>
+            <article class="project__header__body">
+              <p class="project-synopsis">Synopsis:</p>
+              <p>
+                This is a 
+              </p>
+              <p class="project-credit">
+                Coded by:
+                <span>Traversy Media</span>
+              </p>
+              <div class="contributorLinks">
+                <div class="contributorLink youtubeLink">
+                  <p>
+                    javaScript:
+                  </p>
+                  <a href="https://www.youtube.com/watch?v=W7FaYfuwu70"><img
+                      src="./img/icon/YouTube Icon/icons8-youtube-3000(-mdpi).png" alt=""></a>
+              
                 </div>
-                <h3 class="tributeBox__header">Web Dev Simplified</h3>
-                <div class="trubteBox__text">
-                  <p>para</p>
+                <div class="contributorLink internetLink">
+                  <p>
+                    WDS
+                  </p>
+                  <a href="https://courses.webdevsimplified.com/" target="_blank"><img src="./img/icon/icons8-internet-64.png" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="showBtn">
+                <button id="bookListBtn">Show Project</button>
+              </div>
+            </article>
+          </header>
+          <section class="TraversyBookList" id="bookList">
+            <div class="projectBox">
+              <div class="bookList">
+                <div class="container">
+                  <form class="form" id="book-form">
+                    <div class="form-group">
+                      <label for="title">Title</label>
+                      <input type="text" id="title" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                      <label for="author">Author</label>
+                      <input type="text" id="author" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                      <label for="isbn">ISBN#</label>
+                      <input type="text" id="isbn" class="form-control" />
+                    </div>
+                    <input type="submit" value="Add Book" class="btn btn-primary btn-block" />
+                  </form>
+                  <table id="bookListTable" class="bookListTable table">
+                    <thead>
+                      <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN#</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody id="book-list">
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
