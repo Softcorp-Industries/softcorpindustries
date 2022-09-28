@@ -27,53 +27,53 @@
   border-radius: 15px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  // This code for the checkbox is from Codepen by Marcus Burnette
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  label {
+    @include shadowSm-inset;
+    position: relative;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 2em;
+    background: var(--inputToggleTheme);
+    display: block;
+    border-radius: 100px;
+  }
+  label:after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    width: 85px;
+    height: 85px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+    background-image: url("img/icon/936949-200.png");
+    background-size: contain;
+    background-position: center;
+  }
+  input:checked + label {
+    background: var(--inputToggleTheme);
+  }
+  input:checked + label:after {
+    left: calc(100% - 7px);
+    transform: translateX(-100%);
+    background-image: url("img/icon/sun_light_mode_day-2-512.webp");
+    background-size: contain;
+    background-position: center;
+  }
+  label:active:after {
+    width: 130px;
+  }
 }
 
-// This code for the checkbox is from Codepen by Marcus Burnette
-input[type="checkbox"] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
-label {
-  @include shadowSm-inset;
-  position: relative;
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 200px;
-  height: 100px;
-  margin-bottom: 2em;
-  background: var(--inputToggleTheme);
-  display: block;
-  border-radius: 100px;
-}
-label:after {
-  content: "";
-  position: absolute;
-  top: 7px;
-  left: 5px;
-  width: 85px;
-  height: 85px;
-  background: #fff;
-  border-radius: 90px;
-  transition: 0.3s;
-  background-image: url("img/icon/936949-200.png");
-  background-size: contain;
-  background-position: center;
-}
-input:checked + label {
-  background: var(--inputToggleTheme);
-}
-input:checked + label:after {
-  left: calc(100% - 7px);
-  transform: translateX(-100%);
-  background-image: url("img/icon/sun_light_mode_day-2-512.webp");
-  background-size: contain;
-  background-position: center;
-}
-label:active:after {
-  width: 130px;
-}
 .toggleIcon {
   border-radius: 50%;
 }
