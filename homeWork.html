@@ -14,10 +14,8 @@
   <title>My Home Work</title>
   <link rel="stylesheet" href="main.css">
   <script type="module" src="main.js"></script>
-  <script type="module" src="global.js"></script>
+  <script type="module" src="utilitiesFull.js"></script>
   <script type="module" src="homeWork.js"></script>
-  <script defer src="js/greeting.js"></script>
-  <script defer src="js/top.js"></script>
 
 </head>
 
@@ -1569,42 +1567,47 @@
             </article>
           </header>
           <section class="todo1" id="toDoList1">
-            <div class="projectBox">
-              <p class="title">Stuff I need to do</p>
+            <div class="projectBox todo1-container">
+              <p class="title">The Better To Do List</p>
               <div class="all-tasks">
                 <p class="task-list-title">My Lists</p>
                 <ul class="task-list" data-lists></ul>
                 <form action="" data-new-list-form>
-                  <input type="text" class="new list" data-new-list-input placeholder="new list item"
+                  <input type="text" class="new list" data-new-list-input placeholder="create new list"
                     aria-label="new list name" />
-                  <button class="btn create" aria-label="create new list">
+                  <button class="btdBtn create" aria-label="create new list">
                     +
                   </button>
                 </form>
               </div>
+              <br>
               <div class="todo-list" data-list-display-container>
+
                 <div class="todo-header">
                   <p class="list-title" data-list-title>YouTube</p>
                   <p class="task-count" data-list-count>
                     3 Tasks Remaining
                   </p>
                 </div>
+                <p>
+                  Tasks
+                </p>
                 <div class="todo-body">
                   <div class="tasks" data-tasks></div>
                   <div class="new-task-creator">
                     <form action="" data-new-task-form>
                       <input type="text" data-new-task-input class="new task" placeholder="enter new task"
                         aria-label="enter new task" />
-                      <button class="btn create" aria-label="create new task">
+                      <button class="btdBtn create" aria-label="create new task">
                         +
                       </button>
                     </form>
                   </div>
                   <div class="delete-stuff">
-                    <button class="btn delete" data-clear-complete-tasks-button>
+                    <button class="btdBtn delete" data-clear-complete-tasks-button>
                       clear completed tasks
                     </button>
-                    <button class="btn delete" data-delete-list-button>
+                    <button class="btdBtn delete" data-delete-list-button>
                       delete list
                     </button>
                   </div>
@@ -1737,32 +1740,32 @@
           <header class="project__header">
             <p class="project__header__title">Audio Player V2</p>
             <article class="project__header__body">
-                <p class="project-synopsis">Synopsis:</p>
-                <p>
-                  The primary goal was to design toggle buttons with
-                  'input' and 'div' elements and use differnt effects for
-                  each
-                </p>
-                <p class="project-credit">
-                  Design by: <span>Softcorp Industries</span>
-                </p>
-                <div class="contributorLinks">
-                  <div class="contributorLink youtubeLink">
-                    <p>
-                      YouTube:
-                    </p>
-                    <a href=""><img src="./img/icon/YouTube Icon/icons8-youtube-3000(-mdpi).png" alt=""></a>
+              <p class="project-synopsis">Synopsis:</p>
+              <p>
+                The primary goal was to design toggle buttons with
+                'input' and 'div' elements and use differnt effects for
+                each
+              </p>
+              <p class="project-credit">
+                Design by: <span>Softcorp Industries</span>
+              </p>
+              <div class="contributorLinks">
+                <div class="contributorLink youtubeLink">
+                  <p>
+                    YouTube:
+                  </p>
+                  <a href=""><img src="./img/icon/YouTube Icon/icons8-youtube-3000(-mdpi).png" alt=""></a>
 
-                  </div>
-                  <div class="contributorLink internetLink">
-                    <p>
-                      Web Site:
-                    </p>
-                    <a href="http://softcorpindustries.tech" target="_blank"><img
-                        src="./img/icon/icons8-internet-64.png" alt="">
-                    </a>
-                  </div>
                 </div>
+                <div class="contributorLink internetLink">
+                  <p>
+                    Web Site:
+                  </p>
+                  <a href="http://softcorpindustries.tech" target="_blank"><img src="./img/icon/icons8-internet-64.png"
+                      alt="">
+                  </a>
+                </div>
+              </div>
               <div class="showBtn">
                 <button id="webPlayerV1Btn">Show Project</button>
               </div>
@@ -1774,7 +1777,7 @@
                 <div id="analyzerBox">
                   <canvas id="graphics"></canvas>
                 </div>
-                <button class="btn btn-playPause" id="playPauseBtn2">
+                <button class="controlBtn btn-playPause" id="playPauseBtn2">
                   Play
                 </button>
                 <div class="player__tapeDeck">
@@ -1784,7 +1787,7 @@
                     <span id="durTimeText2"></span>
                   </div>
                 </div>
-                <button class="btn btn-mute" id="muteBtn2">Mute</button>
+                <button class="controlBtn btn-mute" id="muteBtn2">Mute</button>
                 <input id="volumeSlider2" type="range" min="0" max="100" value="100" step="1" />
               </div>
             </div>
