@@ -1,23 +1,46 @@
-/*
+const pathBtns = document.querySelectorAll(".pathBtn button");
+const webDevBtns = document.querySelectorAll(".webDevBtn button");
 
-    There is bug that clears the read more btn text
+let pathBtnOpen = false;
+let webDevBtnOpen = false;
 
-let selectedBtn = false;
-
-document.querySelector('#thePath').addEventListener('click', (e) => {
-    //console.log(e.target);
-
-    if (!selectedBtn && e.target.classList.contains('showBtn')) {
-        e.target.parentElement.parentElement.nextElementSibling.firstElementChild.style.display = 'grid';
-        e.target.parentElement.parentElement.nextElementSibling.firstElementChild.classList.add('openWebDev');
-        selectedBtn = true;
+function PathBtn() {
+  pathBtns.forEach((pathBtn) => pathBtn.addEventListener("click", (e) => {
+    if (!pathBtnOpen) {
+      e.target.parentElement.parentElement.nextElementSibling.classList.add('showPath');
+      e.target.innerHTML = 'Hide';
+      e.target.style.outline = "2px solid var(--txtChange)"
+      pathBtnOpen = true;
     } else {
-        e.target.parentElement.parentElement.nextElementSibling.firstElementChild.style.display = 'none';
-        e.target.parentElement.parentElement.nextElementSibling.firstElementChild.classList.remove('openWebDev');
-        selectedBtn = false;
+      e.target.parentElement.parentElement.nextElementSibling.classList.remove('showPath');
+      e.target.innerHTML = 'Show';
+      e.target.style.outline = "none"
+      pathBtnOpen = false
     }
-})
-*/
+  }))
+}
+function WebDevBtn() {
+    webDevBtns.forEach((devBtn) => devBtn.addEventListener("click", (e) => {
+        if (!webDevBtnOpen) {
+            e.target.parentElement.parentElement.nextElementSibling.firstElementChild.style.display = 'grid';
+            e.target.parentElement.parentElement.nextElementSibling.firstElementChild.classList.add('openWebDev');
+            e.target.style.outline = "2px solid var(--txtChange)"
+            e.target.innerHTML = "Hide Report Card"
+            webDevBtnOpen = true;
+        } else {
+            e.target.parentElement.parentElement.nextElementSibling.firstElementChild.style.display = 'none';
+            e.target.parentElement.parentElement.nextElementSibling.firstElementChild.classList.remove('openWebDev');
+            e.target.style.outline = "none"
+            e.target.innerHTML = "Show Report Card"
+            webDevBtnOpen = false;
+        }
+    }))
+}
+
+PathBtn();
+WebDevBtn();
+
+/*
 
 const fccResBtn = document.getElementById('fccResBtn');
 const frontEndBtn = document.getElementById('frontEndBtn');
@@ -104,7 +127,6 @@ ShowFrontEndList();
 showFullStackList();
 showServerSideList();
 
-
 function enableShowMore(e) {
     console.log(e.target.nextElementSibling)
     e.target.parentElement.nextElementSibling.style.display = 'block';
@@ -114,6 +136,7 @@ function disableShowMore(e) {
     e.target.parentElement.nextElementSibling.style.display = 'none'
     e.target.style.outline = "none"
 }
+
 function enableShowCourse(e) {
     console.log(e.target.nextElementSibling)
     e.target.nextElementSibling.style.display = 'block';
@@ -182,7 +205,7 @@ function showTechSkills() {
 showtutorials();
 showTechSkills();
 showDevCourses();
-
+*/
 const fccCourseBtn = document.getElementById('fccCoursesBtn');
 const w3CourseBtn = document.getElementById('w3CoursesBtn')
 const softcorpNotesBtn = document.getElementById('softcorpNotesBtn');
@@ -246,72 +269,3 @@ function enableCourseShow(e) {
 function disableCourseShow(e) {
     e.target.nextElementSibling.style.display = 'none'
 }
-
-
-const readMoreBtn = document.getElementById('readMoreBtn');
-const readMoreBtn2 = document.getElementById('readMoreBtn2');
-const readMoreBtn3 = document.getElementById('readMoreBtn3');
-const readMoreImg = document.getElementById('readMoreImg');
-
-let readMoreOpen = false;
-let readMore2Open = false;
-let readMore3Open = false;
-
-function enableReadMore(e) {
-    //console.log(e.target.parentElement.previousElementSibling);
-    e.target.parentElement.previousElementSibling.style.display = 'block';
-    e.target.parentElement.previousElementSibling.classList.add('readMoreAnim')
-    e.target.parentElement.previousElementSibling.classList.remove('readMoreAnimRev')
-    e.target.innerHTML = 'Read Less';
-}
-function disableReadMore(e) {
-    e.target.parentElement.previousElementSibling.classList.remove('readMoreAnim')
-    e.target.parentElement.previousElementSibling.classList.add('readMoreAnimRev')
-    e.target.parentElement.previousElementSibling.style.display = 'none'
-    e.target.innerHTML = 'Read More';
-    readMoreBtn.style.display = 'block';
-}
-
-function readMore() {
-    document.addEventListener('DOMContentLoaded', () => {
-        readMoreBtn.addEventListener('click', (e) => {
-            if (!readMoreOpen) {
-                enableReadMore(e);
-                readMoreOpen = true;
-            } else {
-                disableReadMore(e);
-                readMoreOpen = false;
-            }
-        })
-    })
-}
-function readMore2() {
-    document.addEventListener('DOMContentLoaded', () => {
-        readMoreBtn2.addEventListener('click', (e) => {
-            if (!readMore2Open) {
-                enableReadMore(e);
-                readMore2Open = true;
-            } else {
-                disableReadMore(e);
-                readMore2Open = false;
-            }
-        })
-    })
-}
-function readMore3() {
-    document.addEventListener('DOMContentLoaded', () => {
-        readMoreBtn3.addEventListener('click', (e) => {
-            if (!readMore3Open) {
-                enableReadMore(e);
-                readMore3Open = true;
-            } else {
-                disableReadMore(e);
-                readMore3Open = false;
-            }
-        })
-    })
-}
-readMore();
-readMore2();
-readMore3();
-

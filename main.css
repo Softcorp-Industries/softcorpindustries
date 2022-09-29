@@ -600,6 +600,10 @@ a {
   padding: 1em;
 }
 
+.devCourses.showPath {
+  display: block;
+}
+
 .devCourse {
   margin: 1em auto;
   width: 100%;
@@ -984,7 +988,7 @@ a {
   display: flex;
   align-items: center;
 }
-.reportCardBtn .btn {
+.reportCardBtn button {
   box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
   cursor: pointer;
   display: block;
@@ -1003,13 +1007,9 @@ a {
   outline: none;
 }
 
-.reportCardBtn .btn:hover {
+.reportCardBtn button:hover {
   transform: scale(1.05);
   letter-spacing: 2px;
-}
-
-#HWReadMoreBtn {
-  margin-bottom: 0.5em;
 }
 
 .readMoreBtn {
@@ -1020,6 +1020,7 @@ a {
   align-items: center;
   justify-content: space-evenly;
   width: 100px;
+  margin-bottom: 0.5em;
 }
 
 .readMore {
@@ -1029,7 +1030,6 @@ a {
   outline: none;
   background: none;
   font-weight: 500;
-  padding-bottom: 1px;
 }
 
 .readMoreBtn:hover {
@@ -1042,25 +1042,29 @@ a {
   transform: rotateZ(90deg);
 }
 
-.showMore {
-  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-  cursor: pointer;
+.pathBtn {
   margin: auto;
   display: block;
   width: 50%;
   max-width: 350px;
+  border-radius: 0.75em;
+}
+.pathBtn button {
+  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 100%;
   padding: 0.75em 0;
   color: var(--txtChange);
   font-size: 0.8em;
   font-family: "Audiowide";
   letter-spacing: 1px;
-  outline: none;
-  border: none;
-  border-radius: 0.75em;
   background-color: var(--darkModeClrlgt);
+  border-radius: 0.75em;
 }
 
-.showMore:hover {
+.pathBtn button:hover {
   transform: scale(1.05);
   letter-spacing: 2px;
 }
@@ -1068,6 +1072,10 @@ a {
 .showMoreSection {
   display: none;
   margin-top: 2em;
+}
+
+.showMoreSection.showPath {
+  display: block;
 }
 
 .readMoreSection {
@@ -2432,6 +2440,10 @@ a {
   margin: auto;
   max-width: 800px;
   display: none;
+}
+
+.webDevelopment.showPath {
+  display: block;
 }
 
 .webDevelopment-list {

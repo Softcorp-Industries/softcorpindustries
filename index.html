@@ -15,10 +15,10 @@
   <link rel="stylesheet" href="main.css" />
   <script type="module" src="main.js"></script>
   <script type="module" src="portfolio.js"></script>
-  <script type="module" src="global.js"></script>
-  <script defer src="js/greeting.js"></script>
+  <script type="module" src="utilitiesFull.js"></script>
   <script defer src="js/showBtns.js"></script>
-  <script defer src="js/top.js"></script>
+  <script defer src="js/rmBtns.js"></script>
+
 </head>
 
 <body data-darkMode="light" id="darkModeFilter">
@@ -258,7 +258,9 @@
               pause the lecture at any time and practice writing actual code
               is "limitless learning for anyone's pace".
             </p>
-            <button class="showMore" id="tutorialsBtn">Show Tutor's</button>
+            <div class="pathBtn">
+              <button id="tutorialsBtn">Show</button>
+            </div>
           </div>
           <section class="showMoreSection">
             <div class="filler-body">
@@ -405,7 +407,7 @@
             </div>
           </section>
         </div>
-        <div class="readMoreBtn">
+        <div class="readMoreBtn rmBtn">
           <button class="readMore" id="readMoreBtn">Read More</button>
         </div>
       </article>
@@ -450,7 +452,9 @@
               that looks at other technologies the the node.js stack covers
               in one language.
             </p>
-            <button class="showMore" id="techSkillsBtn">Show Skills</button>
+            <div class="pathBtn">
+              <button id="techSkillsBtn">Show</button>
+            </div>
           </div>
           <section class="webDevelopment">
             <section class="reportCard">
@@ -458,8 +462,8 @@
               <p class="reportCard__summary">
                 HTML, CSS and Vanilla JavaScript.
               </p>
-              <div class="reportCardBtn">
-                <button class="btn showBtn" id="frontEndBtn">
+              <div class="reportCardBtn webDevBtn">
+                <button class="showBtn" id="frontEndBtn">
                   Show Report Card
                 </button>
               </div>
@@ -547,8 +551,8 @@
             <section class="reportCard">
               <p class="reportCard__header">Full-Stack Development</p>
               <p class="reportCard__summary">MERN, MEAN & MEVN Stack</p>
-              <div class="reportCardBtn">
-                <button class="btn showBtn" id="fullStackBtn">
+              <div class="reportCardBtn webDevBtn">
+                <button class="showBtn" id="fullStackBtn">
                   Show Report Card
                 </button>
               </div>
@@ -622,8 +626,8 @@
             <section class="reportCard">
               <p class="reportCard__header">Back-End Development</p>
               <p class="reportCard__summary">Server Side Programming</p>
-              <div class="reportCardBtn">
-                <button class="btn showBtn" id="serverSideBtn">
+              <div class="reportCardBtn webDevBtn">
+                <button class="showBtn" id="serverSideBtn">
                   Show Report Card
                 </button>
               </div>
@@ -664,7 +668,7 @@
             </section>
           </section>
         </div>
-        <div class="readMoreBtn">
+        <div class="readMoreBtn rmBtn">
           <button class="readMore" id="readMoreBtn2">Read More</button>
         </div>
       </article>
@@ -694,9 +698,11 @@
           </div>
           <div class="showMoreHeader">
             <h3 class="sectionHeader">Web Development Courses</h3>
-            <button class="showMore" id="devCoursesBtn">
-              View Courses
+            <div class="pathBtn">
+            <button id="devCoursesBtn">
+              Show
             </button>
+            </div>
           </div>
           <section class="devCourses">
             <h4 class="devCourse-header">Free Code Camp</h4>
@@ -725,8 +731,8 @@
               <section class="reportCard">
                 <h4 class="reportCard__header">Responsive Web Design</h4>
                 <p>HTML, CSS</p>
-                <div class="reportCardBtn">
-                  <button class="btn showBtn" id="fccResBtn">
+                <div class="reportCardBtn webDevBtn">
+                  <button class="showBtn" id="fccResBtn">
                     Show Projects
                   </button>
                 </div>
@@ -867,7 +873,7 @@
             </section>
           </section>
         </div>
-        <div class="readMoreBtn">
+        <div class="readMoreBtn rmBtn">
           <button class="readMore" id="readMoreBtn3">Read More</button>
         </div>
       </article>

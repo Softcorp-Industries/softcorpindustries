@@ -1,38 +1,48 @@
+//  Code for all the Chapter and Project buttons
 
-const readMoreBtn = document.getElementById('readMoreBtn');
+const chapterBtns = document.querySelectorAll(".chapterBtn button");
+const projectBtns = document.querySelectorAll(".showProject button");
 
-let readMoreOpen = false;
+let showChapterOpen = false;
+let showProjectOpen = false;
 
-function enableReadMore(e) {
-  console.log(e.target.parentElement.previousElementSibling);
-  e.target.parentElement.previousElementSibling.style.display = 'block';
-  e.target.parentElement.previousElementSibling.classList.add('readMoreAnim')
-  e.target.parentElement.previousElementSibling.classList.remove('readMoreAnimRev')
-  e.target.innerHTML = 'Read Less';
+function ShowChapter() {
+  chapterBtns.forEach((chapterBtn) => chapterBtn.addEventListener("click", (e) => {
+    if (!showChapterOpen) {
+      e.target.parentElement.parentElement.nextElementSibling.classList.add('showProject');
+      e.target.innerHTML = 'Hide Projects';
+      e.target.style.outline = "2px solid var(--txtChange)"
+      showChapterOpen = true;
+    } else {
+      e.target.parentElement.parentElement.nextElementSibling.classList.remove('showProject');
+      e.target.innerHTML = 'Show Projects';
+      e.target.style.outline = "none"
+      showChapterOpen = false
+    }
+  }))
 }
-function disableReadMore(e) {
-  e.target.parentElement.previousElementSibling.classList.remove('readMoreAnim')
-  e.target.parentElement.previousElementSibling.classList.add('readMoreAnimRev')
-  e.target.parentElement.previousElementSibling.style.display = 'none'
-  e.target.innerHTML = 'Read More';
-  readMoreBtn.style.display = 'block';
+function ShowProject() {
+  projectBtns.forEach((projectBtn) => projectBtn.addEventListener("click", (e) => {
+    if (!showProjectOpen) {
+      e.target.parentElement.parentElement.parentElement.nextElementSibling.classList.add('showProject');
+      e.target.innerHTML = 'Hide Project';
+      e.target.style.outline = "2px solid var(--txtChange)"
+      showProjectOpen = true;
+    } else {
+      e.target.parentElement.parentElement.parentElement.nextElementSibling.classList.remove('showProject');
+      e.target.innerHTML = 'Show Project';
+      e.target.style.outline = "none"
+      showProjectOpen = false;
+    }
+  }));
 }
+ShowChapter();
+ShowProject();
 
-function readMore() {
-  document.addEventListener('DOMContentLoaded', () => {
-    readMoreBtn.addEventListener('click', (e) => {
-      if (!readMoreOpen) {
-        enableReadMore(e);
-        readMoreOpen = true;
-      } else {
-        disableReadMore(e);
-        readMoreOpen = false;
-      }
-    })
-  })
-}
-readMore();
 
+//  Original Code for the Chapter and Project buttons
+
+/*
 function enableShowProjectsBtn(e) {
   e.target.parentElement.parentElement.nextElementSibling.classList.add('showProject');
   e.target.innerHTML = 'Hide Projects';
@@ -57,7 +67,6 @@ let animBtnShowOpen = false;
 let storageBtnShowOpen = false;
 let webPlayerShowOpen = false;
 let uiBtnShowOpen = false;
-
 
 function showButtonProjects() {
   buttonShow.addEventListener('click', (e) => {
@@ -486,3 +495,4 @@ showTablet_1Project();
 showTablet_2Project();
 showPhone_1Project();
 showPhone_2Project();
+*/
