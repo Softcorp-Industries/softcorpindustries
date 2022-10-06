@@ -6265,39 +6265,16 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   border-radius: 0.5em;
 }
 
-.newEmployeeForm {
+.newForms {
   margin: 2em auto;
   max-width: 750px;
   border-radius: 0.5em;
 }
-.newEmployeeForm legend {
+.newForms legend {
   margin: auto;
   padding: 0 0.75em;
   font-size: 1.25em;
   font-weight: 600;
-}
-
-.btn {
-  box-shadow: inset -3px -3px 5px rgba(83, 83, 83, 0.6), inset 3px 3px 5px rgba(202, 202, 202, 0.6);
-  display: block;
-  width: calc(7.5vw + 8rem);
-  padding: 0.4rem 0.5rem;
-  font-family: "Audiowide";
-  font-size: 14px;
-  font-weight: 600;
-  color: purple;
-  text-align: center;
-  text-decoration: none;
-  letter-spacing: 0.25rem;
-  border: none;
-  background-color: var(--bgFilterDrk);
-  border-radius: 1rem;
-}
-
-.btn:hover {
-  background-color: purple;
-  color: white;
-  box-shadow: none;
 }
 
 .form-box {

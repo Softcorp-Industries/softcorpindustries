@@ -164,22 +164,22 @@
               </article>
               <p class="project__header__title">Employee's</p>
             </header>
-            <div class="tableBox employeeTable programTables">
-              <table>
+            <div class="tableBox programTables" id="employeeTable">
+              <table class="table">
                 <thead>
                   <th>ID#</th>
                   <th>Name</th>
                   <th>Position</th>
                   <th></th>
                 </thead>
-                <tbody id="employeeTableBody">
+                <tbody id="employeeTableBody" class="tableBody">
                 </tbody>
               </table>
             </div>
             <div class="showBtn">
               <button id="NewEmployeeFormBtn">Add New Employee</button>
             </div>
-            <section class="newEmployeeForm">
+            <section class="newForms">
               <p class="subHeader">New Employee Form</p>
               <div class="formWrapper">
                 <form id="newEmployee-form" class="form">
@@ -202,190 +202,112 @@
                   </div>
                   <div class="form-box">
                     <label for="employeeContactNumber">Contact Number</label>
-                    <input type="number" id="employeeContactNumber" name="employeeContactNumber" placeholder="Enter Phone or Cell Number" />
+                    <input type="number" id="employeeContactNumber" name="employeeContactNumber"
+                      placeholder="Enter Phone or Cell Number" />
                   </div>
                   <div class="form-box">
                     <label for="employeeEmail">E-mail</label>
                     <input type="employeeEmail" id="employeeEmail" name="email" placeholder="E-Mail Address" />
                   </div>
-                  <button class="submitBtn" type="submit">Add New Employee</button>
+                  <button class="submitBtn" type="submit">Add Employee</button>
                 </form>
               </div>
             </section>
           </section>
           <section class="project">
-            <div class="project__header">
+            <header class="project__header">
               <p class="project__header__title">Tool's</p>
+            </header>
+            <div class="tableBox programTables" id="toolTable">
+              <table class="table">
+                <thead>
+                  <th>ID#</th>
+                  <th>Make & Type</th>
+                </thead>
+                <tbody id="toolTableBody" class="tableBody">
+                </tbody>
+              </table>
             </div>
-            <section class="toolTable programTables" id="toolTable">
-              <section class="tableBox toolTableBox">
-                <table class="table tableTools">
-                  <thead>
-                    <tr>
-                      <th>Tool ID</th>
-                      <th>Make</th>
-                      <th>Model</th>
-                      <th>Type</th>
-                      <th>Serial Number</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>6788</td>
-                      <td>RIGID</td>
-                      <td>P 700</td>
-                      <td>Power Threader</td>
-                      <td>77774xc333</td>
-                    </tr>
-                    <tr>
-                      <td>7675</td>
-                      <td>DeWalt</td>
-                      <td>DWCD-6500</td>
-                      <td>Cordless Drill</td>
-                      <td>DW990777</td>
-                    </tr>
-                    <tr>
-                      <td>4564</td>
-                      <td>DeWalt</td>
-                      <td>DWRS-5350</td>
-                      <td>Rotary Sander</td>
-                      <td>DW998865</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </section>
-            </section>
             <div class="showBtn">
               <button id="NewToolFormBtn">Add New Tool</button>
             </div>
-            <div class="newToolform">
+            <section class="newForms">
+              <p class="subHeader">New Tool Form</p>
               <div class="formWrapper">
-                <form id="newTool" class="form">
-                  <div class="form__header">
-                    <p class="subHeader">New Tool Form</p>
-                    <p>Softcorp Industries</p>
+                <form id="newTool-form" class="form">
+                  <div class="form-box">
+                    <label for="firstName">ID#</label>
+                    <input type="text" id="firstName" name="firstName" />
                   </div>
-                  <hr />
-                  <div class="form__body">
-                    <div class="newTool__contact">
-                      <div class="form-box">
-                        <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" name="firstName" />
-                      </div>
-                      <div class="form-box">
-                        <label for="middleName">Middle Name</label>
-                        <input type="text" id="middleName" name="middleName" />
-                      </div>
-                      <div class="form-box">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" name="lastName" />
-                      </div>
-                      <div class="form-box">
-                        <label for="contactNumber">Contact Number</label>
-                        <input type="number" id="phoneNumber" name="contactNumber" />
-                      </div>
-                      <div class="form-box">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" />
-                      </div>
-                    </div>
+                  <br>
+                  <div class="form-box">
+                    <label for="middleName">Middle Name</label>
+                    <input type="text" id="middleName" name="middleName" />
                   </div>
-                  <button class="btn" type="submit">Submit</button>
+                  <div class="form-box">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" />
+                  </div>
+                  <div class="form-box">
+                    <label for="contactNumber">Contact Number</label>
+                    <input type="number" id="phoneNumber" name="contactNumber" />
+                  </div>
+                  <div class="form-box">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" />
+                  </div>
+                  <button class="btn" type="submit">Add Tool</button>
                 </form>
               </div>
-            </div>
+            </section>
           </section>
           <section class="project">
-            <div class="project__header">
-              <p class="project__header__title">Vehicle"s</p>
+            <header class="project__header">
+              <p class="project__header__title">Vehicle's</p>
+            </header>
+            <div class="tableBox programTables" id="vehicleTable">
+              <table class="table">
+                <thead>
+                  <th>ID#</th>
+                  <th>Year</th>
+                  <th>Vehicle</th>
+                </thead>
+                <tbody id="vehicleTableBody" class="tableBody">
+                </tbody>
+              </table>
             </div>
-            <section class="vehicleTable programTables" id="vehicleTable">
-              <section class="wrapper">
-                <div class="tableBox">
-                  <table class="table tableVehicles">
-                    <thead>
-                      <tr>
-                        <th>Vehicle ID</th>
-                        <th>VIN #</th>
-                        <th>Make</th>
-                        <th>Model</th>
-                        <th>Year</th>
-                        <th>Color</th>
-                        <th>Fuel Type</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>765439</td>
-                        <td>751-286-556</td>
-                        <td>Ford</td>
-                        <td>F-150 4X4</td>
-                        <td>2018</td>
-                        <td>Light Brown</td>
-                        <td>Diesel</td>
-                      </tr>
-                      <tr>
-                        <td>958834</td>
-                        <td>679-339-999</td>
-                        <td>Crysler</td>
-                        <td>Lebaron</td>
-                        <td>2011</td>
-                        <td>Silver</td>
-                        <td>Natural Gas</td>
-                      </tr>
-                      <tr>
-                        <td>544458</td>
-                        <td>773-339-298</td>
-                        <td>Tesla</td>
-                        <td>The really cool One</td>
-                        <td>2021</td>
-                        <td>Purple</td>
-                        <td>Electric</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </section>
-            </section>
             <div class="showBtn">
               <button id="NewVehicleFormBtn">Add New Vehicle</button>
             </div>
-            <div class="newVehicleform">
+            <section class="newForms">
+              <p class="subHeader">New Vehicle Form</p>
               <div class="formWrapper">
-                <form id="newVehicle" class="form">
-                  <div class="form__header">
-                    <p class="subHeader">New Vehicle Form</p>
-                    <p>Softcorp Industries</p>
+                <form id="newVehicle-form" class="form">
+                  <div class="form-box">
+                    <label for="vehicleId">ID#</label>
+                    <input type="text" id="vehicleId" name="vehicleId" />
                   </div>
-                  <hr />
-                  <div class="form__body">
-                    <div class="newVehicle__contact">
-                      <div class="form-box">
-                        <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" name="firstName" />
-                      </div>
-                      <div class="form-box">
-                        <label for="middleName">Middle Name</label>
-                        <input type="text" id="middleName" name="middleName" />
-                      </div>
-                      <div class="form-box">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" name="lastName" />
-                      </div>
-                      <div class="form-box">
-                        <label for="contactNumber">Contact Number</label>
-                        <input type="number" id="phoneNumber" name="contactNumber" />
-                      </div>
-                      <div class="form-box">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" />
-                      </div>
-                    </div>
+                  <br>
+                  <div class="form-box">
+                    <label for="middleName">Middle Name</label>
+                    <input type="text" id="middleName" name="middleName" />
                   </div>
-                  <button class="btn" type="submit">Submit</button>
+                  <div class="form-box">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" />
+                  </div>
+                  <div class="form-box">
+                    <label for="contactNumber">Contact Number</label>
+                    <input type="number" id="phoneNumber" name="contactNumber" />
+                  </div>
+                  <div class="form-box">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" />
+                  </div>
+                  <button class="btn" type="submit">Add Vehicle</button>
                 </form>
               </div>
-            </div>
+            </section>
           </section>
         </div>
       </section>

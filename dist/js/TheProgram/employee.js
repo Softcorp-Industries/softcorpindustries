@@ -49,6 +49,17 @@ export const EMPLOYEE_ARR = [
   }
 ]
 
+export class Employee {
+  constructor(employeeId, employeeFirstName, employeeLastName, employeePosition, employeeContactNumber, employeeEmail) {
+    this.employeeId = employeeId;
+    this.employeeFirstName = employeeFirstName;
+    this.employeeLastName = employeeLastName;
+    this.employeePosition = employeePosition;
+    this.employeeContactNumber = employeeContactNumber;
+    this.employeeEmail = employeeEmail;
+  }
+}
+
 
 
 //console.log(JSON.stringify(EMPLOYEE_ARR, null, " "));
