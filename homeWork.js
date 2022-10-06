@@ -1,4 +1,4 @@
-import * as homeWorkShowBtns from './js/HomeWork/homeWorkShowBtns.js';
+import * as homeWorkShowBtns from './js/hwBtns.js';
 
 import * as BtnProjects from './js/HomeWork/BtnProjects/btnProjects.js';
 import * as ImgProjects from './js/HomeWork/ImgProjects/imgProjects.js';
