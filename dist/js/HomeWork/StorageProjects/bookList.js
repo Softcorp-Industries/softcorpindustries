@@ -22,10 +22,10 @@ class UI {
         isbn: "45545",
       },
     ];
-
+    /*
     const books = StoredBooks;
     books.forEach((book) => UI.addBookToList(book));
-
+    */
     const booksSt = Store.getBooks();
     booksSt.forEach((book) => UI.addBookToList(book));
   }
@@ -68,6 +68,7 @@ class UI {
     document.querySelector("#isbn").value = "";
   }
 }
+
 // Store Class: Handles Storage
 class Store {
   static getBooks() {
@@ -98,6 +99,7 @@ class Store {
     localStorage.setItem('booksSt', JSON.stringify(books));
   }
 }
+
 // Event: Display Books
 document.addEventListener("DOMContentLoaded", UI.displayBooks);
 

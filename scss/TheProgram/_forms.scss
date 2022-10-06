@@ -1,71 +1,50 @@
 @use "../_global" as *;
 @use "../_mixin" as *;
-.formBox {
+.formWrapper {
   //@include shadowSm;
-  width: 95%;
-  max-width: 725px;
-  margin: 50px auto;
+  //width: 100%;
+  height: 100%;
+  max-width: 750px;
+  margin: auto;
   border-radius: 1em;
 }
 .form {
-  margin: auto;
-  padding: 0.5rem;
+  //margin: auto;
+  width: 100%;
+  padding: 1em;
   letter-spacing: 2px;
-  background-color: black;
-  background-image: url('./img/Vintage Background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  //border-radius: 0.25rem;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
-  &__header {
-    width: 100%;
-    margin: auto;
-    padding: .5rem;
-    border: 1.6px solid var(--primaryBackground);
-    border-radius: 0.25rem 0.25rem 0 0;
-    //background-color: var(--bgFilterDrk);
-    //background-image: url("img/background_2.png");
-    background-size: cover;
-    h1 {
-      margin-bottom: 10px;
-      font-size: 26px;
-      color: var(--jsThemeClr);
-      text-shadow: 0px 0px 4px var(--black);
-    }
-    h3 {
-      color: var(--black);
-      font-size: 16px;
-    }
-  }
-  &__subHeader{
-    color: var(--jsThemeClr);
-    font-size: 16px;
-    text-align: left;
-    text-shadow: 0px 0px 3px var(--black);
-    padding: 1rem;
-  }
-  &__body {
-    width: 100%;
-    max-width: 300px;
-    padding: 1rem;
-    color: var(--jsThemeClr);
-    font-size: 14px;
-    font-weight: 700;
-    //text-shadow: 0px 0px 4px black;
-    letter-spacing: 2px;
-    //background-image: url("img/background_2.png");
-    background-size: cover;
-    //background-color: var(--bgFilterDrk);
-    margin-bottom: calc(1vw + 0.75rem);
-  }
-  hr{
+  background-color: var(--darkModeBg);
+  box-shadow: 0px 0px 3px var(--darkModeTxtClr);
+  border-radius: .5em;
+  hr {
     color: var(--jsThemeClr);
     box-shadow: 0px 2px 3px var(--black);
     height: 3px;
-    margin: 0 .5rem;
   }
-  button{
-    margin: auto
+  button {
+    cursor: pointer;
+    margin: 2em auto;
+    margin-top: 3em;
+    outline: none;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--txtChange);
+    border: none;
+    padding: 0.5em 1em;
+    background-color: green;
+    border-radius: .5em;
+  }
+}
+.newEmployeeForm {
+  margin: 2em auto;
+  max-width: 750px;
+  border-radius: 0.5em;
+  //box-shadow: 0px 0px 2px var(--darkModeTxtClr);
+  legend {
+    margin: auto;
+    padding: 0 0.75em;
+    font-size: 1.25em;
+    font-weight: 600;
   }
 }
 .btn {
@@ -90,32 +69,27 @@
   color: white;
   box-shadow: none;
 }
-.section {
-  margin-bottom: 25px;
-}
-.section h3 {
-  background-color: coral;
-  margin-bottom: 25px;
-  padding: 0.25rem;
-}
+
 .form-box {
-  display: none;
+  display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin: 0.5em 0;
   width: 100%;
   label {
-    color: var(--black);
-    padding: 0.25rem;
-    margin-right: 5px;
+    color: var(--darkModeTxtClr);
+    padding: 0.25em 0;
+    font-size: 0.8em;
+    min-width: 35%;
+    text-align: left;
   }
   input {
     width: 100%;
-    height: 30px;
+    height: 40px;
     padding: 0.25rem;
-    font-size: calc(0.5vw + 0.5rem);
+    font-size: .8em;
     border: none;
-    border-bottom: 2px solid var(--jsThemeClr);
-    background-color: none;
+    border-bottom: 2px solid var(--darkModeTxtClr);
+    background-color: rgb(230, 230, 230);
   }
 }
 
@@ -132,15 +106,15 @@
   background-size: cover;
   //background-color: var(--bgFilterDrk);
   margin-bottom: calc(1vw + 0.75rem);
-  pre{
+  pre {
     width: 90%;
-    table{
+    table {
       margin: auto;
       background-color: none;
       border: none;
-      thead{
-        tr{
-          th{
+      thead {
+        tr {
+          th {
             padding: 15px;
           }
         }
@@ -160,6 +134,9 @@
 @media screen and (min-width: 400px) {
 }
 @media screen and (min-width: 550px) {
+  .form-box {
+    flex-direction: row;
+  }
 }
 @media screen and (min-width: 700px) {
 }

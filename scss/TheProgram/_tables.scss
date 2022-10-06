@@ -1,108 +1,101 @@
-@use "../_global" as *;
+@use "../global" as *;
 @use "../_mixin" as *;
 
 .tableBox {
-  overflow: scroll;
   margin: auto;
   width: 100%;
-  background-image: url('./img/brushed-steel.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.toolTableBox{
-  background-image: url('./img/brushed-steel.jpg');
 }
 /*
 .tableBox{
-  -ms-overflow-style: none;
-        scrollbar-width: none;
-        overflow-y: scroll;
+  //-ms-overflow-style: none;
+        //scrollbar-width: none;
+        //overflow-y: scroll;
 }
 .tableBox::-webkit-scrollbar {
-  display: none;
+  //display: none;
 }
+
 */
-.table {
-  margin: auto;
-  padding: 1rem;
-  text-align: center;
-  color: var(--darkModeTxtClr);
-  background-color: var(--darkModeBgOp);
-  border: 2px solid var(--themeTxtClr);
-  margin-bottom: 50px;
-  tbody tr {
-    td {
-      background-color: var(--darkModeBg);
-      color: var(--darkModeTxtClr);
-      padding: 0.5rem;
-      text-align: center;
-    }
-  }
-  thead tr th {
-    color: var(--darkModeBg);
-    background-color: var(--jsThemeClr);
-    padding: 0.5rem;
-  }
-  .btn {
-    padding: 0.5rem 1rem;
-    background-color: var(--themeBgOp);
-    color: var(--darkModeTxtClr);
-    font-size: calc(0.75vw + 0.75rem);
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-}
 
-#employeeTable, #toolTable, #vehicleTable{
-  display: none;
-}
-.version {
+.programTables {
   margin: auto;
-  width: 95vw;
+  width: 100%;
+  max-width: 900px;
+  height: 400px;
   padding: 0.5rem;
-  text-align: center;
   color: white;
-  background-color: var(--primaryBackground);
   margin-bottom: 50px;
-  section {
+  overflow: scroll;
+  background-color: var(--darkModeBg);
+  box-shadow: 0px 0px 3px var(--darkModeTxtClr);
+  border-radius: .5em;
+  table {
+    width: 100%;
     margin: auto;
-    margin-bottom: 20px;
-    max-height: 20rem;
-    overflow-x: auto;
-    scrollbar-width: 5px;
-    h2 {
-      width: 100%;
-      background-color: orangered;
-      margin-bottom: 20px;
-    }
-    table {
-      background-color: lightgray;
-      padding: 1rem;
-      width: 100%;
-      overflow-x: auto;
-
-      thead {
-        color: var(--primaryBackground);
-        background-color: white;
-        tr th {
-          padding: 0.5rem;
-        }
+    color: var(--darkModeTxtClr);
+    padding: 1rem;
+    border-collapse: collapse;
+    display: block;
+    thead {
+      th {
+        padding: 0.5rem;
+        text-align: left;
       }
-      tbody {
-        background-color: orangered;
-        tr td {
-          padding: 0.5rem;
-        }
+      th:first-child, th:last-child {
+        text-align: center;
+      }
+    }
+    tbody {
+      tr td {
+        min-width: 10em;
+        padding: .5em .25em;
+        min-height: 50px;
+        font-size: .8em;
+        text-align: left;
+      }
+      tr td:first-child {
+        text-align: center;
+      }
+      tr td a {
+        display: block;
+        margin: auto;
+        max-width: 50px;
+      }
+      tr:nth-child(odd) {
+        background-color: rgb(77, 77, 77);
       }
     }
   }
 }
+.delete {
+  text-align: center;
+}
 
-.btn {
+.dangerBtn {
   padding: 0.5rem 1rem;
-  background-color: orangered;
+  background-color: red;
   color: white;
-  font-size: calc(0.75vw + 0.75rem);
+  font-size: 1em;
+  font-weight: 600;
   cursor: pointer;
   margin-bottom: 10px;
+  text-decoration: none;
+}
+
+.initBtn {
+  margin: 2em 0;
+  max-width: 350px;
+  button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: .5em;
+    background-color: green;
+    font-size: .8em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: white;
+    border-radius: .25em;
+  }
 }
