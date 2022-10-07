@@ -52,7 +52,7 @@ class UI {
     <td>${newEmployee.employeeId}</td>
     <td>${newEmployee.employeeFirstName} ${newEmployee.employeeLastName}</td>
     <td>${newEmployee.employeePosition}</td>
-    <td><a href="#employeeTableBody" class="dangerBtn delete">X</a></td>
+    <td><a href="#employees" class="dangerBtn delete">X</a></td>
     `;
     employeeTable.appendChild(employeeTableRow);
   }
@@ -62,7 +62,7 @@ class UI {
     toolTableRow.innerHTML = `
     <td>${newTool.toolId}</td>
     <td>${newTool.toolMake} - ${newTool.toolType}</td>
-    <td><a href="#toolTableBody" class="dangerBtn delete">X</a></td>
+    <td><a href="#tools" class="dangerBtn delete">X</a></td>
     `;
     toolTable.appendChild(toolTableRow);
   }
@@ -73,7 +73,7 @@ class UI {
     <td>${newVehicle.vehicleId}</td>
     <td>${newVehicle.vehicleYear}</td>
     <td>${newVehicle.vehicleMake} - ${newVehicle.vehicleModel}</td>
-    <td><a href="#vehicleTableBody" class="dangerBtn delete">X</a></td>
+    <td><a href="#vehicles" class="dangerBtn delete">X</a></td>
     `;
     vehicleTable.appendChild(vehicleTableRow);
   }
@@ -85,7 +85,7 @@ class UI {
   }
 
   static clearTable() {
-    const table = document.querySelector(".tableBody")
+    const table = document.querySelectorAll(".tableBody")
     while (table.firstChild) {
       table.removeChild(table.firstChild);
     }
@@ -123,16 +123,6 @@ class Store {
     localStorage.setItem('toolStorage', JSON.stringify(TOOL_ARR));
     localStorage.setItem('vehicleStorage', JSON.stringify(VEHICLE_ARR));
     localStorage.setItem('TABLES_ACTIVE', 'initialized')
-  }
-
-  static getEmployeeList() {
-    let employeeStorage;
-    if (localStorage.getItem("employeeStorage") === null) {
-      employeeStorage = [];
-    } else {
-      employeeStorage = JSON.parse(localStorage.getItem("employeeStorage"));
-    }
-    return employeeStorage;
   }
 
   static addEmployee(employee) {
@@ -217,7 +207,7 @@ document.querySelector("#newEmployee-form").addEventListener("submit", (e) => {
     alert("Please fill in all fields");
   } else {
 
-    const newEmployee = new Employee.Employee(employeeId, employeeFirstName, employeeLastName, employeePosition, employeeContactNumber, employeeEmail);
+    const newEmployee = new Employee(employeeId, employeeFirstName, employeeLastName, employeePosition, employeeContactNumber, employeeEmail);
 
     UI.getEmployee(newEmployee);
 
@@ -245,7 +235,7 @@ document.querySelector("#newTool-form").addEventListener("submit", (e) => {
   if (toolId === "" || toolMake === "" || toolModel === "" || toolType === "" || toolSerialNumber === "") {
     alert("Please Fill In All Fields")
   } else {
-    const newTool = new Tool.Tool(toolId, toolMake, toolModel, toolType, toolSerialNumber);
+    const newTool = new Tool(toolId, toolMake, toolModel, toolType, toolSerialNumber);
 
     UI.getTool(newTool);
 
@@ -277,7 +267,7 @@ document.querySelector("#newVehicle-form").addEventListener("submit", (e) => {
   if (vehicleId === "" || vehicleVINNumber === "" || vehicleMake === "" || vehicleModel === "" || vehicleYear === "" || vehicleColor === "" || vehicleFuelType === "") {
     alert("Please Fill In All Fields")
   } else {
-    const newVehicle = new Vehicle.Vehicle(vehicleId, vehicleVINNumber, vehicleMake, vehicleModel, vehicleYear, vehicleColor, vehicleFuelType);
+    const newVehicle = new Vehicle(vehicleId, vehicleVINNumber, vehicleMake, vehicleModel, vehicleYear, vehicleColor, vehicleFuelType);
 
     UI.getVehicle(newVehicle);
 

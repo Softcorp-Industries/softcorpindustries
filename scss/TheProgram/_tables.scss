@@ -35,13 +35,13 @@
     color: var(--darkModeTxtClr);
     padding: 1rem;
     border-collapse: collapse;
-    display: block;
+    //display: block;
     thead {
       th {
         padding: 0.5rem;
         text-align: left;
       }
-      th:first-child, th:last-child {
+      th:first-child {
         text-align: center;
       }
     }

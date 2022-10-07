@@ -1,0 +1,10 @@
+@use "../global" as *;
+@use "../_mixin" as *;
+
+#employeeForm-modal, #toolForm-modal, #vehicleForm-modal {
+  display: none;
+}
+
+#workOrderV1 {
+  display: none;
+}

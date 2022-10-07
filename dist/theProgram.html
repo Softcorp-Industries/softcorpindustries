@@ -149,9 +149,9 @@
       <header class="featureHeader">
         <h2>Tables & Forms</h2>
       </header>
-      <section id="forms" class="forms chapter">
+      <section id="tablesAndForms" class="chapter">
         <div class="projects">
-          <section class="project" id="formProjects">
+          <section class="project" id="employees">
             <header class="project__header">
               <article class="project__header__body">
                 <p class="project-synopsis">Synopsis:</p>
@@ -179,7 +179,7 @@
             <div class="showBtn">
               <button id="NewEmployeeFormBtn">Add New Employee</button>
             </div>
-            <section class="newForms">
+            <section class="newForms" id="employeeForm-modal">
               <p class="subHeader">New Employee Form</p>
               <div class="formWrapper">
                 <form id="newEmployee-form" class="form">
@@ -214,7 +214,7 @@
               </div>
             </section>
           </section>
-          <section class="project">
+          <section class="project" id="tools">
             <header class="project__header">
               <p class="project__header__title">Tool's</p>
             </header>
@@ -222,7 +222,7 @@
               <table class="table">
                 <thead>
                   <th>ID#</th>
-                  <th>Make & Type</th>
+                  <th>Description</th>
                 </thead>
                 <tbody id="toolTableBody" class="tableBody">
                 </tbody>
@@ -231,37 +231,37 @@
             <div class="showBtn">
               <button id="NewToolFormBtn">Add New Tool</button>
             </div>
-            <section class="newForms">
+            <section class="newForms" id="toolForm-modal">
               <p class="subHeader">New Tool Form</p>
               <div class="formWrapper">
                 <form id="newTool-form" class="form">
                   <div class="form-box">
-                    <label for="firstName">ID#</label>
-                    <input type="text" id="firstName" name="firstName" />
+                    <label for="toolId">ID#</label>
+                    <input type="text" id="toolId" name="toolId" />
                   </div>
                   <br>
                   <div class="form-box">
-                    <label for="middleName">Middle Name</label>
-                    <input type="text" id="middleName" name="middleName" />
+                    <label for="toolMake">Make</label>
+                    <input type="text" id="toolMake" name="toolMake" />
                   </div>
                   <div class="form-box">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName" />
+                    <label for="toolModel">Model</label>
+                    <input type="text" id="toolModel" name="toolModel" />
                   </div>
                   <div class="form-box">
-                    <label for="contactNumber">Contact Number</label>
-                    <input type="number" id="phoneNumber" name="contactNumber" />
+                    <label for="toolType">Type</label>
+                    <input type="text" id="toolType" name="toolType" />
                   </div>
                   <div class="form-box">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" />
+                    <label for="toolSerialNumber">Serial Number</label>
+                    <input type="text" id="toolSerialNumber" name="toolSerialNumber" />
                   </div>
-                  <button class="btn" type="submit">Add Tool</button>
+                  <button class="submitBtn" type="submit">Add Tool</button>
                 </form>
               </div>
             </section>
           </section>
-          <section class="project">
+          <section class="project" id="vehicles">
             <header class="project__header">
               <p class="project__header__title">Vehicle's</p>
             </header>
@@ -279,7 +279,7 @@
             <div class="showBtn">
               <button id="NewVehicleFormBtn">Add New Vehicle</button>
             </div>
-            <section class="newForms">
+            <section class="newForms" id="vehicleForm-modal">
               <p class="subHeader">New Vehicle Form</p>
               <div class="formWrapper">
                 <form id="newVehicle-form" class="form">
@@ -289,20 +289,28 @@
                   </div>
                   <br>
                   <div class="form-box">
-                    <label for="middleName">Middle Name</label>
-                    <input type="text" id="middleName" name="middleName" />
+                    <label for="vehicleVINNumber">VIN #</label>
+                    <input type="text" id="vehicleVINNumber" name="vehicleVINNumber" />
                   </div>
                   <div class="form-box">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName" />
+                    <label for="vehicleMake">Make</label>
+                    <input type="text" id="vehicleMake" name="vehicleMake" />
                   </div>
                   <div class="form-box">
-                    <label for="contactNumber">Contact Number</label>
-                    <input type="number" id="phoneNumber" name="contactNumber" />
+                    <label for="vehicleModel">Model</label>
+                    <input type="text" id="vehicleModel" name="vehicleModel" />
                   </div>
                   <div class="form-box">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" />
+                    <label for="vehicleYear">Year</label>
+                    <input type="text" id="vehicleYear" name="vehicleYear" />
+                  </div>
+                  <div class="form-box">
+                    <label for="vehicleColor">Color</label>
+                    <input type="text" id="vehicleColor" name="vehicleColor" />
+                  </div>
+                  <div class="form-box">
+                    <label for="vehicleFuelType">Fuel Type</label>
+                    <input type="text" id="vehicleFuelType" name="vehicleFuelType" />
                   </div>
                   <button class="btn" type="submit">Add Vehicle</button>
                 </form>
@@ -312,145 +320,53 @@
         </div>
       </section>
 
-      <section id="uiForms" class="uiForms chapter">
-        <div class="chapter">
-          <header class="featureHeader">
-            <h2>Interactive Forms</h2>
-          </header>
-          <div class="chapter__header">
-            <div class="chapter__header__body">
-              <article>
-                <span>Synopsis:</span>
-                <p>
-                  The primary goal was to design toggle buttons with 'input'
-                  and 'div' elements and use differnt effects for each
-                </p>
-              </article>
-              <div class="showBtn">
-                <button id="uiFormsBtn">Show</button>
-              </div>
-            </div>
-          </div>
-          <section class="uiForms">
-            <div class="project__header">
-              <p class="project__header__title">New Work Order</p>
-              <div class="project__header__body">
-                <div class="showBtn">
-                  <button id="uiFormV1Btn">Create New Work Order</button>
-                </div>
-              </div>
-            </div>
-            <section class="uiFormV1" id="uiFormV1">
-              <section class="formBox">
-                <h2>Version 1</h2>
-                <form id="employeeForm" class="employeeForm form">
-                  <div class="form-box">
-                    <label for="EmpId">Employee ID</label>
-                    <input id="EmpId" type="text" />
-                  </div>
-                  <div class="form-box">
-                    <label for="name">Name</label>
-                    <input id="name" type="text" />
-                  </div>
-                  <div class="form-box">
-                    <label for="position">Position</label>
-                    <input id="position" type="text" />
-                  </div>
-                  <div class="form-box">
-                    <label for="contact">Contact #</label>
-                    <input id="contact" type="text" />
-                  </div>
-                  <div class="form-box">
-                    <label for="email">Email</label>
-                    <input id="email" type="text" />
-                  </div>
-                  <div class="form-box">
-                    <label for="aa">Administrative Access</label>
-                    <input id="aa" type="text" />
-                  </div>
-                  <div class="form-box">
-                    <label for="active">Active</label>
-                    <input id="active" type="text" />
-                  </div>
-                  <button class="btn" type="submit">Submit</button>
-                </form>
-              </section>
-            </section>
-          </section>
-        </div>
-      </section>
-
-      <section id="profileCards" class="profileCards chapter">
-        <div class="chapter__header">
-          <header class="featureHeader">
-            <h2>Profile Cards</h2>
-          </header>
-          <div class="chapter__header__body">
-            <article>
-              <span>Synopsis:</span>
-              <p>
-                The primary goal was to design toggle buttons with 'input'
-                and 'div' elements and use differnt effects for each
-              </p>
+      <header class="featureHeader">
+        <h2>Work Order</h2>
+      </header>
+      <section id="workOrder" class="chapter">
+        <section class="project">
+          <header class="project__header">
+            <p class="project__header__title">New Work Order</p>
+            <article class="project__header__body">
             </article>
             <div class="showBtn">
-              <button id="profileCardsBtn">Show</button>
+              <button id="uiFormV1Btn">Create New Work Order</button>
             </div>
-          </div>
-        </div>
-        <section class="profileCards">
-          <section class="employeeCard" id="employeeCard">
-            <section class="wrapper">
-              <div class="cardBox">
-                <div class="card">
-                  <h2>Employee Profile</h2>
-                  <div class="profileCard-info">
-                    <div class="profileImg">
-                      <img src="" alt="Employee Picture" width="100px" height="100px" />
-                    </div>
-                    <span class="employeeId">Employee Id</span>
-                    <span class="fullName">Full Name</span>
-                    <span class="employeePosition">Employee Position</span>
-                  </div>
+          </header>
+          <section id="workOrderV1">
+            <section class="formBox">
+              <h2>Version 1</h2>
+              <form id="employeeForm" class="employeeForm form">
+                <div class="form-box">
+                  <label for="EmpId">Employee ID</label>
+                  <input id="EmpId" type="text" />
                 </div>
-                <br />
-              </div>
-            </section>
-          </section>
-          <section class="toolCard" id="toolCard">
-            <section class="wrapper">
-              <div class="cardBox">
-                <div class="card">
-                  <h2>Tool Profile</h2>
-                  <div class="profileCard-info">
-                    <div class="profileImg">
-                      <img src="" alt="Employee Picture" width="100px" height="100px" />
-                    </div>
-                    <span class="employeeId">Employee Id</span>
-                    <span class="fullName">Full Name</span>
-                    <span class="employeePosition">Employee Position</span>
-                  </div>
+                <div class="form-box">
+                  <label for="name">Name</label>
+                  <input id="name" type="text" />
                 </div>
-                <br />
-              </div>
-            </section>
-          </section>
-          <section class="vehicleCard" id="vehicleCard">
-            <section class="wrapper">
-              <div class="cardBox">
-                <div class="card">
-                  <h2>Vehicle Profile</h2>
-                  <div class="profileCard-info">
-                    <div class="profileImg">
-                      <img src="" alt="Employee Picture" width="100px" height="100px" />
-                    </div>
-                    <span class="employeeId">Employee Id</span>
-                    <span class="fullName">Full Name</span>
-                    <span class="employeePosition">Employee Position</span>
-                  </div>
+                <div class="form-box">
+                  <label for="position">Position</label>
+                  <input id="position" type="text" />
                 </div>
-                <br />
-              </div>
+                <div class="form-box">
+                  <label for="contact">Contact #</label>
+                  <input id="contact" type="text" />
+                </div>
+                <div class="form-box">
+                  <label for="email">Email</label>
+                  <input id="email" type="text" />
+                </div>
+                <div class="form-box">
+                  <label for="aa">Administrative Access</label>
+                  <input id="aa" type="text" />
+                </div>
+                <div class="form-box">
+                  <label for="active">Active</label>
+                  <input id="active" type="text" />
+                </div>
+                <button class="btn" type="submit">Submit</button>
+              </form>
             </section>
           </section>
         </section>
