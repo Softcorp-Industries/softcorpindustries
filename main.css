@@ -6231,6 +6231,14 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
     display: block;
   }
 }
+#employeeForm-modal, #toolForm-modal, #vehicleForm-modal {
+  display: none;
+}
+
+#workOrderV1 {
+  display: none;
+}
+
 .formWrapper {
   height: 100%;
   max-width: 750px;
@@ -6368,13 +6376,12 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   color: var(--darkModeTxtClr);
   padding: 1rem;
   border-collapse: collapse;
-  display: block;
 }
 .programTables table thead th {
   padding: 0.5rem;
   text-align: left;
 }
-.programTables table thead th:first-child, .programTables table thead th:last-child {
+.programTables table thead th:first-child {
   text-align: center;
 }
 .programTables table tbody tr td {
