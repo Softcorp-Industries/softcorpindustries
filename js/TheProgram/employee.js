@@ -1,62 +1,62 @@
 export const EMPLOYEE_ARR = [
   {
     employeeId: "101",
-    employeeFirstName: "Christopher",
-    employeeLastName: "Guy",
-    employeePosition: "Programmer",
-    employeeContactNumber: 4035556666,
-    employeeEmail: "softcorpindustries@gmail.com"
+    firstName: "Christopher",
+    lastName: "Guy",
+    position: "Tech",
+    contactNumber: 4035556666,
+    email: "softcorpindustries@gmail.com"
   },
   {
     employeeId: "102",
-    employeeFirstName: "Shane",
-    employeeLastName: "Doolie",
-    employeePosition: "Office Manager",
-    employeeContactNumber: 4035556667,
-    employeeEmail: "guycorpindustries@outlook.com"
+    firstName: "Shane",
+    lastName: "Doolie",
+    position: "Office Manager",
+    contactNumber: 4035556667,
+    email: "guycorpindustries@outlook.com"
   },
   {
     employeeId: "103",
-    employeeFirstName: "David",
-    employeeLastName: "Clark",
-    employeePosition: "Administrative Assistant",
-    employeeContactNumber: 4035556668,
-    employeeEmail: "softcorp@gmail.com"
+    firstName: "David",
+    lastName: "Clark",
+    position: "Administrative Assistant",
+    contactNumber: 4035556668,
+    email: "softcorp@gmail.com"
   },
   {
     employeeId: "104",
-    employeeFirstName: "Alice",
-    employeeLastName: "Holliday",
-    employeePosition: "Programmer",
-    employeeContactNumber: 4035556669,
-    employeeEmail: "myemail@gmail.com"
+    firstName: "Alice",
+    lastName: "Holliday",
+    position: "Tech",
+    contactNumber: 4035556669,
+    email: "myemail@gmail.com"
   },
   {
     employeeId: "105",
-    employeeFirstName: "Sheldon",
-    employeeLastName: "Riess",
-    employeePosition: "Master Electrician",
-    employeeContactNumber: 4035546666,
-    employeeEmail: "guycorp@outlook.com"
+    firstName: "Sheldon",
+    lastName: "Riess",
+    position: "Service Manager",
+    contactNumber: 4035546666,
+    email: "guycorp@outlook.com"
   },
   {
     employeeId: "106",
-    employeeFirstName: "Darlene",
-    employeeLastName: "Pendergast",
-    employeePosition: "Programmer",
-    employeeContactNumber: 4035456666,
-    employeeEmail: "softcorpindustries@gmail.com"
+    firstName: "Darlene",
+    lastName: "Pendergast",
+    position: "Tech",
+    contactNumber: 4035456666,
+    email: "softcorpindustries@gmail.com"
   }
 ]
 
 export class Employee {
-  constructor(employeeId, employeeFirstName, employeeLastName, employeePosition, employeeContactNumber, employeeEmail) {
+  constructor(employeeId, firstName, lastName, position, contactNumber, email) {
     this.employeeId = employeeId;
-    this.employeeFirstName = employeeFirstName;
-    this.employeeLastName = employeeLastName;
-    this.employeePosition = employeePosition;
-    this.employeeContactNumber = employeeContactNumber;
-    this.employeeEmail = employeeEmail;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.position = position;
+    this.contactNumber = contactNumber;
+    this.email = email;
   }
 }
 

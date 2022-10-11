@@ -6231,60 +6231,234 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
     display: block;
   }
 }
-#employeeForm-modal, #toolForm-modal, #vehicleForm-modal {
+.section {
+  color: var(--darkModeTxtClr);
+}
+
+.form-modal {
   display: none;
 }
 
-#workOrderV1 {
-  display: none;
+#theProgram {
+  position: relative;
+}
+#theProgram .programListItem {
+  list-style: none;
+}
+#theProgram .programListItem ul {
+  list-style: none;
+}
+#theProgram .programListItem .addBtn {
+  display: block;
+  margin-bottom: 5px;
+}
+#theProgram .programListItem .addBtn button {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 0.25em;
+  border: none;
+  outline: none;
+  background-color: green;
+}
+#theProgram .programListItem .fullListBtn button {
+  background-color: lightseagreen;
+}
+#theProgram .dashboard {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-evenly;
+}
+#theProgram .dashboard li p {
+  margin-bottom: 0.25em;
+  text-align: center;
+}
+#theProgram .allTables {
+  margin: 1em 0;
 }
 
-.formWrapper {
-  height: 100%;
+/*
+#employeeForm-modal {
+  display: none;
+}
+*/
+#newWorkOrder-modal {
+  max-width: 1000px;
+}
+
+.form-modal {
+  box-shadow: 0px 0px 0px 15em rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  bottom: 1em;
+  left: 1em;
   max-width: 750px;
   margin: auto;
-  border-radius: 1em;
-}
-
-.form {
-  width: 100%;
-  padding: 1em;
-  letter-spacing: 2px;
-  background-color: var(--darkModeBg);
-  box-shadow: 0px 0px 3px var(--darkModeTxtClr);
+  max-height: 80vh;
   border-radius: 0.5em;
+  z-index: 10;
 }
-.form hr {
-  color: var(--jsThemeClr);
-  box-shadow: 0px 2px 3px var(--black);
-  height: 3px;
+.form-modal .form-wrapper {
+  position: relative;
+  border-radius: 0.5em;
+  background-color: var(--darkModeBg);
+  padding: 0.5em 0;
+  box-shadow: 0 0 3px var(--darkModeTxtClr);
 }
-.form button {
+.form-modal .form-wrapper .close-modal {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0em;
+  left: -0.75em;
+  font-size: 1.25em;
+  border-radius: 50%;
+  color: red;
+  font-weight: 600;
+}
+.form-modal .form-wrapper .formHeader {
+  letter-spacing: 2px;
+  font-size: 1.75em;
+  font-weight: 600;
+  margin-bottom: 0.25em;
+}
+.form-modal .form-wrapper .addBtns {
+  width: 95%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid var(--darkModeTxtClr);
+}
+.form-modal .form-wrapper .addBtns .addItem {
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85em;
+  text-align: left;
+}
+.form-modal .form-wrapper .addBtns .addItem__btn {
+  cursor: pointer;
+  display: block;
+  border: none;
+  margin-right: 5px;
+  width: 25px;
+  height: 25px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--darkModeTxtClr);
+  background-color: green;
+}
+.form-modal .form-wrapper .form {
+  overflow-y: scroll;
+  max-height: 70vh;
+  margin: auto;
+  padding: 0.25em;
+  border-radius: 0.5em;
+  letter-spacing: 2px;
+}
+.form-modal .form-wrapper .form .submitBtn {
   cursor: pointer;
   margin: 2em auto;
   margin-top: 3em;
   outline: none;
   font-size: 1em;
   font-weight: 600;
-  color: var(--txtChange);
+  color: white;
   border: none;
   padding: 0.5em 1em;
   background-color: green;
   border-radius: 0.5em;
 }
-
-.newForms {
-  margin: 2em auto;
-  max-width: 750px;
-  border-radius: 0.5em;
+.form-modal .form-wrapper .form .formSubHeader {
+  margin-top: 2em;
+  text-align: left;
 }
-.newForms legend {
-  margin: auto;
-  padding: 0 0.75em;
-  font-size: 1.25em;
+.form-modal .form-wrapper .form .inputAvatar__box {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 15px;
+  box-shadow: 0 0 3px 2px var(--darkModeTxtClr);
+  border-radius: 10px;
+}
+.form-modal .form-wrapper .form .inputAvatar__box .profileBtn,
+.form-modal .form-wrapper .form .inputAvatar__box .removeItem {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5em;
+  color: white;
   font-weight: 600;
+  border: none;
+  background-color: var(--darkModeTxtClr);
+}
+.form-modal .form-wrapper .form .inputAvatar__box .profileBtn {
+  background-color: green;
+  border-radius: 10px 0 0 10px;
+}
+.form-modal .form-wrapper .form .inputAvatar__box .removeItem {
+  background-color: red;
+  border-radius: 0 10px 10px 0;
+}
+.form-modal .form-wrapper .form .inputAvatar__box input {
+  min-width: 80%;
+  padding: 0.5em;
+  text-align: center;
+  letter-spacing: 1px;
+  color: var(--darkModeTxtClr);
+  border: none;
+  background-color: var(--darkModeBg);
 }
 
+.modalOpen {
+  display: block;
+}
+
+@-webkit-keyframes form-modal-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes form-modal-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes form-modal-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes form-modal-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .form-box {
   display: flex;
   flex-direction: column;

@@ -7,7 +7,12 @@ import { Tool } from './js/TheProgram/tool.js';
 import { VEHICLE_ARR } from './js/TheProgram/vehicle.js';
 import { Vehicle } from './js/TheProgram/vehicle.js';
 
-let TABLES_ACTIVE = localStorage.getItem('TABLES_ACTIVE');
+import { formModal } from './js/TheProgram/form-modal.js';
+
+formModal();
+
+
+let ARRS_ACTIVE = localStorage.getItem('ARRS_ACTIVE');
 
 
 class UI {
@@ -50,11 +55,32 @@ class UI {
     const employeeTableRow = document.createElement("tr");
     employeeTableRow.innerHTML = `
     <td>${newEmployee.employeeId}</td>
-    <td>${newEmployee.employeeFirstName} ${newEmployee.employeeLastName}</td>
-    <td>${newEmployee.employeePosition}</td>
+    <td>${newEmployee.firstName} ${newEmployee.lastName}</td>
+    <td>${newEmployee.position}</td>
     <td><a href="#employees" class="dangerBtn delete">X</a></td>
     `;
     employeeTable.appendChild(employeeTableRow);
+  }
+  static getTechList() {
+    const filteredTechList = JSON.parse(localStorage.getItem("employeeStorage"));
+    const techs = filteredTechList.filter(tech => tech.position === "Tech");
+    //  console.log(techs);
+    techs.forEach((tech) => UI.buildTechItem(tech))
+  }
+  static buildTechItem(tech) {
+    const techList = document.querySelector("#techList");
+    const techListItem = document.createElement("li");
+    techListItem.setAttribute("class", "inputAvatar__box")
+
+    techListItem.innerHTML = `
+    <button class="profileBtn">+</button>
+    <input type="text" value="${tech.firstName} ${tech.lastName} is a ${tech.position}"/>
+    <button class="removeItem">X</button>
+    `;
+    techList.appendChild(techListItem);
+  }
+  static buildAvailableTechList() {
+
   }
   static getTool(newTool) {
     const toolTable = document.querySelector("#toolTableBody");
@@ -117,12 +143,15 @@ class UI {
   }
 }
 
+//UI.getTechList();
+
+
 class Store {
   static saveTables() {
     localStorage.setItem('employeeStorage', JSON.stringify(EMPLOYEE_ARR));
     localStorage.setItem('toolStorage', JSON.stringify(TOOL_ARR));
     localStorage.setItem('vehicleStorage', JSON.stringify(VEHICLE_ARR));
-    localStorage.setItem('TABLES_ACTIVE', 'initialized')
+    localStorage.setItem('ARRS_ACTIVE', 'initialized')
   }
 
   static addEmployee(employee) {
@@ -192,28 +221,32 @@ document.addEventListener("DOMContentLoaded", () => {
   UI.savedVehicleTable();
 });
 
+
 //  Add a New Employee
-document.querySelector("#newEmployee-form").addEventListener("submit", (e) => {
+document.querySelector("#newEmployee-form").addEventListener("click", (e) => {
+  //alert("wtf")
   e.preventDefault();
-
+  
   const employeeId = document.querySelector("#employeeId").value;
-  const employeeFirstName = document.querySelector("#employeeFirstName").value;
-  const employeeLastName = document.querySelector("#employeeLastName").value;
-  const employeePosition = document.querySelector("#employeePosition").value;
-  const employeeContactNumber = document.querySelector("#employeeContactNumber").value;
-  const employeeEmail = document.querySelector("#employeeEmail").value;
+  const firstName = document.querySelector("#employeeFirstName").value;
+  const lastName = document.querySelector("#employeeLastName").value;
+  const position = document.querySelector("#employeePosition").value;
+  const contactNumber = document.querySelector("#employeeContactNumber").value;
+  const email = document.querySelector("#employeeEmail").value;
 
-  if (employeeId === "" || employeeFirstName === "" || employeeLastName === "" || employeePosition === "" || employeeContactNumber === "" || employeeEmail === "") {
-    alert("Please fill in all fields");
+
+  if (employeeId === "" || firstName === "" || lastName === "" || position === "" || contactNumber === "" || email === "") {
+    alert("Please fill in all fields with an  *");
   } else {
 
-    const newEmployee = new Employee(employeeId, employeeFirstName, employeeLastName, employeePosition, employeeContactNumber, employeeEmail);
+    const newEmployee = new Employee(employeeId, firstName, lastName, position, contactNumber, email);
 
     UI.getEmployee(newEmployee);
 
     Store.addEmployee(newEmployee);
     UI.clearEmployeeFields();
   }
+  
 })
 //  Remove Employee
 document.querySelector("#employeeTableBody").addEventListener("click", (e) => {
@@ -221,9 +254,14 @@ document.querySelector("#employeeTableBody").addEventListener("click", (e) => {
   UI.deleteEmployee(e.target);
   Store.removeEmployee(e.target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.textContent)
 })
+// Show Full Tech List
+document.querySelector(".dashboard .listBtn").addEventListener("click", () => {
+  UI.getTechList();
+})
 
 //  Add New Tool
 document.querySelector("#newTool-form").addEventListener("submit", (e) => {
+
   e.preventDefault();
 
   const toolId = document.querySelector("#toolId").value;
@@ -285,7 +323,7 @@ document.querySelector("#vehicleTableBody").addEventListener("click", (e) => {
 })
 
 //  Changes Initialize Button to Reset Button
-if (TABLES_ACTIVE === "initialized") {
+if (ARRS_ACTIVE === "initialized") {
   initBtn.innerHTML = "Reset All Tables";
   initBtn.style.backgroundColor = "red";
 }
