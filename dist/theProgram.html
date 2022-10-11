@@ -16,7 +16,6 @@
   <script type="module" src="main.js"></script>
   <script type="module" src="utilitiesFull.js"></script>
   <script type="module" src="theProgram.js"></script>
-
 </head>
 
 <body data-darkMode="light" id="darkModeFilter" data-toggleMode="">
@@ -145,234 +144,373 @@
       </section>
     </template>
 
-    <section class="theProgram">
-      <header class="featureHeader">
-        <h2>Tables & Forms</h2>
-      </header>
-      <section id="tablesAndForms" class="chapter">
-        <div class="projects">
-          <section class="project" id="employees">
-            <header class="project__header">
-              <article class="project__header__body">
-                <p class="project-synopsis">Synopsis:</p>
-                <p>
-                  Tables & Forms
-                </p>
-                <div class="initBtn">
-                  <button id="initBtn">Initialize Employee List</button>
-                </div>
-              </article>
-              <p class="project__header__title">Employee's</p>
-            </header>
-            <div class="tableBox programTables" id="employeeTable">
-              <table class="table">
-                <thead>
-                  <th>ID#</th>
-                  <th>Name</th>
-                  <th>Position</th>
-                  <th></th>
-                </thead>
-                <tbody id="employeeTableBody" class="tableBody">
-                </tbody>
-              </table>
-            </div>
-            <div class="showBtn">
-              <button id="NewEmployeeFormBtn">Add New Employee</button>
-            </div>
-            <section class="newForms" id="employeeForm-modal">
-              <p class="subHeader">New Employee Form</p>
-              <div class="formWrapper">
-                <form id="newEmployee-form" class="form">
-                  <div class="form-box">
-                    <label for="employeeId">ID#</label>
-                    <input type="text" id="employeeId" name="employeeId" placeholder="Employee ID" />
-                  </div>
-                  <br>
-                  <div class="form-box">
-                    <label for="employeeFirstName">First Name</label>
-                    <input type="text" id="employeeFirstName" name="employeeFirstName" placeholder="First Name" />
-                  </div>
-                  <div class="form-box">
-                    <label for="employeeLastName">Last Name</label>
-                    <input type="text" id="employeeLastName" name="employeeLastName" placeholder="Last Name" />
-                  </div>
-                  <div class="form-box">
-                    <label for="employeePosition">Position</label>
-                    <input type="text" id="employeePosition" name="employeePosition" placeholder="Enter Position" />
-                  </div>
-                  <div class="form-box">
-                    <label for="employeeContactNumber">Contact Number</label>
-                    <input type="number" id="employeeContactNumber" name="employeeContactNumber"
-                      placeholder="Enter Phone or Cell Number" />
-                  </div>
-                  <div class="form-box">
-                    <label for="employeeEmail">E-mail</label>
-                    <input type="employeeEmail" id="employeeEmail" name="email" placeholder="E-Mail Address" />
-                  </div>
-                  <button class="submitBtn" type="submit">Add Employee</button>
-                </form>
-              </div>
-            </section>
-          </section>
-          <section class="project" id="tools">
-            <header class="project__header">
-              <p class="project__header__title">Tool's</p>
-            </header>
-            <div class="tableBox programTables" id="toolTable">
-              <table class="table">
-                <thead>
-                  <th>ID#</th>
-                  <th>Description</th>
-                </thead>
-                <tbody id="toolTableBody" class="tableBody">
-                </tbody>
-              </table>
-            </div>
-            <div class="showBtn">
-              <button id="NewToolFormBtn">Add New Tool</button>
-            </div>
-            <section class="newForms" id="toolForm-modal">
-              <p class="subHeader">New Tool Form</p>
-              <div class="formWrapper">
-                <form id="newTool-form" class="form">
-                  <div class="form-box">
-                    <label for="toolId">ID#</label>
-                    <input type="text" id="toolId" name="toolId" />
-                  </div>
-                  <br>
-                  <div class="form-box">
-                    <label for="toolMake">Make</label>
-                    <input type="text" id="toolMake" name="toolMake" />
-                  </div>
-                  <div class="form-box">
-                    <label for="toolModel">Model</label>
-                    <input type="text" id="toolModel" name="toolModel" />
-                  </div>
-                  <div class="form-box">
-                    <label for="toolType">Type</label>
-                    <input type="text" id="toolType" name="toolType" />
-                  </div>
-                  <div class="form-box">
-                    <label for="toolSerialNumber">Serial Number</label>
-                    <input type="text" id="toolSerialNumber" name="toolSerialNumber" />
-                  </div>
-                  <button class="submitBtn" type="submit">Add Tool</button>
-                </form>
-              </div>
-            </section>
-          </section>
-          <section class="project" id="vehicles">
-            <header class="project__header">
-              <p class="project__header__title">Vehicle's</p>
-            </header>
-            <div class="tableBox programTables" id="vehicleTable">
-              <table class="table">
-                <thead>
-                  <th>ID#</th>
-                  <th>Year</th>
-                  <th>Vehicle</th>
-                </thead>
-                <tbody id="vehicleTableBody" class="tableBody">
-                </tbody>
-              </table>
-            </div>
-            <div class="showBtn">
-              <button id="NewVehicleFormBtn">Add New Vehicle</button>
-            </div>
-            <section class="newForms" id="vehicleForm-modal">
-              <p class="subHeader">New Vehicle Form</p>
-              <div class="formWrapper">
-                <form id="newVehicle-form" class="form">
-                  <div class="form-box">
-                    <label for="vehicleId">ID#</label>
-                    <input type="text" id="vehicleId" name="vehicleId" />
-                  </div>
-                  <br>
-                  <div class="form-box">
-                    <label for="vehicleVINNumber">VIN #</label>
-                    <input type="text" id="vehicleVINNumber" name="vehicleVINNumber" />
-                  </div>
-                  <div class="form-box">
-                    <label for="vehicleMake">Make</label>
-                    <input type="text" id="vehicleMake" name="vehicleMake" />
-                  </div>
-                  <div class="form-box">
-                    <label for="vehicleModel">Model</label>
-                    <input type="text" id="vehicleModel" name="vehicleModel" />
-                  </div>
-                  <div class="form-box">
-                    <label for="vehicleYear">Year</label>
-                    <input type="text" id="vehicleYear" name="vehicleYear" />
-                  </div>
-                  <div class="form-box">
-                    <label for="vehicleColor">Color</label>
-                    <input type="text" id="vehicleColor" name="vehicleColor" />
-                  </div>
-                  <div class="form-box">
-                    <label for="vehicleFuelType">Fuel Type</label>
-                    <input type="text" id="vehicleFuelType" name="vehicleFuelType" />
-                  </div>
-                  <button class="btn" type="submit">Add Vehicle</button>
-                </form>
-              </div>
-            </section>
-          </section>
-        </div>
-      </section>
 
-      <header class="featureHeader">
-        <h2>Work Order</h2>
-      </header>
-      <section id="workOrder" class="chapter">
-        <section class="project">
-          <header class="project__header">
-            <p class="project__header__title">New Work Order</p>
-            <article class="project__header__body">
-            </article>
-            <div class="showBtn">
-              <button id="uiFormV1Btn">Create New Work Order</button>
-            </div>
-          </header>
-          <section id="workOrderV1">
-            <section class="formBox">
-              <h2>Version 1</h2>
-              <form id="employeeForm" class="employeeForm form">
-                <div class="form-box">
-                  <label for="EmpId">Employee ID</label>
-                  <input id="EmpId" type="text" />
+    <header class="featureHeader">
+      <h2>Final Exam</h2>
+    </header>
+    <section class="chapter">
+      <article class="chapter__summary">
+        <p class="project-synopsis">Synopsis:</p>
+        <p>
+          Tables & Forms
+        </p>
+        <div class="initBtn">
+          <button id="initBtn">Initialize Employee List</button>
+        </div>
+      </article>
+      <section id="theProgram">
+        <ul class="dashboard">
+          <li class="programListItem">
+            <p>Employee's</p>
+            <ul>
+              <li>
+                <div class="addBtn">
+                  <button class="form-modal-btn" id="NewEmployeeFormBtn">Add New Employee</button>
                 </div>
-                <div class="form-box">
-                  <label for="name">Name</label>
-                  <input id="name" type="text" />
+                <section class="section" id="employees">
+                  <section class="form-modal" id="employeeForm-modal">
+                    <div class="form-wrapper">
+                      <button class="close-modal">X</button>
+                      <p class="subHeader">New Employee Form</p>
+                      <form id="newEmployee-form" class="form" name="newEmployee-form">
+                        <div class="form-box">
+                          <label for="employeeId">ID#</label>
+                          <input type="text" id="employeeId" name="employeeId" placeholder="Employee ID" />
+                        </div>
+                        <br>
+                        <div class="form-box">
+                          <label for="employeeFirstName">First Name</label>
+                          <input type="text" id="employeeFirstName" name="employeeFirstName" placeholder="First Name" />
+                        </div>
+                        <div class="form-box">
+                          <label for="employeeLastName">Last Name</label>
+                          <input type="text" id="employeeLastName" name="employeeLastName" placeholder="Last Name" />
+                        </div>
+                        <div class="form-box">
+                          <label for="employeePosition">Position</label>
+                          <input type="text" id="employeePosition" name="employeePosition"
+                            placeholder="Enter Position" />
+                        </div>
+                        <div class="form-box">
+                          <label for="employeeContactNumber">Contact Number</label>
+                          <input type="text" id="employeeContactNumber" name="employeeContactNumber"
+                            placeholder="Enter Phone or Cell Number" />
+                        </div>
+                        <div class="form-box">
+                          <label for="employeeEmail">E-mail</label>
+                          <input type="email" id="employeeEmail" name="email" placeholder="E-Mail Address" />
+                        </div>
+                        <input type="submit" class="submitBtn" value="Add Employee" />
+                      </form>
+                    </div>
+                  </section>
+                </section>
+              </li>
+              <li>
+                <div class="addBtn fullListBtn">
+                  <button class="listBtn">Full Tech List</button>
                 </div>
-                <div class="form-box">
-                  <label for="position">Position</label>
-                  <input id="position" type="text" />
+              </li>
+              <li>
+                <div class="addBtn fullListBtn">
+                  <button>Active Tech List</button>
                 </div>
-                <div class="form-box">
-                  <label for="contact">Contact #</label>
-                  <input id="contact" type="text" />
+              </li>
+              <li>
+                <div class="addBtn fullListBtn">
+                  <button>Full Employee List</button>
                 </div>
-                <div class="form-box">
-                  <label for="email">Email</label>
-                  <input id="email" type="text" />
+              </li>
+            </ul>
+          </li>
+          <li class="programListItem">
+            <p>Tool's</p>
+            <ul>
+              <li>
+                <div class="addBtn">
+                  <button id="NewToolFormBtn" class="form-modal-btn">Add New Tool</button>
                 </div>
-                <div class="form-box">
-                  <label for="aa">Administrative Access</label>
-                  <input id="aa" type="text" />
+                <section class="section" id="tools">
+                  <section class="form-modal" id="toolForm-modal">
+                    <div class="form-wrapper">
+                      <button class="close-modal">X</button>
+                      <p class="subHeader">New Tool Form</p>
+                      <form id="newTool-form" class="form">
+                        <div class="form-box">
+                          <label for="toolId">ID#</label>
+                          <input type="text" id="toolId" name="toolId" />
+                        </div>
+                        <br>
+                        <div class="form-box">
+                          <label for="toolMake">Make</label>
+                          <input type="text" id="toolMake" name="toolMake" />
+                        </div>
+                        <div class="form-box">
+                          <label for="toolModel">Model</label>
+                          <input type="text" id="toolModel" name="toolModel" />
+                        </div>
+                        <div class="form-box">
+                          <label for="toolType">Type</label>
+                          <input type="text" id="toolType" name="toolType" />
+                        </div>
+                        <div class="form-box">
+                          <label for="toolSerialNumber">Serial Number</label>
+                          <input type="text" id="toolSerialNumber" name="toolSerialNumber" />
+                        </div>
+                        <button class="submitBtn" type="submit">Add Tool</button>
+                      </form>
+                    </div>
+                  </section>
+                </section>
+              </li>
+              <li>
+                <div class="addBtn fullListBtn">
+                  <button>Available Tool List</button>
                 </div>
-                <div class="form-box">
-                  <label for="active">Active</label>
-                  <input id="active" type="text" />
+              </li>
+              <li>
+                <div class="addBtn fullListBtn">
+                  <button>Assigned Tool List</button>
                 </div>
-                <button class="btn" type="submit">Submit</button>
-              </form>
-            </section>
-          </section>
+              </li>
+              <li>
+                <div class="addBtn fullListBtn">
+                  <button>Full Tool List</button>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="programListItem">
+            <p>Vehicle's</p>
+            <ul>
+              <li>
+                <div class="addBtn">
+                  <button id="NewVehicleFormBtn" class="form-modal-btn">Add New Vehicle</button>
+                </div>
+                <section class="section" id="vehicles">
+                  <section class="form-modal" id="vehicleForm-modal">
+                    <div class="form-wrapper">
+                      <button class="close-modal">X</button>
+                      <p class="subHeader">New Vehicle Form</p>
+                      <form id="newVehicle-form" class="form" name="newVehicle-form">
+                        <div class="form-box">
+                          <label for="vehicleId">ID#</label>
+                          <input type="text" id="vehicleId" name="vehicleId" />
+                        </div>
+                        <br>
+                        <div class="form-box">
+                          <label for="vehicleVINNumber">VIN #</label>
+                          <input type="text" id="vehicleVINNumber" name="vehicleVINNumber" />
+                        </div>
+                        <div class="form-box">
+                          <label for="vehicleMake">Make</label>
+                          <input type="text" id="vehicleMake" name="vehicleMake" />
+                        </div>
+                        <div class="form-box">
+                          <label for="vehicleModel">Model</label>
+                          <input type="text" id="vehicleModel" name="vehicleModel" />
+                        </div>
+                        <div class="form-box">
+                          <label for="vehicleYear">Year</label>
+                          <input type="text" id="vehicleYear" name="vehicleYear" />
+                        </div>
+                        <div class="form-box">
+                          <label for="vehicleColor">Color</label>
+                          <input type="text" id="vehicleColor" name="vehicleColor" />
+                        </div>
+                        <div class="form-box">
+                          <label for="vehicleFuelType">Fuel Type</label>
+                          <input type="text" id="vehicleFuelType" name="vehicleFuelType" />
+                        </div>
+                        <button class="submitBtn" type="submit">Add Vehicle</button>
+                      </form>
+                    </div>
+                  </section>
+                </section>
+              </li>
+              <li>
+                <div class="addBtn fullListBtn">
+                  <button>Full Vehicle List</button>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="programListItem">
+            <p>Work Order's</p>
+            <ul>
+              <li>
+                <div class="addBtn">
+                  <button class="form-modal-btn">Work Request</button>
+                </div>
+                <section class="section" id="workOrder-1">
+                  <section class="form-modal" id="newWorkOrder-modal">
+                    <div class="form-wrapper">
+                      <button class="close-modal">X</button>
+                      <p class="formHeader">Work Order</p>
+                      <div class="addBtns">
+                        <div class="addItem">
+                          <button class="addItem__btn">+</button>
+                          <p>
+                            Service Vehicle
+                          </p>
+                        </div>
+                        <div class="addItem">
+                          <button class="addItem__btn">+</button>
+                          <p>
+                            Service Tech
+                          </p>
+                        </div>
+                        <div class="addItem">
+                          <button class="addItem__btn">+</button>
+                          <p>
+                            Tools
+                          </p>
+                        </div>
+                      </div>
+                      <form id="newWorkOrder-form" class="form">
+                        <div class="form-box">
+                          <label for="EmpId">Work Order #</label>
+                          <input id="EmpId" type="text" />
+                        </div>
+                        <header class="formSubHeader">
+                          <p>
+                            Client Information
+                          </p>
+                        </header>
+                        <div class="clientInfo">
+                          <div class="form-box">
+                            <label for="name">Name</label>
+                            <input id="name" type="text" />
+                          </div>
+                          <div class="form-box">
+                            <label for="position">Address</label>
+                            <input id="position" type="text" />
+                          </div>
+                          <div class="form-box">
+                            <label for="contact">Contact #</label>
+                            <input id="contact" type="text" />
+                          </div>
+                          <div class="form-box">
+                            <label for="email">Email</label>
+                            <input id="email" type="text" />
+                          </div>
+                          <div class="form-box">
+                            <label for="active">Active</label>
+                            <input id="active" type="checkbox" />
+                          </div>
+                          <div class="form-box">
+                            <label for="aa">Closed</label>
+                            <input id="aa" type="checkbox" />
+                          </div>
+                        </div>
+                        <div class="inputAvatar vehicleInfo">
+                          <div class="inputAvatar__box">
+                            <button class="profileBtn">+</button>
+                            <input id="primaryVehicle" type="text" placeholder="Service Vehicle" />
+                            <button class="removeItem">X</button>
+                          </div>
+                        </div>
+                        <div class="inputAvatar techInfo">
+                          <div class="inputAvatar__box">
+                            <button class="profileBtn">+</button>
+                            <input id="primaryTech" type="text" placeholder="Lead Tech" />
+                            <button class="removeItem">X</button>
+                          </div>
+                          <div class="inputAvatar__box">
+                            <button class="profileBtn">+</button>
+                            <input id="techName" type="text" placeholder="Tech" />
+                            <button class="removeItem">X</button>
+                          </div>
+                        </div>
+                        <div class="inputAvatar toolList">
+                          <div class="inputAvatar__box">
+                            <button class="profileBtn">+</button>
+                            <input id="firstTool" type="text" placeholder="Tool Item" />
+                            <button class="removeItem">X</button>
+                          </div>
+                          <div class="inputAvatar__box">
+                            <button class="profileBtn">+</button>
+                            <input id="secondTool" type="text" placeholder="Tool Item" />
+                            <button class="removeItem">X</button>
+                          </div>
+                        </div>
+                        <header class="formSubHeader">
+                          <p>
+                            Work Requested
+                          </p>
+                        </header>
+                        <div class="workOrderDescription">
+                          <div class="form-box">
+                            <label for="workOrderDescription">Description</label>
+                            <textarea id="workOrderDescription" type="text" placeholder="Work to be done">
+                                                  </textarea>
+                          </div>
+                        </div>
+                        <button class="submitBtn" id="issueWOBtn" type="submit">Issue Work Order</button>
+                      </form>
+                    </div>
+                  </section>
+                </section>
+              </li>
+              <li>
+                <div class="addBtn fullListBtn">
+                  <button class="form-modal-btn">Active Work Orders</button>
+                </div>
+              </li>
+              <li>
+                <div class="addBtn fullListBtn">
+                  <button class="form-modal-btn">Pending Work Orders</button>
+                </div>
+              </li>
+              <li>
+                <div class="addBtn fullListBtn">
+                  <button class="form-modal-btn">All Work Orders</button>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul id="techList"></ul>
+        <section class="allTables">
+          <div class="tableBox programTables" id="employeeTable">
+            <table class="table">
+              <thead>
+                <th>ID#</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th></th>
+              </thead>
+              <tbody id="employeeTableBody" class="tableBody">
+              </tbody>
+            </table>
+          </div>
+          <div class="tableBox programTables" id="toolTable">
+            <table class="table">
+              <thead>
+                <th>ID#</th>
+                <th>Description</th>
+              </thead>
+              <tbody id="toolTableBody" class="tableBody">
+              </tbody>
+            </table>
+          </div>
+          <div class="tableBox programTables" id="vehicleTable">
+            <table class="table">
+              <thead>
+                <th>ID#</th>
+                <th>Year</th>
+                <th>Vehicle</th>
+              </thead>
+              <tbody id="vehicleTableBody" class="tableBody">
+              </tbody>
+            </table>
+          </div>
         </section>
       </section>
-
     </section>
+
+
+
   </main>
 
   <aside>

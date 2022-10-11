@@ -1,53 +1,167 @@
 @use "../_global" as *;
 @use "../_mixin" as *;
-.formWrapper {
-  //@include shadowSm;
-  //width: 100%;
-  height: 100%;
+
+.form-modal {
+  box-shadow: 0px 0px 0px 15em rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  bottom: 1em;
+  left: 1em;
   max-width: 750px;
   margin: auto;
-  border-radius: 1em;
-}
-.form {
-  //margin: auto;
-  width: 100%;
-  padding: 1em;
-  letter-spacing: 2px;
-  background-color: var(--darkModeBg);
-  box-shadow: 0px 0px 3px var(--darkModeTxtClr);
-  border-radius: .5em;
-  hr {
-    color: var(--jsThemeClr);
-    box-shadow: 0px 2px 3px var(--black);
-    height: 3px;
-  }
-  button {
-    cursor: pointer;
-    margin: 2em auto;
-    margin-top: 3em;
-    outline: none;
-    font-size: 1em;
-    font-weight: 600;
-    color: var(--txtChange);
-    border: none;
-    padding: 0.5em 1em;
-    background-color: green;
-    border-radius: .5em;
-  }
-}
-.newForms {
-  margin: 2em auto;
-  max-width: 750px;
+  max-height: 80vh;
   border-radius: 0.5em;
-  //box-shadow: 0px 0px 2px var(--darkModeTxtClr);
-  legend {
-    margin: auto;
-    padding: 0 0.75em;
-    font-size: 1.25em;
-    font-weight: 600;
+  z-index: 10;
+  .form-wrapper {
+    position: relative;
+    border-radius: 0.5em;
+    background-color: var(--darkModeBg);
+    padding: 0.5em 0;
+    box-shadow: 0 0 3px var(--darkModeTxtClr);
+    .close-modal {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 0em;
+      left: -0.75em;
+      font-size: 1.25em;
+      border-radius: 50%;
+      //box-shadow: 0 0 2px var(--darkModeTxtClr);
+      color: red;
+      font-weight: 600;
+    }
+    .formHeader {
+      letter-spacing: 2px;
+      font-size: 1.75em;
+      font-weight: 600;
+      margin-bottom: 0.25em;
+    }
+    .addBtns {
+      width: 95%;
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1em;
+      padding-bottom: .5em;
+      border-bottom: 2px solid var(--darkModeTxtClr);
+      .addItem {
+        width: 33%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85em;
+        text-align: left;
+        &__btn {
+          cursor: pointer;
+          display: block;
+          border: none;
+          margin-right: 5px;
+          width: 25px;
+          height: 25px;
+          letter-spacing: 1px;
+          font-weight: 600;
+          color: var(--darkModeTxtClr);
+          background-color: green;
+        }
+      }
+    }
+    .form {
+      overflow-y: scroll;
+      max-height: 70vh;
+      margin: auto;
+      padding: 0.25em;
+      //box-shadow: 0 0 3px 2px var(--darkModeTxtClr);
+      border-radius: 0.5em;
+      letter-spacing: 2px;
+      .submitBtn {
+        cursor: pointer;
+        margin: 2em auto;
+        margin-top: 3em;
+        outline: none;
+        font-size: 1em;
+        font-weight: 600;
+        color: white;
+        border: none;
+        padding: 0.5em 1em;
+        background-color: green;
+        border-radius: 0.5em;
+      }
+      .formSubHeader {
+        margin-top: 2em;
+        text-align: left;
+      }
+
+      .inputAvatar {
+        &__box {
+          width: 250px;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          margin-bottom: 15px;
+          box-shadow: 0 0 3px 2px var(--darkModeTxtClr);
+          border-radius: 10px;
+          .profileBtn,
+          .removeItem {
+            cursor: pointer;
+            width: 100%;
+            padding: 0.5em;
+            color: white;
+            font-weight: 600;
+            border: none;
+            background-color: var(--darkModeTxtClr);
+          }
+          .profileBtn {
+            background-color: green;
+            border-radius: 10px 0 0 10px;
+          }
+          .removeItem {
+            background-color: red;
+            border-radius: 0 10px 10px 0;
+          }
+          input {
+            min-width: 80%;
+            padding: 0.5em;
+            text-align: center;
+            letter-spacing: 1px;
+            color: var(--darkModeTxtClr);
+            border: none;
+            //border-bottom: none;
+            //border-left: 1px solid var(--darkModeBg);
+            //border-right: 1px solid var(--darkModeBg);
+            background-color: var(--darkModeBg);
+          }
+        }
+      }
+    }
   }
 }
-
+.modalOpen {
+  display: block;
+}
+@keyframes form-modal-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes form-modal-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 .form-box {
   display: flex;
@@ -65,7 +179,7 @@
     width: 100%;
     height: 40px;
     padding: 0.25rem;
-    font-size: .8em;
+    font-size: 0.8em;
     border: none;
     border-bottom: 2px solid var(--darkModeTxtClr);
     background-color: rgb(230, 230, 230);
