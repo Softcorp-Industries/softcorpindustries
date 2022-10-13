@@ -7,49 +7,215 @@
 .form-modal {
   display: none;
 }
+#finalExam {
+  margin-bottom: 1em;
+}
+.finalExamSummary {
+  margin: auto;
+  width: 80%;
+  max-width: 1000px;
+  .summaryHeader {
+    margin: 2em auto;
+    max-width: 1000px;
+  }
+}
+.programBtns {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: space-between;
+  .programBtn {
+    margin: auto;
+    margin-bottom: 1.5em;
+    letter-spacing: 1px;
+    max-width: 450px;
+    button {
+      cursor: pointer;
+      @include darkMode;
+      letter-spacing: 2px;
+      border: none;
+      width: 300px;
+      display: block;
+      margin: auto;
+      padding: 1em 0.25em;
+      font-size: 1em;
+      border-radius: 2em;
+    }
+    p {
+      margin: 1em auto;
+      width: 85%;
+      font-size: 0.9em;
+      text-align: center;
+    }
+    span {
+      font-family: "Audiowide";
+    }
+    #resetTheProgram-btn {
+      background-color: red;
+    }
+    #rejoinTheProgram-btn {
+      background-color: lightseagreen;
+    }
+  }
+  #reEnterProgramBtn {
+    display: none;
+  }
+}
 
 #theProgram {
-  position: relative;
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  background-color: var(--darkModeBg);
+  z-index: 20;
+  .endProgram {
+    position: fixed;
+    top: 0em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    z-index: 21;
+    box-shadow: 0 0 0 6px black;
+    border-radius: 50%;
+    #endProgramBtn {
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: white;
+      font-size: 1.2em;
+      color: red;
+    }
+  }
   .programListItem {
     list-style: none;
     ul {
       list-style: none;
-      }
-      .addBtn {
-        //width: 200px;
+    }
+    .addBtn {
+      //width: 200px;
+      display: block;
+      margin-bottom: 5px;
+      button {
+        cursor: pointer;
         display: block;
-        margin-bottom: 5px;
-        button {
-          cursor: pointer;
-          display: block;
-          width: 100%;
-          padding: .25em;
-          border: none;
-          outline: none;
-          background-color: green;
-        }
+        width: 100%;
+        padding: 0.25em;
+        border: none;
+        outline: none;
+        background-color: green;
       }
-      .fullListBtn {
-        button {
-          background-color: lightseagreen;
-        }
+    }
+    .fullListBtn {
+      button {
+        background-color: lightseagreen;
       }
-    
+    }
   }
+  .profileCardHeader {
+      text-align: center;
+      margin-top: 4em;
+    }
   .dashboard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: .75em;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: top;
     justify-content: space-evenly;
+    background-color: black;
+    //background-image: url('./img/Landing Images/imgix-1500.jpg');
+    //background-size: cover;
+    //background-repeat: no-repeat;
+    //background-position: center;
     li p {
-      margin-bottom: .25em;
+      margin-bottom: 0.25em;
+      padding: .5em 0;
       text-align: center;
+      background-color: white;
+      color: black;
+      font-size: .8em;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    li {
+      width: 24vw;
+      //max-width: 200px;
+    }
+    
+  }
+  .profileCard {
+    display: none;
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    justify-content: space-evenly;
+    //background-color: fuchsia;
+    .profileHeader {
+      margin: auto;
+      padding: 0.5em 0;
+      letter-spacing: 1px;
+      font-size: 0.8em;
+      text-align: center;
+      //background-color: rgba(255, 255, 255, 0.8);
+      border: 2px solid var(--black);
+      border-radius: 10px;
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+    }
+    .profileInfo {
+      margin: auto;
+      padding: 0.5em;
+      font-size: 0.8em;
+      text-align: left;
+      //background-color: rgba(255, 255, 255, 0.8);
+      border: 2px solid var(--black);
+      border-radius: 10px;
+      //background-color: paleturquoise;
     }
   }
-  .allTables {
-    margin: 1em 0;
+}
+
+#theProgram.programStarted {
+  display: block;
+}
+
+@keyframes start-the-program {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
+@keyframes end-the-program {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 
 /*
 #employeeForm-modal {
@@ -60,4 +226,23 @@
 #newWorkOrder-modal {
   //display: block;
   max-width: 1000px;
+}
+
+@media (min-width: 800px) {
+  #theProgram {
+    .endProgram {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .programBtns {
+    flex-direction: row;
+    justify-content: space-between;
+    .programBtn {
+      button {
+        width: 325px;
+        font-size: 1.2em;
+      }
+    }
+  }
 }

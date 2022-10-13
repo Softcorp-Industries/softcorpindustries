@@ -5,6 +5,12 @@
   margin: auto;
   width: 100%;
 }
+#fullTechTable {
+  display: none;
+}
+#fullOfficeTable {
+  display: none;
+}
 /*
 .tableBox{
   //-ms-overflow-style: none;
@@ -16,57 +22,60 @@
 }
 
 */
+.allTables {
+  margin-top: 7em;
+}
 
-.programTables {
-  margin: auto;
-  width: 100%;
-  max-width: 900px;
-  height: 400px;
-  padding: 0.5rem;
-  color: white;
+.programTable {
+  color: var(--darkModeTxtClr);
   margin-bottom: 50px;
-  overflow: scroll;
-  background-color: var(--darkModeBg);
-  box-shadow: 0px 0px 3px var(--darkModeTxtClr);
-  border-radius: .5em;
+  //overflow: scroll;
+  //background-color: rgba(255, 255, 255, 0.8);
+  //box-shadow: 0px 0px 3px var(--darkModeTxtClr);
+  //border-radius: .5em;
   table {
-    width: 100%;
+    max-width: 700px;
     margin: auto;
-    color: var(--darkModeTxtClr);
     padding: 1rem;
     border-collapse: collapse;
-    //display: block;
+    caption {
+      font-size: 1.75em;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: .5em;
+    }
     thead {
       th {
-        padding: 0.5rem;
+        width: 25%;
+        padding: .5rem 1rem;
         text-align: left;
       }
       th:first-child {
         text-align: center;
-      }
+        width: 60px;
+      } 
     }
     tbody {
       tr td {
-        min-width: 10em;
-        padding: .5em .25em;
+        padding: .5rem 1rem;
         min-height: 50px;
         font-size: .8em;
         text-align: left;
       }
       tr td:first-child {
         text-align: center;
+        
       }
       tr td a {
         display: block;
-        margin: auto;
-        max-width: 50px;
+        width: 100%;
       }
-      tr:nth-child(odd) {
-        background-color: rgb(77, 77, 77);
-      }
+      
     }
   }
 }
+
+
 .delete {
   text-align: center;
 }
@@ -80,22 +89,4 @@
   cursor: pointer;
   margin-bottom: 10px;
   text-decoration: none;
-}
-
-.initBtn {
-  margin: 2em 0;
-  max-width: 350px;
-  button {
-    cursor: pointer;
-    outline: none;
-    border: none;
-    width: 100%;
-    padding: .5em;
-    background-color: green;
-    font-size: .8em;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: white;
-    border-radius: .25em;
-  }
 }
