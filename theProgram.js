@@ -7,101 +7,37 @@ import { Tool } from './js/TheProgram/tool.js';
 import { VEHICLE_ARR } from './js/TheProgram/vehicle.js';
 import { Vehicle } from './js/TheProgram/vehicle.js';
 
+import { Lists } from './js/TheProgram/lists.js';
+import { Display } from './js/TheProgram/display.js';
 import { formModal } from './js/TheProgram/form-modal.js';
 
 formModal();
 
+const theProgram = document.querySelector("#theProgram");
 
+const resetTheProgramBtn = document.querySelector("#resetTheProgram-btn")
+const reEnterProgramBtn = document.querySelector("#reEnterProgramBtn")
+const endProgramBtn = document.querySelector("#endProgramBtn");
+
+
+//  Button Status
+var programStarted = false;
+var fullTechOpen = false;
+var fullOfficeOpen = false;
+
+
+//  Local Storage Variables
 let ARRS_ACTIVE = localStorage.getItem('ARRS_ACTIVE');
-
+let THE_PROGRAM = localStorage.getItem("THE_PROGRAM");
 
 class UI {
-  static initTables() {
-    initBtn.innerHTML = "Reset Tables";
-    initBtn.style.backgroundColor = "red";
-    this.initEmployee_Arr();
-    this.initTool_Arr();
-    this.initVehicle_Arr();
-    Store.saveTables();
+  static startProgram() {
+    theProgram.classList.add("programStarted");
+    theProgram.style.animation = "start-the-program 300ms forwards";
   }
-  static initEmployee_Arr() {
-    const Employee_Arr = EMPLOYEE_ARR;
-    Employee_Arr.forEach((employee) => UI.getEmployee(employee));
-  }
-  static initTool_Arr() {
-    const Tool_Arr = TOOL_ARR;
-    Tool_Arr.forEach((tool) => UI.getTool(tool));
-  }
-  static initVehicle_Arr() {
-    const Vehicle_Arr = VEHICLE_ARR;
-    Vehicle_Arr.forEach((vehicle) => UI.getVehicle(vehicle));
-  }
-
-  static savedEmployeeTable() {
-    const savedEmployeeTable = JSON.parse(localStorage.getItem("employeeStorage"));
-    savedEmployeeTable.forEach((employee) => UI.getEmployee(employee));
-  }
-  static savedToolTable() {
-    const savedToolTable = JSON.parse(localStorage.getItem("toolStorage"));
-    savedToolTable.forEach((tool) => UI.getTool(tool));
-  }
-  static savedVehicleTable() {
-    const savedVehicleTable = JSON.parse(localStorage.getItem("vehicleStorage"));
-    savedVehicleTable.forEach((vehicle) => UI.getVehicle(vehicle));
-  }
-
-  static getEmployee(newEmployee) {
-    const employeeTable = document.querySelector("#employeeTableBody");
-    const employeeTableRow = document.createElement("tr");
-    employeeTableRow.innerHTML = `
-    <td>${newEmployee.employeeId}</td>
-    <td>${newEmployee.firstName} ${newEmployee.lastName}</td>
-    <td>${newEmployee.position}</td>
-    <td><a href="#employees" class="dangerBtn delete">X</a></td>
-    `;
-    employeeTable.appendChild(employeeTableRow);
-  }
-  static getTechList() {
-    const filteredTechList = JSON.parse(localStorage.getItem("employeeStorage"));
-    const techs = filteredTechList.filter(tech => tech.position === "Tech");
-    //  console.log(techs);
-    techs.forEach((tech) => UI.buildTechItem(tech))
-  }
-  static buildTechItem(tech) {
-    const techList = document.querySelector("#techList");
-    const techListItem = document.createElement("li");
-    techListItem.setAttribute("class", "inputAvatar__box")
-
-    techListItem.innerHTML = `
-    <button class="profileBtn">+</button>
-    <input type="text" value="${tech.firstName} ${tech.lastName} is a ${tech.position}"/>
-    <button class="removeItem">X</button>
-    `;
-    techList.appendChild(techListItem);
-  }
-  static buildAvailableTechList() {
-
-  }
-  static getTool(newTool) {
-    const toolTable = document.querySelector("#toolTableBody");
-    const toolTableRow = document.createElement("tr");
-    toolTableRow.innerHTML = `
-    <td>${newTool.toolId}</td>
-    <td>${newTool.toolMake} - ${newTool.toolType}</td>
-    <td><a href="#tools" class="dangerBtn delete">X</a></td>
-    `;
-    toolTable.appendChild(toolTableRow);
-  }
-  static getVehicle(newVehicle) {
-    const vehicleTable = document.querySelector("#vehicleTableBody");
-    const vehicleTableRow = document.createElement("tr");
-    vehicleTableRow.innerHTML = `
-    <td>${newVehicle.vehicleId}</td>
-    <td>${newVehicle.vehicleYear}</td>
-    <td>${newVehicle.vehicleMake} - ${newVehicle.vehicleModel}</td>
-    <td><a href="#vehicles" class="dangerBtn delete">X</a></td>
-    `;
-    vehicleTable.appendChild(vehicleTableRow);
+  static closeProgram(e) {
+    e.target.classList.remove("programStarted");
+    e.target.removeEventListener("animationend", UI.closeProgram);
   }
 
   static deleteEmployee(el) {
@@ -110,13 +46,28 @@ class UI {
     }
   }
 
-  static clearTable() {
-    const table = document.querySelectorAll(".tableBody")
+  static clearFullTechTable() {
+    const table = document.querySelector("#fullTechTable-body");
+
     while (table.firstChild) {
       table.removeChild(table.firstChild);
     }
-    console.log("clearTable")
   }
+  static clearFullOfficeTable() {
+    const toolTable = document.querySelector("#fullOfficeTable-body");
+
+    while (toolTable.firstChild) {
+      toolTable.removeChild(toolTable.firstChild);
+    }
+  }
+  static clearVehicleTable() {
+    const vehicleTable = document.querySelector("#vehicleTableBody");
+
+    while (vehicleTable.firstChild) {
+      vehicleTable.removeChild(vehicleTable.firstChild);
+    }
+  }
+
   static clearEmployeeFields() {
     document.querySelector("#employeeId").value = "";
     document.querySelector("#employeeFirstName").value = "";
@@ -143,15 +94,15 @@ class UI {
   }
 }
 
-//UI.getTechList();
-
-
 class Store {
-  static saveTables() {
+  static saveArrs() {
     localStorage.setItem('employeeStorage', JSON.stringify(EMPLOYEE_ARR));
     localStorage.setItem('toolStorage', JSON.stringify(TOOL_ARR));
     localStorage.setItem('vehicleStorage', JSON.stringify(VEHICLE_ARR));
     localStorage.setItem('ARRS_ACTIVE', 'initialized')
+  }
+  static programStarted() {
+    localStorage.setItem("THE_PROGRAM", "STARTED")
   }
 
   static addEmployee(employee) {
@@ -199,34 +150,70 @@ class Store {
   }
 }
 
-// Initialize and Reset Table
-let initBtnActive = false;
-const initBtn = document.getElementById("initBtn");
-initBtn.addEventListener("click", () => {
-  if (!initBtnActive) {
-    UI.clearTable();
-    UI.initTables();
-    initBtn.innerHTML = "Reset All Tables"
-    initBtnActive = true;
+//  Changes Initialize Button to Reset Button
+if (ARRS_ACTIVE === "initialized") {
+  reEnterProgramBtn.style.display = "block"
+  document.querySelector("#resetTheProgram-btn").nextElementSibling.innerHTML = "Reset";
+  //theProgramBtn.parentElement.style.margin = "0px";
+  document.querySelector("#resetTheProgram-btn").parentElement.style.marginBottom = "1.5em";
+  //reEnterProgramBtn.style.margin = "0px"
+}
+if (THE_PROGRAM === "STARTED") {
+  UI.startProgram();
+}
+
+
+resetTheProgramBtn.addEventListener("click", () => {
+  if (!resetTheProgramBtn) return
+  UI.startProgram();
+  Store.saveArrs();
+  Store.programStarted();
+  programStarted = true;
+})
+endProgramBtn.addEventListener("click", () => {
+  if (!endProgramBtn) return
+  theProgram.style.animation = "end-the-program 300ms forwards";
+  theProgram.addEventListener("animationend", UI.closeProgram)
+  programStarted = false;
+})
+
+// Show Full Tech List
+document.querySelector(".dashboard #fullTechTable-btn").addEventListener("click", (e) => {
+  const fullTechList = document.querySelector("#fullTechTable");
+  if (!fullTechOpen) {
+    Lists.getFullTechList();
+    fullTechList.style.display = "block";
+    fullTechOpen = true;
+    e.target.style.backgroundColor = "red";
   } else {
-    initBtn.innerHTML = "Reset All Tables"
-    initBtnActive = false;
+    UI.clearFullTechTable();
+    fullTechList.style.display = "none";
+    fullTechOpen = false;
+    e.target.style.backgroundColor = "lightseagreen";
   }
 })
 
-// Load Saved Tables
-document.addEventListener("DOMContentLoaded", () => {
-  UI.savedEmployeeTable();
-  UI.savedToolTable();
-  UI.savedVehicleTable();
-});
-
+//  Show Full Office List
+document.querySelector(".dashboard #fullOfficeTable-btn").addEventListener("click", (e) => {
+  const fullOfficeTable = document.querySelector("#fullOfficeTable");
+  if (!fullOfficeOpen) {
+    Lists.getFullOfficeList();
+    fullOfficeTable.style.display = "block"
+    fullOfficeOpen = true;
+    e.target.style.backgroundColor = "red";
+  } else {
+    UI.clearFullOfficeTable();
+    fullOfficeTable.style.display = "none"
+    fullOfficeOpen = false;
+    e.target.style.backgroundColor = "lightseagreen";
+  }
+})
 
 //  Add a New Employee
 document.querySelector("#newEmployee-form").addEventListener("click", (e) => {
   //alert("wtf")
   e.preventDefault();
-  
+
   const employeeId = document.querySelector("#employeeId").value;
   const firstName = document.querySelector("#employeeFirstName").value;
   const lastName = document.querySelector("#employeeLastName").value;
@@ -241,22 +228,10 @@ document.querySelector("#newEmployee-form").addEventListener("click", (e) => {
 
     const newEmployee = new Employee(employeeId, firstName, lastName, position, contactNumber, email);
 
-    UI.getEmployee(newEmployee);
-
     Store.addEmployee(newEmployee);
     UI.clearEmployeeFields();
   }
-  
-})
-//  Remove Employee
-document.querySelector("#employeeTableBody").addEventListener("click", (e) => {
-  //console.log(e.target)
-  UI.deleteEmployee(e.target);
-  Store.removeEmployee(e.target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.textContent)
-})
-// Show Full Tech List
-document.querySelector(".dashboard .listBtn").addEventListener("click", () => {
-  UI.getTechList();
+
 })
 
 //  Add New Tool
@@ -281,13 +256,6 @@ document.querySelector("#newTool-form").addEventListener("submit", (e) => {
 
     UI.clearToolFields();
   }
-})
-
-//  Remove Tool
-document.querySelector("#toolTableBody").addEventListener("click", (e) => {
-  //console.log(e.target)
-  UI.deleteEmployee(e.target);
-  Store.removeTool(e.target.parentElement.previousElementSibling.previousElementSibling.textContent)
 })
 
 //  Add New Vehicle
@@ -315,19 +283,28 @@ document.querySelector("#newVehicle-form").addEventListener("submit", (e) => {
   }
 })
 
-//  Remove Vehicle
+
+/*
+//  Remove Employee
+document.querySelector("#employeeTableBody").addEventListener("click", (e) => {
+  //console.log(e.target)
+  UI.deleteEmployee(e.target);
+  Store.removeEmployee(e.target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.textContent)
+})
+
+//  Remove Tool
+document.querySelector("#toolTableBody").addEventListener("click", (e) => {
+  //console.log(e.target)
+  UI.deleteEmployee(e.target);
+  Store.removeTool(e.target.parentElement.previousElementSibling.previousElementSibling.textContent)
+})
+
 document.querySelector("#vehicleTableBody").addEventListener("click", (e) => {
   //console.log(e.target)
   UI.deleteEmployee(e.target);
   Store.removeVehicle(e.target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.textContent)
 })
-
-//  Changes Initialize Button to Reset Button
-if (ARRS_ACTIVE === "initialized") {
-  initBtn.innerHTML = "Reset All Tables";
-  initBtn.style.backgroundColor = "red";
-}
-
+*/
 
 //console.log(JSON.stringify(EMPLOYEE_ARR, null, " "));
 //console.table(EMPLOYEE_ARR);

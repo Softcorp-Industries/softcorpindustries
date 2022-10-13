@@ -20,7 +20,7 @@ export function formModal() {
 
     const modalClose = () => {
       openModal.classList.remove("modalOpen");
-      openModal.removeEventListener("animationend", modalClose)
+      openModal.removeEventListener("animationend", modalClose);
     }
 
     closeModal.addEventListener("click",

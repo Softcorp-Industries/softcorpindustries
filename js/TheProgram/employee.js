@@ -45,7 +45,39 @@ export const EMPLOYEE_ARR = [
     lastName: "Pendergast",
     position: "Tech",
     contactNumber: 4035456666,
-    email: "softcorpindustries@gmail.com"
+    email: "darlenep@gmail.com"
+  },
+  {
+    employeeId: "200",
+    firstName: "Courtney",
+    lastName: "Flavour",
+    position: "Office",
+    contactNumber: 4035556669,
+    email: "reallyoldemail@hotmail.com"
+  },
+  {
+    employeeId: "210",
+    firstName: "Greg",
+    lastName: "Janzen",
+    position: "Tech",
+    contactNumber: 4035546666,
+    email: "hellobaby@outlook.com"
+  },
+  {
+    employeeId: "230",
+    firstName: "Charles",
+    lastName: "Maddux",
+    position: "Tech",
+    contactNumber: 4033396666,
+    email: "hellonwheels@gmail.com"
+  },
+  {
+    employeeId: "300",
+    firstName: "Shiela",
+    lastName: "Mckay",
+    position: "Office",
+    contactNumber: 4033396666,
+    email: "hellonwheels@gmail.com"
   }
 ]
 

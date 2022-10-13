@@ -144,23 +144,31 @@
       </section>
     </template>
 
-
     <header class="featureHeader">
       <h2>Final Exam</h2>
     </header>
-    <section class="chapter">
-      <article class="chapter__summary">
-        <p class="project-synopsis">Synopsis:</p>
-        <p>
-          Tables & Forms
+    <section class="chapter" id="finalExam">
+      <article class="finalExamSummary">
+        <p class="summaryHeader">
+          The Final Exam is a Dashboard simulation for a Service Manager. If you choose to Enter <span>"The Program"</span> I set up an environment to display current information on employee's, tool's, vehicle's, client's and work order's. You can add employee's, tool's and vehicles to your database. The last thing you can do is create a work order. You can attach employee's, tool's and vehicle's from the database including your entries.
         </p>
-        <div class="initBtn">
-          <button id="initBtn">Initialize Employee List</button>
+        <div class="programBtns">
+        <div class="programBtn resetProgramBtn">
+          <button id="resetTheProgram-btn"><span>"The Program"</span></button>
+          <p>Enter</p>
+        </div>
+        <div class="programBtn" id="reEnterProgramBtn">
+          <button id="rejoinTheProgram-btn"><span>"The Program"</span></button>
+          <p>Re-enter</p>
+        </div>
         </div>
       </article>
       <section id="theProgram">
+        <div class="endProgram">
+          <button id="endProgramBtn">X</button>
+        </div>
         <ul class="dashboard">
-          <li class="programListItem">
+          <li class="programListItem" id="employeeNavList">
             <p>Employee's</p>
             <ul>
               <li>
@@ -208,12 +216,12 @@
               </li>
               <li>
                 <div class="addBtn fullListBtn">
-                  <button class="listBtn">Full Tech List</button>
+                  <button id="fullTechTable-btn">Tech List</button>
                 </div>
               </li>
               <li>
                 <div class="addBtn fullListBtn">
-                  <button>Active Tech List</button>
+                  <button id="fullOfficeTable-btn">Office List</button>
                 </div>
               </li>
               <li>
@@ -223,7 +231,7 @@
               </li>
             </ul>
           </li>
-          <li class="programListItem">
+          <li class="programListItem" id="toolNavList">
             <p>Tool's</p>
             <ul>
               <li>
@@ -273,14 +281,9 @@
                   <button>Assigned Tool List</button>
                 </div>
               </li>
-              <li>
-                <div class="addBtn fullListBtn">
-                  <button>Full Tool List</button>
-                </div>
-              </li>
             </ul>
           </li>
-          <li class="programListItem">
+          <li class="programListItem" id="vehicleNavList">
             <p>Vehicle's</p>
             <ul>
               <li>
@@ -335,7 +338,7 @@
               </li>
             </ul>
           </li>
-          <li class="programListItem">
+          <li class="programListItem" id="woNavList">
             <p>Work Order's</p>
             <ul>
               <li>
@@ -470,8 +473,58 @@
             </ul>
           </li>
         </ul>
-        <ul id="techList"></ul>
+        <!--        <p class="profileCardHeader">Personal</p>
+        <div class="profileCard currentCard">
+          <div class="profileHeader">
+            <img src="./img/personal/profile_img.jpg" alt="">
+            <p class="profileName">Christopher Guy</p>
+            <p>
+              Lv.1 Tech
+            </p>
+          </div>
+          <div class="profileInfo">
+            <p>
+              Address
+            </p>
+            <p>
+              Contact Numbers
+            </p>
+            <p>
+              E-mail Address
+            </p>
+            <p>
+              Employment Bio
+            </p>
+          </div>
+        </div>
+      -->
         <section class="allTables">
+          <div class="programTable">
+            <table id="fullTechTable">
+              <caption>Tech's</caption>
+              <thead>
+                <th>+</th>
+                <th>ID #</th>
+                <th>Name</th>
+                <th>Position</th>
+              </thead>
+              <tbody id="fullTechTable-body"></tbody>
+            </table>
+          </div>
+          <div class="programTable">
+            <table id="fullOfficeTable">
+              <caption>Office Staff</caption>
+              <thead>
+                <th>+</th>
+                <th>ID #</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th></th>
+              </thead>
+              <tbody id="fullOfficeTable-body"></tbody>
+            </table>
+          </div>
+        <!--
           <div class="tableBox programTables" id="employeeTable">
             <table class="table">
               <thead>
@@ -505,6 +558,7 @@
               </tbody>
             </table>
           </div>
+        -->
         </section>
       </section>
     </section>
@@ -513,19 +567,8 @@
 
   </main>
 
-  <aside>
-    <div class="survey">
-      <form>
-        <h3>Web Site Evaluation Survey</h3>
-      </form>
-    </div>
-  </aside>
 
-  <div class="spacer"></div>
-  <footer>
-    Copyright &copy; 2021, Christopher T. Guy <span>O/A</span> Guycorp
-    Industries
-  </footer>
+  
 
   <button id="topBtn" title="Go to top">Top</button>
 </body>
