@@ -11,7 +11,7 @@ export const EMPLOYEE_ARR = [
     employeeId: "102",
     firstName: "Shane",
     lastName: "Doolie",
-    position: "Office Manager",
+    position: "Manager",
     contactNumber: 4035556667,
     email: "guycorpindustries@outlook.com"
   },
@@ -19,7 +19,7 @@ export const EMPLOYEE_ARR = [
     employeeId: "103",
     firstName: "David",
     lastName: "Clark",
-    position: "Administrative Assistant",
+    position: "Office",
     contactNumber: 4035556668,
     email: "softcorp@gmail.com"
   },
@@ -35,7 +35,7 @@ export const EMPLOYEE_ARR = [
     employeeId: "105",
     firstName: "Sheldon",
     lastName: "Riess",
-    position: "Service Manager",
+    position: "Manager",
     contactNumber: 4035546666,
     email: "guycorp@outlook.com"
   },

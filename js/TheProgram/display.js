@@ -20,12 +20,23 @@ export class Display {
     const fullOfficeTable = document.querySelector("#fullOfficeTable-body");
     const officeTableRow = document.createElement("tr");
     officeTableRow.innerHTML = `
+    <td><a href="#">+</a></td>
     <td>${staff.employeeId}</td>
     <td>${staff.firstName} ${staff.lastName}</td>
     <td>${staff.position}</td>
-    <td><a href="#employees" class="dangerBtn delete">X</a></td>
     `;
     fullOfficeTable.appendChild(officeTableRow);
+  }
+  static buildFullManagementTable(manager) {
+    const fullManagementTable = document.querySelector("#fullManagementTable-body");
+    const managementTableRow = document.createElement("tr");
+    managementTableRow.innerHTML = `
+    <td><a href="#">+</a></td>
+    <td>${manager.employeeId}</td>
+    <td>${manager.firstName} ${manager.lastName}</td>
+    <td>${manager.position}</td>
+    `;
+    fullManagementTable.appendChild(managementTableRow);
   }
 
   static buildFullToolTable(newTool) {

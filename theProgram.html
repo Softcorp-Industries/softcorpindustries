@@ -150,17 +150,21 @@
     <section class="chapter" id="finalExam">
       <article class="finalExamSummary">
         <p class="summaryHeader">
-          The Final Exam is a Dashboard simulation for a Service Manager. If you choose to Enter <span>"The Program"</span> I set up an environment to display current information on employee's, tool's, vehicle's, client's and work order's. You can add employee's, tool's and vehicles to your database. The last thing you can do is create a work order. You can attach employee's, tool's and vehicle's from the database including your entries.
+          The Final Exam is a Dashboard simulation for a Service Manager. If you choose to Enter <span>"The
+            Program"</span> I set up an environment to display current information on employee's, tool's, vehicle's,
+          client's and work order's. You can add employee's, tool's and vehicles to your database. The last thing you
+          can do is create a work order. You can attach employee's, tool's and vehicle's from the database including
+          your entries.
         </p>
         <div class="programBtns">
-        <div class="programBtn resetProgramBtn">
-          <button id="resetTheProgram-btn"><span>"The Program"</span></button>
-          <p>Enter</p>
-        </div>
-        <div class="programBtn" id="reEnterProgramBtn">
-          <button id="rejoinTheProgram-btn"><span>"The Program"</span></button>
-          <p>Re-enter</p>
-        </div>
+          <div class="programBtn resetProgramBtn">
+            <button id="resetTheProgram-btn"><span>"The Program"</span></button>
+            <p>Enter</p>
+          </div>
+          <div class="programBtn" id="reEnterProgramBtn">
+            <button id="rejoinTheProgram-btn"><span>"The Program"</span></button>
+            <p>Re-enter</p>
+          </div>
         </div>
       </article>
       <section id="theProgram">
@@ -216,17 +220,17 @@
               </li>
               <li>
                 <div class="addBtn fullListBtn">
-                  <button id="fullTechTable-btn">Tech List</button>
+                  <button id="fullTechTable-btn">Field Tech's</button>
                 </div>
               </li>
               <li>
                 <div class="addBtn fullListBtn">
-                  <button id="fullOfficeTable-btn">Office List</button>
+                  <button id="fullOfficeTable-btn">Office Staff</button>
                 </div>
               </li>
               <li>
                 <div class="addBtn fullListBtn">
-                  <button>Full Employee List</button>
+                  <button id="fullManagementTable-btn">Manager's</button>
                 </div>
               </li>
             </ul>
@@ -273,12 +277,12 @@
               </li>
               <li>
                 <div class="addBtn fullListBtn">
-                  <button>Available Tool List</button>
+                  <button>Available Tool's</button>
                 </div>
               </li>
               <li>
                 <div class="addBtn fullListBtn">
-                  <button>Assigned Tool List</button>
+                  <button>Assigned Tool's</button>
                 </div>
               </li>
             </ul>
@@ -333,13 +337,13 @@
               </li>
               <li>
                 <div class="addBtn fullListBtn">
-                  <button>Full Vehicle List</button>
+                  <button>All Vehicle's</button>
                 </div>
               </li>
             </ul>
           </li>
           <li class="programListItem" id="woNavList">
-            <p>Work Order's</p>
+            <p>W.O.'s</p>
             <ul>
               <li>
                 <div class="addBtn">
@@ -457,23 +461,24 @@
               </li>
               <li>
                 <div class="addBtn fullListBtn">
-                  <button class="form-modal-btn">Active Work Orders</button>
+                  <button class="form-modal-btn">Active W.O.'s</button>
                 </div>
               </li>
               <li>
                 <div class="addBtn fullListBtn">
-                  <button class="form-modal-btn">Pending Work Orders</button>
+                  <button class="form-modal-btn">Pending W.O.'s</button>
                 </div>
               </li>
               <li>
                 <div class="addBtn fullListBtn">
-                  <button class="form-modal-btn">All Work Orders</button>
+                  <button class="form-modal-btn">All W.O.'s</button>
                 </div>
               </li>
             </ul>
           </li>
         </ul>
-        <!--        <p class="profileCardHeader">Personal</p>
+        <!--        
+          <p class="profileCardHeader">Personal</p>
         <div class="profileCard currentCard">
           <div class="profileHeader">
             <img src="./img/personal/profile_img.jpg" alt="">
@@ -501,7 +506,7 @@
         <section class="allTables">
           <div class="programTable">
             <table id="fullTechTable">
-              <caption>Tech's</caption>
+              <caption>Field Tech's</caption>
               <thead>
                 <th>+</th>
                 <th>ID #</th>
@@ -524,7 +529,19 @@
               <tbody id="fullOfficeTable-body"></tbody>
             </table>
           </div>
-        <!--
+          <div class="programTable">
+            <table id="fullManagementTable">
+              <caption>Manager's</caption>
+              <thead>
+                <th>+</th>
+                <th>ID #</th>
+                <th>Name</th>
+                <th>Position</th>
+              </thead>
+              <tbody id="fullManagementTable-body"></tbody>
+            </table>
+          </div>
+          <!--
           <div class="tableBox programTables" id="employeeTable">
             <table class="table">
               <thead>
@@ -568,7 +585,7 @@
   </main>
 
 
-  
+
 
   <button id="topBtn" title="Go to top">Top</button>
 </body>

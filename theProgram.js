@@ -15,15 +15,23 @@ formModal();
 
 const theProgram = document.querySelector("#theProgram");
 
+//  The Program Button Variables
 const resetTheProgramBtn = document.querySelector("#resetTheProgram-btn")
 const reEnterProgramBtn = document.querySelector("#reEnterProgramBtn")
 const endProgramBtn = document.querySelector("#endProgramBtn");
 
+//  Dashboard Button Variables
+const fullTechTableBtn = document.querySelector(".dashboard #fullTechTable-btn");
+const fullOfficeTableBtn = document.querySelector(".dashboard #fullOfficeTable-btn");
+const fullManagementTableBtn = document.querySelector(".dashboard #fullManagementTable-btn");
 
-//  Button Status
-var programStarted = false;
-var fullTechOpen = false;
-var fullOfficeOpen = false;
+//  The Program Button Status
+let programStarted = false;
+
+//  Dashboard Button Status
+let fullTechOpen = false;
+let fullOfficeOpen = false;
+let fullManagementOpen = false;
 
 
 //  Local Storage Variables
@@ -55,12 +63,11 @@ class UI {
   }
   static clearFullOfficeTable() {
     const toolTable = document.querySelector("#fullOfficeTable-body");
-
     while (toolTable.firstChild) {
       toolTable.removeChild(toolTable.firstChild);
     }
   }
-  static clearVehicleTable() {
+  static clearFullVehicleTable() {
     const vehicleTable = document.querySelector("#vehicleTableBody");
 
     while (vehicleTable.firstChild) {
@@ -169,16 +176,16 @@ resetTheProgramBtn.addEventListener("click", () => {
   Store.saveArrs();
   Store.programStarted();
   programStarted = true;
-})
+});
 endProgramBtn.addEventListener("click", () => {
   if (!endProgramBtn) return
   theProgram.style.animation = "end-the-program 300ms forwards";
   theProgram.addEventListener("animationend", UI.closeProgram)
   programStarted = false;
-})
+});
 
 // Show Full Tech List
-document.querySelector(".dashboard #fullTechTable-btn").addEventListener("click", (e) => {
+fullTechTableBtn.addEventListener("click", (e) => {
   const fullTechList = document.querySelector("#fullTechTable");
   if (!fullTechOpen) {
     Lists.getFullTechList();
@@ -191,10 +198,9 @@ document.querySelector(".dashboard #fullTechTable-btn").addEventListener("click"
     fullTechOpen = false;
     e.target.style.backgroundColor = "lightseagreen";
   }
-})
-
+});
 //  Show Full Office List
-document.querySelector(".dashboard #fullOfficeTable-btn").addEventListener("click", (e) => {
+fullOfficeTableBtn.addEventListener("click", (e) => {
   const fullOfficeTable = document.querySelector("#fullOfficeTable");
   if (!fullOfficeOpen) {
     Lists.getFullOfficeList();
@@ -207,7 +213,22 @@ document.querySelector(".dashboard #fullOfficeTable-btn").addEventListener("clic
     fullOfficeOpen = false;
     e.target.style.backgroundColor = "lightseagreen";
   }
-})
+});
+//  Show Full Management List
+fullManagementTableBtn.addEventListener("click", (e) => {
+  const fullManagementTable = document.querySelector("#fullManagementTable");
+  if (!fullManagementOpen) {
+    Lists.getFullManagementList();
+    fullManagementTable.style.display = "block";
+    fullManagementOpen = true;
+    e.target.style.backgroundColor = "red";
+  } else {
+    //UI.clearFullManagementTable();
+    fullManagementTable.style.display = "none";
+    fullManagementOpen = false;
+    e.target.style.backgroundColor = "lightseagreen";
+  }
+});
 
 //  Add a New Employee
 document.querySelector("#newEmployee-form").addEventListener("click", (e) => {
@@ -232,7 +253,7 @@ document.querySelector("#newEmployee-form").addEventListener("click", (e) => {
     UI.clearEmployeeFields();
   }
 
-})
+});
 
 //  Add New Tool
 document.querySelector("#newTool-form").addEventListener("submit", (e) => {
@@ -256,7 +277,7 @@ document.querySelector("#newTool-form").addEventListener("submit", (e) => {
 
     UI.clearToolFields();
   }
-})
+});
 
 //  Add New Vehicle
 document.querySelector("#newVehicle-form").addEventListener("submit", (e) => {
@@ -281,7 +302,7 @@ document.querySelector("#newVehicle-form").addEventListener("submit", (e) => {
 
     UI.clearVehicleFields();
   }
-})
+});
 
 
 /*
