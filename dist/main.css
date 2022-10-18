@@ -6314,8 +6314,8 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   top: 0em;
   left: 50%;
   transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   z-index: 21;
   box-shadow: 0 0 0 6px black;
   border-radius: 50%;
@@ -6344,6 +6344,7 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   cursor: pointer;
   display: block;
   width: 100%;
+  height: 40px;
   padding: 0.25em;
   border: none;
   outline: none;
@@ -6360,7 +6361,7 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 0.75em;
+  padding-top: 1.5em;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -6374,7 +6375,7 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   text-align: center;
   background-color: white;
   color: black;
-  font-size: 0.8em;
+  font-size: 0.75em;
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -6462,10 +6463,33 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
   max-width: 1000px;
 }
 
+@media screen and (min-width: 400px) {
+  #theProgram .dashboard {
+    padding-top: 1em;
+  }
+}
+@media screen and (min-width: 550px) {
+  #theProgram .endProgram {
+    width: 40px;
+    height: 40px;
+  }
+  #theProgram .programListItem .addBtn button {
+    height: 50px;
+    font-size: 0.7em;
+  }
+}
 @media (min-width: 800px) {
   #theProgram .endProgram {
     width: 50px;
     height: 50px;
+    font-size: 1.25em;
+  }
+  #theProgram .programListItem .addBtn {
+    margin-bottom: 10px;
+  }
+  #theProgram .programListItem .addBtn button {
+    height: 30px;
+    font-size: 0.8em;
   }
   .programBtns {
     flex-direction: row;
@@ -6714,6 +6738,10 @@ li:hover > ul.drop-menu.menu-4 li:nth-child(5) {
 }
 
 #fullOfficeTable {
+  display: none;
+}
+
+#fullManagementTable {
   display: none;
 }
 
