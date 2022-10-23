@@ -182,6 +182,7 @@ endProgramBtn.addEventListener("click", () => {
   theProgram.style.animation = "end-the-program 300ms forwards";
   theProgram.addEventListener("animationend", UI.closeProgram)
   programStarted = false;
+  localStorage.setItem("THE_PROGRAM", "ENDED")
 });
 
 // Show Full Tech List
